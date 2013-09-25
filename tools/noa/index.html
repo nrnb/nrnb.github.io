@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>NOA User Manual</title>
+<link href="noa.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-428666-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+
+<div id="header-outer">
+
+<div id="header">
+
+<div id="header-image"><img
+	src="images/NOA-Icon_small.png" alt="image" /></div>
+
+<div id="header-text">NOA</div>
+<div id="header-subtext">Network-Ontology Visualization and Analysis in Cytoscape</div>
+</div>
+</div>
+
+<div id="container">
+
+<div id="toc"><h>Menu</h>
+<ul>
+	<li><a href="#intro">Introduction</a></li>
+	<li><a href="#download">Download</a></li>
+	<li><a href="#techdocs">Technical documentation</a></li>
+	<li><a href="#runningsingle">Running NOA - Single Mode</a></li>
+	<li><a href="#runningbatch">Running NOA - Batch Mode</a></li>
+</ul>
+</div>
+
+<div id="main"><a name="intro"></a>
+<div id="titletext" class="green">Introduction</div>
+
+<div id="main-text-full">NOA performs <a href="http://www.geneontology.org">Gene Ontology</a> enrichment analysis on networks. 
+NOA performs both gene set and interaction-based enrichment analysis, on one or more networks. The algorithm works by first annotating the network 
+(nodes and interactions) with GO terms, followed enrichment analysis.<br />
+The NOA algorithm was first implemented by <a href="http://nar.oxfordjournals.org/content/39/13/e87.full">Jiguang Wang, et al</a>. Please 
+<a href="mailto:czhmu2010@gmail.com">contact us</a> with any feedback, questions or comments.</div>
+
+<div id="divider"></div>
+
+<a name="download"></a>
+<div id="titletext" class="green">Download</div>
+<div id="main-text-full">To install, place the following jar files
+in the plugins directory of your Cytoscape installation:</div>
+<div id="titletext"><a href="http://chianti.ucsd.edu/cyto_web/plugins/pluginjardownload.php?id=549"><img src="images/download.png" width=30 valign="bottom"/>Download
+NOA.jar (3MB)</a></div>
+<div id="main-text-full">Note that NOA requires the CyThesaurus
+plugin, version 1.3.1 or higher:</div>
+<div id="titletext"><a href="http://chianti.ucsd.edu/cyto_web/plugins/pluginjardownload.php?id=439"><img src="images/download.png" width=30 valign="bottom"/>Download
+CyThesaurus.jar (5MB)</a></div>
+
+<div id="divider"></div>
+
+<a name="techdocs"></a>
+<div id="titletext" class="green">Technical documentation</div>
+
+<div id="main-text-full">The NOA algorithm workflow is explained in the below graphics. Click to enlarge.</div>
+
+<div id="float">
+<p>Single network mode</p>
+<a href="images/NOA_workflow-single.png"><img
+	src="images/NOA_workflow-single-thumb.png"
+	alt="NOA workflow, single" /></a>
+</div>
+
+<div id="float">
+<p>Batch mode</p>
+  <a href="images/NOA_workflow-batch.png"><img
+	src="images/NOA_workflow-batch-thumb.png" vspace=20
+	alt="NOA workflow, batch" /></a>
+</div>
+
+<div style="width: 960px; height: 10px;" class="clear"></div>
+
+<!--  
+<a href="images/NOA_workflow-single.png"><img
+	src="images/NOA_workflow-single-thumb.png"
+	alt="NOA workflow, single" /></a>
+	
+<a href="images/NOA_workflow-batch.png"><img
+	src="images/NOA_workflow-batch-thumb.png" vspace=20
+	alt="NOA workflow, batch" /></a>
+-->
+<div id="divider"></div>
+
+<a name="runningsingle"></a>
+<div id="titletext" class="green">Running NOA - Single Mode</div>
+<div id="main-text-full">
+<ol>
+	<li>Select a network to load under <i>File>Import Network (Multiple File Types)</i>. The network can be in any of the 
+	<a href="http://cytoscape.org/manual/Cytoscape2_8Manual.html#Supported%20Network%20File%20Formats">Cytoscape supported network file formats</a>.</li>
+
+	Download sample file: <a href="galFiltered.sif"> galFiltered.sif (8KB)</a>
+
+	<li>Start NOA by selecting <i>Plugins>NOA</i>.</li>
+
+	<img src="images/noainterface-single.png" width="650" vspace=10
+		alt="NOA Interface Single" />
+</ol>
+
+The NOA interface is divided into three sections; <i>Input</i>, <i>Retrieve GO Annotations</i> and <i>Set Parameters</i>:</div>
+<div id="subtitletext-2" class="lightblue">Input</div>
+<a name="inputparams"></a>
+<div id="main-text-full">
+<ol>
+	<li>Select either <i>Edge-based</i> or <i>Node-based</i> algorithm.</li>
+	<li>Select to run analysis on either the <i>Whole network</i> or a <i>Selected sub network</i>. NOA will display the number of nodes or edges in 
+	the selected sub network.</li>
+	<li>Select a <i>Reference network</i> for over-representation. This can be either the <i>Whole network</i> or a <i>Clique</i>.</li>
+</ol>
+</div>
+<div id="subtitletext-2" class="lightblue">Retrieve GO Annotations</div>
+<div id="main-text-full">
+<a name="goannotations"></a>
+<ol>
+	<li>Under <i>Species</i>, select the appropriate species for your data.</li>
+	<li>If this is the first time running NOA, you will see a message to download necessary databases. Click <i>Download</i> to continue. 
+	NOA will download the necessary database for your data. It is only necessary to download datbases once per species.</li>
+	<li>Once database download is complete, NOA will prompt you to annotate your network with GO annotations. Verify that the correct 
+	<i>Identifier attribute</i> and <i>Type of identifier</i> are selected.</li>
+	<li>In addition, you will also be able to select which GO annotation to use:
+	<ul>
+	<li>SlimMosaic: Custom GO Slim for Mosaic.</li>
+	<li>SlimPIR: GO annotations from the <a href="http://pir.georgetown.edu/">Protein Information Resource.</a></li>
+	<li>SlimGeneric: Generic GO Slim annotations from <a href="http://www.geneontology.org/GO.slims.shtml">Gene Ontology.</a></li>
+	<li>Full: Full GO annotations from <a href="http://www.geneontology.org/">Gene Ontology.</a></li>
+	</ul>
+	</li>
+	<li> Click <i>Annotate</i> to continue. You can save the annotated network as a session file for future use. You can also re-annotate 
+	the network with the latest annotations from GO at any time by clicking <i>Re-annotate</i>.</li>
+</ol>
+
+</div>
+
+<div id="subtitletext-2" class="lightblue">Set Parameters</div>
+<div id="main-text-full">
+<a name="setparameters"></a>
+<ol>
+	<li>In the <i>Set Parameters</i> section you can choose several parameters that will directly affect the results of NOA:</li>
+	<ul>
+		<li>Edge annotation:</li>
+		<li>Correction method: Method to use for multiple testing correction.</li>
+		<li>Statistical method: Method to sue for over-representation.</li>
+		<li>P-value threshold: P-value threshold for results.</li>
+	</ul>
+
+	<li>Click <i>Run</i> to start NOA.</li>
+</ol>
+</div>
+
+<a name="results-single"></a>
+<div id="subtitletext-2" class="lightblue">Navigating the results</div>
+<div id="main-text-full">NOA results will be displayed as a results table of GO terms relevant to the network, listed by descending P-value. 
+The results table is shown below next to the original network.
+<img src="images/single-mode-results.png" width="650" vspace=10
+	alt="NOA Results Single" />
+
+The table includes the following information:
+<ul>
+<li>GO ID: The identifier assigned by the Gene Ontology</li>
+<li>Type: Gene Ontology type, either Biological Process (BP), Cellular Component (CC) or Molecular Function (MF).</li>
+<li>P-value: The resulting P-value as calcualted based on the statistical method selected.</li>
+<li>Test: Number of nodes/edges in the network associated with the GO term and the total number of nodes/edges in the network. For example, if 8 out of 
+362 network nodes are found in the GO term, the Sample column displays 8/362.</li>
+<li>Reference: Number of nodes/edges in the network associated with the entire GO hierarchy and the total number of nodes/edges in the hierarchy. For example, 
+if 15 out of 54615 network nodes are found in the hierarchy, the Population column displays 15/54615.</li>
+<li>Description: Description of GO term from the ontology.</li>
+<li>Associated nodes/edges: List of nodes/edges associated with the GO term. Selecting any GO term in the results table will select the associated nodes/edges 
+in the network.</li>
+</ul>
+To save the results as a spreadsheet, click <i>Save</i> and select a location and file name. This will save the results as a comma-separated spreadsheet.
+
+The results table is interactive, clicking on a GO term highlights the corresponding edges and nodes in the network.
+Double-clicking a GO term opens a browser displaying the detailed information for that GO term at the <a href="http://www.geneontology.org">Gene Ontology</a> website.
+
+In addition to the results table, the results are also displayed as an overview network. Nodes correspond to GO terms, and are colored based on the corresponding p-value,
+with brightly colored indicating a lower p-value. Node size indicated the number of nodes and edges in the analyzed network with that annotation, and the thickness of 
+edges between nodes indicates the number of overlapping genes between the two GO terms.
+<img src="images/single-overview.png" width="650" vspace=10
+	alt="Overview network" />
+</div>
+
+<div id="divider"></div>
+
+<a name="runningbatch"></a>
+<div id="titletext" class="green">Running NOA - Batch Mode</div>
+<div id="main-text-full">
+<ol>
+	<li>Start NOA by selecting <i>Plugins>NOA</i>.</li>
+	
+	<img src="images/noainterface-batch.png" width="650" vspace=10
+		alt="NOA Interface Batch" />
+</ol>
+The NOA batch mode interface is similar to the single mode interface, and is divided into three sections; <i>Input</i>, <i>Retrieve GO Annotations</i> 
+and <i>Set Parameters</i>:
+</div>
+<div id="subtitletext-2" class="lightblue">Input</div>
+<div id="main-text-full">
+Selecting Input parameters for batch mode is similar to <a href="#inputparams">single mode</a>, except that a batch input file must be specified under 
+<i>Test network</i>. The batch network file must conform to the following formatting:
+<ul>
+<li>The beginning of each network is specified by a closing angle bracket (>) followed by the network name, for example ">Net1".</li>
+<li>Each network is specified in <a href="http://www.cytoscape.org/manual/Cytoscape2_5Manual.html#SIF%20Format">sif format</a>.</li>
+<p></p>
+</ul>
+For the purposes of this manual, use the sample file <a href="disease_gene.noa"> disease_gene.noa (4KB)</a>. This file contains human data, annotated 
+with HGNC IDs. Select the <i>Node-based</i> algorithm, and <i>All networks</i> as the reference network. 
+	
+</div>
+<div id="subtitletext-2" class="lightblue">Retrieve GO Annotations</div>
+<div id="main-text-full">
+Retrieving GO annotations for a batch analysis is identical to <a href="#goannotations">single analysis mode</a>, except that the <i>Identifier attribute</i> 
+does not need to be specified, since NOA uses identifiers directly from the batch network file.
+<!--  
+<ol>
+	<li>Under <i>Species</i>, select the appropriate species for your data.</li>
+	<li>If this is the first time running NOA, you will see a message to download necessary databases. Click <i>Download</i> to continue. 
+	NOA will download the necessary database for your data. It is only necessary to download datbases once per species.</li>
+	<li>Once database download is complete, NOA will prompt you to annotate your network with GO annotations. Verify that the correct identifier type 
+	is selected under <i>Type of identifier</i>.
+	<li>In addition, you will also be able to select which GO annotation to use:
+	<ul>
+	<li>SlimMosaic: Custom GO Slim for Mosaic.</li>
+	<li>SlimPIR: GO annotations from the <a href="http://pir.georgetown.edu/">Protein Information Resource.</a></li>
+	<li>SlimGeneric: Generic GO Slim annotations from <a href="http://www.geneontology.org/GO.slims.shtml">Gene Ontology.</a></li>
+	<li>Full: Full GO annotations from <a href="http://www.geneontology.org/">Gene Ontology.</a></li>
+	</ul>
+	</li>
+	<li> Click <i>Annotate</i> to continue. You can save the annotated network as a session file for future use. You can also re-annotate 
+	the network with the latest annotations from GO at any time by clicking <i>Re-annotate</i>.</li>
+</ol>
+-->
+</div>
+<div id="subtitletext-2" class="lightblue">Set Parameters</div>
+<div id="main-text-full">
+Setting analysis parameters is also identical to <a href="#setparameters">single mode</a>.
+</div>
+<a name="results-batch"></a>
+<div id="subtitletext-2" class="lightblue">Navigating the results</div>
+<div id="main-text-full">NOA results will be displayed as a results table of GO terms relevant to the input networks. For batch mode, results are provided
+in two different ways, <i>Results</i>, formatted like the results from single mode, and <i>Overlap results</i> , listed by subnetwork in order of descending P-value. 
+
+<img src="images/noaresults-batch.png" width="700" vspace=10
+	alt="NOA Results Batch" />
+	
+The table includes <a href="#results-single">the same information as for single mode</a>, with one additional column for <i>Network ID</i>, the individual 
+network name from the input file.
+</div>
+
+<div id="main-text-full">For overlap results, a list of GO terms found to be associated with more than one network is displayed. 
+<img src="images/noaresults-batch-overlap.png" width="650" vspace=10
+	alt="NOA Results Batch Overlap" />
+NOA also includes a heatmap view of the results. The heatmap results can be saved as individual image files and comma-separated spreadsheets for each of the 
+three branches of GO.
+<img src="images/noaresults-batch-heatmap.png" width="650" vspace=10
+	alt="NOA Results Batch Heatmap" />
+</div>
+</div>
+
+
+<div style="width: 960px; height: 10px;" class="clear"></div>
+</div>
+
+<div id="footer-outer">
+<div id="footer"><b><a href="mailto:czhmu2010@gmail.com">Contact</a></b>
+</div>
+</div>
+
+</body>
+</html>

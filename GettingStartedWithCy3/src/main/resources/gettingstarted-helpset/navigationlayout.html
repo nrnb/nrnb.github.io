@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <style type="text/css">
+      BODY { font-size: 14px; font-family: fantasy; background-color: white; }
+      .listnum { font-size: 2em; }
+    </style>
+  </head>
+<body>
+
+  <object classid="com.agilent.AdaptiveJavaHelp.ConditionMonitor">
+    <param name="condition" value="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.IsThereANetwork">
+    <param name="paragraphID" value="isThereANetworkWarning">
+    <param name="true" value="<p></p>">
+    <param name="false" value="<p style='background-color: #ebebeb;'><br><img src='images/warning.png'> You need to first <b>open a network</b> before proceeding.<br><br></p>">
+  </object>
+  <p id="isThereANetworkWarning"></p>
+
+	<table cellspacing="35">
+		<tr>
+      <td valign="top">
+        <object classid="com.agilent.AdaptiveJavaHelp.ConditionMonitor">
+          <param name="condition" value="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.WasPreferredLayoutApplied">
+          <param name="paragraphID" value="didUserInvokePreferredLayoutTask">
+          <param name="true" value="<img src='images/pass.png'>">
+          <param name="false" value="<span class='listnum'>1.</span>">
+        </object>
+        <p id="didUserInvokePreferredLayoutTask"></p>
+      </td>
+			<td valign="top">Click on this toolbar icon 
+        <object classid="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.ApplyPreferredLayoutBtn"></object>
+        to apply the preferred layout to the network.</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="images/info.png"></td>
+			<td valign="top">Optional. You can try different layouts available under the
+				<b>Layout</b> menu. You can adjust layout parameters by going to
+					<b>Layout>Settings...</b>
+			by selecting a <b>Layout Algorithm</b>. Click on the <b>Set
+					preferred layout</b> to change the layout associated with the toolbar
+        icon
+        <object classid="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.ApplyPreferredLayoutBtn"></object>
+        . The dialog will look like this:
+        <p align="center"><img src="images/layout_settings.png" width="350" height="181"></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="images/info.png"></td>
+      <td valign="top">Optional. Use the toolbar icons
+        <object classid="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.ZoomInBtn"></object>
+        <object classid="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.ZoomOutBtn"></object>
+        <object classid="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.ZoomFitAllBtn"></object>
+        <object classid="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.ZoomFitSelectedBtn"></object>
+        to zoom in and out,
+				fit-to-screen, and fit-to-selection. Zoom can also be controlled by
+				a mouse scroll wheel. Panning can be controlled by a mouse middle
+				button, by
+				command-click-and-drag on the network directly, or by click-and-drag on the bird's eye view.
+        <p align="center"><img src="images/birdseye.png" width="350" height="320"></p>
+      </td>
+		</tr>
+		<tr>
+      <td valign="top">
+        <object classid="com.agilent.AdaptiveJavaHelp.ConditionMonitor">
+          <param name="condition" value="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.AreThereNodesSelected">
+          <param name="paragraphID" value="areThereNodesSelected">
+          <param name="true" value="<img src='images/pass.png'>">
+          <param name="false" value="<span class='listnum'>2.</span>">
+        </object>
+        <p id="areThereNodesSelected"></p>
+      </td>
+			<td valign="top">Click-and-drag over an area of the network to select a
+				set of nodes. Click on any selected node to drag selection. Also
+				notice information on selected nodes in the <b>Table Panel</b> below
+				the network.
+        <p>Here is what selected nodes look like:</p>
+        <p align="center"><img src="images/selection.png" width="350" height="297"></p>
+        <object classid="com.agilent.AdaptiveJavaHelp.ConditionMonitor">
+          <param name="condition" value="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.AreThereNodesSelected">
+          <param name="paragraphID" value="numNodesSelected">
+          <param name="true" value="<br>You have selected <i>%num-selected-nodes%</i> nodes in the <i>%current-network-name%</i> network.">
+          <param name="false" value="<br>">
+        </object>
+        <p id="numNodesSelected"></p>
+        <br><br>
+			</td>
+		</tr>
+		<tr>
+      <td valign="top">
+        <object classid="com.agilent.AdaptiveJavaHelp.ConditionMonitor">
+          <param name="condition" value="org.gladstoneinstitutes.bioinformaticscore.GettingStartedWithCy3.internal.IsEdgeAttrsTableSelected">
+          <param name="paragraphID" value="isEdgeAttrsTableSelected">
+          <param name="true" value="<img src='images/pass.png'>">
+          <param name="false" value="<span class='listnum'>3.</span>">
+        </object>
+        <p id="isEdgeAttrsTableSelected"></p>
+      </td>
+			<td valign="top">Click on the <b>Edge Attributes</b> tab at the bottom of
+				the Table Panel to view information on selected edges.
+			</td>
+		</tr>
+		<!--tr>
+			<td valign="top"><img src="images/info.png"></td>
+			<td valign="top">Optional. If you want to show table information for all
+				nodes and edges, independent of selection, then click on the Selection Mode
+				toggle icon [icon] in the Table Panel.</td>
+		</tr-->
+  </table>
+</body>
+</html>

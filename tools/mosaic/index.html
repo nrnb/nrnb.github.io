@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Mosaic User Manual</title>
+<link href="mosaic.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-428666-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+
+<div id="header-outer">
+
+<div id="header">
+
+<div id="header-image"><img
+	src="images/mosaic-banner-transparent2.png" alt="image" /></div>
+
+<div id="header-text">MOSAIC</div>
+<div id="header-subtext">GO network annotation and partition in
+Cytoscape</div>
+</div>
+</div>
+
+<div id="container">
+
+<div id="toc"><h>Menu</h>
+<ul>
+	<li><a href="#intro">Introduction</a></li>
+	<li><a href="#download">Download</a></li>
+	<li><a href="#techdocs">Technical documentation</a></li>
+	<li><a href="#runningmosaic">Running Mosaic</a></li>
+	<li><a href="#results">Navigating the results</a></li>
+	<li><a href="#examples">Example usage</a></li>
+	<li><a href="#problems">Known problems</a></li>
+</ul>
+</div>
+
+<div id="main">
+<a name="intro"></a>
+<div id="titletext" class="green">Introduction</div>
+
+<div id="main-text-full">Mosaic performs network annotation and
+interactive partitioning driven by the <a
+	href="http://www.geneontology.org">Gene Ontology</a>. The Mosaic
+algorithm works by first annotating the network with GO terms, followed
+by partitioning the network into a series of subnetworks based on the
+biological process annotation of nodes. <br />
+Mosaic was created as a <a href="http://code.google.com/soc/">Google
+Summer of Code</a> project by Chao Zhang in collaboration with the <a
+	href="http://nrnb.org">National Resource for Network Biology</a>
+(NRNB). Please <a href="mailto:czhmu2010@gmail.com">contact us</a> with
+any feedback or questions.
+
+<p>
+And if you end up using Mosaic in your research, please cite this publication:
+<br /><a href="http://bioinformatics.oxfordjournals.org/content/early/2012/05/09/bioinformatics.bts278.full.pdf+html"><small>Chao Z, Hanspers K, Kuchinsky A, Salomonis N, Xu D, and Pico AR. <i>Mosaic: Making Biological Sense of Complex Networks</i>. <b>Bioinformatics</b> 2012, 28, 14:1943-4. 
+</small></a>
+</p>
+</div>
+
+
+<div id="divider"></div>
+
+<a name="download"></a>
+<div id="titletext" class="green">Download</div>
+<div id="main-text-full">To install, place the following jar files
+in the plugins directory of your <a href="http://cytoscape.org">Cytoscape installation</a>:
+<div id="titletext"><a href="http://chianti.ucsd.edu/cyto_web/plugins/pluginjardownload.php?id=542"><img
+	src="images/download.png" width=30 valign="bottom" />Download
+Mosaic.jar (3MB)</a></div>
+<div id="main-text-full"><b>Version 1.1.</b> <br />Note that Mosaic requires the CyThesaurus
+plugin, version 1.3.1 or higher:</div>
+<div id="titletext"><a href="http://chianti.ucsd.edu/cyto_web/plugins/pluginjardownload.php?id=439"><img
+	src="images/download.png" width=30 valign="bottom" />Download
+CyThesaurus.jar (5MB)</a></div>
+
+<p>Mosaic is an <a href="http://www.apache.org/licenses/LICENSE-2.0">open
+source</a> project. Feel free to <a
+	href="http://www.rbvi.ucsf.edu/trac/GenMAPP/browser/trunk/avalon/mosaic">download
+source code</a> and <a href="mailto:czhmu2010@gmail.com">contact us</a>
+about contributing.</div>
+
+<div id="divider"></div>
+
+<a name="techdocs"></a>
+<div id="titletext" class="green">Technical documentation</div>
+
+<div id="main-text-full">The Mosaic algorithm workflow is
+explained in the below graphic. Click to enlarge.</div>
+
+<a href="images/2011-0909-Developer-workflow.png"><img
+	src="images/2011-0909-Developer-workflow-thumb.png" vspace=20
+	alt="Mosaic workflow" /></a>
+
+<div id="divider"></div>
+
+<a name="runningmosaic"></a>
+<div id="titletext" class="green">Running Mosaic</div>
+
+
+<div id="subtitletext-2" class="yellow">Load network</div>
+<div id="main-text-full">
+<ol>
+	<li>Select a network to load under <i>File>Import Network
+	(Multiple File Types)</i>. The network can be in any of the <a
+		href="http://cytoscape.org/manual/Cytoscape2_8Manual.html#Supported%20Network%20File%20Formats">Cytoscape
+	supported network file formats</a>.</li>
+</ol>
+<b>Download sample file: <a href="mosaic-demo-yeast.sif"> mosaic-demo-yeast.sif (14KB)</a></b></div>
+
+<div id="subtitletext-2" class="yellow">Retrieve database and
+annotation information</div>
+<div id="main-text-full">
+<ol>
+	<li>Start Mosaic by selecting <i>Plugins>Mosaic</i>.</li>
+
+	<img src="images/mosaicinterface.png" width="700" vspace=10
+		alt="Mosaic Interface" />
+
+	<li>If this is the first time running Mosaic on your network, you
+	will see a message in the <i>Retrieve GO Annotations</i> section of the Mosaic interface to download necessary
+	databases. Click <i>Download</i> to continue. Mosaic will download the
+	necessary database for your data. It is only necessary to download
+	datbases once per species.</li>
+	<li>Once database download is complete, Mosaic will prompt you to
+	annotate your network with GO annotation. Click <i>Annotate</i> to
+	continue. You can save the annotated network as a session file for
+	future use. You can also re-annotate the network with the latest
+	annotations from GO at any time by clicking <i>Re-annotate</i>.</li>
+</ol>
+</div>
+
+<div id="subtitletext-2" class="yellow">Finalizing Mosaic
+parameters</div>
+<div id="main-text-full">
+<ol>
+	<li>In the <i>Select Attributes</i> section, verify that the
+	correct attributes are selected.
+	<p><i>Note:</i>
+	It is possible to select node attributes other than GO annotation for
+	partitiong and node color, but not for layout. Using alternate annotations involves
+	<a href="#annotations">importing annotation data</a> prior to running Mosaic.</p></li>
+	<li>In the <i>Set Parameters</i> section you can choose several
+	parameters that will directly affect the results of Mosaic:
+	<ul>
+		<li><a name="thresholds"></a>Minimum nodes to view: The minimum
+		number of nodes in a subnetwork. Any subnetworks with fewer nodes will
+		not be shown. Default is 5.</li>
+		<li>Maximum nodes to view: The maximum number of nodes in a subnetwork. 
+		Any subnetworks with more nodes will not be shown. Default is 200.</li>
+		<li>GO level cutoff for partition: The level of the GO hierarchy
+		used for partitioning into subnetworks. Selecting a deeper level
+		(larger number) results in a larger number of subnetworks. You can
+		always <a href="#deeper">drill deeper into a given subnetwork</a>
+		after running the initial partition. Default is 2. Note that for the 
+		purposes of this manual, <i>GO level cutoff</i> was set for "All the way",
+		 meaning to the deepest possible level of GO.</li>
+		<li>Spacing between nodes: Spacing between nodes in a given subnetwork.
+		Default is 30.</li>
+		<!--
+    	<li>Cross-edge pruning:</font> This refers to a strategy to reduce network complexity when nodes are replicated due to specific layout algorithms. </li>
+    	<li>GO hierarchy type:</font></li>
+    	-->
+	</ul></li>
+
+	<li>Click <i>Run</i> to start Mosaic.</li>
+</ol>
+</div>
+
+<div id="divider"></div>
+
+<a name="results"></a>
+<div id="titletext" class="green">Navigating the results</div>
+<div id="main-text-full">When partitioning is complete,
+subnetworks will be displayed as tiles as shown below. In addition to
+subnetworks representing GO biological process terms, the display also
+includes an <a href="#overview">overview network</a> (top left tile) and
+the original network (bottom right tile).</div>
+
+<img src="images/mosaicresults.png" width="700" vspace=10
+	alt="Mosaic Results" />
+
+<div id="main-text-full">In the Mosaic tab in the left-side
+Control Panel, all subnetworks will be listed, including subnetworks
+that fall outside <a href="#thresholds">defined thresholds</a>.
+<ul>
+	<li>To locate a particular subnetwork, select the network in the
+	Mosaic side panel to highlight it in the tiled view.</li>
+	<li>To view a particular subnetwork, click the <i>Maximize</i>
+	button at the top left of the tiled window.</li>
+</ul>
+</div>
+
+<div id="subtitletext-2" class="yellow">Subnetwork view</div>
+<div id="main-text-full">Each subnetwork represents a biological
+process and the layout is controlled by cellular component annotation
+using a pre-set template. Node coloring is determined by molecular
+function annotation, by default.</div>
+
+<img src="images/mosaic-subnetwork.png" width="600" vspace=10
+	alt="Mosaic Subnetwork" />
+
+<div id="main-text-full">The network can be manipulated like any
+other Cytoscape network:
+<ul>
+	<li>Move nodes by click and drag to optimize the layout.</li>
+	<li>Delete nodes and/or edges.</li>
+	<li>Zoom in and out.</li>
+	<li>Use the <i>Network Overview Pane</i> in the lower left corner
+	of the Cytoscape window to navigate around the network.</li>
+	<li>Highlight a set of nodes to view associated attributes in the
+	<i>Data Panel</i>. To add specific attributes to the display, click the
+	<i>Select Attributes</i> button in the <i>Data Panel</i> and select the
+	attributes you want to see from the list.</li>
+	<li>Search for specific nodes by typing the name of the node in
+	the <i>Search</i> field in the Cytoscape toolbar. If the node is found,
+	this will refocus the network view on the node.</li>
+</ul>
+It is also possible to highlight nodes in a selected subnetwork based on
+molecular function annotation, using the <i>Node color selection</i>
+menu at the top of the Mosaic tab. With a subnetwork selected, select a
+molecular function from the drop-down and all nodes with that annotation
+will be highlighted. To display the highlighted nodes in the <i>Data Panel</i>, 
+click the <i>Select nodes</i> button.
+
+<img src="images/mosaic-selectnodes.png" width="700" vspace=10
+	alt="Mosaic node color selection" />
+</div>
+
+<a name="deeper"></a>
+<div id="subtitletext-2" class="yellow">Partitioning deeper into
+select subnetworks</div>
+<div id="main-text-full">It is possible to partition a select
+branch of the subnetwork tree after an initial analysis is completed.
+This works on any non-end branch whos sub-branches did not result in any
+subnetworks in the initial partition. For example, if none of the
+branches possible subnetworks fall within the node thresholds, the
+subnetworks will not be automatically created, but these could still be
+paritioned manually using this process.</div>
+<img src="images/mosaic-deeper.png" width="400" vspace=10
+	alt="Mosaic Overview" />
+<div id="main-text-full">
+<ol>
+	<li>Select a non-end branch by clicking on it in the Mosaic tab in
+	the <i>Control Panel</i>.</li>
+	<li>Right-click on the branch and select <i>Partition This
+	Network</i>. You will be able to select a specific subnetwork to create, or
+	you can select all.</li>
+</ol>
+Note that Mosaic will use the same parameters for paritioning as were
+selected in the original analysis.</div>
+
+<a name="overview"></a>
+<div id="subtitletext-2" class="yellow">Overview network</div>
+<div id="main-text-full">In addition to the subnetworks, an
+overview network is also created in which each subnetwork is represented
+as a node. The size of each node represents the number of nodes in that
+subnetwork, and the line thickness represents the number of connections
+between two subnetworks. You can adjust the edge widths using <a
+	href="http://www.cytoscape.org/manual/Cytoscape2_8Manual.html#Advanced Topics">Viz
+Mapper</a>.
+<img src="images/mosaic-overview.png" width="300" vspace=10
+	alt="Mosaic Overview" /> 
+<p>In addition to the visual style that is applied to the overview network, the corresponding
+attribute values used to create the visual style is available as a set of node and edge attributes.
+The attributes are 
+<ul>
+<li>evidences: nodes classified in the GO/process (node attribute)</li>
+<li>subnetworkSize: number of nodes classified in the GO/process(node attribute)</li>
+<li>commonEvidences: nodes in common (edge attribute)</li>
+<li>overlapCount: number of nodes in common (edge attribute)</li>
+</ul>
+</div>
+<div id="divider"></div>
+
+<a name="examples"></a>
+<div id="titletext" class="green">Example usage</div>
+
+<a name="annotations"></a>
+<div id="subtitletext-2" class="yellow">Loading alternative annotations for node coloring</div>
+<div id="main-text-full">Annotations other than GO can be used for partitioning and node coloring in Mosaic. The annotation data can
+be imported as node attributes. The below instructions assume that the annotation data is available in a simple text file, and that the
+primary identifier in the annotation file is the same as that used for nodes in the network. This example explains how to use information 
+on predicted miRNA binding site for node coloring.
+<ol>
+<li>After importing a network, go to <i>File>Import>Attribute from Table (Text/MS Excel)...</i> to open the <i>Import Annotation File</i> 
+interface.</li>
+<li>Select the annotation file. In the <i>Advanced</i> section, select <i>Show Text File Import Options</i>. In the <i>Attribute Names</i>
+ section, select <i>Transfer first line as attribute names</i>.</li>
+<li>In <i>Advanced</i>, select <i>Show Mapping Options</i> and verify that the correct column in the annotation file is mapped to the
+appropriate network attribute (i.e. matching identifiers).</li>
+<li>In the <i>Preview</i> section, deselct columns that you don't want to import by clicking on the column header. The column should be
+highlighted in grey if de-selected. The interface should now look like this:
+<img src="images/mosaic-ontologyimport.png" width="600" vspace=10
+	alt="Annotation Import" /></li>
+<li>Click <i>Import</i> to start the import.</li>
+<li>When import is finished, select a few nodes in the network and verify in the Data Table that the annotation was imported correctly.</li>
+<li>Start Mosaic. In the <i>Select Attributes</i> section, select the imported attribute under <i>Attribute to use for node coloring</i>.
+Click <i>Annotate</i> to annotate the network with GO for partitioning and layout.
+<img src="images/mosaic-customontology.png" width="700" vspace=10
+	alt="Using a custom annotation" /></li>
+<li>Each subnetwork will now be colored based on the predicted miRNA binding sites.
+<img src="images/mosaic-subnetwork-miRNA.png" width="600" vspace=10
+	alt="miRNA binding as node coloring" /></li>
+</ol></div>
+
+
+<div id="divider"></div>
+
+<a name="problems"></a>
+<div id="titletext" class="green">Potential issues and error messages</div>
+
+<div id="main-text-full">If these descriptions do not help address a problem you are experiencing, please <a href="mailto:czhmu2010@gmail.com">contact us</a>.</div> 
+<div id=subtitletext-2>Make sure you only have one copy of Mosaic and CyThesaurus installed. </div>
+<div id="main-text-full">If you install using the Cytoscape Plugin Manager and also download and install the jars from this website, then there will be conflicts and odd behaviors. This is true for any Cytoscape plugin. You can remove manually installed plugins from the plugin folder in your Cytoscape installation; and you can remove managed plugins from Plugins>Plugins Manager.</div>
+<div id=subtitletext-2>Mosaic can not annotate yeast networks using SGD IDs, like S000006332.</div>
+<div id="main-text-full">Mosaic isn''t able to translate SGD IDs to Ensembl, so the annotation of networks with these IDs fails. We will fix address 
+this in a future release. In the meantime, work with another identifier (e.g., YPR128C).</div>
+<div id=subtitletext-2>Error message: "Please load a network first!"</div>
+<div id="main-text-full">You must have at least one network loaded in Cytoscape before running Mosaic.</div>
+<div id=subtitletext-2>Error message: "CyThesaurus 1.31 or later verion is necessary for runing Mosaic!" </div>
+<div id="main-text-full">CyThesaurus 1.31 or later version is required by Mosaic for annotating networks and earlier versions might cause inconsistent issues. You can get the latest version at the top of this page. Be sure to uninstall older versions first.</div>
+<div id=subtitletext-2>Error message: "You need internet connection for downloading databases."</div>
+<div id="main-text-full">Mosaic supports many species and cannot distributed them all inside plugin. So, the first time you work with a given species, an internet connection is required to download the species-specific database files. Subsequent runs for this species will work offline.</div>
+<div id=subtitletext-2>Error message: "Building *** subnetworks may take a while. Are you sure you want to proceed?"</div>
+<div id="main-text-full">The message means that the current network contains more than 100 subnetworks and partitioning procedure will take longer. You can decline and then try decreasing the level to which to partition or try reannotating with GOslim (if you were working with GOfull).</div>
+<div id=subtitletext-2>Error message: "Selected attribute does not match layout template".</div>
+<div id="main-text-full">This message appears when the full GO hierarchy is used to annotate nodes, as opposed to Mosaic-specific GO slim. If your network is
+already annotated with GO terms, make sure to re-annotate the network in Mosaic, to ensure that the correct GO annotations are used.</div>
+
+
+</div>
+
+<div style="width: 960px; height: 10px;" class="clear"></div>
+</div>
+
+<div id="footer-outer">
+<div id="footer"><b><a href="mailto:czhmu2010@gmail.com">Contact</a></b>
+</div>
+</div>
+
+</body>
+</html>

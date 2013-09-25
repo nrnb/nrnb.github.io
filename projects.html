@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NRNB: Projects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script>
+$(function () {
+	   var activeTab = $('[href=' + location.hash + ']');
+	   activeTab && activeTab.tab('show');
+	   window.scrollTo(0, 0);
+	});
+</script>
+
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="assets/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="index.html"><img
+					src="images/NRNB_white_22.png" alt="image" /></a>
+				<ul class="nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="outreach.html">Collaborate</a></li>
+					<li><a href="training.html">Learn</a></li>
+					<li><a href="tools.html">Gallery</a></li>
+					<li class="active"><a href="#">Projects</a></li>
+					<li><a href="people.html">People</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<H3>Technology Research and Development</H3>
+		<a class="btn btn-primary pull-right"
+			href="presentations.html#nrnbannual">Annual Reports &raquo;</a>
+
+		<p>We are conducting an aggressive development program centered on
+			Technology and Research Development projects (TRDs) that will extend
+			the Cytoscape infrastructure to make it significantly more useful to
+			researchers.</p>
+
+		<ul class="nav nav-tabs" id="tabs">
+			<li class="active"><a href="#a-tab" data-toggle="tab">TRD-A</a></li>
+			<li><a href="#b-tab" data-toggle="tab">TRD-B</a></li>
+			<li><a href="#c-tab" data-toggle="tab">TRD-C</a></li>
+			<li><a href="#d-tab" data-toggle="tab">TRD-D</a></li>
+		</ul>
+		<div class="tab-content">
+			<a class="btn btn-info btn-mini" href="project-tracking.html">Submit
+				Project Update</a>
+			<div class="tab-pane active" id="a-tab">
+				<h3>Project A: Identification of network-based biomarkers for
+					molecular classification</h3>
+				<h4>
+					Project Leaders: <a href="people.html#sander">Chris Sander</a>
+					(MSKCC) and <a href="people.html#trey">Trey Ideker</a> (UCSD)
+				</h4>
+
+				<div class="well">
+					<p>
+						In this project, we will develop technology to <b>automatically
+							identify altered disease networks and enable the discovery of
+							network-based biomarkers in cancer.</b> Recentiy, we and others have
+						shown proof of principle that networks and pathways provide a
+						powerful tool to understand the pronounced genetic heterogeneity
+						seen in individual tumors of the same cancer type and that they
+						can lead to more accurate and robust signatures for classifying
+						disease states. To date, such methods have been explored in
+						glioblastoma multiforme as well as pancreatic, lung, breast and
+						colorectal cancers . The algorithmic research and Cytoscape
+						development in this TRD will be tied to analyzing multiple cancer
+						types derived from The Cancer Genome Afias Project, prostate
+						cancer genome data derived from the MSKCC Prostate Cancer Genome
+						Project (PCGP, a collaborator), and Chronic Lymphocytic Leukemia.
+						An additional user of the tools developed here will be a
+						collaboration studying prostate cancer using a genomics approach.
+					</p>
+					<p>We seek to address the following open issues to
+						network-based biomarker identification:
+					<ul>
+						<li><b>Identification of perturbed subnetworks and
+								pathways across cancers and cancer subtypes.</b> This track will
+							extend the Ideker group's ActiveModules method which searches a
+							biomolecular interaction network to identify connected
+							subnetworks for which the average expression level is higher than
+							(or more differentially-expressed than) expected. This track will
+							also implement Chris Sander's NetBox approach for identifying
+							frequently altered network modules within individual cancer
+							types. These network modules or cohesive groups of interconnected
+							genes are indicative of altered pathways in cancer, and have been
+							algorithmically identified in glioblastoma (Cerami, Sander et al.
+							publication in review).</li>
+						<li><b>Network-based classification of tumors.</b> This
+							algorithm will extend and implement the Ideker lab's recent work
+							in breast cancer classification to identify connected subnetworks
+							(extracted from protein interaction networks) and canonical
+							pathways (i.e. annotated sets of genes from pathway databases)
+							whose expression patterns maximally discriminate between tumors
+							of a specific clinical type. The method will be benchmarked on
+							the many published expression data sets that have been gathered
+							for distinguishing primary from metastatic cancer.</li>
+						<li><b>Integration of drug-target networks with
+								dysregulated pathways.</b> This algorithm will seek to automatically
+							link known drug-target networks with dysregulated pathways
+							identified by the algorithms above. Producing such an integrated
+							drug-target network will be an important first step in assessing
+							new cancer therapies, rationally developing combination
+							therapies, and tailoring choice of therapy to a patient's genetic
+							profile.</li>
+					</ul>
+
+					<img src="images/F5.png" width="700" /><br /> <b>Figure:
+						BioNetMarker Plugin and its application to data derived from the
+						TCGA Project.</b> The creation of BioNetMarker Cytoscape Plugin will
+					be tied to the analysis of cancer genomics data derived from the
+					TCGA project, as described in DBP 1. The five steps in using the
+					plugin are outlined. We envision that the plugin will be broadly
+					useful for identifying active and discriminating networks in
+					multiple diseases.
+				</div>
+			</div>
+			<div class="tab-pane" id="b-tab">
+				<h3>Project B: Recognizing trend motifs and dynamics in social
+					networks</h3>
+				<h4>
+					Project Leader: <a href="people.html#fowler">James Fowler</a>
+					(UCSD)
+				</h4>
+
+				<div class="well">
+
+					<p>
+						Social networks are increasingly recognized as having an important
+						effect on a wide variety of human behaviors, affecting the spread
+						of health outcomes (AIDS, obesity, drinking and smoking behavior),
+						emotional states (depression, loneliness, and happiness), and
+						political outcomes (legislative activity, judicial decisions, and
+						terrorist events). However, the statistical tools used to study
+						these effects are drawn from a tradition that focuses on dyads, or
+						sets of two people who are socially connected. When we find an
+						association in behavior within dyads, we typically cannot
+						distinguish three possible explanations. 1) <i>Homophily:</i>
+						people might choose to be friends with others because they have
+						the same behavior. In other words, birds of a feather might flock
+						together. 2) <i>Context:</i> there might be variation in the
+						environment than causes both individuals in a dyad to exhibit the
+						same behavior. For example, poor neighborhoods might create
+						environments that promote less healthy behaviors, causing an
+						association between friends who live in the same neighborhood. 3)
+						<i>Influence:</i> one person in the dyad actually influences the
+						other in some way to cause their behavior to become more like
+						their own.
+					</p>
+					<p>In this project, we will develop algorithms for analyzing
+						trend motifs in networks. Trend motifs are small patterns in a
+						network that change over time. These will be used to study the
+						spread of behaviors across social networks, primarily supporting
+						research in DBP 3 (Role of social networks in the spread of
+						disease). However, trend motifs are expected to be widely useful
+						and will also be applied to cancer time series progression data
+						from DBPs 1 and 2. The work will also provide a framework for a
+						collaboration to work towards understanding the genetic basis of
+						social networks. The algorithms will be developed and made freely
+						available as Cytoscape plugins.</p>
+					<p>
+						The understanding of collective behavior in social networks is of
+						great importance for a wide range of topics, spanning the
+						development of disease intervention strategies to the
+						identification of terrorist threats. Therefore, the <b>primary
+							aim</b> of this proposal is <i>to develop a technology that
+							distinguishes between homophily, context, and influence effects
+							in dynamic social networks, and apply this analysis tool to the
+							examination of health network databases such as the Framingham
+							Heart Study and the National Longitudinal Study of Adolescent
+							Health.</i> This technology will be developed using the Cytoscape
+						software infrastructure as Cytoscape plugin. In order to
+						understand why so many behaviors are influenced by social
+						connections, a tool must be developed that is able to detemiine
+						the variable contribution of a given set of potential causes (such
+						as homophily, context, and influence effects). This technology can
+						then be used to determine the underlying causes behind the spread
+						of various behaviors (health, political, emotional) in networks of
+						different types and across different time points. The emerging
+						techniques and tools will be broadly applicable to the study of
+						social network influence on health behaviors such as eating
+						habits, alcohol consumption, and drug use.
+					</p>
+					<p>We will also use the technology to explore the effect of
+						network structure on these behaviors. Given the evidence for
+						clustering of obesity, we expect local structures to have
+						important impacts on an individual's exposure to health behaviors
+						and outcomes that go beyond dyadic transmission. We will also
+						study the effect of structure on smoking and drinking behaviors,
+						political behaviors, and the emotional contagion of happiness,
+						depression, and loneliness.</p>
+
+					<img src="images/F9a.png" width="320" title="A" /><img
+						src="images/F9b.png" width="320" title="B" /><br /> <b>Figure:
+						Obesity in the Framingham Heart Study Social Network.</b> Panel (a)
+					shows a subcomponent of the whole FHS social network that contained
+					2,106 individuals in the year 2000. Node border indicates gender
+					(red=female, blue=male), node color indicates obesity
+					(yellow=BMI>30), node size is proportional to BMI, and arrow colors
+					indicate relationship (purple=friend or spouse, orange=family).
+					Created using Pajek.131 Panel (b) shows the estimated difference
+					between the probability that an alter is obese given that an ego is
+					obese in the observed FHS network and an identical network (with
+					topology preserved) in which the same number of obese individuals
+					is randomly distributed. Alter distance refers to closest social
+					distance between the alter and ego (alter = distance 1, alter's
+					alter = distance 2, etc.). Error bars show 95% confidence intervals
+					based on 1,000 simulations. The waves correspond to survey waves
+					spread out between 1971 and 2003.
+				</div>
+			</div>
+			<div class="tab-pane" id="c-tab">
+				<h3>Project C: Visualization and Representation of Biological
+					Networks</h3>
+				<h4>
+					Project Leaders: <a href="people.html#bader">Gary Bader</a> (U
+					Toronto) and <a href="people.html#alex">Alex Pico</a>
+					(Gladstone/UCSF)
+				</h4>
+
+				<div class="well">
+					<p>Biologists frequently use networks to represent the
+						structure and function of the cell, using intuitive metaphors to
+						reduce multiple levels of spatial and temporal relationships to a
+						two-dimensional image. At the same time, computational
+						representations of the cell are more abstract and tend to be less
+						intuitive for biologists than human-made diagrams. This section
+						describes planned improvements to the biological relevance of
+						computational visualizations of biological networks in Cytoscape.
+						Intuitive biological network visualizations may one day replace
+						printed biology textbooks as the primary resource for knowledge
+						about cellular processes.</p>
+					<p>Imagine being able to view the entire network of genes and
+						gene products working in a cell. Then freeze the cell at a moment
+						in time, and zoom to visualize the location, state, and
+						interconnections of a collection of molecules in a particular
+						subcellular location. Zoom in further to identify the splice
+						isoforms and variants resulting from that particular genome being
+						processed in that tissue, at that time, under specific conditions.
+						We are a long way from such an ideal cellular exploration system.
+						Instead, biological systems are typically visualized as "ball and
+						stick" networks that include only pairwise connections between
+						nodes. This representation has many limitations, such as the
+						inability to convey detailed knowledge about biological processes
+						and their dynamics (e.g. biochemical reactions which are three-way
+						relationships between metabolic substrates, products, and enzymes)
+						and poor visualization of very large numbers of nodes and links as
+						are present in the cell (e.g. resulting in visual "hairballs").</p>
+					<p>To overcome these challenges, we will develop new methods
+						for visualizing and exploring very large biological networks that
+						reduce visual complexity and enhance cognitive value compared to
+						the traditional network display. These approaches will exploit the
+						hierarchical and modular organization of biological networks and
+						the large amount of information available about nodes and edges,
+						such as Gene Ontology annotations of gene function. We will
+						develop visualization methods in the following areas driven by DBP
+						4 and DBP 5:
+					<ul>
+						<li><b>Simplifying network views by hierarchically
+								organizing networks and their modules.</b> Biological networks are
+							inherently modular (e.g. pathways and complexes) and hierarchical
+							(e.g. sub-pathways and complex subunits). We will develop methods
+							to organize networks hierarchically and to visually explore these
+							hierarchies. First, we will identify modular structures in the
+							network using a set of known modules (e.g. from gene annotation)
+							or by using existing clustering approaches and module detection
+							methods developed in TRD A, B and currently available in
+							Cytoscape. Next, modules will be rendered visually as individual
+							nodes connected by their inter-module relationships. This module
+							network is potentially hierarchical, in that each module defines
+							a sub-network, which may also contain modules. Visualization
+							methods will support modules with hidden or visible child nodes
+							and module overlap (e.g. for protein complexes that share
+							subunits). New automatic layout algorithms will be developed to
+							clearly organize modular, hierarchical networks using
+							partitioning and module-defined layout templates.</li>
+						<li><b>Showing only the information needed across
+								multiple levels of detail (semantic zooming) and data sources
+								(information layering).</b> The complete view of a large protein
+							interaction network would be extremely cluttered if it included
+							all protein details, such as the sequences or structures of all
+							proteins. Ideally, as the user zooms in to progressively focus in
+							on an area of interest, more details about that area are shown
+							(semantic zooming). Further, users should be able to select
+							information of interest to be viewed on the network (information
+							layering). We will develop methods to interactively navigate
+							networks across multiple levels of detail, from whole cell to
+							subfeatures of a node (e.g. protein domains, exons). This will
+							support multiple biological network types, such as pathways and
+							protein interaction networks, via the visualization of different
+							types of biological details at the module level (e.g. exons,
+							splice sites, polymorphisms, miRNA target sites, protein domains
+							and post-translational modifications) and at the molecular group
+							level (complexes, paralogs, haplotypes, chromosomal regions and
+							pathways). We will develop information layer-based visualization
+							strategies, where node and edge attributes, such as gene
+							expression profiles, will be represented as different layers that
+							can be interactively switched on and off.</li>
+						<li><b>Simultaneously viewing network attributes
+								collected from many biological experiments.</b> Proteins and genes
+							in biological networks are associated with an increasing amount
+							of data from multiple experiments, such as gene expression from
+							time-series or across normal and disease states. Ideally, this
+							multi-dimensional information would be visualized in the context
+							of networks. We will extend the Cytoscape visual mapping system
+							to support multiple node and edge data attributes at the same
+							time using new types of visual attributes.</li>
+					</ul>
+					<p>
+						To develop visualizations that are effective for exploring
+						biological networks, we will take advantage of recent developments
+						in Graphics Processing Unit (GPU) power and technology developed
+						in the field of Information Visualization (InfoVis), such as the <a
+							href="http://ivtk.sourceforge.net/">InfoVis Toolkit</a>. We will
+						also work with InfoVis and Human Computer Interaction researchers
+						to ensure that our novel network visualization methods will ease
+						network< navigation compared to current best methods.
+					</p>
+					<p>Researchers need tools to not only aid in the collection and
+						processing of large-scale datasets, but also to make sense of the
+						data in the familiar context of biological pathways. The
+						visualization methods that we will develop will enable a view of
+						the cell that is intuitive to biologists and that leads them
+						quickly to new discoveries - where a researcher exclaims "Aha! Now
+						I understand the relationships in my data and can formulate a new
+						hypothesis!" as a result of exploring a network in Cytoscape.</p>
+
+					<img src="images/F12.png" width="700" /><br /> <b>(Left)
+						Prototype hierarchical network view showing protein complexes
+						involved in transcription, as implemented by the CyOog plugin.</b>
+					This network is manually constructed. <br /> <b>(Right) A
+						prototype thematic map of yeast galactose metabolism and its
+						regulation.</b> Nodes are Gene Ontology biological process terms,
+					orange links represent protein-protein interactions and purple
+					links are protein-DNA interactions between or within processes.
+					Link width is proportional to number of interactions.
+				</div>
+			</div>
+			<div class="tab-pane" id="d-tab">
+				<h3>Project D: Predictive Modeling and Network Inference</h3>
+				<h4>
+					Project Leaders: <a href="people.html#benno">Benno Schwikowski</a>
+					(Institut Pasteur)
+				</h4>
+
+				<div class="well">
+					<p>We propose to create an extension to the Cytoscape network
+						visualization and analysis platform that will significantly
+						facilitate the implementation of state-of-the-art
+						clustering/classification and network inference algorithms for
+						biology and other domains. Based on numerous available data sets
+						(e.g. gene expression), these methods will propose connections
+						between components in specific biological systems under study.
+						This will be driven by and directly applicable to DBP 6
+						(Discovering agents that boost innate antimicrobial defenses).
+						This research will also be used by the BaSysBio Project, which
+						seeks to better understand dynamic gene regulation in bacteria.</p>
+
+					<p>Our broad objective is to make network induction more
+						accessible to biologists by providing a user-friendly solution
+						that lends itself to iterative application between computational
+						network inference and experimentation. Specifically:
+					<ol type="1">
+						<li>It will provide an extensible framework for the
+							implementation of a variety of clustering, classification, and
+							network inference (from now on summarized as "network learning")
+							algorithms. This will be done through a set of Application
+							Programmer Interfaces (APIs) specific to clustering,
+							classification, and network inference with supports for module
+							networks.</li>
+						<li>We will initially implement simple
+							clustering/classification and network inference algorithms,
+							enabling a first working solution.</li>
+						<li>The framework will offer a flexible Graphical User
+							Interface (GUI) to select algorithms to be used, input data, and
+							algorithm parameters.</li>
+						<li>It will offer the possibility to provide restrictions
+							(e.g., from prior knowledge or experimental evidence) to network
+							learning algorithms through the graphical user interface.</li>
+						<li>We will develop and implement a state-of-the-art network
+							inference algorithm that supports module networks and the
+							inclusion of prior knowledge.</li>
+						<li>The framework will be embedded into Cytoscape to:
+							<ul>
+								<li>Allow input of restrictions through a GUI,</li>
+								<li>Allow the visual inspection of the output of these
+									algorithms, and to</li>
+								<li>Provide numerous other network analysis functionality,
+									such as numerous layout functions, flexible visualization of
+									node/edge attributes and modules, and access to a variety of
+									data sources</li>
+							</ul>
+						</li>
+					</ol>
+					<p>We plan to study the usability of the new approach in an
+						iterative context with our biological collaborators.</p>
+
+
+					<img src="images/F20.png" width="700" /><br /> <b>Figure:</b>
+					The CYNI framework extends Cytoscape to support an iterative
+					computational-experimental cycle for network-based modeling.
+				</div>
+			</div>
+			<!-- end tab-pane -->
+
+		</div>
+		<!-- end tab-content -->
+
+		<hr>
+
+		<footer>
+			<p>
+				The National Resource for Network Biology is an NIH Division of
+				Biomedical Technology, Bioinformatics, and Computational Biology (<a
+					href="http://www.nigms.nih.gov/About/Overview/bbcb.htm"><b>BBCB</b></a>)
+				Biomedical Technology Research Center (<a
+					href="http://www.ncrr.nih.gov/biomedical_technology/biomedical_technology_research_centers/"><b>BTRC</b></a>).
+				NRNB is funded by grant GM103504.
+			</p>
+			<p class="pull-right">&copy; NRNB, 2013</p>
+			<p>
+				Contact: <a href="mailto:apico@gladstone.ucsf.edu">email us</a>
+			</p>
+		</footer>
+
+	</div>
+	<!-- /container -->
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push([ '_setAccount', 'UA-19386719-1' ]);
+		_gaq.push([ '_trackPageview' ]);
+
+		(function() {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+					: 'http://www')
+					+ '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
+
