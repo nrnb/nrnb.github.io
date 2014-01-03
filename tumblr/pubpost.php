@@ -15,6 +15,7 @@ label textarea{
 <option value="cytoscape-publications">cytoscape-publications</option>
 <option value="wikipathways">wikipathways</option>
 <option value="netbiopub">netbiopub</option>
+<option value="exrna">exrna</option>
 </select>
 </label>
 <br />

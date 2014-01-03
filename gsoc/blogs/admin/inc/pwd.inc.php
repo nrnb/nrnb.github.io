@@ -1,0 +1,1 @@
+<?php $login="admin"; $password="a55f1d0cdc1e372a08744dda82eebe5b"; ?>

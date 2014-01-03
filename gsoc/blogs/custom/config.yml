@@ -1,0 +1,10 @@
+---
+url: http://nrnb.org/gsoc/blogs/
+name: NRNB GSoC Blogs
+items: 10
+shuffle: 0
+refresh: 240
+cache: 10
+nohtml: 0
+postmaxlength: 0
+cachedir: ./cache
