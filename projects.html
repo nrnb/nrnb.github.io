@@ -384,56 +384,23 @@ body {
 				</h4>
 
 				<div class="well">
-					<p>We propose to create an extension to the Cytoscape network
-						visualization and analysis platform that will significantly
-						facilitate the implementation of state-of-the-art
-						clustering/classification and network inference algorithms for
-						biology and other domains. Based on numerous available data sets
-						(e.g. gene expression), these methods will propose connections
-						between components in specific biological systems under study.
-						This will be driven by and directly applicable to DBP 6
-						(Discovering agents that boost innate antimicrobial defenses).
-						This research will also be used by the BaSysBio Project, which
-						seeks to better understand dynamic gene regulation in bacteria.</p>
+					<p>The objectives of this TRD are to (1) Create 'fill-in-the-algorithm' infrastructure 
+					for network inference and (2) Make methods accessible to biologists within the Cytoscape 
+					framework. Our approach is to create a software infrastructure (CYNI) for network inference 
+					algorithms.</p>
 
-					<p>Our broad objective is to make network induction more
-						accessible to biologists by providing a user-friendly solution
-						that lends itself to iterative application between computational
-						network inference and experimentation. Specifically:
-					<ol type="1">
-						<li>It will provide an extensible framework for the
-							implementation of a variety of clustering, classification, and
-							network inference (from now on summarized as "network learning")
-							algorithms. This will be done through a set of Application
-							Programmer Interfaces (APIs) specific to clustering,
-							classification, and network inference with supports for module
-							networks.</li>
-						<li>We will initially implement simple
-							clustering/classification and network inference algorithms,
-							enabling a first working solution.</li>
-						<li>The framework will offer a flexible Graphical User
-							Interface (GUI) to select algorithms to be used, input data, and
-							algorithm parameters.</li>
-						<li>It will offer the possibility to provide restrictions
-							(e.g., from prior knowledge or experimental evidence) to network
-							learning algorithms through the graphical user interface.</li>
-						<li>We will develop and implement a state-of-the-art network
-							inference algorithm that supports module networks and the
-							inclusion of prior knowledge.</li>
-						<li>The framework will be embedded into Cytoscape to:
-							<ul>
-								<li>Allow input of restrictions through a GUI,</li>
-								<li>Allow the visual inspection of the output of these
-									algorithms, and to</li>
-								<li>Provide numerous other network analysis functionality,
-									such as numerous layout functions, flexible visualization of
-									node/edge attributes and modules, and access to a variety of
-									data sources</li>
-							</ul>
-						</li>
-					</ol>
-					<p>We plan to study the usability of the new approach in an
-						iterative context with our biological collaborators.</p>
+					<p>The Cyni Toolbox app is available from the Cytoscape App Store (link) and is also available 
+					here (http://www.proteomics.fr/Sysbio/CyniProject). Data imputation and discretization techniques 
+					are provided along with several known inference algorithms to make this tool fully operational for 
+					any kind of inference requirement. While data imputation and discretization techniques allow you 
+					modify Cytoscape tables, network inference algorithms produce a new network after applying the chosen technique.
+				
+					<p>Cyni Toolbox is not only an application to perform a result, but it also provides a framework 
+					for other app developers to facilitate the implementation of other algorithms. The goal of the 
+					Cyni framework is to provide standardized, extensible and configurable default solutions for all 
+					components different from the core algorithms, such as GUI, parameter handling, and configuration 
+					of distance/similarity measures. Thereby, developers can focus on their core expertise. Tutorials 
+					are available for Cyni Toolbox users as well as for developing new algorithms through Cyni.</p>
 
 
 					<img src="images/F20.png" width="700" /><br /> <b>Figure:</b>
