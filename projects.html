@@ -286,22 +286,22 @@ body {
 						relationships between metabolic substrates, products, and enzymes)
 						and poor visualization of very large numbers of nodes and links as
 						are present in the cell (e.g. resulting in visual "hairballs").</p>
-					<p>To overcome these challenges, we will develop new methods
-						for visualizing and exploring very large biological networks that
-						reduce visual complexity and enhance cognitive value compared to
-						the traditional network display. These approaches will exploit the
-						hierarchical and modular organization of biological networks and
-						the large amount of information available about nodes and edges,
-						such as Gene Ontology annotations of gene function. We will
-						develop visualization methods in the following areas driven by DBP
-						4 and DBP 5:
+					<p>To overcome these challenges, we are develop new methods for visualizing 
+					and exploring very large biological networks that reduce visual complexity 
+					and enhance cognitive value compared to the traditional network display. These 
+					approaches will exploit the hierarchical and modular organization of biological 
+					networks and the large amount of information available about nodes and edges, 
+					such as Gene Ontology annotations of gene function. We are developing visualization 
+					methods in the following areas: 
 					<ul>
 						<li><b>Simplifying network views by hierarchically
 								organizing networks and their modules.</b> Biological networks are
 							inherently modular (e.g. pathways and complexes) and hierarchical
-							(e.g. sub-pathways and complex subunits). We will develop methods
-							to organize networks hierarchically and to visually explore these
-							hierarchies. First, we will identify modular structures in the
+							(e.g. sub-pathways and complex subunits). Biological networks are inherently 
+							modular (e.g. pathways and complexes) and hierarchical (e.g. sub-pathways and 
+							complex subunits). We are developing methods to organize networks hierarchically 
+							and to visually explore these hierarchies.  
+							First, we will identify modular structures in the
 							network using a set of known modules (e.g. from gene annotation)
 							or by using existing clustering approaches and module detection
 							methods developed in TRD A, B and currently available in
@@ -314,48 +314,43 @@ body {
 							subunits). New automatic layout algorithms will be developed to
 							clearly organize modular, hierarchical networks using
 							partitioning and module-defined layout templates.</li>
-						<li><b>Showing only the information needed across
-								multiple levels of detail (semantic zooming) and data sources
-								(information layering).</b> The complete view of a large protein
-							interaction network would be extremely cluttered if it included
-							all protein details, such as the sequences or structures of all
-							proteins. Ideally, as the user zooms in to progressively focus in
-							on an area of interest, more details about that area are shown
-							(semantic zooming). Further, users should be able to select
-							information of interest to be viewed on the network (information
-							layering). We will develop methods to interactively navigate
-							networks across multiple levels of detail, from whole cell to
-							subfeatures of a node (e.g. protein domains, exons). This will
-							support multiple biological network types, such as pathways and
-							protein interaction networks, via the visualization of different
-							types of biological details at the module level (e.g. exons,
-							splice sites, polymorphisms, miRNA target sites, protein domains
-							and post-translational modifications) and at the molecular group
-							level (complexes, paralogs, haplotypes, chromosomal regions and
-							pathways). We will develop information layer-based visualization
-							strategies, where node and edge attributes, such as gene
-							expression profiles, will be represented as different layers that
-							can be interactively switched on and off.</li>
+						<li><b>Showing only the information needed across multiple levels of detail 
+						(semantic zooming) and data sources (information layering).</b> The complete 
+						view of a large protein interaction network would be extremely cluttered if 
+						it included all protein details, such as the sequences or structures of all 
+						proteins. Ideally, as the user zooms in to progressively focus in on an area 
+						of interest, more details about that area are shown (semantic zooming). Further, 
+						users should be able to select information of interest to be viewed on the network 
+						(information layering). We will develop methods to interactively navigate networks 
+						across multiple levels of detail, from whole cell to subfeatures of a node 
+						(e.g. protein domains, exons). This will support multiple biological network types, 
+						such as pathways and protein interaction networks, via the visualization of different 
+						types of biological details at the module level (e.g. exons, splice sites, polymorphisms, 
+						miRNA target sites, protein domains and post-translational modifications) and at the 
+						molecular group level (complexes, paralogs, haplotypes, chromosomal regions and pathways). 
+						We will develop information layer-based visualization strategies, where node and edge 
+						attributes, such as gene expression profiles, will be represented as different layers 
+						that can be interactively switched on and off.</li>
 						<li><b>Simultaneously viewing network attributes
-								collected from many biological experiments.</b> Proteins and genes
-							in biological networks are associated with an increasing amount
-							of data from multiple experiments, such as gene expression from
-							time-series or across normal and disease states. Ideally, this
-							multi-dimensional information would be visualized in the context
-							of networks. We will extend the Cytoscape visual mapping system
-							to support multiple node and edge data attributes at the same
-							time using new types of visual attributes.</li>
+							collected from many biological experiments.</b> Proteins and genes in biological 
+							networks are associated with an increasing amount of data from multiple experiments, 
+							such as gene expression from time-series or across normal and disease states. Ideally, 
+							this multi-dimensional information would be visualized in the context of networks. 
+							We are extending Cytoscape to support new types of visualizations to enable multiple 
+							node and edge data to be visualized at the same time.</li>
+						<li><b>Analyzing Complex Networks Using Ontologies.</b>The development of high-throughput 
+						technology has given rise to an enormous increase of data on biomolecular expression and 
+						interactions, which results in protein interaction networks, gene regulatory networks, 
+						signaling networks and metabolic networks. One approach to understanding networks relies on 
+						ontologies, such as Gene Ontology, and enrichment analysis. We are developing network functional 
+						analysis methods that take into consideration network topology. Our NOA app implements the NOA 
+						algorithm for network-based enrichment analysis, which extends Gene Ontology annotations to 
+						network links, or edges. The NOA app facilitates the annotation and analysis of one or more 
+						networks in Cytoscape according to user-defined parameters. In addition to tables, the NOA 
+						app also presents results in the form of heatmaps and overview networks in Cytoscape, which 
+						can be exported for publication figures.</li>
 					</ul>
-					<p>
-						To develop visualizations that are effective for exploring
-						biological networks, we will take advantage of recent developments
-						in Graphics Processing Unit (GPU) power and technology developed
-						in the field of Information Visualization (InfoVis), such as the <a
-							href="http://ivtk.sourceforge.net/">InfoVis Toolkit</a>. We will
-						also work with InfoVis and Human Computer Interaction researchers
-						to ensure that our novel network visualization methods will ease
-						network< navigation compared to current best methods.
-					</p>
+					
 					<p>Researchers need tools to not only aid in the collection and
 						processing of large-scale datasets, but also to make sense of the
 						data in the familiar context of biological pathways. The
@@ -365,15 +360,20 @@ body {
 						I understand the relationships in my data and can formulate a new
 						hypothesis!" as a result of exploring a network in Cytoscape.</p>
 
-					<img src="images/F12.png" width="700" /><br /> <b>(Left)
+					<img src="images/F12.png" width="700" /><br /> 
+					<img src="images/NOA.png" width="700" /><br />
+					<b>(Left)
 						Prototype hierarchical network view showing protein complexes
 						involved in transcription, as implemented by the CyOog plugin.</b>
-					This network is manually constructed. <br /> <b>(Right) A
+					This network is manually constructed. <br /> <b>(Middle) A
 						prototype thematic map of yeast galactose metabolism and its
 						regulation.</b> Nodes are Gene Ontology biological process terms,
 					orange links represent protein-protein interactions and purple
 					links are protein-DNA interactions between or within processes.
-					Link width is proportional to number of interactions.
+					Link width is proportional to number of interactions. <br /><b>(Right) 
+					A heatmap of GO-annotated human pathways based on batch mode NOA app 
+					analysis. Axes are labeled in inset, highlighting apoptosis-related 
+					pathways and GO terms.</b>
 				</div>
 			</div>
 			<div class="tab-pane" id="d-tab">
