@@ -93,8 +93,8 @@ body {
 				</h4>
 
 				<div class="well">
-					<p><b>A Gene Ontology Extracted from Molecular Networks (Trey Ideker, UCSD)</b>:<br />
-					Ontologies are of key importance to many domains of biological research. The Gene Ontology (GO), 
+					<h3>A Gene Ontology Extracted from Molecular Networks (Trey Ideker, UCSD):</h3>
+					<p>Ontologies are of key importance to many domains of biological research. The Gene Ontology (GO), 
 					in particular, has been instrumental in unifying knowledge about biological processes, 
 					cellular components, and molecular functions through a hierarchy of concepts and their 
 					interrelationships. However, given only partial biological knowledge and inconsistency in how 
@@ -178,7 +178,7 @@ body {
 					when the user queries for the gene EGFR in the portal, we not only show the network context of this gene, 
 					but also provide information about the drugs targeting the product of this gene: geﬁtinib and erlotinib 
 					are tyrosine kinase inhibitors that target the catalytic domain of EGFR, and cetuximab and trastuzumab 
-					are monoclonal antibodies that target the extracellular domain of EGFR and ERBB2, respectively (Fig. 3) [11].</p>
+					are monoclonal antibodies that target the extracellular domain of EGFR and ERBB2, respectively (Fig. 3) [11].
 					
 					<img src="images/SanderF1.png" width="700" /><br /> 
 					<b>Figure 3: Improved Network tab: Network analysis of epidermal growth factor receptor networks 
@@ -190,8 +190,8 @@ body {
 					genomic data (copy number, mutation, and mRNA expression) onto all nodes in the network. (C) Edges can 
 					represent different interaction types (color-coded, such as “reacts with”). (D) Options for filtering, 
 					cropping and searching the network of interest.
-					
-					<p>Our new drug-target feature is now available as part of the open-access cBioPortal and is helping 
+					<br /><br />
+					Our new drug-target feature is now available as part of the open-access cBioPortal and is helping 
 					cancer researchers in exploring the therapy options within the network context of genes of interest. </p>
 					
 					<p><b>New Driving Biological Projects:</b> In the next year, we are anticipating improving the network 
@@ -211,7 +211,7 @@ body {
 					recently been implemented as a proof-of-concept prototype and is now being integrated into cBioPortal. 
 					When complete, this new feature will allow better presentation of proteomics data (e.g. Reverse Phase 
 					Protein Array data provided as part of the TCGA network) by allowing users to optionally switch from 
-					a gene-centric to protein-centric view.</p>
+					a gene-centric to protein-centric view.
 					
 					<img src="images/SanderF2.png" width="700" /> <br /> <b>Figure 4:
 					Proposed additions to the current simple network view.</b> On the left is the Simple Interaction 
@@ -220,11 +220,24 @@ body {
 					(SBGN), of the CytoscapeWeb project. The SBGN view provides a more detailed representation of the 
 					pathway and also provides protein-centric view with Proteomics data mapped to specific proteins or 
 					phospho-proteins.
-				
 					
+					<p>In the next year, we are also planning to utilize genomic alteration and pathway data to infer 
+					clinically relevant uses of drug-target data. For this, we intend to use down- and up-stream relationships 
+					between genes to suggest drugs of possible interest that can indirectly target a particular genomic 
+					alteration event in cancer samples (see Figure 4). One historical example for such cases is the use of 
+					AKT inhibitors in patients who bear a homozygous PTEN deletion. Without the gene PTEN and its product, 
+					Akt proteins, which are down-stream of PTEN, cannot be suppressed, and therefore are found to be 
+					upregulated in cancer samples that have the homozygous PTEN deletion. In the presence of an AKT 
+					inhibitor, this up-regulation effect can be counteracted. Another similar example of this concept is 
+					the use of CDK4/6 inhibitors when CDKN2A is either mutated or homozygously deleted in cancer cells. 
+					Pathway resources, such as Pathway Commons, already provide this type of relationships between genes; 
+					and we plan to extract this information in a systematic way and combine it with the drug-target data 
+					in order to infer such therapy options in an automatic manner within the cBioPortal framework. This 
+					method and the prototype are currently under development (Stage 2).
 					<img src="images/SanderF3.png" width="700" /> <br /> <b>Figure 5:</b>
 					Conceptual framework for inferring novel and drug-based therapy options based on specific genomic 
 					alteration with the use of pathway context -- e.g. use of AKT inhibitors when PTEN is altered in the tumor.
+					</p>
 					
 					<p><b>Network Analysis Methods for Inferring Causality in Signaling Networks (Sander, MSKCC)</b><br />
 					The goal of our second TRD project is to develop network analysis tools that algorithmically infer 
