@@ -129,7 +129,7 @@ body {
 					what types of network data could be used to increase the coverage of biological processes and molecular 
 					functions. Finally, a key question is whether enough high-quality data exist to build NeXO ontologies for 
 					other species, particularly human, and, whether it is better to structure a common ontology for all species, 
-					as has been done in GO, or to focus on individual species-specific ontologies.</p>
+					as has been done in GO, or to focus on individual species-specific ontologies.
 					
 					<img src="images/IdekerF1.png" width="700" /><br /> 
 					<b>Figure 1: Automated assembly and alignment of gene ontologies.</b> (A) Probabilistic community detection within 
@@ -139,11 +139,11 @@ body {
 					in a way that (B) prohibits non-unique mappings and ancestor-descendant criss-crossing.
 					
 					<img src="images/IdekerF2.png" width="700" /><br /> <b>Figure 2:</b>
-					The NeXO ontology is shown as a tree, with nodes indicating terms and edges indi-cating hierarchical 
-					relations between terms, i.e. that one term contains another. Node sizes indi-cate the number of genes assigned 
+					The NeXO ontology is shown as a tree, with nodes indicating terms and edges indicating hierarchical 
+					relations between terms, i.e. that one term contains another. Node sizes indicate the number of genes assigned 
 					to a term. Node colors represent the degree of correspon-dence to a term in GO as determined by ontology alignment, 
-					with high-level alignments labeled. Insets show the hierarchy identi-fied for the ribosome and actin cytoskeleton.
-					
+					with high-level alignments labeled. Insets show the hierarchy identified for the ribosome and actin cytoskeleton.
+					</p>
 					<p><b>Network Analysis Tools for Cancer Genomics (Chris Sander, MSKCC):</b><br />This project is focused on building 
 					network analysis tools for interpreting high-throughput cancer genomic data sets to identify altered disease 
 					networks and enable the identification of network-based biomarkers in cancer. Our primary focus is building 
@@ -154,6 +154,7 @@ body {
 					is critical, as numerous large-scale projects, including the Cancer Genome Atlas (TCGA) project and the 
 					International Cancer Genome Consortium (ICGC), are profiling dozens of cancer types and subtypes. Identifying 
 					altered pathways and networks within each of these cancer types remains a critical and open challenge.</p>
+					
 					<p>During our first several years of NRNB funding, we completed a prototype project for displaying 
 					multi-dimensional cancer genomic data in the context of molecular interaction networks. We chose to 
 					implement the prototype in CytoscapeWeb [1], as CytoscapeWeb does not require any additional software 
@@ -163,6 +164,7 @@ body {
 					to the entire cancer research community. Cancer researchers are now using these tools to perform 
 					network analysis on up to 20 different cancer types, including TCGA-funded projects, such as glioblastoma 
 					multiforme (GBM) [2] and serous ovarian cancer [3].</p>
+					
 					<p>The cBioPortal for Cancer Genomics code base has recently reached a stable state where it is now being 
 					considered as a general framework to build our other NRNB-related tools on. Our recently finalized drug-target 
 					data support in the context of cBioPortal’s network analysis is one such example. During the past year, 
@@ -177,6 +179,7 @@ body {
 					but also provide information about the drugs targeting the product of this gene: geﬁtinib and erlotinib 
 					are tyrosine kinase inhibitors that target the catalytic domain of EGFR, and cetuximab and trastuzumab 
 					are monoclonal antibodies that target the extracellular domain of EGFR and ERBB2, respectively (Fig. 3) [11].</p>
+					
 					<img src="images/SanderF1.png" width="700" /><br /> 
 					<b>Figure 3: Improved Network tab: Network analysis of epidermal growth factor receptor networks 
 					in serous ovarian cancer.</b> (A) Network view of the EGFR and ERBB2 neighborhood in serous ovarian cancer 
@@ -187,9 +190,11 @@ body {
 					genomic data (copy number, mutation, and mRNA expression) onto all nodes in the network. (C) Edges can 
 					represent different interaction types (color-coded, such as “reacts with”). (D) Options for filtering, 
 					cropping and searching the network of interest.
+					
 					<p>Our new drug-target feature is now available as part of the open-access cBioPortal and is helping 
 					cancer researchers in exploring the therapy options within the network context of genes of interest. </p>
-					<p><b>New Driving Biological Projects:</b>In the next year, we are anticipating improving the network 
+					
+					<p><b>New Driving Biological Projects:</b> In the next year, we are anticipating improving the network 
 					analysis feature in two ways: 1) detailed visualization of the pathways and reactions in the network view; 
 					2) inference of indirect drug targets, for potentially interesting therapy options, by using genomic 
 					alteration and drug-target data. Currently, interaction types that are shown in the network analysis 
@@ -202,22 +207,24 @@ body {
 					biological networks in a more detailed way, therefore enabling the use of Systems Biology Graphical 
 					Notation (SBGN) for better representation of BioPAX. As part of our NRNB collaboration with Ugur 
 					Dogrusoz (Bilkent University, Turkey), we are aiming to adopt SBGN-complaint views to visualize 
-					multi-dimensional cancer genomics data with the network context (see Figure 3). This project has 
+					multi-dimensional cancer genomics data with the network context (see Figure 4). This project has 
 					recently been implemented as a proof-of-concept prototype and is now being integrated into cBioPortal. 
 					When complete, this new feature will allow better presentation of proteomics data (e.g. Reverse Phase 
 					Protein Array data provided as part of the TCGA network) by allowing users to optionally switch from 
 					a gene-centric to protein-centric view.</p>
-					<img src="images/SanderF2.png" width="700" /><br /> <b>Figure 3:
+					
+					<img src="images/SanderF2.png" width="700" /><br /> <b>Figure 4:
 					Proposed additions to the current simple network view.</b> On the left is the Simple Interaction 
 					derived from BioPAX; on the right is an example visualization of a BioPAX network obtained from Pathway 
 					Commons. The latter is utilizing the new visualization capabilities, Systems Biology Graphical Notation 
 					(SBGN), of the CytoscapeWeb project. The SBGN view provides a more detailed representation of the 
 					pathway and also provides protein-centric view with Proteomics data mapped to specific proteins or 
 					phospho-proteins.
+					
 					<p>In the next year, we are also planning to utilize genomic alteration and pathway data to infer 
 					clinically relevant uses of drug-target data. For this, we intend to use down- and up-stream 
 					relationships between genes to suggest drugs of possible interest that can indirectly target a 
-					particular genomic alteration event in cancer samples (see Figure 4). One historical example for 
+					particular genomic alteration event in cancer samples (see Figure 5). One historical example for 
 					such cases is the use of AKT inhibitors in patients who bear a homozygous PTEN deletion. Without 
 					the gene PTEN and its product, Akt proteins, which are down-stream of PTEN, cannot be suppressed, 
 					and therefore are found to be upregulated in cancer samples that have the homozygous PTEN deletion. 
@@ -227,9 +234,11 @@ body {
 					relationships between genes; and we plan to extract this information in a systematic way and combine 
 					it with the drug-target data in order to infer such therapy options in an automatic manner within the 
 					cBioPortal framework. This method and the prototype are currently under development. </p>
-					<img src="images/SanderF3.png" width="700" /><br /> <b>Figure 4:
+					
+					<img src="images/SanderF3.png" width="700" /><br />Figure 5:
 					Conceptual framework for inferring novel and drug-based therapy options based on specific genomic 
 					alteration with the use of pathway context -- e.g. use of AKT inhibitors when PTEN is altered in the tumor.
+					
 					<p><b>Network Analysis Methods for Inferring Causality in Signaling Networks (Sander, MSKCC)</b><br />
 					The goal of our second TRD project is to develop network analysis tools that algorithmically infer 
 					causality within signaling networks and make these tools available. High-throughput screens conducted 
