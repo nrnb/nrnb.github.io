@@ -94,8 +94,8 @@ body {
 
 				<div class="well">
 					<h4>A Gene Ontology Extracted from Molecular Networks (Trey Ideker, UCSD):</h4>
-					<p>Ontologies are of key importance to many domains of biological research. The Gene Ontology (GO), 
-					in particular, has been instrumental in unifying knowledge about biological processes, 
+					<p>Ontologies are of key importance to many domains of biological research. 
+					The Gene Ontology (GO), in particular, has been instrumental in unifying knowledge about biological processes, 
 					cellular components, and molecular functions through a hierarchy of concepts and their 
 					interrelationships. However, given only partial biological knowledge and inconsistency in how 
 					this knowledge is curated, it has been difficult to construct, extend and validate GO in an 
@@ -352,121 +352,163 @@ body {
 				</h4>
 
 				<div class="well">
-					<p>Biologists frequently use networks to represent the
-						structure and function of the cell, using intuitive metaphors to
-						reduce multiple levels of spatial and temporal relationships to a
-						two-dimensional image. At the same time, computational
-						representations of the cell are more abstract and tend to be less
-						intuitive for biologists than human-made diagrams. This section
-						describes planned improvements to the biological relevance of
-						computational visualizations of biological networks in Cytoscape.
-						Intuitive biological network visualizations may one day replace
-						printed biology textbooks as the primary resource for knowledge
-						about cellular processes.</p>
-					<p>Imagine being able to view the entire network of genes and
-						gene products working in a cell. Then freeze the cell at a moment
-						in time, and zoom to visualize the location, state, and
-						interconnections of a collection of molecules in a particular
-						subcellular location. Zoom in further to identify the splice
-						isoforms and variants resulting from that particular genome being
-						processed in that tissue, at that time, under specific conditions.
-						We are a long way from such an ideal cellular exploration system.
-						Instead, biological systems are typically visualized as "ball and
-						stick" networks that include only pairwise connections between
-						nodes. This representation has many limitations, such as the
-						inability to convey detailed knowledge about biological processes
-						and their dynamics (e.g. biochemical reactions which are three-way
-						relationships between metabolic substrates, products, and enzymes)
-						and poor visualization of very large numbers of nodes and links as
-						are present in the cell (e.g. resulting in visual "hairballs").</p>
-					<p>To overcome these challenges, we are develop new methods for visualizing 
-					and exploring very large biological networks that reduce visual complexity 
-					and enhance cognitive value compared to the traditional network display. These 
-					approaches will exploit the hierarchical and modular organization of biological 
-					networks and the large amount of information available about nodes and edges, 
-					such as Gene Ontology annotations of gene function. We are developing visualization 
-					methods in the following areas: 
+					<h4>Cytoscape 3.0 and CytoscapeWeb for the Visualization and Representation 
+					of Biological Networks 
+					(Bader, U Toronto): </h4>
+					<p><b>Technologies developed with NRNB funds:</b><br />
+					Our goal is to develop new technologies for visualization and representation 
+					of biological networks. 
+					Our grant aims are:
 					<ul>
-						<li><b>Simplifying network views by hierarchically
-								organizing networks and their modules.</b> Biological networks are
-							inherently modular (e.g. pathways and complexes) and hierarchical
-							(e.g. sub-pathways and complex subunits). Biological networks are inherently 
-							modular (e.g. pathways and complexes) and hierarchical (e.g. sub-pathways and 
-							complex subunits). We are developing methods to organize networks hierarchically 
-							and to visually explore these hierarchies.  
-							First, we will identify modular structures in the
-							network using a set of known modules (e.g. from gene annotation)
-							or by using existing clustering approaches and module detection
-							methods developed in TRD A, B and currently available in
-							Cytoscape. Next, modules will be rendered visually as individual
-							nodes connected by their inter-module relationships. This module
-							network is potentially hierarchical, in that each module defines
-							a sub-network, which may also contain modules. Visualization
-							methods will support modules with hidden or visible child nodes
-							and module overlap (e.g. for protein complexes that share
-							subunits). New automatic layout algorithms will be developed to
-							clearly organize modular, hierarchical networks using
-							partitioning and module-defined layout templates.</li>
-						<li><b>Showing only the information needed across multiple levels of detail 
-						(semantic zooming) and data sources (information layering).</b> The complete 
-						view of a large protein interaction network would be extremely cluttered if 
-						it included all protein details, such as the sequences or structures of all 
-						proteins. Ideally, as the user zooms in to progressively focus in on an area 
-						of interest, more details about that area are shown (semantic zooming). Further, 
-						users should be able to select information of interest to be viewed on the network 
-						(information layering). We will develop methods to interactively navigate networks 
-						across multiple levels of detail, from whole cell to subfeatures of a node 
-						(e.g. protein domains, exons). This will support multiple biological network types, 
-						such as pathways and protein interaction networks, via the visualization of different 
-						types of biological details at the module level (e.g. exons, splice sites, polymorphisms, 
-						miRNA target sites, protein domains and post-translational modifications) and at the 
-						molecular group level (complexes, paralogs, haplotypes, chromosomal regions and pathways). 
-						We will develop information layer-based visualization strategies, where node and edge 
-						attributes, such as gene expression profiles, will be represented as different layers 
-						that can be interactively switched on and off.</li>
-						<li><b>Simultaneously viewing network attributes
-							collected from many biological experiments.</b> Proteins and genes in biological 
-							networks are associated with an increasing amount of data from multiple experiments, 
-							such as gene expression from time-series or across normal and disease states. Ideally, 
-							this multi-dimensional information would be visualized in the context of networks. 
-							We are extending Cytoscape to support new types of visualizations to enable multiple 
-							node and edge data to be visualized at the same time.</li>
-						<li><b>Analyzing Complex Networks Using Ontologies.</b>The development of high-throughput 
-						technology has given rise to an enormous increase of data on biomolecular expression and 
-						interactions, which results in protein interaction networks, gene regulatory networks, 
-						signaling networks and metabolic networks. One approach to understanding networks relies on 
-						ontologies, such as Gene Ontology, and enrichment analysis. We are developing network functional 
-						analysis methods that take into consideration network topology. Our NOA app implements the NOA 
-						algorithm for network-based enrichment analysis, which extends Gene Ontology annotations to 
-						network links, or edges. The NOA app facilitates the annotation and analysis of one or more 
-						networks in Cytoscape according to user-defined parameters. In addition to tables, the NOA 
-						app also presents results in the form of heatmaps and overview networks in Cytoscape, which 
-						can be exported for publication figures.</li>
+					<li><b>Aim 1.</b> Simplifying network views by hierarchically organizing 
+					networks and their modules.</li>
+					<li><b>Aim 2.</b> Showing only the information needed across multiple levels 
+					of detail (semantic zooming) 
+					and data sources (information layering)</li>
+					<li><b>Aim 3.</b> Simultaneously viewing network attributes collected from 
+					many biological experiments. </li>	
 					</ul>
+					<p>Our major activity over the past year has continued to ensure that Cytoscape 
+					3.0 supports the advanced visualization and representation features that we 
+					proposed in the NRNB grant, both in system design and performance. This has 
+					required major effort working on releasing Cytoscape 3.0 and making sure all 
+					of the application programming interfaces (APIs) present in that system will 
+					support our aims. Cytoscape 3.0 has now been released and we are focusing on 
+					developing new features. Over the past year, we implemented support for multiple
+					renderers so app authors can contribute their own visualizations. We helped 
+					integrate the Metanodes plugin into Cytoscape 3 as CyGroups in collaboration 
+					with Scooter Morris at UCSF, which enables hierarchical views. We developed 
+					technology to integrate OpenGL into Cytoscape, which required changes to the 
+					code building process. This will support faster new visualizations in the future 
+					that take advantage of current graphics card functionality. We also mentored a 
+					GSoC project for visualizing dynamic networks (e.g. networks that vary over time).
+					</p>
+					<p>Excitingly, we have also ported over the CytoscapeWeb visualization tool that 
+					we originally developed for the GeneMANIA project to use open web standards 
+					such as HTML5. This software is now available at 
+					github.com/cytoscape/cytoscape.js. This involved testing various HTML5 canvas 
+					and WebGL based libraries for rendering networks within the browser, such as 
+					Three.js, KineticJS, EaselJS, performing performance testing using WebGL directly 
+					for drawing networks using HTML5 technology, performing performance testing using 
+					HTML5 canvas directly and finally implementing a complete HTML5 canvas based 
+					rendered that is fully compatible with touch devices, like the Apple iPad. 
+					This technology will improve accessibility of Cytoscape visualizations by 
+					supporting any computing device that runs a modern web browser (many of which 
+					can not run the Cytoscape Java application). As more groups develop web-based 
+					network visualization and analysis functionality, we expect extensive innovation 
+					in user interfaces and visualization techniques to occur on this platform. We 
+					are also continuing to lay the groundwork for representation and visualization 
+					of detailed biological pathway information in Cytoscape 3. We have completed 
+					the following activities in this area:
+					<ul>
+					<li>Developed a new CyPath2 Cytoscape 3.0 app, which can load biological 
+					pathway data from the Pathway Commons web service in BioPAX level 3 format.</li>
+					<li>Updated BioPAX and Pathway Commons core plugins/apps for Cy2 and Cy3</li>
+					</ul>
+					</p>
+					<p>Ensuring Cytoscape 3 will enable our stated aims has required tremendous 
+					effort, in that we have need to implement a number of prototype features to 
+					test that our API designs are robust. We expect this work will pay off in 
+					2013 now that we have finally released Cytoscape 3 and have started working 
+					on novel visualization features in earnest.</p>
+					<p>We continue to maintain our highly successful Enrichment Map visualization 
+					plugin for Cytoscape 2.8, responding to frequent requests by users for new 
+					features. This visualization tool is heavily used in all of our collaborations 
+					with local biology groups and by others (the two papers describing the method 
+					garnered over 90 citations since 2010). We have recently established a 
+					collaboration with Jill Mesirov’s group at the Broad Institute, MIT to integrate 
+					Enrichment Map into their popular Gene Set Enrichment Analysis (GSEA) software. 
+					This work, funded by a separate NIH R01 grant, is now complete and will be 
+					released in the coming months.</p>
+					<p>Over the past year, we have developed strong ties with a new driving 
+					biological project – the 
+					<a href="http://oicr.on.ca/oicr-programs-and-platforms/innovation-programs/cancer-stem-cells">
+					Cancer Stem Cell program</a> at the Ontario Institute for Cancer Research (OICR) 
+					in Toronto, led by John Dick, the discoverer of cancer stem cells. Fifteen labs 
+					participate in this program, most of which run genomics experiments and are very 
+					interested in pathway analysis to help interpret their results. As such, they 
+					have funded two full time research associates in my lab, Veronique Voisin who 
+					does pathway analysis using Enrichment Map and Shaheena Bashir, who is a 
+					biostatistician who processes raw genomics data to prepare for pathway analysis. 
+					This has led to the four published projects in the past year.</p>
 					
-					<p>Researchers need tools to not only aid in the collection and
-						processing of large-scale datasets, but also to make sense of the
-						data in the familiar context of biological pathways. The
-						visualization methods that we will develop will enable a view of
-						the cell that is intuitive to biologists and that leads them
-						quickly to new discoveries - where a researcher exclaims "Aha! Now
-						I understand the relationships in my data and can formulate a new
-						hypothesis!" as a result of exploring a network in Cytoscape.</p>
-
-					<img src="images/F12.png" width="700" /><br /> 
-					<img src="images/NOA.png" width="700" /><br />
-					<b>(Left)
-						Prototype hierarchical network view showing protein complexes
-						involved in transcription, as implemented by the CyOog plugin.</b>
-					This network is manually constructed. <br /> <b>(Middle) A
-						prototype thematic map of yeast galactose metabolism and its
-						regulation.</b> Nodes are Gene Ontology biological process terms,
-					orange links represent protein-protein interactions and purple
-					links are protein-DNA interactions between or within processes.
-					Link width is proportional to number of interactions. <br /><b>(Right) 
-					A heatmap of GO-annotated human pathways based on batch mode NOA app 
-					analysis. Axes are labeled in inset, highlighting apoptosis-related 
-					pathways and GO terms.</b>
+					<h4>Analyzing Complex Networks Using Ontologies and Cytoscape 3.0 (Alex Pico, 
+					Gladstone/UCSF):</h4>
+					<p>To make use of the vast wealth of data and knowledge to elucidate the 
+					function of biological networks is one of the biggest challenges in 
+					bioinformatics. The development of high-throughput technology has given rise 
+					to an enormous increase of data on biomolecular expression and interactions, 
+					which results in protein interaction networks, gene regulatory networks, 
+					signaling networks and metabolic networks. One approach to understanding 
+					networks relies on ontologies, such as Gene Ontology, and enrichment analysis. 
+					Common approaches, such as BiNGO [1], regard a network as a list of genes, 
+					performing gene-level annotation and enrichment methods. However, it is 
+					apparent that the same list of genes with different interactions may perform 
+					different functions. Thus, the functional analysis of networks should take 
+					into consideration network topology.</p>
+					<p>Following up on last year's work on the Mosaic app for the partitioning 
+					and visualization of complex networks using Gene Ontology [2], we focused on 
+					the development of the Network Ontology Analysis (NOA) app for Cytoscape. 
+					The NOA app implements the NOA algorithm [3] for network-based enrichment 
+					analysis, which extends Gene Ontology annotations to network links, or edges. 
+					First, NOA assigns ontology terms to interactions based on the 
+					known annotations of connected genes via optimizing two novel indexes 
+					‘Coverage’ and ‘Diversity’. Then, NOA generates two alternative reference 
+					sets to statistically rank the enriched functional terms for a given 
+					biological network. NOA was shown to be more efficient not only for dynamic 
+					regulatory networks but also for rewired protein interaction networks. 
+					However, there are several shortcomings with the initial implementation: 
+					no graphical interface or visualization of results; limited support for 
+					species, gene names and ontology types; no batch mode for large-scale 
+					computation; and no integration or interoperability with other network 
+					tools. To overcome these shortcomings, we have reimplemented the NOA 
+					algorithm as a Cytoscape app and added interfaces, extensible ontology and 
+					identifier support, new visualizations, a batch mode, and interoperability 
+					with other Cytoscape apps, such as CyThesaurus and Mosaic. The NOA 
+					app facilitates the annotation and analysis of one or more networks in 
+					Cytoscape according to user-defined parameters. In addition to tables, the 
+					NOA plugin also presents results in the form of heatmaps and overview 
+					networks in Cytoscape, which can be exported for publication figures. A 
+					manuscript on this work is currently in review. 
+					The publication and release of this tool via the Cytoscape App Store brings 
+					the project to Stage 4.</p>
+					<p><b>Application</b>
+					As a proof-of-principle example, we prepared a file containing all the human 
+					pathways curated at WikiPathways and translated Ensembl identifiers for batch
+					mode analysis by the NOA plugin. We ran edge-based analysis to make use of 
+					the interaction content in the pathways, rather than just treating them like 
+					disconnected gene sets. Each pathway was analyzed against the entire 
+					collection as reference and no correction was applied. As expected, curated 
+					pathways of known function were significantly annotated with relevant GO 
+					terms (Fig. 1). Users could add novel pathways or uncharacterized interaction
+					networks to this batch analysis to assess functional annotation of edges in 
+					the context of known biology.
+					<img src="images/PicoF1.png" width="700" /><br /> 
+					A heatmap of GO-annotated human pathways based on batch mode NOA plugin 
+					analysis. Axes are labeled in inset, highlighting apoptosis-related pathways 
+					and GO terms.
+					</p>
+					<p><b>Cytoscape 3.0</b><br />
+					Adding Dr. Scooter Morris to the Gladstone subcontract this year, we not only 
+					gained a valuable Roving Engineer for training and outreach, but also a key 
+					contributor to Cytoscape 3.0 design and development. During this reporting 
+					period, Dr. Morris, worked on porting key plugins to 3.0, that other apps 
+					depend on as well as many core features, including context menus, Tunables, 
+					and custom graphics. As part of this work, he met with Bader lab members at 
+					the University of Toronto to work on improving the user interface for the 
+					VizMapper and extending Metanodes. He also improved the standardization of 
+					the Cytoscape context menus and the esthetics of Cytoscape dialogs by 
+					enhancing the Tunables interface. The focus of the Cytoscape 3 effort during 
+					the later half of this reporting period has been the 3.0.1 release. 
+					This is primarily a "bug-fix" release that follows on the heels of the 
+					initial release of Cytoscape 3, and is intended to be the "solid" release we 
+					want to advocate for new users. In addition to several general fixes, 
+					Dr. Morris' work has addressed several issues with graphical annotations and 
+					groups that are important for wider use.  We also began the design for an API 
+					to export the functionality of graphical annotations to other apps, in 
+					particular apps such as the GPML App, which will use these features to render
+					pathway diagrams imported from the WikiPathways resource, which is another 
+					NRNB-supported service.</p>
 				</div>
 			</div>
 			<div class="tab-pane" id="d-tab">
