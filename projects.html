@@ -324,22 +324,28 @@ body {
 					with Proteomics data mapped to specific proteins or 
 					phospho-proteins.
 					
-					<p>In the next year, we are also planning to utilize genomic alteration and pathway data to infer 
-					clinically relevant uses of drug-target data. For this, we intend to use down- and up-stream relationships 
-					between genes to suggest drugs of possible interest that can indirectly target a particular genomic 
-					alteration event in cancer samples (see Figure 4). One historical example for such cases is the use of 
-					AKT inhibitors in patients who bear a homozygous PTEN deletion. Without the gene PTEN and its product, 
-					Akt proteins, which are down-stream of PTEN, cannot be suppressed, and therefore are found to be 
-					upregulated in cancer samples that have the homozygous PTEN deletion. In the presence of an AKT 
-					inhibitor, this up-regulation effect can be counteracted. Another similar example of this concept is 
-					the use of CDK4/6 inhibitors when CDKN2A is either mutated or homozygously deleted in cancer cells. 
-					Pathway resources, such as Pathway Commons, already provide this type of relationships between genes; 
-					and we plan to extract this information in a systematic way and combine it with the drug-target data 
-					in order to infer such therapy options in an automatic manner within the cBioPortal framework. This 
+					<p>In the next year, we are also planning to utilize genomic alteration and 
+					pathway data to infer clinically relevant uses of drug-target data. For this, 
+					we intend to use down- and up-stream relationships 
+					between genes to suggest drugs of possible interest that can indirectly 
+					target a particular genomic alteration event in cancer samples (see Figure 4). 
+					One historical example for such cases is the use of AKT inhibitors in 
+					patients who bear a homozygous PTEN deletion. Without the gene PTEN and its 
+					product, Akt proteins, which are down-stream of PTEN, cannot be suppressed, 
+					and therefore are found to be upregulated in cancer samples that have the 
+					homozygous PTEN deletion. In the presence of an AKT inhibitor, this 
+					up-regulation effect can be counteracted. Another similar example of this 
+					concept is the use of CDK4/6 inhibitors when CDKN2A is either mutated or 
+					homozygously deleted in cancer cells. Pathway resources, such as Pathway 
+					Commons, already provide this type of relationships between genes; 
+					and we plan to extract this information in a systematic way and combine it 
+					with the drug-target data in order to infer such therapy options in an 
+					automatic manner within the cBioPortal framework. This 
 					method and the prototype are currently under development.
 					<img src="images/SanderF4.png" width="700" /> <br /> <b>Figure 4:</b>
-					Conceptual framework for inferring novel and drug-based therapy options based on specific genomic 
-					alteration with the use of pathway context -- e.g. use of AKT inhibitors when PTEN is altered in the tumor.
+					Conceptual framework for inferring novel and drug-based therapy options based 
+					on specific genomic alteration with the use of pathway context -- e.g. use 
+					of AKT inhibitors when PTEN is altered in the tumor.
 					</p>
 					
 					<p><b>References</b>
@@ -351,17 +357,6 @@ body {
 					genes and core pathways. <i>Nature</i> 2008, 455(7216):1061--1068.</li>
 					<li>Integrated genomic analyses of ovarian carcinoma.<i>Nature </i>2011, 
 					474(7353):609-615.</li>
-					<li>Keshava Prasad TS, Goel R, Kandasamy K, Keerthikumar S, Kumar S, 
-					Mathivanan S, Telikicherla D, Raju R, Shafreen B, Venugopal A et al: Human 
-					Protein Reference Database--2009 update. <i>Nucleic acids research </i>2009, 
-					37(Database issue):D767-772.</li>
-					<li>Matthews L, Gopinath G, Gillespie M, Caudy M, Croft D, de Bono B, 
-					Garapati P, Hemish J, Hermjakob H, Jassal B et al: Reactome knowledgebase of 
-					human biological pathways and processes. <i>Nucleic acids research</i> 2009, 
-					37(Database issue):D619-622.</li>
-					<li>Schaefer CF, Anthony K, Krupa S, Buchoff J, Day M, Hannay T, Buetow KH: 
-					PID: the Pathway Interaction Database. <i>Nucleic acids research </i>2009, 
-					37(Database issue):D674-679.</li>
 					<li>Cerami EG, Gross BE, Demir E, Rodchenkov I, Babur O, Anwar N, Schultz N, 
 					Bader GD, Sander C: Pathway Commons, a web resource for biological pathway 
 					data. <i>Nucleic acids research</i>, 39(Database issue):D685-690.</li>
@@ -385,10 +380,10 @@ body {
 					that algorithmically infer causality within signaling networks and make these
 					tools available. High-throughput screens conducted with libraries of small 
 					molecules or inhibitory RNAs have the ability to identify compounds that 
-					induce tumor suppressive responses in cancer cells [12]. While the effects 
+					induce tumor suppressive responses in cancer cells [1]. While the effects 
 					of such perturbations can be easily linked to transcriptional changes, 
 					identifying the causal mechanism is a main challenge. In collaboration 
-					with Somwar and colleagues [13], we used a computational approach to predict 
+					with Somwar and colleagues [2], we used a computational approach to predict 
 					the target of a small molecule inducing reduced growth in lung adenocarcinoma
 					cell lines. Interestingly, experimental follow up confirmed 
 					the prediction.</p>
@@ -399,19 +394,24 @@ body {
 					minimal set of interactions able to connect genes that are differentially 
 					expressed after a perturbation, with candidate targets of the same 
 					perturbation. This initial approach relied on an algorithm 
-					that solves the Steiner-tree problem. Given a set of “terminal” nodes, the Steiner-tree is defined 
-					as the tree of minimum weight connecting these terminals, allowing the inclusion of additional nodes. 
-					Differentially expressed genes after a perturbation and/or candidate targets of the same perturbation 
-					can be used as terminals. Our prediction was that the resulting Steiner-tree could therefore contain 
-					both gene interactions able to explain the observed transcriptional changes and the putative target 
-					of the perturbation. Within this past year, we determined that this approach does not work as well 
-					as expected, and are now in the process of exploring a new algorithmic framework that combines 
-					Gaussian graphical models with maximum entropy methods.</p>
-					<p><b>New Driving Biological Projects</b><br />A new biological driver for deriving causality networks 
-					is inferring causal relationships within data types and between data types, such as copy number 
-					changes and cancer genomics. For example, we would like to investigate the relationship between 
-					mutations in the TP53 tumor repressor and the complex copy number profile in ovarian cancer. Another 
-					example is the exploration of causal relationships between gene mutations. For example, mutations in 
+					that solves the Steiner-tree problem. Given a set of “terminal” nodes, the 
+					Steiner-tree is defined as the tree of minimum weight connecting these 
+					terminals, allowing the inclusion of additional nodes. Differentially 
+					expressed genes after a perturbation and/or candidate targets of the same 
+					perturbation can be used as terminals. Our prediction was that the resulting 
+					Steiner-tree could therefore contain both gene interactions able to explain 
+					the observed transcriptional changes and the putative target of the 
+					perturbation. Within this past year, we determined that this approach does 
+					not work as well as expected, and are now in the process of exploring a new 
+					algorithmic framework that combines Gaussian graphical models with maximum 
+					entropy methods.</p>
+					<p><b>New Driving Biological Projects</b><br />A new biological driver for 
+					deriving causality networks is inferring causal relationships within data 
+					types and between data types, such as copy number changes and cancer genomics. 
+					For example, we would like to investigate the relationship between 
+					mutations in the TP53 tumor repressor and the complex copy number profile in 
+					ovarian cancer. Another example is the exploration of causal relationships 
+					between gene mutations. For example, mutations in 
 					the POLE gene lead to a characteristic spectrum of mutations in other proteins. We have preliminary 
 					results and plan to develop a network analysis approach to identify causal relationships.
 					</p><p>We are also considering looking at interactions between microbial subpopulations, starting with 
@@ -419,10 +419,30 @@ body {
 					provided by the host and nutrient intake. Recent work has shown the precise composition and evolution 
 					of this population is closely coupled to the state of health of the host. Certain deviations from 
 					equilibrium present a significant risk of invasion by pathogenic bacteria, as seen with some cancer 
-					patients receiving bone marrow transplantations [23]. A more detailed understanding of the relationships 
+					patients receiving bone marrow transplantations [3]. A more detailed understanding of the relationships 
 					between gut microbial subpopulations following such aggressive treatments in the host could inform 
 					therapeutic development leading to improved outcomes.</p>
 					<p>
+					
+					<p>
+					<b>Our Related Publications</b>
+					<ul>
+					<li>Gao J, et al, Integrative Analysis of Complex Cancer Genomics Profiles 
+					using the cBioPortal. <i>Science Signaling Protocol</i> 2013 Apr 2;6(269):pl1.</li>
+					<li>Molinelli E, Korkut A, Wang W, MIller M, Gauthier N, Jing X, Kaushik P,
+					et al. Perturbation Biology: inferring signaling networks in cellular systems.
+					<i>PLoS Comp Bio </i> 2013 Dec;9(12):e1003290. </li>
+					<li>Cancer Genome Atlas Network. Comprehensive molecular portraits of human 
+					breast tumours. <i>Nature</i>. 2012; 490(7418):61-70.</li>
+					<li>Cerami E, et al, The cBio Cancer Genomics Portal: An open platform for 
+					exploring multi-dimensional cancer genomics data. <i>Cancer Discovery</i>. 
+					May 2012, 2:401.</li>
+					<li>The Cancer Genome Atlas Network, Comprehensive Molecular Characterization
+					of Human Colon and Rectal Cancer. <i>Nature</i> 2012; 487(7407):330-337.</li>
+					<li>The Cancer Genome Atlas Network, Comprehensive genomic characterization 
+					of squamous cell lung cancers. <i>Nature</i> 2012; 489:519-525.</li>
+					</ul>
+					</p>
 					<b>References</b>
 					<ol>
 					<li>Somwar R, Shum D, Djaballah H, Varmus H: Identification and preliminary 
@@ -435,26 +455,6 @@ body {
 					of the growth of lung adenocarcinoma cell lines. <i>Proceedings of the National 
 					Academy of Sciences of the United States of America </i>2011, 108(39):16375-16380.
 					</li>
-					<li>Stratton MR, Campbell PJ, Futreal PA: The cancer genome. <i>Nature </i>2009, 
-					458(7239):719--724.</li>
-					<li>Hanahan D, Weinberg RA: The hallmarks of cancer. <i>Cell </i>2000, 
-					100(1):57--70.</li>
-					<li>Hanahan D, Weinberg RA: Hallmarks of cancer: the next generation. <i>Cell</i> 
-					2011, 144(5):646-674.</li>
-					<li>Ciriello G, Cerami E, Sander C, Schultz N: Mutual exclusivity analysis 
-					identifies oncogenic network modules. <i>Genome research </i>2012, 22(2):398-406.</li>
-					<li>Vaske CJ, Benz SC, Sanborn JZ, Earl D, Szeto C, Zhu J, Haussler D, Stuart
-					JM: Inference of patient-specific pathway activities from multi-dimensional 
-					cancer genomics data using PARADIGM. <i>Bioinformatics</i> 2010, 26(12):i237-245.</li>
-					<li>Vandin F, Upfal E, Raphael BJ: Algorithms for detecting significantly 
-					mutated pathways in cancer. <i>Journal of computational biology : a journal of 
-					computational molecular cell biology </i>2011, 18(3):507-522.</li>
-					<li>Turner N, Tutt A, Ashworth A: Hallmarks of 'BRCAness' in sporadic cancers. 
-					<i>Nat Rev Cancer</i> 2004, 4(10):814-819.</li>
-					<li>Storrs C: Combing the Cancer Genome.<i>The Scientist</i>  2012, Mar.</li>
-					<li>Taylor BS, Schultz N, Hieronymus H, Gopalan A, Xiao Y, Carver BS, Arora 
-					VK, Kaushik P, Cerami E, Reva B et al: Integrative genomic profiling of human
-					prostate cancer. <i>Cancer cell</i> 2010, 18(1):11-22.</li>
 					<li>Jenq RR, Ubeda C, Taur Y, Menezes CC, Khanin R, Dudakov JA, Liu C, et al.
 					Regulation of intestinal inflammation by microbiota following allogeneic bone
 					marrow transplantation. <i>J Exp Med.</i> 2012;209(5):903-911.</li>
@@ -685,6 +685,29 @@ body {
 					does pathway analysis using Enrichment Map and Shaheena Bashir, who is a 
 					biostatistician who processes raw genomics data to prepare for pathway analysis. 
 					This has led to the four published projects in the past year.</p>
+					<p>
+					<b>Our Related Publications</b>
+					<ul>
+					<li>Lechman ER, Gentner B, van Galen P, Giustacchini A, Saini M, Boccalatte 
+					FE, Hiramatsu H, Restuccia U, Bachi A, Voisin V, Bader GD, Dick JE, Naldini 
+					L. Attenuation of miR-126 activity expands HSC in vivo without exhaustion. 
+					<i>Cell Stem Cell</i>. 2012 Dec 7;11(6):799-811.</li>
+					<li>Labbé RM, Irimia M, Currie KW, Lin A, Zhu SJ, Brown DD, Ross EJ, Voisin V,
+					Bader GD, Blencowe BJ, Pearson BJ. A comparative transcriptomic analysis 
+					reveals conserved features of stem cell pluripotency in planarians and 
+					mammals.<i> Stem Cells</i>. 2012 Aug;30(8):1734-45.</li>
+					<li>Liu JC, Voisin V, Bader GD, Deng T, Pusztai L, Symmans WF, Esteva FJ, 
+					Egan SE, Zacksenhaus E. Seventeen-gene signature from enriched Her2/Neu 
+					mammary tumor-initiating cells predicts clinical outcome for human 
+					HER2+:ERα- breast cancer. <i>Proc Natl Acad Sci U S A.</i> 
+					2012 Apr 10;109(15):5832-7.</li>
+					<li>Bozhena Jhas, Shrivani Sriskanthadevan, Marko Skrtic, Mahadeo A. Sukhai, 
+					Veronique Voisin, Yulia Jitkova, Marcela Gronda, Rose Hurren, Rob C. Laister,
+					Gary D. Bader, Mark D. Minden and Aaron D. Schimmer, Metabolic adaptation to 
+					chronic inhibition of mitochondrial protein synthesis in acute myeloid 
+					leukemia cells.<i>PLOS ONE</i> . 2013;8(3):e58367 </li>
+					</ul>
+					</p>
 					
 					<h4>Analyzing Complex Networks Using Ontologies and Cytoscape 3.0 (Alex Pico, 
 					Gladstone/UCSF)</h4>
@@ -762,6 +785,19 @@ body {
 					particular apps such as the GPML App, which will use these features to render
 					pathway diagrams imported from the WikiPathways resource, which is another 
 					NRNB-supported service.</p>
+					<p>
+					<b>References</b>
+					<ol>
+					<li>Maere, S., Heymans, K. and Kuiper, M. (2005) BiNGO: a Cytoscape plugin to
+					assess overrepresentation of gene ontology categories in biological networks,
+					<i>Bioinformatics</i>, 21, 3448-3449.</li>
+					<li>Zhang, C., et al. (2012) Mosaic: making biological sense of complex 
+					networks, <i>Bioinformatics</i>, 28, 1943-1944.</li>
+					<li>Wang, J., et al. (2009) Disease-aging network reveals significant roles 
+					of aging genes in connecting genetic diseases, <i>PLoS Comput Biol</i>, 5, 
+					e1000521.</li>
+					</ol>
+					</p>
 				</div>
 			</div>
 			<div class="tab-pane" id="d-tab">
