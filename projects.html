@@ -95,73 +95,106 @@ body {
 				<div class="well">
 					<h4>A Gene Ontology Extracted from Molecular Networks (Trey Ideker, UCSD)</h4>
 					<p>Ontologies are of key importance to many domains of biological research. 
-					The Gene Ontology (GO), in particular, has been instrumental in unifying knowledge about biological processes, 
-					cellular components, and molecular functions through a hierarchy of concepts and their 
-					interrelationships. However, given only partial biological knowledge and inconsistency in how 
-					this knowledge is curated, it has been difficult to construct, extend and validate GO in an 
-					unbiased manner. We have recently showed that the existing collection of high-throughput 
-					network maps, as are now becoming available, can be analyzed to automatically assemble an 
-					ontology of gene function that rivals manually curated efforts [Dutkowski et al. Nat Biotechnol, 
-					2013 2013. 31(1): p. 38-45]. Our systematic computational approach (Fig. 1) combines evidence from 
-					physical, genetic and transcriptional networks to produce an ontology comprised of 4,123 biological 
-					concepts and 5,766 hierarchical concept relations (Fig. 2). Using a new ontology alignment procedure 
-					(Fig. 1), we found that the network-based ontology captures the majority of known cellular components 
-					and identifies approximately 600 new cellular components and component relations – many of which we 
-					were able to validate either experimentally or bioinformatically. By working closely with the GO curators, 
-					we were able to incorporate selected new components and relations into the Gene Ontology, thus providing 
-					proof-of-principle for how to systematically update and revise the GO structure based on large-scale data. 
+					The Gene Ontology (GO), in particular, has been instrumental in unifying 
+					knowledge about biological processes, cellular components, and molecular 
+					functions through a hierarchy of concepts and their interrelationships. 
+					However, given only partial biological knowledge and inconsistency in how 
+					this knowledge is curated, it has been difficult to construct, extend and 
+					validate GO in an unbiased manner. We have recently showed that the existing 
+					collection of high-throughput network maps, as are now becoming available, 
+					can be analyzed to automatically assemble an ontology of gene function that 
+					rivals manually curated efforts [1]. Our systematic computational approach 
+					(Fig. 1) combines evidence from physical, genetic and transcriptional 
+					networks to produce an ontology comprised of 4,123 biological concepts and 
+					5,766 hierarchical concept relations (Fig. 2). Using a new ontology alignment 
+					procedure (Fig. 1), we found that the network-based ontology captures the 
+					majority of known cellular components and identifies approximately 600 new 
+					cellular components and component relations – many of which we were able to 
+					validate either experimentally or bioinformatically. By working closely with 
+					the GO curators, we were able to incorporate selected new components and 
+					relations into the Gene Ontology, thus providing proof-of-principle for how 
+					to systematically update and revise the GO structure based on large-scale 
+					data. 
 					</p>
-					<p>The network-extracted ontology is a new resource for systems and synthetic biology – i.e. a data-driven 
-					catalogue of cellular machinery, from genes, to complexes, to pathways and higher-order processes. It 
-					provides a powerful tool for performing multi-scale analysis of biological networks, including automatically 
-					identifying, annotating and visualizing the complete hierarchical structure. We also show how integrating 
-					the ontology with additional high-throughput datasets leads to identification of new components and 
-					processes altered in human disease. Based on our results, we suggest a new role for ontologies in 
-					bioinformatics: rather than merely being used as a gold-standard for performing functional enrichment, 
-					ontologies should serve as evolvable models that are validated, revised, and expanded based on new genomic data.</p>
-					<p>Moving forward, it will be interesting to see how the network-extracted ontology can further be extended. 
-					For instance while NeXO represents a rigorous approach to capture ontology terms and term relations, the 
-					ability to systematically annotate the type of relation that occurs between terms (e.g. “is a”, “part of”, 
-					“regulates”) poses a separate and very interesting challenge. An in-depth investigation is needed to assess 
-					which network properties are best at separating the different types of relations, and whether there are 
-					additional data sets that might be brought to bear on this problem. Similarly, while NeXO 
-					identifies the majority of known cellular components, it will be interesting to further investigate 
-					what types of network data could be used to increase the coverage of biological processes and molecular 
-					functions. Finally, a key question is whether enough high-quality data exist to build NeXO ontologies for 
-					other species, particularly human, and, whether it is better to structure a common ontology for all species, 
-					as has been done in GO, or to focus on individual species-specific ontologies.
+					<p>The network-extracted ontology is a new resource for systems and synthetic
+					biology – i.e. a data-driven catalogue of cellular machinery, from genes, to 
+					complexes, to pathways and higher-order processes. It provides a powerful 
+					tool for performing multi-scale analysis of biological networks, including 
+					automatically identifying, annotating and visualizing the complete 
+					hierarchical structure. We also show how integrating the ontology with 
+					additional high-throughput datasets leads to identification of new components
+					and processes altered in human disease. Based on our results, we suggest a 
+					new role for ontologies in bioinformatics: rather than merely being used as 
+					a gold-standard for performing functional enrichment, ontologies should serve
+					as evolvable models that are validated, revised, and expanded based on new 
+					genomic data.</p>
+					<p>Moving forward, it will be interesting to see how the network-extracted 
+					ontology can further be extended. For instance while NeXO represents a 
+					rigorous approach to capture ontology terms and term relations, the ability 
+					to systematically annotate the type of relation that occurs between terms 
+					(e.g. “is a”, “part of”, “regulates”) poses a separate and very interesting 
+					challenge. An in-depth investigation is needed to assess which network 
+					properties are best at separating the different types of relations, and 
+					whether there are additional data sets that might be brought to bear on this 
+					problem. Similarly, while NeXO identifies the majority of known cellular 
+					components, it will be interesting to further investigate what types of 
+					network data could be used to increase the coverage of biological processes 
+					and molecular functions. Finally, a key question is whether enough 
+					high-quality data exist to build NeXO ontologies for other species, 
+					particularly human, and, whether it is better to structure a common ontology 
+					for all species, as has been done in GO, or to focus on individual 
+					species-specific ontologies.
 					
 					<img src="images/IdekerF1.png" width="700" /><br /> 
-					<b>Figure 1: Automated assembly and alignment of gene ontologies.</b> (A) Probabilistic community detection within 
-					the input networks yields a binary tree in which nodes correspond to ontology terms and links correspond to 
-					parent-child term relations. Unsupported terms are replaced by multi-way joins, and additional parent-child 
-					relations are added based on network data. The resulting ontology is aligned against the Gene Ontology, 
-					in a way that (B) prohibits non-unique mappings and ancestor-descendant criss-crossing.
+					<b>Figure 1: Automated assembly and alignment of gene ontologies.</b> (A) 
+					Probabilistic community detection within the input networks yields a binary 
+					tree in which nodes correspond to ontology terms and links correspond to 
+					parent-child term relations. Unsupported terms are replaced by multi-way 
+					joins, and additional parent-child relations are added based on network data. The resulting ontology is aligned against the Gene Ontology, 
+					in a way that (B) prohibits non-unique mappings and ancestor-descendant
+					criss-crossing.
 					
 					<img src="images/IdekerF2.png" width="700" /><br /> <b>Figure 2:</b>
-					The NeXO ontology is shown as a tree, with nodes indicating terms and edges indicating hierarchical 
-					relations between terms, i.e. that one term contains another. Node sizes indicate the number of genes assigned 
-					to a term. Node colors represent the degree of correspon-dence to a term in GO as determined by ontology alignment, 
-					with high-level alignments labeled. Insets show the hierarchy identified for the ribosome and actin cytoskeleton.
+					The NeXO ontology is shown as a tree, with nodes indicating terms and edges 
+					indicating hierarchical relations between terms, i.e. that one term contains 
+					another. Node sizes indicate the number of genes assigned to a term. Node 
+					colors represent the degree of correspon-dence to a term in GO as determined 
+					by ontology alignment, with high-level alignments labeled. Insets show the 
+					hierarchy identified for the ribosome and actin cytoskeleton.
 					</p>
-					<h4>Network Analysis Tools for Cancer Genomics (Chris Sander, MSKCC)</h4>
-					<p>This project is focused on building 
-					network analysis tools for interpreting high-throughput cancer genomic data sets to identify altered disease 
-					networks and enable the identification of network-based biomarkers in cancer. Our primary focus is building 
-					user-friendly, open source tools for visualizing and analyzing multidimensional cancer genomic data sets 
-					(including copy number, mutation, and mRNA expression) in the context of known biological pathways and 
-					interaction networks, and making these tools broadly available to clinical, experimental and computational 
-					investigators within the cancer research community. Providing such tools to the cancer research community 
-					is critical, as numerous large-scale projects, including the Cancer Genome Atlas (TCGA) project and the 
-					International Cancer Genome Consortium (ICGC), are profiling dozens of cancer types and subtypes. Identifying 
-					altered pathways and networks within each of these cancer types remains a critical and open challenge.</p>
 					
-					<p>During our first several years of NRNB funding, we completed a prototype project for displaying 
-					multi-dimensional cancer genomic data in the context of molecular interaction networks. We chose to 
-					implement the prototype in CytoscapeWeb [1], as CytoscapeWeb does not require any additional software 
-					installation or require Java Web Start. It therefore significantly lowers the barriers for usage, 
-					particularly for biologists and clinical researchers ­­­­- two of our main target user groups.
-					We transitioned our tools from prototype to production mode, and have made our software available 
+					<p><b>References</b>
+					<ol>
+					<li>Dutkowski, J., Kramer, M., Surma, M.A., Balakrishnan, R., Cherry, J.M., 
+					Krogan, N.J., and Ideker, T., A gene ontology inferred from molecular 
+					networks. <i>Nat Biotechnol</i>, 2013. 31(1): p. 38-45.</li>
+					</ol>
+					</p>
+					
+					<h4>Network Analysis Tools for Cancer Genomics (Chris Sander, MSKCC)</h4>
+					<p>This project is focused on building network analysis tools for 
+					interpreting high-throughput cancer genomic data sets to identify altered 
+					disease networks and enable the identification of network-based biomarkers in
+					cancer. Our primary focus is building user-friendly, open source tools for 
+					visualizing and analyzing multidimensional cancer genomic data sets 
+					(including copy number, mutation, and mRNA expression) in the context of 
+					known biological pathways and interaction networks, and making these tools 
+					broadly available to clinical, experimental and computational investigators 
+					within the cancer research community. Providing such tools to the cancer 
+					research community is critical, as numerous large-scale projects, including 
+					the Cancer Genome Atlas (TCGA) project and the International Cancer Genome 
+					Consortium (ICGC), are profiling dozens of cancer types and subtypes. 
+					Identifying altered pathways and networks within each of these cancer types 
+					remains a critical and open challenge.</p>
+					
+					<p>During our first several years of NRNB funding, we completed a prototype 
+					project for displaying multi-dimensional cancer genomic data in the context 
+					of molecular interaction networks. We chose to implement the prototype in 
+					CytoscapeWeb [1], as CytoscapeWeb does not require any additional software 
+					installation or require Java Web Start. It therefore significantly lowers the
+					barriers for usage, particularly for biologists and clinical researchers ­­
+					­­- two of our main target user ou
+				s.We transitioned our tools from prototype to production mode, and have made our software available 
 					to the entire cancer research community. Cancer researchers are now using these tools to perform 
 					network analysis on up to 20 different cancer types, including TCGA-funded projects, such as glioblastoma 
 					multiforme (GBM) [2] and serous ovarian cancer [3].</p>
