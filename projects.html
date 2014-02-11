@@ -192,67 +192,136 @@ body {
 					of molecular interaction networks. We chose to implement the prototype in 
 					CytoscapeWeb [1], as CytoscapeWeb does not require any additional software 
 					installation or require Java Web Start. It therefore significantly lowers the
-					barriers for usage, particularly for biologists and clinical researchers ­­
-					­­- two of our main target user ou
-				s.We transitioned our tools from prototype to production mode, and have made our software available 
-					to the entire cancer research community. Cancer researchers are now using these tools to perform 
-					network analysis on up to 20 different cancer types, including TCGA-funded projects, such as glioblastoma 
-					multiforme (GBM) [2] and serous ovarian cancer [3].</p>
+					barriers for usage, particularly for biologists and clinical researchers ­
+					-- two of our main user groups. We transitioned our tools from prototype to 
+					production mode, and have made our software available to the entire cancer 
+					research community. Cancer researchers are now using these tools to perform 
+					network analysis on up to 20 different cancer types, including TCGA-funded 
+					projects, such as glioblastoma multiforme (GBM) [2] and serous ovarian cancer
+					[3].</p>
 					
-					<p>The cBioPortal for Cancer Genomics code base has recently reached a stable state where it is now being 
-					considered as a general framework to build our other NRNB-related tools on. Our recently finalized drug-target 
-					data support in the context of cBioPortal’s network analysis is one such example. During the past year, 
-					we improved the network analysis capabilities of the cBioPortal by providing query and visualization of 
-					aggregated drug data from multiple resources. With this new feature, the portal currently contains 
-					gene-centric drug-target information from the following resources: DrugBank [8], KEGG Drug [9], 
-					<a href="http://www.cancer.gov/cancertopics/druginfo/alphalist">NCI Cancer Drugs</a>, and Rask-Andersen et al. [10]. 
-					Within the network analysis view, drugs are hidden by default, but can be added to the network via the 
-					Genes & Drugs menu on the right side of the screen. Users now have the option of displaying FDA-approved 
-					drugs, cancer drugs defined by NCI Cancer Drugs, or all drugs targeting the query genes. For example, 
-					when the user queries for the gene EGFR in the portal, we not only show the network context of this gene, 
-					but also provide information about the drugs targeting the product of this gene: geﬁtinib and erlotinib 
-					are tyrosine kinase inhibitors that target the catalytic domain of EGFR, and cetuximab and trastuzumab 
-					are monoclonal antibodies that target the extracellular domain of EGFR and ERBB2, respectively (Fig. 3) [11].
+					<p>The cBioPortal for Cancer Genomics code base has recently reached a stable
+					state where it is now being considered as a general framework to build our 
+					other NRNB-related tools on. Our recently finalized drug-target data support 
+					in the context of cBioPortal’s network analysis is one such example. During 
+					the past year, we improved the network analysis capabilities of the 
+					cBioPortal by providing query and visualization of aggregated drug data from 
+					multiple resources. With this new feature, the portal currently contains 
+					gene-centric drug-target information from the following resources: DrugBank 
+					[8], KEGG Drug [9], 
+					<a href="http://www.cancer.gov/cancertopics/druginfo/alphalist">NCI Cancer 
+					Drugs</a>, and Rask-Andersen et al. [10]. Within the network analysis view, 
+					drugs are hidden by default, but can be added to the network via the Genes & 
+					Drugs menu on the right side of the screen. Users now have the option of 
+					displaying FDA-approved drugs, cancer drugs defined by NCI Cancer Drugs, or 
+					all drugs targeting the query genes. For example, when the user queries for 
+					the gene EGFR in the portal, we not only show the network context of this 
+					gene, but also provide information about the drugs targeting the product of 
+					this gene: geﬁtinib and erlotinib are tyrosine kinase inhibitors that target 
+					the catalytic domain of EGFR, and cetuximab and trastuzumab are monoclonal 
+					antibodies that target the extracellular domain of EGFR and ERBB2, 
+					respectively (Fig. 1) [11].
 					
 					<img src="images/SanderF1.png" width="700" /><br /> 
-					<b>Figure 3: Improved Network tab: Network analysis of epidermal growth factor receptor networks 
-					in serous ovarian cancer.</b> (A) Network view of the EGFR and ERBB2 neighborhood in serous ovarian cancer 
-					(TCGA data set) rendered by Cytoscape Web. EGFR and ERBB2 are query genes (thick border), and nearest 
-					neighbor genes are color coded by their alteration frequency in ovarian cancer. One can display drugs 
-					that target EGFR or ERBB2 (hexagons, orange if FDA approved), as well as details about genomic alterations 
-					and links to external resources (lower left panel, example MYC). (B) The portal overlays multidimensional 
-					genomic data (copy number, mutation, and mRNA expression) onto all nodes in the network. (C) Edges can 
-					represent different interaction types (color-coded, such as “reacts with”). (D) Options for filtering, 
-					cropping and searching the network of interest.
+					<b>Figure 1: Improved Network tab: Network analysis of epidermal growth 
+					factor receptor networks in serous ovarian cancer.</b> (A) Network view of 
+					the EGFR and ERBB2 neighborhood in serous ovarian cancer (TCGA data set) 
+					rendered by Cytoscape Web. EGFR and ERBB2 are query genes (thick border), 
+					and nearest neighbor genes are color coded by their alteration frequency in 
+					ovarian cancer. One can display drugs that target EGFR or ERBB2 (hexagons, 
+					orange if FDA approved), as well as details about genomic alterations 
+					and links to external resources (lower left panel, example MYC). (B) The 
+					portal overlays multidimensional genomic data (copy number, mutation, and 
+					mRNA expression) onto all nodes in the network. (C) Edges can represent 
+					different interaction types (color-coded, such as “reacts with”). (D) Options
+					for filtering, cropping and searching the network of interest.
 					<br /><br />
-					Our new drug-target feature is now available as part of the open-access cBioPortal and is helping 
-					cancer researchers in exploring the therapy options within the network context of genes of interest. </p>
+					Our new drug-target feature is now available as part of the open-access 
+					cBioPortal and is helping cancer researchers in exploring the therapy options
+					within the network context of genes of interest. </p>
 					
-					<p><b>New Driving Biological Projects:</b> In the next year, we are anticipating improving the network 
-					analysis feature in two ways: 1) detailed visualization of the pathways and reactions in the network view; 
-					2) inference of indirect drug targets, for potentially interesting therapy options, by using genomic 
-					alteration and drug-target data. Currently, interaction types that are shown in the network analysis 
-					view are derived from the BioPAX to SIF inference rules [7]. For example: In Same Component indicates 
-					that Genes A and B are involved in the same biological component, such as a complex; State Change 
-					indicates that Gene A causes a state change, such as a phosphorylation change within Gene B. This 
-					reduction from BioPAX to SIF was necessary as the Cytoscape Web framework, by then, was not 
-					supporting visualization of more complex elements, such as compartments. With the technology being 
-					developed as part of the CSP-100 project (Gary Bader), it recently become feasible to visualize 
-					biological networks in a more detailed way, therefore enabling the use of Systems Biology Graphical 
-					Notation (SBGN) for better representation of BioPAX. As part of our NRNB collaboration with Ugur 
-					Dogrusoz (Bilkent University, Turkey), we are aiming to adopt SBGN-complaint views to visualize 
-					multi-dimensional cancer genomics data with the network context (see Figure 4). This project has 
-					recently been implemented as a proof-of-concept prototype and is now being integrated into cBioPortal. 
-					When complete, this new feature will allow better presentation of proteomics data (e.g. Reverse Phase 
-					Protein Array data provided as part of the TCGA network) by allowing users to optionally switch from 
+					<p><b><Outreach Plans/b><br />
+					Since its launch in mid-2010, the cBioPortal has been extensively used by 
+					cancer researchers around the globe, particularly by The Cancer Genome Atlas 
+					TCGA) network. The portal currently attracts more than 1,500 unique visitors 
+					per week. In order to help researchers use cBioPortal in their studies, we 
+					are actively communicating with various communities, such as the TCGA network
+					and publicizing the tool through different channels.</p>
+					
+					<p>During the last year, we have adapted and are currently maintaining an e-mail 
+					list for users who have questions regarding the use of the cBioPortal. This 
+					e-mail list and the questions answered by our group are publicly available at
+					our <a href="http://groups.google.com/group/cbioportal/">Google Groups page</a>. 
+					Furthermore we have recently completed a manuscript that explains the use cases 
+					of cBioPortal and its network analysis feature in details in order to 
+					encourage wider adaptation. We believe this publication (Science Signaling) 
+					will help researchers interested in Cancer Research to use the portal in a 
+					more efficient way.</p>
+					
+					<p>We have also participated in the last year’s Google Summer of Code (GSoC) 
+					Program for two separate projects under the NRNB organization. The first 
+					project, a Cytoscape 3.0 Application to facilitate downloading cancer 
+					genomics data through the cBioPortal Web API services, was successfully lead 
+					by Dazhi Jiao under the advisement of two members from our group. This 
+					Cytoscape 3.0 application allows users to download data from cBioPortal, 
+					visualize it in the network context either in an overall or sample-specific 
+					manner, and analyze it with the help of additional Cytoscape 3.0 applications
+					(see Figure 2). The source code for this project is freely available at our 
+					<a href="http://bit.ly/cbioportal">Google Code project web site</a>. The 
+					software implementation for this project is currently being finalized 
+					and we are planning to distribute this application through Cytoscape’s App 
+					Store interface in the next year.
+					<img src="images/SanderF2.png" width="700" /><br /> 
+					<Figure 2. A screenshot of the Mondrian application, an open-source project 
+					conducted as part of the Google Summer of Code 2012 project. The image shows 
+					how genomics data, downloaded from the cBioPortal through this application, 
+					is being overlaid onto the user’s network of interest. Once the data is 
+					loaded from the cancer studies of interest through the cBioPortal’s Web Api, 
+					users have the option to explore multi-dimensional cancer-related data within
+					Cytoscape framework in a fashion that is similar to cBioPortal’s network 
+					analysis feature.</p>
+					
+					<p>Our second GSoC project was lead by the summer student, Istemi Bahceci 
+					under the co-advisement of one member of our group in conjunction with our 
+					NRNB-collaborator Ugur Dogrusoz at Bilkent University. The aim of this 
+					project was to extend CytoscapeWeb to support the Systems Biology Graphical 
+					Notation (SBGN) for more detailed biological pathway visualization. This 
+					project was completed over the last summer and we are currently integrating 
+					it into the cBioPortal’s to provide better network analysis options for users.</p>
+					
+					<p><b>New Driving Biological Projects:</b> In the next year, we are 
+					anticipating improving the network analysis feature in two ways: 1) detailed 
+					visualization of the pathways and reactions in the network view; 2) inference 
+					of indirect drug targets, for potentially interesting therapy options, by 
+					using genomic alteration and drug-target data. Currently, interaction types 
+					that are shown in the network analysis view are derived from the BioPAX to 
+					SIF inference rules [7]. For example: In Same Component indicates that Genes 
+					A and B are involved in the same biological component, such as a complex; 
+					State Change indicates that Gene A causes a state change, such as a 
+					phosphorylation change within Gene B. This reduction from BioPAX to SIF was 
+					necessary as the Cytoscape Web framework, by then, was not supporting 
+					visualization of more complex elements, such as compartments. With the 
+					technology being developed as part of the CSP-100 project (Gary Bader), it 
+					recently become feasible to visualize biological networks in a more detailed 
+					way, therefore enabling the use of Systems Biology Graphical Notation (SBGN) 
+					for better representation of BioPAX. As part of our NRNB collaboration with 
+					Ugur Dogrusoz (Bilkent University, Turkey), we are aiming to adopt 
+					SBGN-complaint views to visualize multi-dimensional cancer genomics data with 
+					the network context (see Figure 3). This project has recently been 
+					implemented as a proof-of-concept prototype and is now being integrated into 
+					cBioPortal. When complete, this new feature will allow better presentation of 
+					proteomics data (e.g. Reverse Phase Protein Array data provided as part of 
+					the TCGA network) by allowing users to optionally switch from 
 					a gene-centric to protein-centric view.
 					
-					<img src="images/SanderF2.png" width="700" /> <br /> <b>Figure 4:
-					Proposed additions to the current simple network view.</b> On the left is the Simple Interaction 
-					derived from BioPAX; on the right is an example visualization of a BioPAX network obtained from Pathway 
-					Commons. The latter is utilizing the new visualization capabilities, Systems Biology Graphical Notation 
-					(SBGN), of the CytoscapeWeb project. The SBGN view provides a more detailed representation of the 
-					pathway and also provides protein-centric view with Proteomics data mapped to specific proteins or 
+					<img src="images/SanderF3.png" width="700" /> <br /> <b>Figure 3:
+					Proposed additions to the current simple network view.</b> On the left is the
+					Simple Interaction derived from BioPAX; on the right is an example 
+					visualization of a BioPAX network obtained from Pathway Commons. The latter 
+					is utilizing the new visualization capabilities, Systems Biology Graphical 
+					Notation (SBGN), of the CytoscapeWeb project. The SBGN view provides a more 
+					detailed representation of the pathway and also provides protein-centric view
+					with Proteomics data mapped to specific proteins or 
 					phospho-proteins.
 					
 					<p>In the next year, we are also planning to utilize genomic alteration and pathway data to infer 
@@ -268,25 +337,68 @@ body {
 					and we plan to extract this information in a systematic way and combine it with the drug-target data 
 					in order to infer such therapy options in an automatic manner within the cBioPortal framework. This 
 					method and the prototype are currently under development.
-					<img src="images/SanderF3.png" width="700" /> <br /> <b>Figure 5:</b>
+					<img src="images/SanderF4.png" width="700" /> <br /> <b>Figure 4:</b>
 					Conceptual framework for inferring novel and drug-based therapy options based on specific genomic 
 					alteration with the use of pathway context -- e.g. use of AKT inhibitors when PTEN is altered in the tumor.
 					</p>
 					
-					<h4>Network Analysis Methods for Inferring Causality in Signaling Networks (Sander, MSKCC)</h4>
-					<p>The goal of our second TRD project is to develop network analysis tools that algorithmically infer 
-					causality within signaling networks and make these tools available. High-throughput screens conducted 
-					with libraries of small molecules or inhibitory RNAs have the ability to identify compounds that induce 
-					tumor suppressive responses in cancer cells [12]. While the effects of such perturbations can be easily 
-					linked to transcriptional changes, identifying the causal mechanism is a main challenge. In collaboration 
-					with Somwar and colleagues [13], we used a computational approach to predict the target of a small molecule 
-					inducing reduced growth in lung adenocarcinoma cell lines. Interestingly, experimental follow up confirmed 
+					<p><b>References</b>
+					<ol>
+					<li>Lopes CT, Franz M, Kazi F, Donaldson SL, Morris Q, Bader GD: Cytoscape 
+					Web: an interactive web-based network browser. <i>Bioinformatics</i>, 
+					26(18):2347-2348.</li>
+					<li>TCGA: Comprehensive genomic characterization defines human glioblastoma 
+					genes and core pathways. <i>Nature</i> 2008, 455(7216):1061--1068.</li>
+					<li>Integrated genomic analyses of ovarian carcinoma.<i>Nature </i>2011, 
+					474(7353):609-615.</li>
+					<li>Keshava Prasad TS, Goel R, Kandasamy K, Keerthikumar S, Kumar S, 
+					Mathivanan S, Telikicherla D, Raju R, Shafreen B, Venugopal A et al: Human 
+					Protein Reference Database--2009 update. <i>Nucleic acids research </i>2009, 
+					37(Database issue):D767-772.</li>
+					<li>Matthews L, Gopinath G, Gillespie M, Caudy M, Croft D, de Bono B, 
+					Garapati P, Hemish J, Hermjakob H, Jassal B et al: Reactome knowledgebase of 
+					human biological pathways and processes. <i>Nucleic acids research</i> 2009, 
+					37(Database issue):D619-622.</li>
+					<li>Schaefer CF, Anthony K, Krupa S, Buchoff J, Day M, Hannay T, Buetow KH: 
+					PID: the Pathway Interaction Database. <i>Nucleic acids research </i>2009, 
+					37(Database issue):D674-679.</li>
+					<li>Cerami EG, Gross BE, Demir E, Rodchenkov I, Babur O, Anwar N, Schultz N, 
+					Bader GD, Sander C: Pathway Commons, a web resource for biological pathway 
+					data. <i>Nucleic acids research</i>, 39(Database issue):D685-690.</li>
+					<li>Knox C, Law V, Jewison T, Liu P, Ly S, Frolkis A, Pon A, Banco K, Mak C, 
+					Neveu V et al: DrugBank 3.0: a comprehensive resource for 'omics' research on
+					drugs. <i>Nucleic acids research</i> 2011, 39(Database issue):D1035-1041.</li>
+					<li>Ogata H, Goto S, Sato K, Fujibuchi W, Bono H, & Kanehisa M (1999). KEGG: 
+					Kyoto Encyclopedia of Genes and Genomes. <i>Nucleic acids research</i>, 27(1), 
+					29–34</li>
+					<li>Rask-Andersen M, Almen MS and Schioth HB: Trends in the exploitation of 
+					novel drug targets. <i>Nature Drug Discovery</i> 2011; 10:579-590.</li>
+					<li>Raymond E., Faivre S, Armand JP: Epidermal growth factor receptor 
+					tyrosine kinase as a target for anticancer therapy. <i>Drugs</i> 2000; 
+					60:41-42.</li>
+					</ol>
+					</p>
+					
+					<h4>Network Analysis Methods for Inferring Causality in Signaling Networks 
+					(Sander, MSKCC)</h4>
+					<p>The goal of our second TRD project is to develop network analysis tools 
+					that algorithmically infer causality within signaling networks and make these
+					tools available. High-throughput screens conducted with libraries of small 
+					molecules or inhibitory RNAs have the ability to identify compounds that 
+					induce tumor suppressive responses in cancer cells [12]. While the effects 
+					of such perturbations can be easily linked to transcriptional changes, 
+					identifying the causal mechanism is a main challenge. In collaboration 
+					with Somwar and colleagues [13], we used a computational approach to predict 
+					the target of a small molecule inducing reduced growth in lung adenocarcinoma
+					cell lines. Interestingly, experimental follow up confirmed 
 					the prediction.</p>
-					<p>Building on this concept, we have been working on computational approaches to model causal signaling 
-					cascades inducing observed transcriptional changes within perturbed cancer cell lines. We have been 
-					exploring the use of optimization algorithms adapted from statistical physics to identify the minimal 
-					set of interactions able to connect genes that are differentially expressed after a perturbation, with 
-					candidate targets of the same perturbation. This initial approach relied on an algorithm 
+					<p>Building on this concept, we have been working on computational approaches
+					to model causal signaling cascades inducing observed transcriptional changes 
+					within perturbed cancer cell lines. We have been exploring the use of 
+					optimization algorithms adapted from statistical physics to identify the 
+					minimal set of interactions able to connect genes that are differentially 
+					expressed after a perturbation, with candidate targets of the same 
+					perturbation. This initial approach relied on an algorithm 
 					that solves the Steiner-tree problem. Given a set of “terminal” nodes, the Steiner-tree is defined 
 					as the tree of minimum weight connecting these terminals, allowing the inclusion of additional nodes. 
 					Differentially expressed genes after a perturbation and/or candidate targets of the same perturbation 
@@ -310,6 +422,44 @@ body {
 					patients receiving bone marrow transplantations [23]. A more detailed understanding of the relationships 
 					between gut microbial subpopulations following such aggressive treatments in the host could inform 
 					therapeutic development leading to improved outcomes.</p>
+					<p>
+					<b>References</b>
+					<ol>
+					<li>Somwar R, Shum D, Djaballah H, Varmus H: Identification and preliminary 
+					characterization of novel small molecules that inhibit growth of human lung 
+					adenocarcinoma cells. <i>Journal of biomolecular screening </i>2009, 
+					14(10):1176-1184.</li>
+					<li>Somwar R, Erdjument-Bromage H, Larsson E, Shum D, Lockwood WW, Yang G, 
+					Sander C, Ouerfelli O, Tempst PJ, Djaballah H et al: Superoxide dismutase 1 
+					(SOD1) is a target for a small molecule identified in a screen for inhibitors
+					of the growth of lung adenocarcinoma cell lines. <i>Proceedings of the National 
+					Academy of Sciences of the United States of America </i>2011, 108(39):16375-16380.
+					</li>
+					<li>Stratton MR, Campbell PJ, Futreal PA: The cancer genome. <i>Nature </i>2009, 
+					458(7239):719--724.</li>
+					<li>Hanahan D, Weinberg RA: The hallmarks of cancer. <i>Cell </i>2000, 
+					100(1):57--70.</li>
+					<li>Hanahan D, Weinberg RA: Hallmarks of cancer: the next generation. <i>Cell</i> 
+					2011, 144(5):646-674.</li>
+					<li>Ciriello G, Cerami E, Sander C, Schultz N: Mutual exclusivity analysis 
+					identifies oncogenic network modules. <i>Genome research </i>2012, 22(2):398-406.</li>
+					<li>Vaske CJ, Benz SC, Sanborn JZ, Earl D, Szeto C, Zhu J, Haussler D, Stuart
+					JM: Inference of patient-specific pathway activities from multi-dimensional 
+					cancer genomics data using PARADIGM. <i>Bioinformatics</i> 2010, 26(12):i237-245.</li>
+					<li>Vandin F, Upfal E, Raphael BJ: Algorithms for detecting significantly 
+					mutated pathways in cancer. <i>Journal of computational biology : a journal of 
+					computational molecular cell biology </i>2011, 18(3):507-522.</li>
+					<li>Turner N, Tutt A, Ashworth A: Hallmarks of 'BRCAness' in sporadic cancers. 
+					<i>Nat Rev Cancer</i> 2004, 4(10):814-819.</li>
+					<li>Storrs C: Combing the Cancer Genome.<i>The Scientist</i>  2012, Mar.</li>
+					<li>Taylor BS, Schultz N, Hieronymus H, Gopalan A, Xiao Y, Carver BS, Arora 
+					VK, Kaushik P, Cerami E, Reva B et al: Integrative genomic profiling of human
+					prostate cancer. <i>Cancer cell</i> 2010, 18(1):11-22.</li>
+					<li>Jenq RR, Ubeda C, Taur Y, Menezes CC, Khanin R, Dudakov JA, Liu C, et al.
+					Regulation of intestinal inflammation by microbiota following allogeneic bone
+					marrow transplantation. <i>J Exp Med.</i> 2012;209(5):903-911.</li>
+					</ol>
+					</p>
 				</div>
 			</div>
 			<div class="tab-pane" id="b-tab">
