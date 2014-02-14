@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NRNB: GSoc Ideas Page</title>
+
+<!-- Le styles -->
+<link href="../assets/css/bootstrap.css" rel="stylesheet">
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="../assets/css/jquery.tocify.css" />
+<link type="text/css" rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+<style type="text/css">
+#nav {
+     position: fixed;
+}
+.tocify ul, .tocify li {
+	line-height: 15px;
+}
+</style>
+</head>
+<body>
+<div class="row" height="100%">
+    <div class="span4"  height="100%">
+         <!-- Our table of contents will be here !-->
+         <div id="nav" style="font-size: 12px;" height="100%"></div>
+    </div>
+    <div id="ideas" class="span8">
+<h2 dir="ltr" >IDEA 1: Submit your own original proposal</h2>
+
+<p>Feel free to propose your own idea. As long as it relates to one of our projects, we will give it serious consideration. Creativity and self-motivation are great traits for open source programmers, but make sure your proposal is also relevant.</p>
+
+<h2 dir="ltr" >IDEA 2: Graph Database Support for Cytoscape 3 by TinkerPop Software Stack</h2>
+
+<p><a href="http://www.cytoscape.org/cy3.html" >Cytoscape 3</a> is now available to end-users, and we need an easy-to-use Cytoscape App which provides the following functions to support huge data sets:</p>
+
+<ul>
+<li><p>Mount huge network(s) in disk-based graph database</p>
+
+</li>
+<ul>
+<li><p><a href="http://www.neo4j.org/" >Neo4j</a></p>
+
+</li>
+<li><p><a href="http://www.openrdf.org/" >Sail</a></p>
+
+</li>
+</ul>
+
+<li><p>Send query to the network</p>
+
+</li>
+<ul>
+<li><p>Search by simple properties (Name, ID, etc.)</p>
+
+</li>
+<li><p><a href="http://en.wikipedia.org/wiki/SPARQL" >SPARQL</a> (for semantic data)</p>
+
+</li>
+<li><p><a href="https://github.com/tinkerpop/gremlin/wiki" >Gremlin</a></p>
+
+</li>
+</ul>
+
+<li><p>Visualize the result</p>
+
+</li>
+</ul>
+
+<p>To support multiple databases, you need to use<a href="https://github.com/tinkerpop/blueprints" > TinkerPop Blueprints</a>. The goal of this project is publish a maintainable and usable (by average biologists) App for all Cytoscape 3 users.</p>
+
+<br />
+<p>Language and Skills: Java, Maven, OSGi, Git/GitHub</p>
+
+<p>Potential Mentors: Kei Ono, Samad Lotia</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 3: Graphical Annotated Networks in Cytoscape 3</h2>
+
+<p>Beyond just the nodes and edges, it’s often helpful to annotate a network or pathway with more information, including basic graphics and text. We now have a basic annotations framework in Cytoscape 3, but there is a lot to be done. We have also proposed an API for annotations, but the existing implementation needs to be modified to conform to the API. There are also two new features that we would like to add: relative annotations (relative to a node/edge or group of nodes) and annotation groups.</p>
+
+<p>Download Cytoscape 3 and play with the existing annotations capabilities. If the project still interests you contact potential mentors via the link below and we will help you refine your proposal.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Scooter Morris</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 4: Implement heatmaps in CyDataTable browser in Cytoscape 3</h2>
+
+<p>Similar in idea to what is provided by<a href="http://bioinformatics.oxfordjournals.org/content/24/18/2112.abstract" > VistaClara</a> with some of the advanced features in<a href="http://www.cgl.ucsf.edu/cytoscape/cluster/clusterMaker.html" > clusterMaker</a>, e.g., dendrograms, zooming, etc.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Scooter Morris, Samad Lotia</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<br />
+<br />
+<p>Possible Mentors: Jim Schaff</p>
+
+<p>Contact: vcell-discusssbml</p>
+
+<h2 dir="ltr" >IDEA 6: Web interface for Querying the Virtual Cell database</h2>
+
+<p>Goal: Develop a web application for querying and retrieval SBML models from Virtual Cell database</p>
+
+<p>The<a href="http://vcell.org" > Virtual Cell</a> modeling and simulation framework is an open source software for modeling and simulations of biological systems using Java RMI, providing both client- and server- based modeling and simulation capabilities. The biologically oriented user interface allows experimentalists to create models, define cellular geometry, specify simulations and analyze the simulation results. The models and results are stored on a remote server and presently can be reviewed only in the VCell software. The development of a web application for querying VCell database would provide new resources for biologists by enabling web access to VCell database, searching and retrieving public models in VCML and SBML formats.</p>
+
+<br />
+<p>Language and Skills: Java, experience with Google Web Toolkit is a plus</p>
+
+<p>Possible Mentors: Michael Blinov, Jim Schaff</p>
+
+<p>Contact: vcell-discuss</p>
+
+<h2 dir="ltr" >IDEA 7: Cytoscape plugin for importing and visualizing variant data</h2>
+
+<p>Background: Variant data identifies genomic regions where individual base pairs are different from a reference genome. These variations (e.g., SNPs) can influence gene regulation, structure and function, and are thus associated many genetic diseases. These data sets are quick large and difficult to navigate.</p>
+
+<p>Goal: To make a Cytoscape plugin that reads in variant data files and dynamically maps the data to biological networks and pathways independently loaded into Cytoscape. The plugin should provide the databases needed to perform the mapping as well as default visualization settings, such as coloring all genes with variants in coding regions red.</p>
+
+<p>The plugin should:</p>
+
+<ul>
+<li><p>Be able to read .vcf files (<a href="http://www.1000genomes.org/node/101" >http://www.1000genomes.org/node/101</a>). In fact, there is an indexed and compressed form of .vcf files that we would ideally work with.</p>
+
+</li>
+<li><p>Recognize the mapping of Ensembl IDs to genomic coordinates. Pathway and networks will already be mapped to Ensembl via GenMAPP-CS plugins.</p>
+
+</li>
+<li><p>Identify the subset of .vcf data rows to import based on the genomic coordinates of the pathway or network nodes.</p>
+
+</li>
+<li><p>Import these rows. When more than one row maps to a single gene, a metanode should be created.</p>
+
+</li>
+<li><p>Parse important values from the INFO column of .vcf files and create separate CyAttributes.</p>
+
+</li>
+<li><p>Define various default visual color or size mappings based on the values of the imported .vcf attributes.</p>
+
+</li>
+</ul>
+
+<br />
+<p>Language and Skills: Java/Swing</p>
+
+<p>Potential Mentors: Alex Pico, Paul Tang, Nathan Salomonis, Michael Heuer</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 8: WikiPathways pathway page enhancements</h2>
+
+<p>Apply your web development skills to improve the WikiPathways website, especially the<a href="http://www.wikipathways.org/index.php/Pathway:WP1602" > pathway page</a>. Here are several ideas of features you could work on:</p>
+
+<ul>
+<li><p>Improve editing of pathway information. To edit most pathway information you currently need to start a Java editor applet. This is rather slow, doesn’t always work and is not the most logical choice for several parts of the page:</p>
+
+</li>
+<ul>
+<li><p>Literature references: It would be useful to be able to add literature references directly to the bibliography section. Authors and title information should be looked up automatically after providing a PubMed identifier.</p>
+
+</li>
+</ul>
+
+<li><p>Improve annotation of genes, proteins and metabolites (DataNodes): The<href="#External_references" > External references</a> table at the bottom of the pathway page provides an overview of DataNode annotations on the pathway. To make it easier to find and fix incorrect or missing annotations, the following improvements could be made:</p>
+
+</li>
+<ul>
+<li><p>It should be possible to add or change the annotation directly from that table. Currently, you have to open the editor applet and locate the DataNode on the pathway diagram.</p>
+
+</li>
+<li><p>Mark missing or incorrectly annotated DataNodes in the table, e.g. by adding a warning icon.</p>
+
+</li>
+<li><p>For DataNodes without any annotation, it would be useful to provide an suggestion feature, that automatically searches for possible annotations based on the name. Users then only have to approve the suggestion instead of finding the annotation manually.</p>
+
+</li>
+</ul>
+
+</ul>
+
+<br />
+<p>Language and Skills: JavaScript, JQuery, Web development</p>
+
+<p>Possible mentors: Thomas Kelder, Alex Pico</p>
+
+<p>Contact: wikipathways-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 9: New Features for Online Tutorial System</h2>
+
+<p><a href="http://http//opentutorials.cgl.ucsf.edu" >OpenTutorials</a> is a free, online tutorial resource for open source and NRNB-supported tools. It is built on top of MediaWiki and a handful of extensions. It’s basic function is to provide a wiki-based collection of tutorials that can be viewed as web page, slide show or printed handout. The wiki approach makes it easy to build and maintain content. The slide show and handout features make it useful for presenters.</p>
+
+<p>There are a number of features that need to be implemented to improve the site and really make it effective to a larger community. What we’re looking for here with this project is an application that is very clear about the use cases of tutorials:</p>
+
+<ul>
+<li><p>for developers wanting to create and maintain tutorial materials</p>
+
+</li>
+<li><p>for presenters of tutorials</p>
+
+</li>
+<li><p>and for users learning from tutorials.</p>
+
+</li>
+</ul>
+
+<p>The application should include a number of features that enhance these use cases. When possible, the features should point to other examples were similar approaches have proven successful (e.g., in other popular software). After we discuss the features, your application should then include implementation details and a timeline. These would be implemented as one or more PHP extensions, for example. Experience or some demonstration of familiarity with MediaWiki or PHP would be a plus. Here are some feature ideas to get you started:</p>
+
+<ul>
+<li><p>Mix-and-match: We need a mechanism to allow presenters to mix and match tutorials (or sections of tutorials) into sets that are tailored for their class or workshop audience.</p>
+
+</li>
+<li><p>Transient locks: We need a mechanism for temporarily locking content while it is being presented (so that someone isn’t editing a wiki page while you are presenting it to a class of 100 students!). This can be done either by supporting temporary presenter “copies” that are not publicly editable, or simply locks that presenters can set for specific dates and times.</p>
+
+</li>
+<li><p>Enhanced image replacement tools to make it easier to update screenshots.</p>
+
+</li>
+<li><p>Tutorial builder tools using templates and forms to get a new tutorial started, or an integrated html-to-wiki converter like<a href="http://labs.seapine.com/htmltowiki.cgi" > this</a>.</p>
+
+</li>
+<li><p>Tweaks to the wiki page display of header/meta data and of slide breaks (e.g., a clear, yet unobtrusive icon).</p>
+
+</li>
+</ul>
+
+<br />
+<p>Language and Skills: PHP, MediaWiki</p>
+
+<p>Potential Mentors: Alex Pico, Kristina Hanspers</p>
+
+<p>Contact: apico@gladstone.ucsf.edu</p>
+
+<h2 dir="ltr" >IDEA 10: Custom Export Editor for WikiPathways Using SVG</h2>
+
+<p>Background:<a href="http://wikipathways.org" > WikiPathways</a> is a collaborative pathway editing and sharing platform. There are many ways to use the pathway content including data visualization and analysis. Another use is as illustrations in presentations and publications. We currently provide SVG export for this purpose. However, the images usually require quite a bit of “touch up” in secondary tools like Illustrator, which inhibits this use case.</p>
+
+<p>Goal: Customize a basic SVG Editor to insert into the export process to allow basic visual style updates and custom annotations on top of the pathway image. Pre-configured options would include:</p>
+
+<ul>
+<li><p>thicker lines and bold font (for better display in powerpoint)</p>
+
+</li>
+<li><p>swap basic cellular component shapes with nice graphics (provided from an existing repository)</p>
+
+</li>
+<li><p>color schemes</p>
+
+</li>
+</ul>
+
+<p>This simple “touch up” editor could dramatically increase the audience for WikiPathways to include anyone looking for an easy tool to generate nice looking pathway images for presentations. Ideally, this editor would work on tablets as well as across major browsers.</p>
+
+<br />
+<p>Language and Skills: SVG,<a href="http://code.google.com/p/svg-edit/" > SVG-edit</a> (or alternative)</p>
+
+<p>Potential Mentors: Alexander Pico, Anders Riutta</p>
+
+<p>Contact: wikipathways-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 11: Integration of WikiPathways Visualization with PathVisio into Bioclipse</h2>
+
+<p>Goal: To integrate PathVisio visualization widget into Bioclipse for visualization of pathway information from WikiPathways. Selecting protein and metabolites in the pathway visualization, will shows of that chemical entity in other Bioclipse components, using the Jmol and JChemPaint plugins for Bioclipse. Preferably, interaction can be scripted, allowing integration with other metabolomics</p>
+
+<p>features in Bioclipse.</p>
+
+<p>Motivation: Bioclipse is a powerful platform combining a powerful scripting language to write data analysis and visualization workflows, which can easily be shared on, for example, MyExperiment.org [1]. While it has various components to support metabolomics in general, it lacks support for visualization of metabolic pathways.</p>
+
+<p>Description: You will use Java to write a plugin for Bioclipse [2] that uses PathVisio [3] as a library to visualize metabolic pathways from WikiPathways inside Bioclipse. You will use the Eclipse selection event propagation mechanism [4] so that when users select protein and metabolites, Bioclipse will automatically visualize 2D or 3D structural information about those molecules (only the event creation has to be implemented). Preferably, a scripting language extension is written [5], to allow extracting information from the pathway and highlighting of parts of the pathway. This involves extending an existing interface with methods that can be run from the scripting language.</p>
+
+<ol ><li><p><a href="http://myexperiment.org/" >myexperiment.org</a></p>
+
+</li>
+<li><p><a href="http://www.bioclipse.net/" >www.bioclipse.net</a></p>
+
+</li>
+<li><p><a href="http://www.pathvisio.org/" >www.pathvisio.org</a></p>
+
+</li>
+<li><p><a href="http://www.eclipse.org/articles/Article-WorkbenchSelections/article.html" >www.eclipse.org/articles/Article-WorkbenchSelections/article.html</a></p>
+
+</li>
+<li><p><a href="http://www.biomedcentral.com/1471-2105/10/397" >www.biomedcentral.com/1471-2105/10/397</a></p>
+
+</li>
+</ol><br />
+<a href="http://www.biomedcentral.com/1471-2105/10/397" ></a><p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Egon Willighagen</p>
+
+<p>Contact: wikipathways-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 12: Integration of Cytoscape into Bioclipse</h2>
+
+<p>Goal: To integrate the new Cytoscape OSGi visualization widgets into Bioclipse for visualization of large interaction networks. Selecting protein and metabolites in the pathway visualization, will shows of that chemical entity in other Bioclipse components, using the Jmol and JChemPaint plugins for Bioclipse. Preferably, interaction can be scripted, allowing integration with other metabolomics</p>
+
+<p>features in Bioclipse.</p>
+
+<p>Motivation: Bioclipse is a powerful platform combining a powerful scripting language to write data analysis and visualization workflows, which can easily be shared on, for example, MyExperiment.org [1]. While it has been used in drug discovery and predictive toxicology in pharmaceutical industry [2], it currently does not have functionality to visualize large graph structures as Cytoscape has.</p>
+
+<p>Description: You will use Java to write a plugin for Bioclipse [3] that uses Cytoscape. No particular graph is aimed at, but the plugin will use the Eclipse selection event propagation mechanism [4] so that when users select protein and metabolites, Bioclipse will automatically visualize 2D or 3D structural information about those molecules (only the event creation has to be implemented). Preferably, a scripting language extension is written, to allow extracting information from the</p>
+
+<p>visualized graphs.</p>
+
+<ol ><li><p><a href="http://myexperiment.org/" >myexperiment.org</a></p>
+
+</li>
+<li><p><a href="http://pubs.acs.org/doi/abs/10.1021/ci200242c" >pubs.acs.org/doi/abs/10.1021/ci200242c</a></p>
+
+</li>
+<li><p><a href="http://www.bioclipse.net/" >www.bioclipse.net</a></p>
+
+</li>
+<li><p><a href="http://www.eclipse.org/articles/Article-WorkbenchSelections/article.html" >www.eclipse.org/articles/Article-WorkbenchSelections/article.html</a></p>
+
+</li>
+</ol><br />
+<a href="http://www.eclipse.org/articles/Article-WorkbenchSelections/article.html" ></a><p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Egon Willighagen</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 13: PathVisio Plugin to Load Additional Information about Data Nodes</h2>
+
+<p>Ensembl now provides a BioMart implementation for Ensembl genes, variation and regulation. The goal of this project is to develop a plugin that loads additional information about the data nodes in a pathway and displays them in a side panel (gene name, chromosome location, strand, %GC content, transcript count, etc). This could be extended with other services that provide other information about the data nodes.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Martina</p>
+
+<p>Contact: wikipathways-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 14: JavaScript JSON convertors for graph file formats</h2>
+
+<p>Graphs can be represented in several formats, including GraphML, XGMML, SIF, and so on. The goal of this project would be to write convertors to and from formats like these and JSON.</p>
+
+<p>This would allow projects on the client side (e.g. cytoscape.js) or on the server side (e.g. node.js) to read and write these graph formats.</p>
+
+<p>You’ll probably want to make use of some sort of XML parsing library in JavaScript – even jQuery would probably suffice.</p>
+
+<br />
+<p>Language and Skills: JavaScript, XML parsing</p>
+
+<p>Potential Mentors: Max Franz, Christian Lopes, Gary Bader</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 15: Publish Cytoscape 3 Session to cytoscape.js</h2>
+
+<p><a href="http://www.cytoscape.org/cy3.html" >Cytoscape 3</a> and<a href="http://cytoscape.github.com/cytoscape.js/" > cytoscape.js</a> are completely independent software packages; 3 is a Java Desktop application and .js is a JavaScript library to visualize network data. However, it shares some basic concepts, such as Visual Styles. It is very useful if we can reproduce same/similar Cytoscape 3 network views in web browsers to share/publish data sets.</p>
+
+<p>The goal of this project is exporting Cytoscape 3 data as JSON, and reproducing same/similar interactive network views with cytoscape.js and other JavaScript libraries.</p>
+
+<ul>
+<li><p>Export Cytoscape 3 data as JSON</p>
+
+</li>
+<ul>
+<li><p>Networks</p>
+
+</li>
+<li><p>Data Tables</p>
+
+</li>
+<li><p>Visual Styles</p>
+
+</li>
+</ul>
+
+<li><p>This is a JAVA programming project. JavaScript<a href="http://nrnb.org/ideas?action=edit;id=JavaScript" >?</a> knowledge is optional, but Java/OSGi knowledge is REQUIRED. You need to write a lot of Java classes to convert Cytoscape 3 data objects into JSON using Jackson library.</p>
+
+</li>
+<li><p><a href="https://github.com/idekerlab/json-impl" >Prototype is available</a></p>
+
+</li>
+<li><p>Create a test HTML5 page to visualize Cytoscape 3 network views with cytoscape.js</p>
+
+</li>
+<li><p>(Optional) Add import JSON function for Cytoscape 3</p>
+
+</li>
+</ul>
+
+<br />
+<p>Language and Skills: Java, JavaScript, HTML5, Git/GitHub</p>
+
+<p>Potential Mentors: Kei Ono, Christian Lopes, Max Franz, Gary Bader</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 16: BridgeDb config plugin in PathVisio</h2>
+
+<p><a href="http://www.bridgedb.org" >BridgeDb</a> is an identifier mapping framework used in PathVisio and WikiPathways. Currently it is possible to load a mapping databases for gene products and metabolites. The existing<a href="http://www.pathvisio.org/wiki/BridgeDbConfigPluginHelp" > BridgeDb config plugin</a> provides functionality to load more mapping databases or to use other webservices for the mappings. This functionality should be extended and integrated into the core PathVisio application as another core module. The configuration dialog has to be improved so it is more intuitive and user friendly.</p>
+
+<p>The main features of this module should be:</p>
+
+<ul>
+<li><p>user friendly dialog to configure mapping services</p>
+
+</li>
+<li><p>centralized module for identifier mapping in PathVisio</p>
+
+</li>
+<li><p>system to define which databases are used for which species and/or data node type</p>
+
+</li>
+</ul>
+
+<br />
+<p>Language and Skills: Java, OSGi, BridgeDb</p>
+
+<p>Potential Mentors: Martina Kutmon, Anwesha Bohler</p>
+
+<p>Contact: wikipathways-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 17: Publication Reference Plugin for PathVisio</h2>
+
+<p>Currently<a href="http://www.pathvisio.org" > PathVisio</a> supports publication reference annotation of pathways, data nodes and interactions with PubMed identifiers. The goal of this plugin is to provide a more advanced framework for reference annotations.</p>
+
+<p>This plugin should provide (can be extended):</p>
+
+<ul>
+<li><p>functionality to use other identifiers than pubmed (might be possible to use an existing java library for that)</p>
+
+</li>
+<li><p>show all references in a side tab with linkouts</p>
+
+</li>
+<li><p>exporting all references in different reference style formats</p>
+
+</li>
+</ul>
+
+<br />
+<p>Language and Skills: Java, OSGi</p>
+
+<p>Potential Mentors: Sravanthi Sinha, Martina Kutmon</p>
+
+<p>Contact: wikipathways-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 18: Visualizing Pathway RDF with Visualbox</h2>
+
+<p>WikiPathways data is now available as RDF, but to take full advantage of this representation we need better network-friendly visualization tools for RDF.<a href="http://visualbox.org" > Visualbox</a> is an open source toolbox to create web-based visualizations of RDF. It currently has 12 filters ranging from tabular to Google Map projections. In this project, we would like to extend<a href="http://visualbox.org" > Visualbox</a> with one or more network and pathways-specific filters.</p>
+
+<p>This project could also include extending<a href="http://visualbox.org" > Visualbox</a> to have better support for SPARQL query construction and validation, including but not limited to basic syntax highlighting.</p>
+
+<p>Overall, the goal is to provide an RDF data viewer tailored for biologists interested in pathways and networks. Other original ideas for extensions and approaches are welcome.</p>
+
+<br />
+<p>Language and Skills: JavaScript, PHP, CSS (SPARQL, JS libs and tools)</p>
+
+<p>Potential Mentors: Andra Waagmeester, Alvaro Graves, Anders Riutta</p>
+
+<br />
+<p>Contact: wikipathways-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 19: Tablet App for WikiPathways</h2>
+
+<p>The WikiPathways motto is “Pathways for the People”. As such, we want to reach a broad audience for contributors and users of biological pathways. The next logical step is a cross-platform app for tablets.</p>
+
+<p>Our existing Java Applet and JavaScript viewers and editors are being overhauled in step with updated web technologies (HTML5, JS, SVG, Canvas). This GSoC project would build on top of this work to encapsulate key browsing functionality as a table app. Some basic editing functionality might also be considered. This project would thus leverage existing technologies depending on the best starting point for translation, for example:</p>
+
+<ul>
+<li><p><a href="http://www.codenameone.com/" >Codename One</a> (Java)</p>
+
+</li>
+<li><p><a href="http://www.slideshare.net/livefront/building-html5-tablet-apps-for-ios-and-android" >HTML5</a></p>
+
+</li>
+<li><p><a href="https://github.com/wikipathways/pathvisiojs" >pathvisiojs</a> <a href="http://www.slideshare.net/livefront/building-html5-tablet-apps-for-ios-and-android" ></a></p>
+
+</li>
+</ul>
+
+<p>Ultimately, the project is about rendering our particular XML (GPML) providing search, navigation and interactivity via a tablet.</p>
+
+<br />
+<p>Language and Skills: Significant tablet app development experience</p>
+
+<p>Potential Mentors: Andra Waagmeester,Nuno Nunes, Anders Riutta</p>
+
+<p>Contact: wikipathways-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 20: Real-time Streaming of Dynamic Graphs in Cytoscape</h2>
+
+<p><a href="http://code.google.com/p/dynnetwork/" >DynNetwork</a> is a plugin developed during GSoC 2012 to visualize and analyze dynamic data in Cytoscape 3. Do you want to help us bring the application up to the next level?</p>
+
+<p>We are interested in implementing streaming of dynamic graphs from external sources:</p>
+
+<ul>
+<li><p>Implement interface for event streams. Identify key sources.</p>
+
+</li>
+<li><p>Bridge current implementation to the event stream interface</p>
+
+</li>
+<li><p>Adapt DynNetwork to be fully functional for event streaming</p>
+
+</li>
+</ul>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Jason Montojo</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 21: Improved Layering/Interaction in Cytoscape 3 Networks</h2>
+
+<p>This project involves working on the visualization core in Cytoscape 3 (ding) to significantly improve the user experience. Currently, Cytoscape supports a single canvas to visualize the network. When moving or changing graphic objects (nodes and edges), the entire visible portion of the canvas needs to be updated. It has been pointed out by visualization experts that this problem can be easily solved by adding an additional “selection” canvas. Motion of nodes and edges could be performed in this canvas rather than the main canvas, significantly improving the interactivity on dense networks. The addition of a “selection” canvas also enables a number of visualization techniques that are too computationally expensive in the current Cytoscape model.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Scooter Morris</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 22: Compound Graph Visualization in Cytoscape 3</h2>
+
+<p>Cytoscape 3 has introduce two concepts into the core, groups and annotations, that could be combined to provide a compound graph visualization. Currently groups can be either in a “collapsed” or “expanded” state. For a compound graph, a new visualization state needs to be introduced that allows the compound node (group) to be visualized as a shape (concave or convex hull) around it’s children. Moving that shape would move all of it’s children, etc.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Scooter Morris</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 23: Network Analysis Enhancements</h2>
+
+<p>Cytoscape 3 includes a Network Analyzer bundle that performs a number of extremely useful network analyses. Unfortunately, the functionality provided is not exposed in a way that other plugins can utilize. This project will enhance the network analysis functionality to support calculating individual network statistics using an exported API or exported Cytoscape tasks. Moreover, the project will provide this functionality in both a GUI and non-GUI (headless) mode.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Scooter Morris and Nadezhda Doncheva</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 24: Visualization of Time-series Cluster Data</h2>
+
+<p>Currently, the clusterMaker plugin uses standard heat maps to visualize attribute cluster data (based on Java TreeView). Increasingly, time series data is becoming important for clustering applications and it would be useful to expand the provided visualization options to explicitly support time series data. For these purposes, we’re thinking about time-series that have multiple conditions in each series, which means we need to move beyond the standard two-dimensional heat map. This project can explore utilizing animation, small multiples, or other standard visualization techniques (or your own novel techniques) to provide new visualization opportunities to users. Ideally, this would be integrated with network-based animation tools such as DynNetwork or CyAnimator.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Scooter Morris</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 25: Network Animation Tools</h2>
+
+<p>CyAnimator was a key-frame style animation tool for Cytoscape 2.8. This project will implement a similar tool for Cytoscape 3, taking advantage of the existing CyAnimator where appropriate. This tool is distinct from the DynNetwork tool in that it is not necessarily driven by specific data, although one possible use case would be to create dynamic XGMML as an output from the tool.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Scooter Morris</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 26: Touch-based Exploration of Large Data Collections and Networks</h2>
+
+<p>The goal of this project is to develop a general, open source framework for performing iterative, faceted search on large data collections and networks specifically for touch-based input devices. The project will leverage ideas from existing desktop applications (see<a href="http://www.youtube.com/watch?v=BZuFUZpEZ-A" > Microsoft Pivot</a>) but will include experimentation and innovation in interaction techniques in order to create a more engaging user experience. Ultimately the framework will be applied in one of potentially many biological applications, including MedSavant, which is described below.</p>
+
+<p>MedSavant is a high-performance search engine for genomic datasets, which is primarily aimed to help researchers identify genetic conditions that cause disease. The desktop client allows users to</p>
+
+<p>incrementally construct faceted search queries and visualize their results virtually in realtime. Similar workflows enabled by the desktop client will be made possible by integration with the proposed</p>
+
+<p>framework. For more information, visit <a href="http://www.medsavant.com" >www.medsavant.com</a>.</p>
+
+<br />
+<p>Language and Skills: Android or iOS development; AJAX, JSON, Java, and Javascript; UNIX</p>
+
+<p>Potential Mentors: Marc Fiume, Marta Girdea</p>
+
+<p>Contact: mfiume@cs.toronto.edu</p>
+
+<h2 dir="ltr" >IDEA 27: Co-authorship networks App</h2>
+
+<p>PubMed currently lists more than 23 million citations for biomedical literature from MEDLINE, life science journals, and online books. Co-authorship networks can uncover relevant patterns in a particular research area, trends in research, and productivity by individuals or teams. For example, one could quickly create a network with all investigators working in cancer research in the last 10 years and highlight the total number of articles, geographic location, and average impact factor of each author.</p>
+
+<p>An App like this is not currently available in an open source format, and it is anticipated it to have an extraordinary large user base.</p>
+
+<p>The Cytoscape app developed in this project would allow the following:</p>
+
+<ul>
+<li><p>Querying PubMed (and potentially other databases), by topic, author or else.</p>
+
+</li>
+<li><p>Extracting paper info from abstract</p>
+
+</li>
+<li><p>Computing co-authorship matrix</p>
+
+</li>
+<li><p>Creating co-authorship network</p>
+
+</li>
+<li><p>Enable attributes for coloring and shaping nodes and edges by properties<br />
+like publication numbers, geo-location, journal impact factor, etc</p>
+
+</li>
+</ul>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Sergio Baranzini</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 28: User Interaction on Biomedical Linked Data</h2>
+
+<p>During the GSoC 2012, we developed<a href="http://vsdlc3.blogspot.com" > SemScape</a>, a plugin that allows the use of Cytoscape as a browser for Semantic Web (Linked Data) knowledge bases. We are currently in the process of updating libs and packaging the plugin for the Cytoscape App Store.</p>
+
+<p>The idea for this year’s project is to go one step further and to allow the use of Cytoscape to visually define queries in SPARQL. The basic idea is that from a graph, a sub-graph can be defined where a few nodes or edges can be marked as variables (and eventually filters can be associated to them): this is equivalent to a (simple) SPARQL query. The user can then define queries in a simple and interactive way, without knowing the underlying syntax, that can be stored and applied on different data sources.</p>
+
+<p>The project can then be extended in three directions, depending on the interest of the student:</p>
+
+<ul>
+<li><p>allowing users to push such queries to a repositories and hence share them (the current plugin support updates of queries from remote repositories)</p>
+
+</li>
+<li><p>Implementing more complex queries (unions, negation, …)</p>
+
+</li>
+<li><p>Implementing heuristics for query-selection: in the current plugin, queries can be performed on demand, but they are also associated to specific actions. For instance, right-selecting a node of type protein can present as an option to expend the graph with the results of a query which is can include the specific protein as a value. This is possible through a simple markup through which queries are annotated by the user. Such markup could be included in the visual query/construction process and/or extracted from simple query patterns.</p>
+
+</li>
+</ul>
+
+<p>Some of the ideas in this project<a href="http://www.biomedcentral.com/1471-2105/9/S4/S6" > have been already prototyped</a>, so we have a good understanding of the difficulty and timing required.</p>
+
+<p>This project has the potential to make Cytoscape an ideal tool to navigate and query Linked Data resources (both in biomedical and, more generally, in Open Data domains).</p>
+
+<br />
+<p>Language and Skills: Java/Maven. Knowledge of OSGi would be helpful. Knowledge of Semantic Web technologies would be a plus.</p>
+
+<p>Potential Mentors: Andrea Splendiani, Andra Waagmeester</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >IDEA 29: CentiScaPe for multiple networks analysis and graphical output enhancement</h2>
+
+<p>Background: CentiScaPe is a Cytoscape plugin that allows to compute network centrality parameters. It is the most complete Cytoscape plugin for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, Betweenness, Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected networks. CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. CentiScaPe also provides a Boolean logic- based tool that allows easy characterization of nodes whose topological relevance depends on more than one centrality. Finally, different graphic outputs and the included description of biological significance for each computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing easy node categorization and experimental prioritization.</p>
+
+<p>Goal: The new beta version of CentiScaPe provides also the possibilities to analyze multiple networks and to integrate the analysis with experimental data set. This implies that a user can automatically start a computation of several networks and waits for the results. Anyway, the output of the analysis of a lot of networks (say 100) is useless if not supported by a smart and user friendly system to analyze the results. The IDEA is to implements some techniques used in software analysis to extract information from the results of multiple computation in order to compare different networks and to extract topological based biomarkers:</p>
+
+<ul>
+<li><p>The main framework for the results analysis is the Abstract Interpretation theory, particularly the interval analysis (and eventually others) [1].</p>
+
+</li>
+<li><p>Some statistical parameters, automatic analysis of the output, and new kinds of graphical outputs that can help to extract information from a multiple networks centrality analysis should be provided. The tools should for example be able to answer to questions as “How does the centroid value of the protein A chenge in the submitted 100 different networks?” or “How does the betweenness of protein B change if we consider 30 different phosporilation values for each proteins in the network N (this means we have 30 different experimental data set for the same network that must be included in the computation)?”.</p>
+
+</li>
+<li><p>The tools should also provide the implementation of the integration of experimental data-sets for the eigenvector, bridging centrality and edge betweenness (they are now available for all the other centralities).</p>
+
+</li>
+</ul>
+
+<p>[1] Patrick Cousot and Radhia Cousot. 1977. Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints. In Proceedings of the 4th ACM SIGACT-SIGPLAN symposium on Principles of programming languages (POPL ‘77).</p>
+
+<p><a href="http://doi.acm.org/10.1145/512950.512973" >http://doi.acm.org/10.1145/512950.512973</a></p>
+
+<br />
+<a href="http://doi.acm.org/10.1145/512950.512973" ></a><p>Language and Skills: Java, software analysis (possibly abstract interpretation theory)</p>
+
+<p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >Idea 30: Porting Interference App to Cytoscape 3 with new features for undirected and directed networks</h2>
+
+<p>Background: Interference is a Cytoscape plug-in for virtual knock-out experiments on complex networks. It allows to evaluate the topological effects of single or multiple nodes removal from a network. In this perspective, interference allows virtual node knock-out experiments: it is possible to remove one or more nodes from a network and analyze the consequences on network structure, by looking to the variations of the node centralities values. As the centrality value of a node is strictly dependent on the network structure and on the properties of other nodes in the network, the consequences of a node deletion are well captured by the variation on the centrality values of all the other nodes. With the interference app the user can:</p>
+
+<ul>
+<li><p>Simulate pharmacological treatment: one can potentially predict side effects of the drug by looking at the topological properties of nodes in a drug-treated network, meaning with that a network in which a drug-targeted node (protein) was removed. To inhibit a protein (for instance a kinases) corresponds to removing the node from the network</p>
+
+</li>
+<li><p>Simulate gene deletion: gene deletion implies losing encoded proteins, thus resulting in the corresponding removal of one or more nodes from a protein network</p>
+
+</li>
+</ul>
+
+<p>Goal: The Interference plugin is based on some features of the CentiScaPe plugin, and is available for Cytoscape 2.8.x but not yet for Cytoscape 3. The IDEA is to port the plugin to Cytoscape 3 and to add some features. The plugin works for undirected networks, but now a new version of the CentiScaPe plugin allows to compute several centralities also for directed networks. The new tool should:</p>
+
+<ul>
+<li><p>Work with Cytoscape 3.</p>
+
+</li>
+<li><p>Provide the Eigenvector, Bridging Centrality and Edge Betweenness</p>
+
+</li>
+<li><p>centrality Interference (now missing).</p>
+
+</li>
+<li><p>Provide the directed Interference for all the centralities implemented</p>
+
+</li>
+<li><p>More info at:<a href="http://www.cbmc.it/%7Escardonig/interference/Interference.php" > http://www.cbmc.it/%7Escardonig/interference/Interference.php</a></p>
+
+</li>
+</ul>
+
+<br />
+<a href="http://www.cbmc.it/%7Escardonig/interference/Interference.php" ></a><p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona),Fausto Spoto (University of Verona)</p>
+
+<p>Contact: cytoscape-discuss@googlegroups.com</p>
+
+<h2 dir="ltr" >Idea 31: Porting Pesca App to Cytoscape 3 with new features for undirected and directed networks</h2>
+
+<p>Background: The Pesca plugin is able to generate networks extracting shortest-path based subnetwork in order to help reconstructing biological networks. Particularly it provides the shortest path tree from a node, the shortest path cluster and a function to connect single nodes to giant component based on the shortest path from the nodes to the giant components.</p>
+
+<p>Goal: These features are available for Cytoscape 2.8.x in beta version. The IDEA is to port all the features to Cytoscape 3 and to add new features to the app. Particularly:</p>
+
+<ul>
+<li><p>Provide the shortest path tree and shortest path cluster for both directed and undirected networks</p>
+
+</li>
+<li><p>Provide the connection from single nodes to a giant component for both directed and undirected networks</p>
+
+</li>
+<li><p>Provide the possibility to download directed and undirected human interactome to be used to generate biological networks (from the human ppi network database:<a href="http://dp.univr.it/%7Elaudanna/LCTST/downloads/index.html" > http://dp.univr.it/~laudanna/LCTST/downloads/index.html</a>)</p>
+
+</li>
+<li><p>Provide a user friendly output allowing to easily extract and generate subnetworks</p>
+
+</li>
+<li><p>Provide some simple statistics (S-P distribution, number of occurrence of nodes)</p>
+
+</li>
+</ul>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
+
+<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
+
+<h2>Idea 32: Develop Heat-map Based Data Views for Cytoscape 3 using CoolMap</h2>
+
+<p>Background: CoolMap is a novel omics data exploration application/library that offers new ways to explore complex molecular data. It is based on the classic heatmap paradigm, but allows users to use generated (such as clustering) or pre-defined (such as gene ontology or sample groups) ontologies to aggregate big datasets into concept-level, human manageable views. The rows and columns of CoolMap can be expanded/collapsed interactively and each cell can be plotted in many ways (color gradient, statistical plots, etc.). It efficiently facilitates the exploratory data analysis, and help researchers generate hypotheses from data.</p>
+
+<p>Paired with other software like Cytoscape, this visualization duo has a lot of potential to transform the knowledge discovery processes from biomedical networks. CoolMap can be a good upgrade candidate for the currently used Java TreeView for Cytoscape.</p>
+
+<br />
+<p>A basic Cytoscape to CoolMap plugin framework will be provided to the student. The student then can harness the power of Cytoscape and CoolMap to explore new visualization possibilities.</p>
+
+<br />
+<p>CoolMap will public in several weeks and news and updates can be found at <a href="http://www.coolmap.org" >http://www.coolmap.org</a></p>
+
+<br />
+<p>Goal: Develop either a Cytoscape plugin using CoolMap’s core visualization library, or a CoolMap plugin that utilizes the full functionality of the CoolMap application to enhance Cytoscape’s heatmap-based visualization capabilities.</p>
+
+<br />
+<p>Language and Skills: Java</p>
+
+<p>Potential Mentors: Gang Su (University of Michigan, Ann Arbor)</p>
+
+<p>Contact: <a href="mailto:sugang@umich.edu" >sugang@umich.edu</a>, <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
+
+<br />
+
+    </div> <!-- .span9 !-->
+</div> <!-- .row !-->
+
+<script src="../assets/js/jquery-1.11.0.min.js"></script>
+<script src="../assets/js/jquery-ui.min.js"></script>
+<script src="../assets/js/jquery.tocify.min.js"></script>
+<script>
+$("#nav").tocify({
+    context: "#ideas",
+    showAndHide: false,
+    selectors: "h2",
+});
+</script>
+</body>
+</html>
