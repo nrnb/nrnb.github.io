@@ -967,23 +967,8 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 36: Visualizing Pathway RDF with Visualbox</h2>
 
-<p>WikiPathways data is now available as RDF, but to take full advantage of this representation we need better network-friendly visualization tools for RDF.<a href="http://visualbox.org" > Visualbox</a> is an open source toolbox to create web-based visualizations of RDF. It currently has 12 filters ranging from tabular to Google Map projections. In this project, we would like to extend<a href="http://visualbox.org" > Visualbox</a> with one or more network and pathways-specific filters.</p>
-
-<p>This project could also include extending<a href="http://visualbox.org" > Visualbox</a> to have better support for SPARQL query construction and validation, including but not limited to basic syntax highlighting.</p>
-
-<p>Overall, the goal is to provide an RDF data viewer tailored for biologists interested in pathways and networks. Other original ideas for extensions and approaches are welcome.</p>
-
-<br />
-<p>Language and Skills: JavaScript, PHP, CSS (SPARQL, JS libs and tools)</p>
-
-<p>Potential Mentors: Andra Waagmeester, Alvaro Graves, Anders Riutta</p>
-
-<p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 37: Improved Layering/Interaction in Cytoscape 3 Networks</h2>
+<h2 dir="ltr" >Idea 36: Improved Layering/Interaction in Cytoscape 3 Networks</h2>
 
 <p>This project involves working on the visualization core in Cytoscape 3 (ding) to significantly improve the user experience. Currently, Cytoscape supports a single canvas to visualize the network. When moving or changing graphic objects (nodes and edges), the entire visible portion of the canvas needs to be updated. It has been pointed out by visualization experts that this problem can be easily solved by adding an additional “selection” canvas. Motion of nodes and edges could be performed in this canvas rather than the main canvas, significantly improving the interactivity on dense networks. The addition of a “selection” canvas also enables a number of visualization techniques that are too computationally expensive in the current Cytoscape model.</p>
 
@@ -995,7 +980,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 38: Compound Graph Visualization in Cytoscape 3</h2>
+<h2 dir="ltr" >Idea 37: Compound Graph Visualization in Cytoscape 3</h2>
 
 <p>Cytoscape 3 has introduce two concepts into the core, groups and annotations, that could be combined to provide a compound graph visualization. Currently groups can be either in a “collapsed” or “expanded” state. For a compound graph, a new visualization state needs to be introduced that allows the compound node (group) to be visualized as a shape (concave or convex hull) around it’s children. Moving that shape would move all of it’s children, etc.</p>
 
@@ -1007,7 +992,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 39: Network Analysis Enhancements</h2>
+<h2 dir="ltr" >Idea 38: Network Analysis Enhancements</h2>
 
 <p>Cytoscape 3 includes a Network Analyzer bundle that performs a number of extremely useful network analyses. Unfortunately, the functionality provided is not exposed in a way that other plugins can utilize. This project will enhance the network analysis functionality to support calculating individual network statistics using an exported API or exported Cytoscape tasks. Moreover, the project will provide this functionality in both a GUI and non-GUI (headless) mode.</p>
 
@@ -1019,7 +1004,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 40: Visualization of Time-series Cluster Data</h2>
+<h2 dir="ltr" >Idea 39: Visualization of Time-series Cluster Data</h2>
 
 <p>Currently, the clusterMaker plugin uses standard heat maps to visualize attribute cluster data (based on Java TreeView). Increasingly, time series data is becoming important for clustering applications and it would be useful to expand the provided visualization options to explicitly support time series data. For these purposes, we’re thinking about time-series that have multiple conditions in each series, which means we need to move beyond the standard two-dimensional heat map. This project can explore utilizing animation, small multiples, or other standard visualization techniques (or your own novel techniques) to provide new visualization opportunities to users. Ideally, this would be integrated with network-based animation tools such as DynNetwork or CyAnimator.</p>
 
@@ -1031,7 +1016,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 41: Network Animation Tools</h2>
+<h2 dir="ltr" >Idea 40: Network Animation Tools</h2>
 
 <p>CyAnimator was a key-frame style animation tool for Cytoscape 2.8. This project will implement a similar tool for Cytoscape 3, taking advantage of the existing CyAnimator where appropriate. This tool is distinct from the DynNetwork tool in that it is not necessarily driven by specific data, although one possible use case would be to create dynamic XGMML as an output from the tool.</p>
 
@@ -1043,7 +1028,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 42: Touch-based Exploration of Large Data Collections and Networks</h2>
+<h2 dir="ltr" >Idea 41: Touch-based Exploration of Large Data Collections and Networks</h2>
 
 <p>The goal of this project is to develop a general, open source framework for performing iterative, faceted search on large data collections and networks specifically for touch-based input devices. The project will leverage ideas from existing desktop applications (see<a href="http://www.youtube.com/watch?v=BZuFUZpEZ-A" > Microsoft Pivot</a>) but will include experimentation and innovation in interaction techniques in order to create a more engaging user experience. Ultimately the framework will be applied in one of potentially many biological applications, including MedSavant, which is described below.</p>
 
@@ -1061,7 +1046,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:mfiume@cs.toronto.edu" >mfiume@cs.toronto.edu</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 43: Improve the Text-Mining Functionality of Factoid</h2>
+<h2 dir="ltr" >Idea 42: Improve the Text-Mining Functionality of Factoid</h2>
 
 <p><a href="http://pathwaycommons.github.io/factoid/" >Factoid</a> aims to be a tool that helps authors annotate biological interactions that occur in the text of academic publications in a machine-readable manner. Currently, Factoid uses basic entity-recognition to identify genes, proteins, biological processes to identify interactions between these entities. The goal of this project would be to integrate more sophisticated algorithms into the extraction of interactions from text content. A starting point for some of these would be the algorithms outlined by the EBI website WhatIzIt.</p>
 <br />
