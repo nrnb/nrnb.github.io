@@ -68,8 +68,7 @@ Project Title: $title%0D
 Collaborator: $nrnbcontact (cc'd)%0D%0D
 
 Link to custom update form:%0D 
-http://nrnb.org/csp.php?id=$subid%0D
-(respond by Feb 8, if you can)%0D%0D
+http://nrnb.org/csp.php?id=$subid%0D%0D
 
 Collaborations are at the core of NRNB, providing a critical feedback loop in the development and dissemination of network biology tools. They clearly enrich our work and we hope they benefit you directly as well.%0D%0D
 
