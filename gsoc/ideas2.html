@@ -1070,6 +1070,26 @@ Re-implementation of the TieDIE algorithm in the Cytoscape 3.0 (cytoscape.org) s
 
 <p>Contact: <a href="mailto:evanpaull@gmail.com" >Evan Paull</a>, <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
+<h2 dir="ltr">Idea 44: Optimize Semi-supervised Learning Algorithm for Genomic Datasets and Inject Prior Knowledge from Biological Pathways</h2>
+<p>
+<b>Background</b>: A major problem in bioinformatics is that the number of features collected by modern high-throughput technologies severely overwhelms the number of samples for which such features are available. In a typical dataset, it is not uncommon to have tens of thousands of molecular measurements, but only a few tens or hundreds of samples. This severe undersampling creates a significant challenge for researchers who want to mine such datasets for biological or clinical insight. For example, when looking to predict sensitivity of cancer cells to various compounds, it is not uncommon to come up with a collection of molecular features that are highly predictive on a given dataset, only to have the accuracy fail to generalize to new, previously unseen samples.
+</p><p>
+A natural way to approach the issue is to bring in additional samples to the dataset, e.g., other cancer cells from the same tissue in the compound sensitivity example above. However, the phenotypic information or "labels" for such samples may not be readily available. Semi-supervised learning is a branch of machine learning that deals with constructing predictive models using both labeled and unlabeled data. It is particularly well-suited to biological applications, because while there is typically only a small handful of labeled samples, the unlabeled data is aplenty. Furthermore, we can expect some shared underlying biology between labeled and unlabeled data, due the fact that molecular measurements capture some underlying activity of various signaling and metabolic pathways in a cell. Semi-supervised learning can tap into the vast amount of unlabeled data to uncover such pathways and then utilize the labeled samples to correlate these pathways to phenotypic outcomes.
+</p><p>
+<b>Goal</b>: To implement a specific semi-supervised learning algorithm and to work with the mentor on modifying this algorithm to tailor to biological data. The algorithm was originally proposed by Ando & Zhang (2005) and operates by constructing multiple predictive tasks from the unlabeled data and learning across all those tasks simultaneously. The intuition behind the algorithm is that, if a molecular feature X is highly correlated with the phenotype F, then learning to predict X is just as valuable as learning to predict F directly. The advantage of predicting X is the fact that it's observed across all data (both labeled and unlabeled), while the measurements of F are, by definition, available for the labeled data only. Continuing with the example above, if a compound targets the epidermal growth factor receptor (EGFR) in a cell, then predicting whether EGFR is highly expressed is a task that should be highly related to directly predicting the sensitivity of the cell to that compound.
+</p><p>
+To simultaneously learn across multiple tasks, Ando & Zhang's algorithm makes an assumption that the tasks share some underlying lower-dimensional representation. This provides a perfect place to inject prior biological knowledge about feature-feature relationships. Specifically, a sub-goal of the project is to modify the lower-dimensional constraints in the algorithm to align with known information about biological pathways, as taken from web resources, such as WikiPathways, BIOCARTA, PathwayCommons, etc.
+</p><p>
+The basic implementation of the algorithm is already in place. It remains to optimize the implementation for handling full-scale genomic datasets (~20k features and thousands of samples) by moving parts of the code from R to C / C++, and to implement the pathway-based component discussed above.
+</p><br />
+<p>Language and Skills: R, C / C++, Linear Algebra
+</p><p>
+Potential Mentors: Artem Sokolov (UCSC)
+</p><p>
+Contact: <a href="mailto:sokolov@soe.ucsc.edu">Artem Sokolov</a>
+</p><p>
+References:<br />
+Ando, R. K., & Zhang, T. (2005). A framework for learning predictive structures from multiple tasks and unlabeled data. The Journal of Machine Learning Research, 6, 1817-1853.
 
 <!-- END PASTE -->
 
