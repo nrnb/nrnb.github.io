@@ -71,7 +71,7 @@ body {
 
 		<ul class="nav nav-tabs" id="tabs">
 			<li class="active"><a href="#cytoscape-tab" data-toggle="tab">Cytoscape</a></li>
-			<li><a href="#cytoscapeweb-tab" data-toggle="tab">Cytoscape.js</a></li>
+			<li><a href="#cytoscapejs-tab" data-toggle="tab">Cytoscape.js</a></li>
 			<li><a href="#wikipathways-tab" data-toggle="tab">WikiPathways</a></li>
 			<li><a href="#cbioportal-tab" data-toggle="tab">cBio Portal</a></li>
 			<li><a href="#pathvisio-tab" data-toggle="tab">PathVisio</a></li>
@@ -86,173 +86,76 @@ body {
 			<li><a href="#gestodifferent-tab" data-toggle="tab">GESTODIFFERENT</a></li>
 		</ul>
 		<div class="tab-content">
+		
 			<div class="tab-pane fade in active" id="cytoscape-tab">
-			<iframe src="tools/cytoscape.html" width="1170" height="1400"
+				<iframe src="tools/cytoscape.html" width="1170" height="1400"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
-			<!--
-				<h3>Cytoscape</h3>
-				<p>
-					<a href="http://www.cytoscape.org" target="_blank">Cytoscape</a> is
-					an open source bioinformatics environment for integration,
-					visualization, and query of biological networks that can be used
-					with a broad variety of data types and customized through the use
-					and development of plugin extensions.
-				</p>
-				
-				<h5>Documentation</h5>
-				<ul>
-				<li><a href="http://www.cytoscape.org">Cytoscape.org</a></li>
-				<li><a href="http://opentutorials.cgl.ucsf.edu/index.php/Portal:Cytoscape3">Tutorials on Open Tutorials</a>
-				</li>
-				<li><a href="http://wiki.cytoscape.org/Cytoscape_3/UserManual">User Manual</a>
-				</li>
-				
-				</ul>
-				
-				<h5>Developer Resources</h5>
-				<ul>
-				<li><a href="http://code.cytoscape.org/">Developers Main Page</a></li>
-				<li><a href="https://github.com/cytoscape">Cytoscape on GitHub</a>
-				</li>	
-				</ul>
-				
-				<h5>How to Cite</h5>
-				<ul>
-				<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/21149340">Cytoscape 2.8: new features for data integration and network visualization. 
-				Smoot, et al., <i>Bioinformatics</i> 2011.</a></li>
-				<li><a href="http://www.nature.com/nmeth/journal/v9/n11/full/nmeth.2212.html">A travel guide to Cytoscape plugins
-				Saito et al., <i>Nature Methods</i> 2012.</a></li>
-				<li><a href="http://www.nature.com/nprot/journal/v2/n10/full/nprot.2007.324.html">Integration of biological networks and gene expression data using Cytoscape.
-				Cline et al., <i>Nature Protocols</i> 2007.</a></li>
-				<li><a href="http://genome.cshlp.org/content/13/11/2498.long">Cytoscape: a software environment for integrated models of biomolecular interaction networks
-				Shannon et al., <i>Genome Research</i> 2003.</a></li>
-				</ul>
-				
-				<hr />
-				<h5>Image Gallery</h5>
-				<p>
-					In addition to these images, also see <a
-						href="http://cytoscape-publications.tumblr.com/">published
-						figures using Cytoscape</a>.
-				</p>
-				<div class="row-fluid">
-					<ul class="thumbnails">
-						<li class="span4">
-							<div class="thumbnail">
-							<a href="images/Cytoscape_1.png" target="_blank"><img src="images/Cytoscape_1.png" alt="Cytoscape 1" /></a>
-							<p>An arbitrary network demonstrating powerful visual style
-									and layout features in Cytoscape.</p>
-							<div>
-						</li>
-						
-							<li class="span4">
-							<div class="thumbnail">
-							<a href="images/Cytoscape_2.png" target="_blank"><img src="images/Cytoscape_2.png" alt="Cytoscape 2" /></a>
-							<p>An arbitrary network demonstrating versatile edge line
-									coloring and routing in Cytoscape.</p>
-							</div>
-						</li>
-						
-						<li class="span4">
-							<div class="thumbnail">
-							<a href="images/Cytoscape_3.png" target="_blank"><img src="images/Cytoscape_3.png" alt="Cytoscape 3" /></a>
-							<p>An arbitrary network demonstrating custom edge types and
-									nested network visualization in Cytoscape.</p>
-							</div>
-						</li>
-						
-					</ul>
-				</div>
-				
-				<!-- SECOND ROW --> 
-			<!-- 	<div class="row-fluid">
-					
-					<ul class="thumbnails">
-						<li class="span4">
-							<div class="thumbnail">
-							<a href="images/Cytoscape_4.png" target="_blank"><img src="images/Cytoscape_4.png" alt="Cytoscape 4" /></a>
-							<p>An arbitrary network demonstrating the layout of massive
-									networks in Cytoscape.</p>
-							</div>
-						</li>
-						
-							<li class="span4">
-							<div class="thumbnail">
-							<a href="images/Cytoscape_5.png" target="_blank"><img src="images/Cytoscape_5.png" alt="Cytoscape 5" /></a>
-							<p>An arbitraty network demonstrating the use of nested
-									networks to represent protein complexes in Cytoscape.</p>
-							</div>
-						</li>
-						
-						<li class="span4">
-							<div class="thumbnail">
-							<a href="images/Cytoscape_6.png" target="_blank"><img src="images/Cytoscape_6.png" alt="Cytoscape 6" /></a>
-							<p>An arbitrary network demonstrating the use of
-									transparency in representing overlapping node sets in
-									Cytoscape.</p>
-							</div>
-						</li>
-						
-					</ul>
-				
-				</div>
-		
-			</div> --> 
 			
-			<div class="tab-pane fade" id="cytoscapeweb-tab">
+			<div class="tab-pane fade" id="cytoscapejs-tab">
 				<iframe src="tools/cytoscapejs.html" width="1170" height="1200"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="wikipathways-tab">
 				<iframe src="tools/wikipathways.html" width="1170" height="1500"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="cbioportal-tab">
 				<iframe src="tools/cbioportal.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="pathvisio-tab">
 				<iframe src="tools/pathvisio.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="cytoscapeappstore-tab">
 				<iframe src="tools/cytoscapeappstore.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="genemania-tab">
 				<iframe src="tools/genemania.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="pihelper-tab">
 				<iframe src="tools/pihelper.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="enrichmentmap-tab">
 				<iframe src="tools/enrichmentmap.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="noa-tab">
 				<iframe src="tools/noa.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="mosaic-tab">
 				<iframe src="tools/mosaic.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="clustermaker-tab">
 				<iframe src="tools/clustermaker.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="wordcloud-tab">
 				<iframe src="tools/wordcloud.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
+			
 			<div class="tab-pane fade" id="gestodifferent-tab">
 				<iframe src="tools/gestodifferent.html" width="1170" height="1300"
 			frameborder="0" scrolling="auto"></iframe>
 			</div>
-		
 		</div>
 
 		<hr>
