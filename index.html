@@ -9,13 +9,9 @@
 
     <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-        body {
-            padding-top: 60px;
-            padding-bottom: 40px;
-        }
-    </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <link href="assets/css/nrnb.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -48,9 +44,14 @@
                     <ul class="dropdown-menu">
                         <li><a href="about-nb.html">What is Network Biology?</a></li>
                         <li><a href="presentations.html#annual-tab">Annual Reports</a></li>
-                        <li><a href="people.html">People</a></li>
-                        <li><a href="people.html#eac-tab">Advisory Committee</a></li>
-                        <li><a href="people.html#partners-tab">Partners</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="#">People</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="people.html">NRNB Team</a></li>
+                            <li><a href="people.html#eac">Advisory Committee</a></li>
+                            <li><a href="people.html#partners">Partners</a></li>
+                        </ul>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -111,7 +112,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    	<li><a href="presentations.html"><b>Media</b></a></li>
+                        <li><a href="presentations.html"><b>Media</b></a></li>
                         <li class="divider"></li>
                         <li><a href="presentations.html#nrnb-tab">NRNB Projects</a></li>
                         <li><a href="presentations.html#annual-tab">Annual Reports</a></li>
@@ -123,7 +124,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    	<li><a href="training.html"><b>Training</b></a></li>
+                        <li><a href="training.html"><b>Training</b></a></li>
                         <li class="divider"></li>
                         <li><a href="training.html#events-tab">Events</a></li>
                         <li><a href="training.html#courses-tab">Courses</a></li>
@@ -132,7 +133,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collaborate <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                    	<li><a href="outreach.html"><b>Collaborate</b></a></li>
+                        <li><a href="outreach.html"><b>Collaborate</b></a></li>
                         <li class="divider"></li>
                         <li><a href="gsoc/index.html">Google Summer of Code</a></li>
                         <li><a href="academy.html">NRNB Academy</a></li>
@@ -147,103 +148,153 @@
     </div>
 </div>
 
+<div class="belt snow-shite">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span7">
+                <img src="images/top_cytoscape.png">
+            </div>
+            <div class="span5 section">
+                <h2>National Resource for Network Biology</h2>
 
-<div class="container">
-    <div class="row-fluid">
-        <div class="span6">
-            <img src="images/Cytoscape_1.png">
-        </div>
-        <div class="span6">
-            <h3>National Resource for Network Biology</h3>
+                <p>
+                    The aim of the <b>National Resource for Network Biology (NRNB)</b> is to advance the new science of
+                    Biological Networks through analytic tools, visualizations, databases and computing resources.
+                    Biomedical research is increasingly dependent on knowledge of biological networks of multiple types
+                    and
+                    scales, including gene, protein and drug interactions, cell-cell and cell-host communication, and
+                    vast
+                    social networks. Our technologies enable researchers to assemble and analyze these networks and to
+                    use
+                    them to better understand biological systems and, in particular, how they fail in disease. NRNB
+                    leverages the <a href="http://www.cytoscape.org/">Cytoscape</a> Cyberinfrastructure,
+                    a widely-used network analysis
+                    platform which we further support through a rich set of tutorials, workshops, 24/7 help desk
+                    assistance,
+                    and over 100 collaboration and service projects.</p>
 
-            <p>
-                The aim of the <b>National Resource for Network Biology (NRNB)</b> is to advance the new science of Biological Networks through analytic tools, visualizations, databases and computing resources. Biomedical research is increasingly dependent on knowledge of biological networks of multiple types and scales, including gene, protein and drug interactions, cell-cell and cell-host communication, and vast social networks. Our technologies enable researchers to assemble and analyze these networks and to use them to better understand biological systems and, in particular, how they fail in disease. NRNB leverages the Cytoscape Cyberinfrastructure (http://cytoscape.org), a widely-used network analysis platform which we further support through a rich set of tutorials, workshops, 24/7 help desk assistance, and over 100 collaboration and service projects.</p>
-               <p> We are developing freely available, open source software
-                technologies to enable network-based visualization, analysis, and
-                biomedical discovery. We are driving research and development <a
-                    href="projects.html"><b>projects</b></a>, coordinating <a
-                    href="training.html"><b>training</b></a> opportunities, and
-                actively seeking new <a href="outreach.html"><b>collaborations</b></a>
-                to develop NRNB <a href="tools.html"><b>tools</b></a> and apply
-                them to biomedical research.
-            </p>
-            <a class="btn btn-primary" href="about-nb.html">Learn more about Netowrk Biology &raquo;</a>
-            <a class="btn btn-primary" href="presentations.html#annual-tab">Annual Reports &raquo;</a>
-            <a class="btn btn-default" href="presentations.html">Visit Media Library &raquo;</a>
+                <p> We are developing freely available, open source software
+                    technologies to enable network-based visualization, analysis, and
+                    biomedical discovery. We are driving research and development <a
+                            href="projects.html"><b>projects</b></a>, coordinating <a
+                            href="training.html"><b>training</b></a> opportunities, and
+                    actively seeking new <a href="outreach.html"><b>collaborations</b></a>
+                    to develop NRNB <a href="tools.html"><b>tools</b></a> and apply
+                    them to biomedical research.
+                </p>
+
+                <a class="btn btn-primary btn-block" href="about-nb.html">Learn more about Netowrk Biology</a>
+                <a class="btn btn-primary btn-block" href="presentations.html#annual-tab">Annual Reports</a>
+                <a class="btn btn-default btn-block" href="presentations.html">Visit Media Library</a>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="span6">
-            <h3>Research Highlights</h3>
-
-            <p>
-                Our research programs are exploring an array of new approaches to network analysis, such as how to use molecular networks to stratify cancer patient genomes (Network-Based Stratification) or how to assemble a gene ontology of the cell directly from molecular network data (nexontology.org). In recent years we have released a number of widely-used network analysis resources, including the Cancer Biology Portal (cBioPortal.org), the GeneMANIA network database (genemania.org), and the Cytoscape Appstore (apps.cytoscape.org).</p>
-                <p><b>Recent Research Publications</b><br />
-                Dutkowski J, Ono K, Kramer M, Yu M, Pratt D, Demchak B, Ideker T. NeXO Web: the NeXO ontology database and visualization platform. <i>Nucleic Acids Res</i> 42(1): D1269-74 (2014) 
-            </p>
-        </div>
-        <div class="span6">
-            <h3>Upcoming Training & Events</h3>
-
-            <p>
-				TBA
-            </p>
-        </div>
-    </div>
+<div class="belt white">
+    <div class="container">
         <div class="row">
-        <div class="span4">
-            <h3>Researchers</h3>
+            <div class="span6 section">
+                <h3>Research Highlights</h3>
 
-            <p>
-                 We can collaborate on adapting NRNB <a href="tools.html"><b>tools</b></a>
-                for use in your unique projects. If you are already using our
-                supported tools in novel and important research, then we should be
-                collaborating. 
-            </p>
-        </div>
-        <div class="span4">
-            <h3>Database Providers</h3>
+                <p>
+                    Our research programs are exploring an array of new approaches to network analysis, such as how to
+                    use
+                    molecular networks to stratify cancer patient genomes (Network-Based Stratification) or how to
+                    assemble
+                    a gene ontology of the cell directly from molecular network data (nexontology.org). In recent years
+                    we
+                    have released a number of widely-used network analysis resources, including the Cancer Biology
+                    Portal
+                    (cBioPortal.org), the GeneMANIA network database (genemania.org), and the Cytoscape Appstore
+                    (apps.cytoscape.org).
+                </p>
 
-            <p>
-               We can establish pipelines from your databases and data warehouses
-                to make your data more accessible and more useful. There are many
-                opportunities to interface with NRNB <a href="tools.html"><b>tools</b></a>.
-            </p>
-        </div>
-        <div class="span4">
-            <h3>Software Developers</h3>
+                <h5>Recent Research Publications</h5>
+                <ul class="unstyled">
+                    <li>
+                        Dutkowski J, Ono K, Kramer M, Yu M, Pratt D, Demchak B, Ideker T. NeXO Web: the NeXO ontology
+                        database and visualization platform. <i>Nucleic Acids Res</i> 42(1): D1269-74 (2014)
+                    </li>
+                    <!-- Add additional publications here -->
+                </ul>
 
-            <p>
-            You can join any of our development communities. All <a href="tools.html">NRNB software</a>
-			is <em>open source.</em> Also consider our mentoring programs through <a href="gsoc/index.html">
-            <b>Google Summer of Code</b></a> and <a href="academy.html"><b>NRNB Academy</b></a>.
-            </p>
+                <a class="btn btn-primary pull-right"
+                   href="http://www.citeulike.org/user/nrnb">
+                    Recent NRNB Publications &raquo;
+                </a>
+            </div>
+            <div class="span6 section">
+                <h3>Upcoming Training & Events</h3>
+
+                <p>
+                    TBA
+                </p>
+            </div>
         </div>
+        <div class="row">
+            <div class="span4 section">
+                <h3>Researchers</h3>
+
+                <p>
+                    We can collaborate on adapting NRNB <a href="tools.html"><b>tools</b></a>
+                    for use in your unique projects. If you are already using our
+                    supported tools in novel and important research, then we should be
+                    collaborating.
+                </p>
+            </div>
+            <div class="span4 section">
+                <h3>Database Providers</h3>
+
+                <p>
+                    We can establish pipelines from your databases and data warehouses
+                    to make your data more accessible and more useful. There are many
+                    opportunities to interface with NRNB <a href="tools.html"><b>tools</b></a>.
+                </p>
+            </div>
+            <div class="span4 section">
+                <h3>Software Developers</h3>
+
+                <p>
+                    You can join any of our development communities. All <a href="tools.html">NRNB software</a>
+                    is <em>open source.</em> Also consider our mentoring programs through <a href="gsoc/index.html">
+                    <b>Google Summer of Code</b></a> and <a href="academy.html"><b>NRNB Academy</b></a>.
+                </p>
+            </div>
         </div>
     </div>
-    <hr>
-
-    <footer>
-        <p>
-            The National Resource for Network Biology is an NIH Division of
-            Biomedical Technology, Bioinformatics, and Computational Biology (<a
-                href="http://www.nigms.nih.gov/About/Overview/bbcb.htm"><b>BBCB</b></a>)
-            Biomedical Technology Research Center (<a
-                href="http://www.nigms.nih.gov/About/Overview/BBCB/BiomedicalTechnology/BiomedicalTechnologyResearchCenters.htm"><b>BTRC</b></a>).
-            NRNB is funded by grant GM103504.
-        </p>
-
-        <p class="pull-right">&copy; NRNB, 2014</p>
-
-        <p>
-            Contact: <a href="mailto:apico@gladstone.ucsf.edu">email us</a>
-        </p>
-    </footer>
-
 </div>
+<div class="belt black">
+    <div class="container">
+        <footer>
+            <p>
+                The National Resource for Network Biology is an NIH Division of
+                Biomedical Technology, Bioinformatics, and Computational Biology (<a
+                    href="http://www.nigms.nih.gov/About/Overview/bbcb.htm"><b>BBCB</b></a>)
+                Biomedical Technology Research Center (<a
+                    href="http://www.nigms.nih.gov/About/Overview/BBCB/BiomedicalTechnology/BiomedicalTechnologyResearchCenters.htm"><b>BTRC</b></a>).
+                NRNB is funded by grant GM103504.
+            </p>
+
+            <p>
+                &copy; NRNB, 2014 <i class="icon-envelope icon-white"></i> <a href="mailto:apico@gladstone.ucsf.edu">email
+                us</a>
+            </p>
+        </footer>
+    </div>
+</div>
+
+<!-- For Navbar -->
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#partners-tab a').click(function (e) {
+            e.preventDefault();
+            $('a[href="' + $(this).attr('href') + '"]').tab('show');
+        })
+    });
+</script>
 
 <!-- For Google Analytics: DO NOT MODIFY! -->
 <script type="text/javascript">
@@ -262,10 +313,6 @@
         s.parentNode.insertBefore(ga, s);
     })();
 </script>
-
-<!-- For Navbar -->
-<script src="assets/js/jquery-1.11.0.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
 
 </body>
 </html>

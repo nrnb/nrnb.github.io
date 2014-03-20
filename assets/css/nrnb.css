@@ -1,0 +1,65 @@
+/*
+    Custom CSS for Bootstrap 2 based NRNB Web Site
+    Keiichiro Ono (kono at UCSD)
+*/
+
+body {
+    padding-top: 40px;
+    background: #000000;
+}
+
+
+footer {
+    padding: 20px;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.media,
+.media .media {
+    margin-top: 15px;
+}
+
+.media:first-child {
+    margin-top: 0;
+}
+
+.media .pull-left {
+    margin-right: 10px;
+}
+
+.belt {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.black {
+    color: #eeeeee;
+    background: #000000;
+}
+
+.snow-shite {
+    background: #f5f5f5;
+}
+
+.white {
+    background: #FFFFFF;
+}
+
+.section {
+    color: #555555;
+    padding-bottom: 20px;
+}
+
+.section h3 {
+    font-weight: 200;
+    border-bottom: 1px solid #555555;
+}
+
+.section h2 {
+    color: #222222;
+    font-size: 26px;
+    font-weight: 200;
+}
