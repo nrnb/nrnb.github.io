@@ -47,12 +47,20 @@ footer {
 .white {
     background: #FFFFFF;
 }
+.google-doc-color {
+    background: #E8EEF7;
+}
 
 .section {
     color: #555555;
     padding-bottom: 20px;
 }
 
+.section h4 {
+    color: #222222;
+    font-size: 20px;
+    font-weight: 400;
+}
 .section h3 {
     font-weight: 200;
     border-bottom: 1px solid #555555;
