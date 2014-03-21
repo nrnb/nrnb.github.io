@@ -29,7 +29,7 @@ var navbarText =
                     '<ul class="dropdown-menu">' +
                         '<li class="dropdown-submenu">' +
                             '<a href="#">Projects</a>' +
-                            '<ul class="dropdown-menu">' +
+                            '<ul class="dropdown-menu" id="projects-menu">' +
                                 '<li><a href="projects.html"><b>Projects</b></a></li>' +
                                 '<li class="divider"></li>' +
                                 '<li>' +
@@ -59,7 +59,7 @@ var navbarText =
                 '</li>' +
                 '<li class="dropdown">' +
                     '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>' +
-                    '<ul class="dropdown-menu">' +
+                    '<ul class="dropdown-menu" id="tools-menu">' +
                         '<li><a href="tools.html"><b>Tools</b></a></li>' +
                         '<li class="divider"></li>' +
                         '<li><a href="tools.html#cytoscape-tab">Cytoscape</a></li>' +
@@ -81,19 +81,19 @@ var navbarText =
                 '</li>' +
                 '<li class="dropdown">' +
                     '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>' +
-                    '<ul class="dropdown-menu">' +
+                    '<ul class="dropdown-menu" id="presentations-menu">' +
                         '<li><a href="presentations.html"><b>Media</b></a></li>' +
                         '<li class="divider"></li>' +
                         '<li><a href="presentations.html#nrnb-tab">NRNB Projects</a></li>' +
                         '<li><a href="presentations.html#annual-tab">Annual Reports</a></li>' +
                         '<li><a href="presentations.html#symposia-tab">NRNB Symposia</a></li>' +
                         '<li><a href="presentations.html#netbiosig-tab">NetBio SIG</a></li>' +
-                        '<li><a href="presentations.html#cbioportal-tab">Cytoscape App Expo</a></li>' +
+                        '<li><a href="presentations.html#appexpo-tab">Cytoscape App Expo</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
                     '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <b class="caret"></b></a>' +
-                    '<ul class="dropdown-menu">' +
+                    '<ul class="dropdown-menu" id="training-menu">' +
                         '<li><a href="training.html"><b>Training</b></a></li>' +
                         '<li class="divider"></li>' +
                         '<li><a href="training.html#events-tab">Events</a></li>' +
@@ -141,3 +141,33 @@ $('body').prepend(navbarText);
 
 // Insert footer at the end of document.
 $('footer').append(footerText);
+
+
+// For switching tab
+$(function () {
+    function selectTab(target) {
+        console.log('EnterNew: ' + target);
+        var activeTab = $('[href=' + target + ']');
+        activeTab && activeTab.tab('show');
+        window.scrollTo(0, 0);
+    }
+
+    $(document).ready(selectTab(location.hash));
+
+    $('#tools-menu').click(function(ev) {
+        var locHash = ev.target.href.split("#");
+        selectTab('#' + locHash[1]);
+    });
+    $('#projects-menu').click(function(ev) {
+        var locHash = ev.target.href.split("#");
+        selectTab('#' + locHash[1]);
+    });
+    $('#presentations-menu').click(function(ev) {
+        var locHash = ev.target.href.split("#");
+        selectTab('#' + locHash[1]);
+    });
+    $('#training-menu').click(function(ev) {
+        var locHash = ev.target.href.split("#");
+        selectTab('#' + locHash[1]);
+    });
+});
