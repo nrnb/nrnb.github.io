@@ -13,9 +13,36 @@ footer {
     padding: 20px;
 }
 
+.top {
+    color: #ffffff !important;
+    background-image: url("../../images/top_page_bg2.png");
+    /*-moz-background-size: 100% auto;*/
+    /*background-size: 100% auto;*/
+    /*background-repeat: no-repeat;*/
+    height: 700px;
+    padding-top: 150px;
+    font-weight: 200;
+}
+.top a {
+    color: #04f0fe;
+}
+
+.top h2 {
+    font-weight: 100;
+    font-size: 26px;
+}
+
+
 .btn {
     border-radius: 0 !important;
 }
+
+.fixed-width-button {
+    width: 130px;
+    font-weight: 200;
+    font-size: 18px;
+}
+
 
 .media,
 .media .media {
