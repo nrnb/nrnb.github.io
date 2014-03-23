@@ -50,7 +50,7 @@ var navbarText =
                                 '</li>' +
                             '</ul>' +
                         '</li>' +
-                        '<li><a href="http://www.citeulike.org/user/nrnb">Publications</a></li>' +
+                        '<li><a href="http://www.citeulike.org/user/nrnb" target="_blank">Publications</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
