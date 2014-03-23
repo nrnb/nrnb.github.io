@@ -75,7 +75,7 @@ var navbarText =
                         '<li><a href="tools.html#nexo-tab">NeXO</a></li>' +
                         '<li><a href="tools.html#ndex-tab">NDEx</a></li>' +
                         '<li class="divider"></li>' +
-                        '<li><a href="get-started.html">How to Get Started</a></li>' +
+                        '<li><a href="training.html#tutorials-tab">How to Get Started</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
@@ -102,6 +102,7 @@ var navbarText =
                         '<li class="divider"></li>' +
                         '<li><a href="training.html#events-tab">Events</a></li>' +
                         '<li><a href="training.html#courses-tab">Courses</a></li>' +
+                        '<li><a href="training.html#tutorials-tab">Tutorials</a></li>' + 
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
