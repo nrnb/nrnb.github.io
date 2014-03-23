@@ -13,13 +13,17 @@ footer {
     padding: 20px;
 }
 
+h3, h4, h5 {
+    font-weight: 200;
+}
+
 .top {
     color: #ffffff !important;
     background-image: url("../../images/top_page_bg2.png");
     /*-moz-background-size: 100% auto;*/
     /*background-size: 100% auto;*/
     /*background-repeat: no-repeat;*/
-    height: 600px;
+    height: 650px;
     padding-top: 150px;
     font-weight: 400;
     font-size: 13px;
@@ -41,7 +45,7 @@ footer {
     display : table-cell;
     vertical-align : middle;
     float:none;
-    height: 600px;
+    height: 650px;
 }
 
 
@@ -84,6 +88,14 @@ footer {
     border: 1px solid #04f0fe;
 }
 
+
+.small {
+    width: 150px !important;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 a:hover .btn-blue {
     font-weight: 700;
     color: red !important;
@@ -98,7 +110,9 @@ a:hover .btn-blue {
 
 .media,
 .media .media {
-    margin-top: 15px;
+    padding: 10px;
+    padding-top: 0;
+    padding-left: 0;
 }
 
 .media:first-child {
@@ -114,6 +128,18 @@ a:hover .btn-blue {
     padding-bottom: 20px;
 }
 
+.panel {
+    height: 300px;
+    margin-top: 10px;
+    color: #2E4E81;
+    font-size: 35px;
+    font-weight: 100;
+    vertical-align : middle;
+    float:none;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
 .black {
     color: #eeeeee;
     background: #000000;
@@ -121,6 +147,15 @@ a:hover .btn-blue {
 
 .snow-shite {
     background: #f5f5f5;
+}
+
+.blue {
+    color: #ffffff;
+    background: #2E4E81;
+}
+.orange {
+    color: #ffffff;
+    background: orange;
 }
 
 .white {
