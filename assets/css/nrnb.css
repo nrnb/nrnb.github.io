@@ -19,9 +19,13 @@ footer {
     /*-moz-background-size: 100% auto;*/
     /*background-size: 100% auto;*/
     /*background-repeat: no-repeat;*/
-    height: 700px;
+    height: 600px;
     padding-top: 150px;
-    font-weight: 200;
+    font-weight: 400;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
 .top a {
     color: #04f0fe;
@@ -29,7 +33,30 @@ footer {
 
 .top h2 {
     font-weight: 100;
-    font-size: 26px;
+    font-size: 24px;
+}
+
+
+.top-right {
+    display : table-cell;
+    vertical-align : middle;
+    float:none;
+    height: 600px;
+}
+
+
+.logo-big {
+    width: 400px;
+    margin-left: -20px;
+}
+
+.logo-footer {
+
+}
+
+.buttons {
+   margin-top: 0;
+   padding-top: 0;
 }
 
 
@@ -37,10 +64,35 @@ footer {
     border-radius: 0 !important;
 }
 
-.fixed-width-button {
-    width: 130px;
+
+.button-flat {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ffffff;
+    color: #ffffff !important;
     font-weight: 200;
     font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    width: 350px !important;
+    background: rgba(255,255,255,0.0) !important;
+}
+
+.btn-blue, a .btn-blue {
+    color: #04f0fe !important;
+    border: 1px solid #04f0fe;
+}
+
+a:hover .btn-blue {
+    font-weight: 700;
+    color: red !important;
+}
+
+
+.btn-gray, a .btn-gray {
+    color: #555555 !important;
+    border: 1px solid #555555;
 }
 
 
@@ -80,7 +132,9 @@ footer {
 
 .section {
     color: #555555;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .section h4 {
