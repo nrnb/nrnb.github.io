@@ -106,9 +106,9 @@ var navbarText =
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
-                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Collaborate <b class="caret"></b></a>' +
+                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Collaboration <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu">' +
-                        '<li><a href="outreach.html"><b>Collaborate</b></a></li>' +
+                        '<li><a href="outreach.html"><b>Collaboration</b></a></li>' +
                         '<li class="divider"></li>' +
                         '<li><a href="gsoc.html">Google Summer of Code</a></li>' +
                         '<li><a href="academy.html">NRNB Academy</a></li>' +
