@@ -1,202 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>NRNB: Gallery</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+    <meta charset="utf-8">
+    <title>NRNB: Tools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<!-- Le styles -->
-<link href="assets/css/bootstrap.css" rel="stylesheet">
-<script type="text/javascript"
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/nrnb.css" rel="stylesheet">
 
-<style type="text/css">
-body {
-	padding-top: 60px;
-	padding-bottom: 40px;
-}ge
-</style>
 
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<!-- Fav and touch icons -->
-<link rel="shortcut icon" href="assets/ico/favicon.ico">
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="assets/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="assets/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed"
-	href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed"
+          href="assets/ico/apple-touch-icon-57-precomposed.png">
 </head>
 
 <body>
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="index.html"><img
-					src="images/NRNB_white_22.png" alt="image" /></a>
-				<ul class="nav">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="outreach.html">Collaborate</a></li>
-					<li><a href="training.html">Learn</a></li>
-					<li class="active"><a href="#">Tools Gallery</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="people.html">People</a></li>
-				</ul>
-
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-
-		<h2>NRNB Gallery</h2>
-		<p>
-			A major component of network biology tools is visualization. Here are
-			some example screenshots and exports from NRNB tools and resources.
-			Feel free to use these images in representing these tools. <em>Just
-				be sure to also copy the citation information!</em>
-		</p>
+<div class="belt white">
+    <div class="container">
+        <div class="section">
+            <h3>NRNB Tools</h3>
+        </div>
+        <p>
+            A major component of network biology tools is visualization. Here are
+            some example screenshots and exports from NRNB tools and resources.
+            Feel free to use these images in representing these tools. <em>Just
+            be sure to also copy the citation information!</em>
+        </p>
 
 
-		<ul class="nav nav-tabs" id="tabs">
-			<li class="active"><a href="#cytoscape-tab" data-toggle="tab">Cytoscape</a></li>
-			<li><a href="#cytoscapejs-tab" data-toggle="tab">Cytoscape.js</a></li>
-			<li><a href="#wikipathways-tab" data-toggle="tab">WikiPathways</a></li>
-			<li><a href="#cbioportal-tab" data-toggle="tab">cBio Portal</a></li>
-			<li><a href="#pathvisio-tab" data-toggle="tab">PathVisio</a></li>
-			<li><a href="#cytoscapeappstore-tab" data-toggle="tab">Cytoscape App Store</a></li>
-			<li><a href="#genemania-tab" data-toggle="tab">GeneMANIA</a></li>
-			<li><a href="#pihelper-tab" data-toggle="tab">PiHelper</a></li>
-			<li><a href="#enrichmentmap-tab" data-toggle="tab">Enrichment Map</a></li>
-			<li><a href="#noa-tab" data-toggle="tab">NOA</a></li>
-			<li><a href="#mosaic-tab" data-toggle="tab">Mosaic</a></li>
-			<li><a href="#clustermaker-tab" data-toggle="tab">clusterMaker</a></li>
-			<li><a href="#wordcloud-tab" data-toggle="tab">WordCloud</a></li>
-			<li><a href="#gestodifferent-tab" data-toggle="tab">GeStoDifferent</a></li>
-		</ul>
-		<div class="tab-content">
-		
-			<div class="tab-pane fade in active" id="cytoscape-tab">
-				<iframe src="tools/cytoscape.html" width="1170" height="1500"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="cytoscapejs-tab">
-				<iframe src="tools/cytoscapejs.html" width="1170" height="1200"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="wikipathways-tab">
-				<iframe src="tools/wikipathways.html" width="1170" height="1550"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="cbioportal-tab">
-				<iframe src="tools/cbioportal.html" width="1170" height="900"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="pathvisio-tab">
-				<iframe src="tools/pathvisio.html" width="1170" height="1500"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="cytoscapeappstore-tab">
-				<iframe src="tools/cytoscapeappstore.html" width="1170" height="750"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="genemania-tab">
-				<iframe src="tools/genemania.html" width="1170" height="850"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="pihelper-tab">
-				<iframe src="tools/pihelper.html" width="1170" height="950"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="enrichmentmap-tab">
-				<iframe src="tools/enrichmentmap.html" width="1170" height="1300"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="noa-tab">
-				<iframe src="tools/noa.html" width="1170" height="950"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="mosaic-tab">
-				<iframe src="tools/mosaic.html" width="1170" height="1200"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="clustermaker-tab">
-				<iframe src="tools/clustermaker.html" width="1170" height="1200"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="wordcloud-tab">
-				<iframe src="tools/wordcloud.html" width="1170" height="950"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-			
-			<div class="tab-pane fade" id="gestodifferent-tab">
-				<iframe src="tools/gestodifferent.html" width="1170" height="1100"
-			frameborder="0" scrolling="auto"></iframe>
-			</div>
-		</div>
+        <ul class="nav nav-tabs" id="tabs">
+            <li class="active"><a href="#cytoscape-tab" data-toggle="tab">Cytoscape</a></li>
+            <li><a href="#cytoscapejs-tab" data-toggle="tab">Cytoscape.js</a></li>
+            <li><a href="#cytoscapeappstore-tab" data-toggle="tab">Cytoscape App Store</a></li>
+            <li><a href="#wikipathways-tab" data-toggle="tab">WikiPathways</a></li>
+            <li><a href="#cbioportal-tab" data-toggle="tab">cBio Portal</a></li>
+            <li><a href="#pathvisio-tab" data-toggle="tab">PathVisio</a></li>
+            <li><a href="#genemania-tab" data-toggle="tab">GeneMANIA</a></li>
+            <li><a href="#pihelper-tab" data-toggle="tab">PiHelper</a></li>
+            <li><a href="#enrichmentmap-tab" data-toggle="tab">Enrichment Map</a></li>
+            <li><a href="#noa-tab" data-toggle="tab">NOA</a></li>
+            <li><a href="#mosaic-tab" data-toggle="tab">Mosaic</a></li>
+            <li><a href="#clustermaker-tab" data-toggle="tab">clusterMaker</a></li>
+            <li><a href="#wordcloud-tab" data-toggle="tab">WordCloud</a></li>
+            <li><a href="#gestodifferent-tab" data-toggle="tab">GeStoDifferent</a></li>
+            <li><a href="#nexo-tab" data-toggle="tab">NeXO</a></li>
+            <li><a href="#ndex-tab" data-toggle="tab">NDEx</a></li>
+        </ul>
+        <div class="tab-content">
 
-		<hr>
+            <div class="tab-pane fade in active" id="cytoscape-tab">
+                <iframe src="tools/cytoscape.html" width="1170" height="1500"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
 
-		<footer>
-			<p>
-				The National Resource for Network Biology is an NIH Division of
-				Biomedical Technology, Bioinformatics, and Computational Biology (<a
-					href="http://www.nigms.nih.gov/About/Overview/bbcb.htm"><b>BBCB</b></a>)
-				Biomedical Technology Research Center (<a
-					href="http://www.nigms.nih.gov/About/Overview/BBCB/BiomedicalTechnology/BiomedicalTechnologyResearchCenters.htm"><b>BTRC</b></a>).
-				NRNB is funded by grant GM103504.
-			</p>
-			<p class="pull-right">&copy; NRNB, 2014</p>
-			<p>
-				Contact: <a href="mailto:apico@gladstone.ucsf.edu">email us</a>
-			</p>
-		</footer>
+            <div class="tab-pane fade" id="cytoscapejs-tab">
+                <iframe src="tools/cytoscapejs.html" width="1170" height="1200"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
 
-	</div>
-	<!-- /container -->
+            <div class="tab-pane fade" id="wikipathways-tab">
+                <iframe src="tools/wikipathways.html" width="1170" height="1550"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
 
+            <div class="tab-pane fade" id="cbioportal-tab">
+                <iframe src="tools/cbioportal.html" width="1170" height="900"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="pathvisio-tab">
+                <iframe src="tools/pathvisio.html" width="1170" height="1500"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="cytoscapeappstore-tab">
+                <iframe src="tools/cytoscapeappstore.html" width="1170" height="750"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="genemania-tab">
+                <iframe src="tools/genemania.html" width="1170" height="850"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="pihelper-tab">
+                <iframe src="tools/pihelper.html" width="1170" height="950"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="enrichmentmap-tab">
+                <iframe src="tools/enrichmentmap.html" width="1170" height="1300"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="noa-tab">
+                <iframe src="tools/noa.html" width="1170" height="950"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="mosaic-tab">
+                <iframe src="tools/mosaic.html" width="1170" height="1200"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="clustermaker-tab">
+                <iframe src="tools/clustermaker.html" width="1170" height="1200"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="wordcloud-tab">
+                <iframe src="tools/wordcloud.html" width="1170" height="950"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+
+            <div class="tab-pane fade" id="gestodifferent-tab">
+                <iframe src="tools/gestodifferent.html" width="1170" height="1100"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+            <div class="tab-pane fade" id="nexo-tab">
+                <iframe src="tools/nexo.html" width="1170" height="2000"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+            <div class="tab-pane fade" id="ndex-tab">
+                <iframe src="tools/ndex.html" width="1170" height="1100"
+                        frameborder="0" scrolling="auto"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer></footer>
+
+<!-- For Navbar -->
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/page_setup.js"></script>
 
 
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push([ '_setAccount', 'UA-19386719-1' ]);
-		_gaq.push([ '_trackPageview' ]);
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push([ '_setAccount', 'UA-19386719-1' ]);
+    _gaq.push([ '_trackPageview' ]);
 
-		(function() {
-			var ga = document.createElement('script');
-			ga.type = 'text/javascript';
-			ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl'
-					: 'http://www')
-					+ '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-	<script src="assets/js/bootstrap.min.js"></script>
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+                : 'http://www')
+                + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 
 </body>
 </html>
