@@ -56,7 +56,7 @@ var navbarText =
                 '<li class="dropdown">' +
                     '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu" id="tools-menu">' +
-                        '<li><a href="tools.html"><b>Tools</b></a></li>' +
+                        '<li><a href="tools-wall.html"><b>Tools</b></a></li>' +
                         '<li class="divider"></li>' +
                         '<li><a href="tools.html#cytoscape-tab">Cytoscape</a></li>' +
                         '<li><a href="tools.html#cytoscapejs-tab">Cytoscape.js</a></li>' +

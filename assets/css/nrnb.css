@@ -187,3 +187,44 @@ a:hover .btn-blue {
     font-size: 26px;
     font-weight: 200;
 }
+
+.tools {
+    font-weight: 100;
+    vertical-align: middle;
+}
+
+.tools h1 {
+    line-height: 150px;
+    font-weight: 100;
+    font-size: 130px;
+    margin: 0;
+}
+
+.wall {
+    background-color: #eaeaea;
+}
+
+.wall h2, .wall h3, .wall h4, .wall h5 {
+   font-weight: 200;
+   color: #666666;
+}
+
+.card {
+    background-color: #ffffff;
+    font-weight: 100;
+    height: 205px !important;
+    width: 205px !important;
+    padding: 15px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.card:hover {
+    background-color: #0088dd;
+}
+
+/*.card:hover h4 {*/
+    /*color: #FFFFFF;*/
+/*}*/
