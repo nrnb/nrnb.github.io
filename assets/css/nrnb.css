@@ -1,0 +1,230 @@
+/*
+    Custom CSS for Bootstrap 2 based NRNB Web Site
+    Keiichiro Ono (kono at UCSD)
+*/
+
+body {
+    padding-top: 40px;
+    background: #000000;
+}
+
+
+footer {
+    padding: 20px;
+}
+
+h3, h4, h5 {
+    font-weight: 200;
+}
+
+.top {
+    color: #ffffff !important;
+    background-image: url("../../images/top_page_bg2.png");
+    /*-moz-background-size: 100% auto;*/
+    /*background-size: 100% auto;*/
+    /*background-repeat: no-repeat;*/
+    height: 650px;
+    padding-top: 150px;
+    font-weight: 400;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.top a {
+    color: #04f0fe;
+}
+
+.top h2 {
+    font-weight: 100;
+    font-size: 24px;
+}
+
+
+.top-right {
+    display : table-cell;
+    vertical-align : middle;
+    float:none;
+    height: 650px;
+}
+
+
+.logo-big {
+    width: 400px;
+    margin-left: -20px;
+}
+
+.logo-footer {
+
+}
+
+.buttons {
+   margin-top: 0;
+   padding-top: 0;
+}
+
+
+.btn {
+    border-radius: 0 !important;
+}
+
+
+.button-flat {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ffffff;
+    color: #ffffff !important;
+    font-weight: 200;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    width: 350px !important;
+    background: rgba(255,255,255,0.0) !important;
+}
+
+.btn-blue, a .btn-blue {
+    color: #04f0fe !important;
+    border: 1px solid #04f0fe;
+}
+
+
+.small {
+    width: 150px !important;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+a:hover .btn-blue {
+    font-weight: 700;
+    color: red !important;
+}
+
+
+.btn-gray, a .btn-gray {
+    color: #555555 !important;
+    border: 1px solid #555555;
+}
+
+
+.media,
+.media .media {
+    padding: 10px;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.media:first-child {
+    margin-top: 0;
+}
+
+.media .pull-left {
+    margin-right: 10px;
+}
+
+.belt {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.panel {
+    height: 300px;
+    margin-top: 10px;
+    color: #2E4E81;
+    font-size: 35px;
+    font-weight: 100;
+    vertical-align : middle;
+    float:none;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+.black {
+    color: #eeeeee;
+    background: #000000;
+}
+
+.snow-shite {
+    background: #f5f5f5;
+}
+
+.blue {
+    color: #ffffff;
+    background: #2E4E81;
+}
+.orange {
+    color: #ffffff;
+    background: orange;
+}
+
+.white {
+    background: #FFFFFF;
+}
+.google-doc-color {
+    background: #E8EEF7;
+}
+
+.section {
+    color: #555555;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section h4 {
+    color: #222222;
+    font-size: 20px;
+    font-weight: 400;
+}
+.section h3 {
+    font-weight: 200;
+    border-bottom: 1px solid #555555;
+}
+
+.section h2 {
+    color: #222222;
+    font-size: 26px;
+    font-weight: 200;
+}
+
+.tools {
+    font-weight: 100;
+    vertical-align: middle;
+}
+
+.tools h1 {
+    line-height: 150px;
+    font-weight: 100;
+    font-size: 130px;
+    margin: 0;
+}
+
+.wall {
+    background-color: #eaeaea;
+}
+
+.wall h2, .wall h3, .wall h4, .wall h5 {
+   font-weight: 200;
+   color: #666666;
+}
+
+.card {
+    background-color: #ffffff;
+    font-weight: 100;
+    height: 205px !important;
+    width: 205px !important;
+    padding: 15px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.card:hover {
+    background-color: #0088dd;
+}
+
+/*.card:hover h4 {*/
+    /*color: #FFFFFF;*/
+/*}*/
