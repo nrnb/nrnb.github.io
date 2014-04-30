@@ -93,69 +93,7 @@
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 4: Cytoscape plugin for importing and visualizing variation data</h2>
 
-<p>Background: Variation data identifies genomic regions where individual base pairs are different from a reference genome. The consequences of these variations (e.g., stop gained in a protein sequence due to a SNP in a coding region) can influence gene regulation, structure and function, and are thus associated many genetic diseases. These data sets are large and difficult to navigate.</p>
-
-<br />
-<p>Goal: To extend and publish <a href="http://www.dishevelled.org/variation-cytoscape3-app" >a Cytoscape 3 app in development</a> that reads in variation data from various services and dynamically maps the data to biological networks and pathways independently (or selectively) loaded into Cytoscape. The app should provide the services needed to perform the mapping as well as default visualization settings, such as coloring all genes with variations in coding regions red.</p>
-
-<br />
-<p>The app currently supports:</p>
-
-<ul>
-<li><p>Loading variation data from <a href="http://beta.rest.ensembl.org/" >Ensembl REST services</a>, <a href="http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-41" >VCF</a> files, and <a href="https://github.com/arq5x/gemini" >GEMINI</a></p>
-
-</li>
-<li><p>Loading variation consequence data from Ensembl REST services, <a href="http://snpeff.sourceforge.net/" >SnpEff</a>-annotated VCF files, <a href="http://www.ensembl.org/info/docs/tools/vep/" >Ensembl VEP</a>-annotated VCF files, and GEMINI</p>
-
-</li>
-<li><p>Predicting variation consequences with Ensembl VEP via Ensembl REST services</p>
-
-</li>
-<li><p>Summarizing variations and variation consequences per row/gene by <a href="http://www.geneontology.org/" >Gene Ontology</a> term</p>
-
-</li>
-<li><p>Visual mappings for variation and variation consequence counts</p>
-
-</li>
-</ul>
-
-<br />
-<p>The app should be extended to provide:</p>
-
-<ul>
-<li><p>Default color mappings for variation consequences by Sequence Ontology term</p>
-
-</li>
-<li><p>Advanced/compound visual mappings for counts of variation consequences summarized at the row/gene level (e.g., mutation diagrams, data rings, donut charts)</p>
-
-</li>
-<li><p>Variation service implementation based on <a href="https://github.com/bigdatagenomics/adam" >ADAM</a></p>
-
-</li>
-<li><p>Variation service implementation based on a REST client for GEMINI</p>
-
-</li>
-<li><p>In-memory variation consequence prediction services based on SnpEff and <a href="http://compbio.charite.de/contao/index.php/jannovar.html" >JAnnovar</a></p>
-
-</li>
-<li><p><a href="http://www.hgvs.org/mutnomen/" >HGVS</a> identifiers for variants where available (possibly via <a href="https://github.com/invitae/hgvs" >hgvs mapper</a>)</p>
-
-</li>
-<li><p>Compare/contrast variation and/or variation consequences between samples (e.g. tumor vs normal) or populations (e.g. a case/control study)</p>
-
-</li>
-</ul>
-
-<br />
-<p>Language and Skills: Java/Swing</p>
-
-<p>Potential Mentors: Alex Pico, Paul Tang, Nathan Salomonis, Michael Heuer</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 5: CentiScaPe for multiple networks analysis and graphical output enhancement</h2>
 
 <p>Background: CentiScaPe is a Cytoscape plugin that allows to compute network centrality parameters. It is the most complete Cytoscape plugin for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, Betweenness, Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected networks. CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. CentiScaPe also provides a Boolean logic- based tool that allows easy characterization of nodes whose topological relevance depends on more than one centrality. Finally, different graphic outputs and the included description of biological significance for each computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing easy node categorization and experimental prioritization.</p>
@@ -209,33 +147,7 @@
 <p>Contact: <a href="mailto:sugang@umich.edu" >sugang@umich.edu</a>, <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 7: Developing An Interface For The Cancer Network Altering Variant Database (CAN-VD) Using Cytoscape.js </h2>
 
-<p>Background: Cancer is highly associated with genomic mutations. Such mutations in genes affect their protein products resulting in mutated proteins that acquire new function (gain-of-interaction/function), mutants that lose their function (loss-of- interaction/function) or mutants that lose a function and acquire another (switch-of-interaction/function). Identifying mutants that are related to cancer development and interpreting their functional consequences is important for understanding cancer biology and developing diagnostics, prognostics and drug targets.</p>
-
-<br />
-<p>Focus: We are studying the effects of mutations on protein-protein interaction (PPI) networks in cancer. The effects of over 800,000 missense mutations are being analyzed and stored in the Cancer Network Altering-Variant Database (CNA-VD), a relational database implemented in MySQL. CAN-VD stores the PPI interactions mediated by wildtype and variant protein sequences to build and compare the PPI network in the two conditions and understand the effects of mutations on the network topology and, consequently, the cellular and biological functions of the cancer system.</p>
-
-<br />
-<p>Goals:</p>
-
-<ol ><li><p>Develop a web-based interface for PPI data retrieval with a comprehensive search function.</p>
-
-</li>
-<li><p>Develop a visualization and annotation module using Cytoscape.js to visualize the retrieved PPI data as a network with annotations that highlight the mutation effects (the differences between the normal and cancer networks). </p>
-
-</li>
-</ol><br />
-<p>Inputs: The student will be provided with the database design and sample data as well as an introduction to the topic and the different possible visualizations and annotations needed. The student will have the freedom to choose among them or to propose other options.</p>
-
-<br />
-<p>Language and Skills: Javascript, JSON, PHP</p>
-
-<p>Potential Mentors: Mohamed Helmy, Gary Bader</p>
-
-<p>Contact: <a href="mailto:mohamed.attiashahata@utoronto.ca" >mohamed.attiashahata@utoronto.ca</a>, <a href="mailto:gary.bader@utoronto.ca" >gary.bader@utoronto.ca</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 8: Cytoscape.js Based Viewer for SBGN Process Description Diagrams with Built-In Complexity Management Operations</h2>
 
 <p>Background: </p>
@@ -282,108 +194,7 @@
 Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 10: Advanced data import in PathVisio</h2>
 
-<p><a href="http://pathvisio.org/" >PathVisio</a> is a pathway editor and analysis tool. PathVisio allows users to upload and visualize data on biological pathways. Currently it is possible to upload only one expression dataset at a time as a comma-delimited file. This functionality should be extended to allow uploading a number of data files at the same time as well as uploading of multiple data file formats (for eg. Excel sheets).</p>
-
-<p>This will involve extending the <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.gex" >gex</a> and <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.data" >data</a> modules of PathVisio. These modules are part of the PathVisio core and take care of importing experimental data and mapping it to the elements in a pathway. </p>
-
-<p>The modules need to be extended so as to allow:</p>
-
-<ul>
-<li><p>Uploading of multiple expression datasets at once.</p>
-
-</li>
-<li><p>Linking each individual dataset to a particular element type, for eg. linking a gene expression dataset to genes in a pathway and a flux data set to the interactions in a pathway.</p>
-
-</li>
-<li><p>Importing data from multiple file formats (For eg: .xls, .ods).</p>
-
-</li>
-<li><p>The “Data” tab in the side panel of PathVisio will show all the currently loaded datasets, the biological elements they are linked to, and the currently loaded annotation databases.</p>
-
-</li>
-</ul>
-
-<br />
-<p>Language and Skills: Java, OSGi</p>
-
-<p>Potential Mentors: Anwesha Bohler, Martina Kutmon (Unimaas, NL)</p>
-
-<p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 11: Enhance hierarchical models within Segway</h2>
-
-<p><a href="http://noble.gs.washington.edu/proj/segway/" >Segway</a> performs semi-automated annotation of the genome based on functional genomics data (ChIP-seq, RNA-seq, DNase-seq). Essentially it performs unsupervised clustering of these data anchored to the genome, using a dynamic Bayesian network framework. Since different patterns are visible at different scales, we could best describe genomic behavior using a hierarchical model, which would also allow us to better control additional parameters controlling transitions between segment labels and the emission of data. This would enable us to change the representation the relationship between these patterns from a simple network to a network of networks. Initial implementation of two-level hierarchical segmentation is included in Segway, but needs some improvement, such as:</p>
-
-<ul>
-<li><p>add ability to do Viterbi decoding of both sublabels and superlabels separately</p>
-
-</li>
-<li><p>change superlabels so they emit sublabels instead of strict 1-to-many superlabel-sublabel transition</p>
-
-</li>
-<li><p>enable the use of hierarchical models in semi-supervised learning mode</p>
-
-</li>
-<li><p>add ability to enforce left-to-right movement through sequence</p>
-
-</li>
-</ul>
-
-<br />
-<p>Language and Skills: Python, Dynamic Bayesian Networks</p>
-
-<p>Potential Mentors: Michael Hoffman</p>
-
-<p>Contact: <a href="mailto:mhoffman@uhnresearch.ca" >mhoffman@uhnresearch.ca</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 12: New Features for Interference App</h2>
-
-<p>Background: Interference is a Cytoscape plug-in for virtual knock-out experiments on complex networks. It allows to evaluate the topological effects of single or multiple nodes removal from a network. In this perspective, interference allows virtual node knock-out experiments: it is possible to remove one or more nodes from a network and analyze the consequences on network structure, by looking to the variations of the node centralities values. As the centrality value of a node is strictly dependent on the network structure and on the properties of other nodes in the network, the consequences of a node deletion are well captured by the variation on the centrality values of all the other nodes. With the interference app the user can:</p>
-
-<ul>
-<li><p>Simulate pharmacological treatment: one can potentially predict side effects of the drug by looking at the topological properties of nodes in a drug-treated network, meaning with that a network in which a drug-targeted node (protein) was removed. To inhibit a protein (for instance a kinases) corresponds to removing the node from the network</p>
-
-</li>
-<li><p>Simulate gene deletion: gene deletion implies losing encoded proteins, thus resulting in the corresponding removal of one or more nodes from a protein network</p>
-
-</li>
-</ul>
-
-<br />
-<p>Goal: The Goal of the proposal is to add more features to the App in order to consistently improving the tool:</p>
-
-<ol ><li><p>Calculation of centralities and other new node descriptors (node degrees, Markov Shannon entropies). These numbers will be used to rank the nodes for elimination; the user should choose the criteria (what node descriptor to be use for ranking, the default should be the node degree).</p>
-
-</li>
-<li><p>Ranking the nodes using one node descriptor</p>
-
-</li>
-<li><p>Eliminate 1 - x nodes and calculate each elimination step your entire network descriptors (ex: average node descriptors) and the Markov Shannon entropy (for the entire node) ; the user could choose the % or number of nodes to keep at the end of the network attack (ex: he can eliminate only 30% of the nodes using the node degree ranking)</p>
-
-</li>
-<li><p>Presenting the results as text/table and plot.</p>
-
-</li>
-<li><p>Interactive plot: the user can select one eliminated node into the final plot and see metabolic info, notations, semantics, etc. (the normal information you can have in Cytoscape)</p>
-
-</li>
-</ol><br />
-<p>More info at:<a href="http://www.cbmc.it/%7Escardonig/interference/Interference.php" > http://www.cbmc.it/%7Escardonig/interference/Interference.php</a></p>
-
-<br />
-<p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Cristian Robert Munteanu (University of A Coruña)</p>
-
-<p>Potential Co-Mentors: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a>, <a href="mailto:muntisa@gmail.com" >muntisa@gmail.com</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 13: Develop a Method for Aligning Pathways and Visualizing these Alignments</h2>
 
 <p>There is continued growth in the groups generating machine-readable representations of biological pathways (such as <a href="http://www.reactome.org/" >Reactome</a> or <a href="http://wikipathways.org/" >WikiPathways</a>) and subsequent efforts to aggregate these pathways into unified repositories, such as Pathway Commons. Aggregation of these pathways suffers from multiple pathways being aggregated that differ due to mismatches in author representations of these pathways. The goal of this project is to develop a method for aligning pathways and then visualizing the results of these alignment. Starting points could be to find interactions that use the same substrates and produce the same products. </p>
@@ -399,62 +210,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 14: Add Additional Graph Analysis Algorithms to Cytoscape.js</h2>
 
-<p><a href="http://cytoscape.github.io/cytoscape.js/" >Cytoscape.js</a> is a Javascript graph library that can be used for both the analysis and visualization of biological networks. Currently, Cytoscape.js is missing additional functions for the analysis of graphs. For instance, Cytoscape.js only has a Breadth First Search algorithm implemented for the traversal of graphs. Additional, methods could also be implemented to include additional functions to calculate statistics about graphs. The goal is to augment the graph analysis features in Cytoscape.js implemented purely in Javascript.</p>
-
-<br />
-<p>Language and Skills: Javascript, Graph Theory</p>
-
-<p>Potential Mentors: Augustin Luna (MSKCC)</p>
-
-<p>Contact: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 15: Work on the Pathway Database Converters for the Expansion of Pathway Commons</h2>
-
-<p><a href="http://www.pathwaycommons.org/about/" >Pathway Commons</a> (PC) aggregates biological pathway information from several pathway databases; the data is stored primarily in the format known as <a href="http://www.biopax.org/" >BioPAX</a>. We are continually seeking to expand the amount of data present in Pathway Commons, while maintaining the high quality of data in PC. Databases that have been proposed for future inclusion are the <a href="http://ctdbase.org" >Comparative Toxicogenomics Database</a> (CTD) and <a href="http://humanmetabolism.org/" >RECON</a>, a human metabolic database. </p>
-
-<br />
-<p>Each of these databases, has its own challenges for conversion to BioPAX and future inclusion into PC. Inclusion of CTD would require the student to develop a mapping of CTD to BioPAX concepts, and develop a converter using <a href="http://www.biopax.org/paxtools.php" >Paxtools</a>, a BioPAX API written in Java. RECON is currently in the <a href="http://sbml.org/Main_Page" >SBML</a> format and would require conversion to BioPAX. The goal of this project is to develop a converter for one of these databases (or another that the student proposes) and convert the database; the output of the converter should validate using the <a href="http://webservice.baderlab.org:28080/home.html;jsessionid=070EBE4AF7FC1EF04E7D8599F2488A1B" >BioPAX Validator</a>.</p>
-
-<br />
-<p>Language and Skills: Java, XML</p>
-
-<p>Potential Mentors: Augustin Luna (MSKCC)</p>
-
-<p>Contact: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 16: Pathvisiojs (JavaScript) Diff Viewer for Biological Pathway Diagrams</h2>
-
-<p><a href="https://github.com/wikipathways/pathvisiojs" >Pathvisiojs</a> is a web-based viewer and editor for biological pathway diagrams. It was developed by the <a href="http://wikipathways.org/" >WikiPathways.org</a> team to enable students and researchers to browse, draw, analyze, download, publish and share pathways. A specific need for curation is the ability to compare two different pathways or two different versions of the same pathway. This project calls for performing an efficient diff on the JSON data of two pathways and rendering the result as an easy to understand SVG image, with visual cues highlighting the differences. The resulting image should be interactive to allow the user to click on highlighted differences to view detailed information.</p>
-
-<br />
-<p>A Diff Viewer already exists, but needs to be replaced as its based on obsolete Java Applet technology. Follow the link to view an example of a comparison of two versions of the same pathway. Note that all highlighted objects are clickable.</p>
-
-<p><a href="http://www.wikipathways.org//index.php?title=Special%3ADiffAppletPage&amp;pwTitle=Pathway%3AWP4&amp;new=73615&amp;old=72246" >http://www.wikipathways.org//index.php?title=Special%3ADiffAppletPage&amp;pwTitle=Pathway%3AWP4&amp;new=73615&amp;old=72246</a> (recommend Firefox with applet support extension)</p>
-
-<br />
-<p>Language and Skills: JavaScript, D3.js, SVG</p>
-
-<p>Potential Mentors: Anders Riutta, Alex Pico, Kristina Hanspers (Gladstone Institutes, San Francisco) </p>
-
-<p>Contact: <a href="mailto:anders.riutta@gladstone.ucsf.edu" >anders.riutta@gladstone.ucsf.edu</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 17: Implementation of new clustering techniques into Cytoscape</h2>
-
-<p>clusterMaker is a Cytoscape App that provides users with a number of clustering algorithms and visualizations. This project involves extending clusterMaker through adding new algorithms or visualizations. Some possible new attribute-based algorithms include biclustering, DBSCAN, model-based clustering, tight clustering. New network partitioning algorithms include PBD (Pujol, 2006), SCIPi (Jiang &amp; Singh 2010), Ensemble clusters, or any one of many other recently published algorithms. There is also lots of room for improvements to the visualization of clusters, including time-series morphing of heatmaps, generation of difference or merged heatmaps, or tools to more easily navigate clusters after computation.</p>
-
-<br />
-<p>Language and Skills: Java, and a strong math background</p>
-
-<p>Potential Mentors: Scooter Morris (UCSF)</p>
-
-<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >scooter@cgl.ucsf.edu</a> </p>
-
-<br />
 <h2 dir="ltr" >Idea 18: Drag &amp; Drop or Palette Editor for SBGN and other graphical notations in Cytoscape</h2>
 
 <p>The goal is to design and implement a drag-and-drop or palette-based editor for Cytoscape that would include nodes, edges, and graphical annotations. In the ideal case, this would be extensible so that apps add their own nodes or edges with specific graphical attributes. The Systems Biology Graphical Notation (SBGN) is a standard graphical notation for presenting pathways and protein interactions. Currently, Cytoscape lacks the node symbols and edge types required for SBGN. In this project, those notations will be added to the Cytoscape core, and a simple palette editor developed for user interaction.</p>
@@ -479,18 +235,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >scooter@cgl.ucsf.edu</a> </p>
 
 <br />
-<h2 dir="ltr" >Idea 20: Network alignment app for Cytoscape</h2>
 
-<p>One of the increasingly common needs when analyzing biological networks is network comparison. Often this involves aligning two or more networks so that the same nodes are in the same place and differences between networks can be highlighted. This could involve time-series data, host-pathogen interaction data, or cross-species comparisons. There are several algorithms that provide this functionality, but none have been implemented in Cytoscape. This project would involve implementing one or more network alignment algorithms and providing visualizations to allow users to explore the similarities and differences between the aligned networks.</p>
-
-<br />
-<p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Scooter Morris</p>
-
-<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >scooter@cgl.ucsf.edu</a> </p>
-
-<br />
 <h2 dir="ltr" >Idea 21: Constrained layout algorithms in Cytoscape</h2>
 
 <p>Most layout algorithms in Cytoscape rely on inherent network topology and only a crude set of spatial constraints (e.g., grid, circle). There are many cases when working with networks in Cytoscape where you want to be able to constrain layouts to user- or attribute-defined spaces. This idea involves implementing layouts that are constrained by:</p>
@@ -575,65 +320,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 23: Graph Database Support for Cytoscape 3 by TinkerPop Software Stack</h2>
 
-<p><a href="http://www.cytoscape.org/cy3.html" >Cytoscape 3</a> is now available to end-users, and we need an easy-to-use Cytoscape App which provides the following functions to support huge data sets:</p>
-
-<ul>
-<li><p>Mount huge network(s) in disk-based graph database</p>
-
-</li>
-<ul>
-<li><p><a href="http://www.neo4j.org/" >Neo4j</a></p>
-
-</li>
-<li><p><a href="http://www.openrdf.org/" >Sail</a></p>
-
-</li>
-</ul>
-
-<li><p>Send query to the network</p>
-
-</li>
-<ul>
-<li><p>Search by simple properties (Name, ID, etc.)</p>
-
-</li>
-<li><p><a href="http://en.wikipedia.org/wiki/SPARQL" >SPARQL</a> (for semantic data)</p>
-
-</li>
-<li><p><a href="https://github.com/tinkerpop/gremlin/wiki" >Gremlin</a></p>
-
-</li>
-</ul>
-
-<li><p>Visualize the result</p>
-
-</li>
-</ul>
-
-<p>To support multiple databases, you need to use<a href="https://github.com/tinkerpop/blueprints" > TinkerPop Blueprints</a>. The goal of this project is publish a maintainable and usable (by average biologists) App for all Cytoscape 3 users.</p>
-
-<br />
-<p>Language and Skills: Java, Maven, OSGi, Git/GitHub</p>
-
-<p>Potential Mentors: Kei Ono, Samad Lotia</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 24: Virtual Cell iPhone app enhancements</h2>
-
-<p>The Virtual Cell modeling and simulation framework is an open source software for modeling and simulations of biological systems providing both client- and server- based modeling and simulation capabilities. An iOS app has been prototyped which interfaces with the Restful VCell API and allows mobile access to VCell models and management of running simulations within our a batch environment on a centralized computational facility. This app must browse private and public models, monitor and control simulation jobs, manage user quotas, and provide simple results viewing. During the project period, we will reevaluate the requirements of the production software, refine the design, add features and beta test with our team and VCell users.</p>
-
-<br />
-<p>Language and Skills: Objective-C/iOS</p>
-
-<p>Possible mentors: Jim Schaff</p>
-
-<p>Contact: <a href="mailto:vcell-discuss@googlegroups.com" >vcell-discuss@googlegroups.com</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 25: Web publishing of models from Virtual Cell database</h2>
 
 <p>The<a href="http://vcell.org" > Virtual Cell</a> modeling and simulation framework is an open source software for modeling and simulations of biological systems using Java RMI, providing both client- and server- based modeling and simulation capabilities. The biologically oriented user interface allows experimentalists to create models, define cellular geometry, specify simulations and analyze the simulation results. The models and results are stored on a remote server in ORACLE database and presently can be reviewed only in the VCell software. You need to implement a content management system that will search and retrieve model information from ORACLE or MySQL database and publish it online. The model structure stored in a relationship database is available at<a href="http://vcell.org/technology/VcmlSpec.html" > http://vcell.org/technology/VcmlSpec.html</a></p>
@@ -646,81 +333,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:vcell-discuss@googlegroups.com" >vcell-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 26: Porting Interference App to Cytoscape 3 with new features for undirected and directed networks</h2>
 
-<p>Background: Interference is a Cytoscape plug-in for virtual knock-out experiments on complex networks. It allows to evaluate the topological effects of single or multiple nodes removal from a network. In this perspective, interference allows virtual node knock-out experiments: it is possible to remove one or more nodes from a network and analyze the consequences on network structure, by looking to the variations of the node centralities values. As the centrality value of a node is strictly dependent on the network structure and on the properties of other nodes in the network, the consequences of a node deletion are well captured by the variation on the centrality values of all the other nodes. With the interference app the user can:</p>
-
-<ul>
-<li><p>Simulate pharmacological treatment: one can potentially predict side effects of the drug by looking at the topological properties of nodes in a drug-treated network, meaning with that a network in which a drug-targeted node (protein) was removed. To inhibit a protein (for instance a kinases) corresponds to removing the node from the network</p>
-
-</li>
-<li><p>Simulate gene deletion: gene deletion implies losing encoded proteins, thus resulting in the corresponding removal of one or more nodes from a protein network</p>
-
-</li>
-</ul>
-
-<br />
-<p>Goal: The Interference plugin is based on some features of the CentiScaPe plugin, and is available for Cytoscape 2.8.x but not yet for Cytoscape 3. The Idea is to port the plugin to Cytoscape 3 and to add some features. The plugin works for undirected networks, but now a new version of the CentiScaPe plugin allows to compute several centralities also for directed networks. The new tool should:</p>
-
-<ul>
-<li><p>Work with Cytoscape 3.</p>
-
-</li>
-<li><p>Provide the Eigenvector, Bridging Centrality and Edge Betweenness</p>
-
-</li>
-<li><p>centrality Interference (now missing).</p>
-
-</li>
-<li><p>Provide the directed Interference for all the centralities implemented</p>
-
-</li>
-<li><p>More info at:<a href="http://www.cbmc.it/%7Escardonig/interference/Interference.php" > http://www.cbmc.it/%7Escardonig/interference/Interference.php</a></p>
-
-</li>
-</ul>
-
-<br />
-<a href="http://www.cbmc.it/%7Escardonig/interference/Interference.php" ></a><p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona),Fausto Spoto (University of Verona)</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 27: Porting Pesca App to Cytoscape 3 with new features for undirected and directed networks</h2>
-
-<p>Background: The Pesca plugin is able to generate networks extracting shortest-path based subnetwork in order to help reconstructing biological networks. Particularly it provides the shortest path tree from a node, the shortest path cluster and a function to connect single nodes to giant component based on the shortest path from the nodes to the giant components.</p>
-
-<br />
-<p>Goal: These features are available for Cytoscape 2.8.x in beta version. The Idea is to port all the features to Cytoscape 3 and to add new features to the app. Particularly:</p>
-
-<ul>
-<li><p>Provide the shortest path tree and shortest path cluster for both directed and undirected networks</p>
-
-</li>
-<li><p>Provide the connection from single nodes to a giant component for both directed and undirected networks</p>
-
-</li>
-<li><p>Provide the possibility to download directed and undirected human interactome to be used to generate biological networks (from the human ppi network database:<a href="http://dp.univr.it/%7Elaudanna/LCTST/downloads/index.html" > http://dp.univr.it/~laudanna/LCTST/downloads/index.html</a>)</p>
-
-</li>
-<li><p>Provide a user friendly output allowing to easily extract and generate subnetworks</p>
-
-</li>
-<li><p>Provide some simple statistics (S-P distribution, number of occurrence of nodes)</p>
-
-</li>
-</ul>
-
-<br />
-<p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 28: New Features for Online Tutorial System</h2>
 
 <p><a href="http://opentutorials.cgl.ucsf.edu" >OpenTutorials</a> is a free, online tutorial resource for open source and NRNB-supported tools. It is built on top of MediaWiki and a handful of extensions. It’s basic function is to provide a wiki-based collection of tutorials that can be viewed as a web page, slide show or printed handout. The wiki approach makes it easy to build and maintain content. The slide show and handout features make it useful for presenters.</p>
@@ -859,18 +472,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 32: PathVisio Plugin to Load Additional Information about Data Nodes</h2>
 
-<p>Ensembl now provides a BioMart implementation for Ensembl genes, variation and regulation. The goal of this project is to develop a plugin that loads additional information about the data nodes in a pathway and displays them in a side panel (gene name, chromosome location, strand, %GC content, transcript count, etc). This could be extended with other services that provide other information about the data nodes.</p>
-
-<br />
-<p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Martina</p>
-
-<p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 33: Publish Cytoscape 3 Session to cytoscape.js</h2>
 
 <p><a href="http://www.cytoscape.org/cy3.html" >Cytoscape 3</a> and<a href="http://cytoscape.github.com/cytoscape.js/" > cytoscape.js</a> are completely independent software packages; 3 is a Java Desktop application and .js is a JavaScript library to visualize network data. However, it shares some basic concepts, such as Visual Styles. It is very useful if we can reproduce same/similar Cytoscape 3 network views in web browsers to share/publish data sets.</p>
@@ -992,18 +594,7 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 38: Network Analysis Enhancements</h2>
 
-<p>Cytoscape 3 includes a Network Analyzer bundle that performs a number of extremely useful network analyses. Unfortunately, the functionality provided is not exposed in a way that other plugins can utilize. This project will enhance the network analysis functionality to support calculating individual network statistics using an exported API or exported Cytoscape tasks. Moreover, the project will provide this functionality in both a GUI and non-GUI (headless) mode.</p>
-
-<br />
-<p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Scooter Morris and Nadezhda Doncheva</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 39: Visualization of Time-series Cluster Data</h2>
 
 <p>Currently, the clusterMaker plugin uses standard heat maps to visualize attribute cluster data (based on Java TreeView). Increasingly, time series data is becoming important for clustering applications and it would be useful to expand the provided visualization options to explicitly support time series data. For these purposes, we’re thinking about time-series that have multiple conditions in each series, which means we need to move beyond the standard two-dimensional heat map. This project can explore utilizing animation, small multiples, or other standard visualization techniques (or your own novel techniques) to provide new visualization opportunities to users. Ideally, this would be integrated with network-based animation tools such as DynNetwork or CyAnimator.</p>
@@ -1057,19 +648,6 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <p>Contact: <a href="mailto:lunaa@cbio.mskcc.org" >Augustin Luna</a>, <a href="mailto:maxkfranz@gmail.com" >Max Franz</a></p>
 
 <br />
-<h2 dir="ltr" >Idea 43: Implement TieDIE algorithm as Cytoscape App</h2>
-
-<p>Identifying the cellular wiring that connects genomic perturbations to transcriptional changes in cancer is essential to understand the mechanics of disease initiation and progression, and, ultimately, to predict drug response. We have developed a method called <a href="http://bioinformatics.oxfordjournals.org/content/29/21/2757.short">Tied Diffusion Through Interacting Events (TieDIE)</a>, which uses a network diffusion approach to connect genomic perturbations to gene expression changes characteristic of cancer subtypes. The method computes a subnetwork of protein–protein interactions, predicted transcription factor-to-target connections, and curated interactions from literature that connects genomic and transcriptomic perturbations. TieDIE results have been presented in multiple Cancer Genome Atlas (TCGA) marker papers, including in clear cell renal carcinoma, where the algorithm identified key subnetworks linking frequent mutations in chromatin-remodeling genes to activated transcription factors that control a wide number of cellular processes that are required for the maintenance of a disease state.</p>
-<p>
-Re-implementation of the TieDIE algorithm in the Cytoscape 3.0 (cytoscape.org) software program will allow users to search for and assess the significance of subnetworks inside the cutting-edge visual interface of cytoscape, while circumventing time-consuming data manipulation steps. We expect this implementation to greatly increase the user base of our algorithm, and also to provide high exposure for the developer assuming this project, particularly in the bioinformatics and network search field. Candidates should have strong experience in Python and Java programming languages, as well as experience with matrix computation and visual interfaces. Some experience with numerical approximation methods and random-walk processes would also be helpful.
-</p>
-<br />
-<p>Languages and Skills: Java, Cytoscape app dev</p>
-
-<p>Potential Mentors: Evan Paull (UCSC) </p>
-
-<p>Contact: <a href="mailto:evanpaull@gmail.com" >Evan Paull</a>, <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
 <h2 dir="ltr">Idea 44: Optimize Semi-supervised Learning Algorithm for Genomic Datasets and Inject Prior Knowledge from Biological Pathways</h2>
 <p>
 <b>Background</b>: A major problem in bioinformatics is that the number of features collected by modern high-throughput technologies severely overwhelms the number of samples for which such features are available. In a typical dataset, it is not uncommon to have tens of thousands of molecular measurements, but only a few tens or hundreds of samples. This severe undersampling creates a significant challenge for researchers who want to mine such datasets for biological or clinical insight. For example, when looking to predict sensitivity of cancer cells to various compounds, it is not uncommon to come up with a collection of molecular features that are highly predictive on a given dataset, only to have the accuracy fail to generalize to new, previously unseen samples.
