@@ -83,21 +83,67 @@ apico@gladstone.ucsf.edu%0D
 -----------------------------------
 ";
 
-	foreach ($row as $field){
-		if (strlen($field) > 200)
-			$field = substr($field, 0, 200) ."...";
-		echo "<td>$field</td>";
+	$pubs = $row['pubmedids'];
+	$ifpubs = "";
+	if (strlen($pubs) > 7){
+	  $splitpubs = split(',', $pubs);
+	  $publinks = "";
+	  foreach($splitpubs as $p){
+	  	$publinks .= "http://www.ncbi.nlm.nih.gov/pubmed/$p ";
+	  }
+	  $ifpubs = "Publication(s): $publinks";
 	}
-	if (isValidEmail($email) && isValidEmail($nrnbemail)){
-	if ($subid > 0 && $status == "Ongoing")
-		echo "<td><a href=\"mailto:$email?cc=$nrnbemail&Subject=$subject&Body=$body\">[send update request]</a></td>";
-	else
-		echo "<td><a href=\"mailto:$email?cc=$nrnbemail&Subject=$subject\">[send email]</a></td>";
-	}
-	else
-		echo "<td>email missing</td>";
+	$subject2 = "NRNB Collaborator, Your Feedback Is Requested (<2 minutes)";
+	$body2 = "Dear Collaborator,%0D%0D
 
-	echo "</tr>";
+Four years ago we launched the National Resource for Network Biology (http://nrnb.org), a NIH P41 resource comprised of multiple groups working on developing network biology technologies and offering training and a broad set of collaborations.  In that time we've:%0D%0D
+
+ * published 80 papers%0D
+ * held 119 training events and 26 courses across 14 countries%0D
+ * worked with 59 Google Summer of Code students%0D
+ * established 149 collaborations%0D
+ * and enhanced the Cytoscape developer and user communities with projects like the Cytoscape App Store%0D%0D
+
+Now we are up for renewal and we need your help.  We want your feedback on your experience collaborating with an NRNB group. We've prepare a super simple, single question survey. It'll take less than 2 minutes!%0D%0D
+
+http://nrnb.org/outreach.html#feedback%0D%0D
+
+NRNB collaborator: $nrnbcontact%0D
+Project title: $title%0D 
+$ifpubs%0D%0D
+
+Did we help develop a new method or tool? Did we help apply a network tool toward a useful end? Did we contribute significantly to a publication? Did we further the goals of your research?%0D%0D 
+
+Thanks for you time!%0D
+ - Alex%0D%0D
+
+----------------------------------------%0D
+Alexander Pico, PhD%0D
+NRNB Executive Director%0D
+Bioinformatics Assoc. Director%0D
+Gladstone Institutes%0D
+http://nrnb.org%0D
+http://gladstoneinstitutes.org%0D
+----------------------------------------
+";
+
+        foreach ($row as $field){
+                if (strlen($field) > 200)
+                        $field = substr($field, 0, 200) ."...";
+                echo "<td>$field</td>";
+        }
+        if (isValidEmail($email) && isValidEmail($nrnbemail)){
+          if ($subid > 0 && $status == "Ongoing")
+                echo "<td><a href=\"mailto:$email?cc=$nrnbemail&Subject=$subject&Body=$body\">[send update request]</a></td>";
+          else                                                                                                                                            
+                echo "<td><a href=\"mailto:$email?cc=$nrnbemail&Subject=$subject\">[send email]</a></td>";                                              
+	  echo "<td><a href=\"mailto:$email?Subject=$subject2&Body=$body2\">[send testimonial request]</a></td>"; 
+	}
+        else                                                                                                                                            
+                echo "<td>email missing</td><td>email missing</td>";                                                                                                          
+                                                                                                                                                        
+        echo "</tr>";    
+
 }
 		
 
