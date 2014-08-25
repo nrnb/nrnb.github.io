@@ -88,6 +88,7 @@ var navbarText =
                         '<li class="dropdown-submenu">' +
                             '<a href="#">NetBio SIG</a>' +
                             '<ul class="dropdown-menu" id="projects-menu">' +
+                                '<li><a href="media-sig-2014.html">2014</a></li>' +
                                 '<li><a href="media-sig-2013.html">2013</a></li>' +
                                 '<li><a href="media-sig-2012.html">2012</a></li>' +
                                 '<li><a href="media-sig-2011.html">2011</a></li>' +
