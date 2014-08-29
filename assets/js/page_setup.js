@@ -105,6 +105,8 @@ var navbarText =
                         '<li><a href="training.html#events-tab">Events</a></li>' +
                         '<li><a href="training.html#courses-tab">Courses</a></li>' +
                         '<li><a href="training.html#tutorials-tab">Tutorials</a></li>' + 
+                        '<li class="divider"></li>' +
+                        '<li><a href="testimonials.html">Testimonials</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
@@ -116,6 +118,7 @@ var navbarText =
                         '<li><a href="academy.html">NRNB Academy</a></li>' +
                         '<li><a href="competitions.html">NRNB Competitions</a></li>' +
                         '<li><a href="collaboration-report.html">Ongoing Collaborations</a></li>' +
+                        '<li><a href="testimonials.html#collab-tab">Testimonials</a></li>' +
                         '<li class="divider"></li>' +
                         '<li><a href="collaboration-tracking.html">Collaboration Request Form</a></li>' +
                     '</ul>' +
