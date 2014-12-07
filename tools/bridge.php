@@ -22,9 +22,9 @@ function submitform()
 
 //Defaults
 $org = "Yeast";
-$ds1 = "D|SGD"; //note: use pipe to separate code from name
-$ds2 = "En|Ensembl"; //note: use pipe to separate code from name
-$id = "...";
+$ds1 = "T|GeneOntology"; //note: use pipe to separate code from name
+$ds2 = "D|SGD"; //note: use pipe to separate code from name
+$id = "GO:0032807";
 
 if(!empty($_POST["org"]))
 	$org = $_POST["org"];
