@@ -243,7 +243,7 @@ line-height: 20px;
 color: #999999;
 }
 blockquote2 small:before {
-content: '\2014 \00A0';
+content: '\2015 \00A0';
 }
 blockquote2.pull-right {
 float: right;
@@ -260,7 +260,7 @@ blockquote2.pull-right small:before {
 content: '';
 }
 blockquote2.pull-right small:after {
-content: '\00A0 \2014';
+content: '\00A0 \2015';
 }
 q:before,
 q:after,
