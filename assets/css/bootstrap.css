@@ -809,7 +809,7 @@ blockquote small {
 }
 
 blockquote small:before {
-  content: '\2014 \00A0';
+  content: '\2015 \00A0';
 }
 
 blockquote.pull-right {
@@ -830,7 +830,7 @@ blockquote.pull-right small:before {
 }
 
 blockquote.pull-right small:after {
-  content: '\00A0 \2014';
+  content: '\00A0 \2015';
 }
 
 q:before,
