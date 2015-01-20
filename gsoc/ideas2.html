@@ -190,22 +190,21 @@ arbitrary level of nesting is allowed and folding can take place at an arbitrary
 <br />
 <h2 dir="ltr" >Idea 6: Advanced data visualization in PathVisio</h2>
 
-<p><a href="http://pathvisio.org/" >PathVisio</a> is a pathway editor and analysis tool. PathVisio allows users to upload and visualize data on biological pathways. We want to extend the visualization module in PathVisio which is part of the PathVisio core application. A central visualization registry should allow plugins to create and register new visualization options. The current visualization interface in PathVisio is very complex and should be made more user-friendly and intuitive for the users. </p>
+<p><b>Background</b>:<a href="http://pathvisio.org/" >PathVisio</a> is a pathway editor and analysis tool. PathVisio allows users to upload and 
+visualize data on biological pathways. We want to extend the visualization module in PathVisio which is part of the PathVisio 
+core application. A central visualization registry should allow plugins to create and register new visualization options. The 
+current visualization interface in PathVisio is very complex and should be made more user-friendly and intuitive for the users. </p>
 
-<br />
-<p>Goals:</p>
-
-<p>- Independent visualization module and registry</p>
-
-<p>- More user-friendly visualization interface</p>
-
-<p>- Possibility for users to define visualization templates that can be used for different datasets (currently a visualization is linked to a dataset and has to be created again for a new dataset)</p>
-
-<br />
-<p>Language and Skills: Java, OSGi</p>
-
-<p>Potential Mentors: Martina Kutmon, Anwesha Bohler (Unimaas, NL)<br />
-Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<p><b>Goals</b>:</p>
+<ul>
+<li>Independent visualization module and registry</li>
+<li>More user-friendly visualization interface</li>
+<li>Possibility for users to define visualization templates that can be used for different datasets (currently a visualization 
+is linked to a dataset and has to be created again for a new dataset)</li>
+</ul>
+<p><b>Language and Skills</b>: Java, OSGi</p>
+<p><b>Potential Mentors</b>: Martina Kutmon, Anwesha Bohler (Unimaas, NL)<br /></p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <br />
 
@@ -297,41 +296,39 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <br />
 <h2 dir="ltr" >Idea 11: A SPARQL query plugin for Pathvisio</h2>
 
-<p>Background: The semantic web is becoming a valuable resource for Pathway knowledge. The challenge still remain to smoothly integrate this knowledge into biological frameworks. With their SPARQL endpoints Uniprot (<a href="http://beta.sparql.uniprot.org/" >http://beta.sparql.uniprot.org/</a>) or the EBI rdf Platform (<a href="https://www.ebi.ac.uk/rdf/" >https://www.ebi.ac.uk/rdf/</a>) , biological data is becoming available as semantic web data. To use this knowledge one need not only to learn SPARQL queries, but also be prepared to convert the semantic data in different formats that comes with the various biological platforms. Using semantic web data in Pathvisio, we currently need to compose the appropriate SPARQL queries, get the data and write various parser to change the data in to the different data models. </p>
+<p><b>Background</b>: The semantic web is becoming a valuable resource for Pathway knowledge. The challenge still remain to 
+smoothly integrate this knowledge into biological frameworks. With their SPARQL endpoints Uniprot 
+(<a href="http://beta.sparql.uniprot.org/" >http://beta.sparql.uniprot.org/</a>) or the EBI rdf Platform 
+(<a href="https://www.ebi.ac.uk/rdf/" >https://www.ebi.ac.uk/rdf/</a>) , biological data is becoming available as semantic 
+web data. To use this knowledge one need not only to learn SPARQL queries, but also be prepared to convert the semantic data 
+in different formats that comes with the various biological platforms. Using semantic web data in Pathvisio, we currently 
+need to compose the appropriate SPARQL queries, get the data and write various parser to change the data in to the different 
+data models. </p>
 
-<br />
-<p>Goal: To make a Pathvisio plugin that allows a pathway curator to write SPARQL queries against a variety of semantic web based pathways resources and include the obtained triples into the Pathway under scrutiny. The plugin should also provide an interface to SPARQL results for other Pathvisio plugins. Having such SPARQL interface still requires a pathway editor to become knowledgeable in writing SPARQL queries. The burden of having to write various parsers for semantic web data however, is taken away. The plugin should:</p>
+<p><b></b>: To make a Pathvisio plugin that allows a pathway curator to write SPARQL queries against a variety of semantic 
+web based pathways resources and include the obtained triples into the Pathway under scrutiny. The plugin should also provide 
+an interface to SPARQL results for other Pathvisio plugins. Having such SPARQL interface still requires a pathway editor to 
+become knowledgeable in writing SPARQL queries. The burden of having to write various parsers for semantic web data however, 
+is taken away. The plugin should:</p>
 
 <ul>
-<li><p>Provide a SPARQL query editor, from where the user could compose queries, which are then subsequently launched to the respective SPARQL endpoints.</p>
-
-</li>
-<li><p>Provide an interface that wrap specific SPARQL queries for other Pathvisio plugins. </p>
-
-</li>
-<li><p>Link to a centralized repository (e.g. Github) where SPARQL queries can be stored for future reference and others to use.</p>
-
-</li>
-<li><p>Link to a centralized index of relevant SPARQL endpoints. This index might again be stored on platforms like Github. </p>
-
-</li>
-<li><p>Import the resulting triples, which can then be linked to recognizable pathway components, or as data elements to use in Pathway analysis. </p>
-
-</li>
-<li><p>Make a RDF representation of a Pathway opened in Pathvisio. These triples are to be used as template for SPARQL queries. The user should be able to click on a triple which is then added to the WHERE block in the SPARQL query.</p>
-
-</li>
+<li>Provide a SPARQL query editor, from where the user could compose queries, which are then subsequently launched to the 
+respective SPARQL endpoints.</li>
+<li>Provide an interface that wrap specific SPARQL queries for other Pathvisio plugins.</li>
+<li>Link to a centralized repository (e.g. Github) where SPARQL queries can be stored for future reference and others to use.</li>
+<li>Link to a centralized index of relevant SPARQL endpoints. This index might again be stored on platforms like Github.</li>
+<li>Import the resulting triples, which can then be linked to recognizable pathway components, or as data elements to use in 
+Pathway analysis.</li>
+<li>Make a RDF representation of a Pathway opened in Pathvisio. These triples are to be used as template for SPARQL queries. 
+The user should be able to click on a triple which is then added to the WHERE block in the SPARQL query.</li>
 </ul>
 
-<br />
-<p>Potential students: This idea is for a student who has solid background in SPARQL queries, or the Semantic web in general, and who is looking into opening up the Semantic Web to specific knowledge domains (I.e. Biology and/or Medicine). </p>
+<p><b>Language and Skills</b>: SPARQL, RDF, and Java. This idea is for a student who has solid background in SPARQL queries, or the Semantic web in 
+general, and who is looking into opening up the Semantic Web to specific knowledge domains (I.e. Biology and/or Medicine).</p>
 
-<br />
-<p>Language and Skills: SPARQL, RDF, and Java</p>
+<p><b>Potential Mentors</b>: Andra Waagmeester, Anders Riutta, Martina Kutmon </p>
 
-<p>Potential Mentors: Andra Waagmeester, Anders Riutta, Martina Kutmon </p>
-
-<p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <br />
 
@@ -425,35 +422,31 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <br />
 <h2 dir="ltr" >Idea 15: Integration of WikiPathways Visualization with PathVisio into Bioclipse</h2>
 
-<p>Goal: To integrate PathVisio visualization widget into Bioclipse for visualization of pathway information from WikiPathways. Selecting protein and metabolites in the pathway visualization, will shows of that chemical entity in other Bioclipse components, using the Jmol and JChemPaint plugins for Bioclipse. Preferably, interaction can be scripted, allowing integration with other metabolomics features in Bioclipse.</p>
+<p><b>Goal</b>: To integrate PathVisio visualization widget into Bioclipse for visualization of pathway information from 
+WikiPathways. Selecting protein and metabolites in the pathway visualization, will shows of that chemical entity in other 
+Bioclipse components, using the Jmol and JChemPaint plugins for Bioclipse. Preferably, interaction can be scripted, allowing 
+integration with other metabolomics features in Bioclipse.</p>
 
-<br />
-<p>Motivation: Bioclipse is a powerful platform combining a powerful scripting language to write data analysis and visualization workflows, which can easily be shared on, for example, MyExperiment.org [1]. While it has various components to support metabolomics in general, it lacks support for visualization of metabolic pathways.</p>
+<p><b>Motivation</b>: Bioclipse is a powerful platform combining a powerful scripting language to write data analysis and 
+visualization workflows, which can easily be shared on, for example, MyExperiment.org [1]. While it has various components 
+to support metabolomics in general, it lacks support for visualization of metabolic pathways.</p>
 
-<br />
-<p>Description: You will use Java to write a plugin for Bioclipse [2] that uses PathVisio [3] as a library to visualize metabolic pathways from WikiPathways inside Bioclipse. You will use the Eclipse selection event propagation mechanism [4] so that when users select protein and metabolites, Bioclipse will automatically visualize 2D or 3D structural information about those molecules (only the event creation has to be implemented). Preferably, a scripting language extension is written [5], to allow extracting information from the pathway and highlighting of parts of the pathway. This involves extending an existing interface with methods that can be run from the scripting language.</p>
+<p><b>Description</b>: You will use Java to write a plugin for Bioclipse [2] that uses PathVisio [3] as a library to visualize 
+metabolic pathways from WikiPathways inside Bioclipse. You will use the Eclipse selection event propagation mechanism [4] so 
+that when users select protein and metabolites, Bioclipse will automatically visualize 2D or 3D structural information about 
+those molecules (only the event creation has to be implemented). Preferably, a scripting language extension is written [5], 
+to allow extracting information from the pathway and highlighting of parts of the pathway. This involves extending an existing 
+interface with methods that can be run from the scripting language.</p>
 
-<ol ><li><p><a href="http://myexperiment.org/" >myexperiment.org</a></p>
-
-</li>
-<li><p><a href="http://www.bioclipse.net/" >www.bioclipse.net</a></p>
-
-</li>
-<li><p><a href="http://www.pathvisio.org/" >www.pathvisio.org</a></p>
-
-</li>
-<li><p><a href="http://www.eclipse.org/articles/Article-WorkbenchSelections/article.html" >www.eclipse.org/articles/Article-WorkbenchSelections/article.html</a></p>
-
-</li>
-<li><p><a href="http://www.biomedcentral.com/1471-2105/10/397" >www.biomedcentral.com/1471-2105/10/397</a></p>
-
-</li>
-</ol><br />
-<a href="http://www.biomedcentral.com/1471-2105/10/397" ></a><p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Egon Willighagen, Jonathan Alvarsson</p>
-
-<p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<ol><li><a href="http://myexperiment.org/" >myexperiment.org</a></li>
+<li><a href="http://www.bioclipse.net/" >www.bioclipse.net</a></li>
+<li><a href="http://www.pathvisio.org/" >www.pathvisio.org</a></li>
+<li><a href="http://www.eclipse.org/articles/Article-WorkbenchSelections/article.html" >www.eclipse.org/articles/Article-WorkbenchSelections/article.html</a></li>
+<li><a href="http://www.biomedcentral.com/1471-2105/10/397" >www.biomedcentral.com/1471-2105/10/397</a></li>
+</ol>
+<p><b>Language and Skills</b>: Java</p>
+<p><b>Potential Mentors</b>: Egon Willighagen, Jonathan Alvarsson</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <br />
 <h2 dir="ltr" >Idea 16: Integration of Cytoscape into Bioclipse</h2>
@@ -533,54 +526,44 @@ Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-di
 <br />
 <h2 dir="ltr" >Idea 18: BridgeDb config plugin in PathVisio</h2>
 
-<p><a href="http://www.bridgedb.org" >BridgeDb</a> is an identifier mapping framework used in PathVisio and WikiPathways. Currently it is possible to load a mapping databases for gene products and metabolites. The existing<a href="http://www.pathvisio.org/wiki/BridgeDbConfigPluginHelp" > BridgeDb config plugin</a> provides functionality to load more mapping databases or to use other webservices for the mappings. This functionality should be extended and integrated into the core PathVisio application as another core module. The configuration dialog has to be improved so it is more intuitive and user friendly.</p>
+<p><b>Background</b>:<a href="http://www.bridgedb.org" >BridgeDb</a> is an identifier mapping framework used in PathVisio and 
+WikiPathways. Currently it is possible to load a mapping databases for gene products and metabolites. The 
+existing<a href="http://www.pathvisio.org/wiki/BridgeDbConfigPluginHelp" > BridgeDb config plugin</a> provides functionality 
+to load more mapping databases or to use other webservices for the mappings. This functionality should be extended and 
+integrated into the core PathVisio application as another core module. The configuration dialog has to be improved so it is 
+more intuitive and user friendly.</p>
 
 <p>The main features of this module should be:</p>
-
 <ul>
-<li><p>user friendly dialog to configure mapping services</p>
-
-</li>
-<li><p>centralized module for identifier mapping in PathVisio</p>
-
-</li>
-<li><p>system to define which databases are used for which species and/or data node type</p>
-
-</li>
+<li>user friendly dialog to configure mapping services</li>
+<li>centralized module for identifier mapping in PathVisio</li>
+<li>system to define which databases are used for which species and/or data node type</li>
 </ul>
 
-<br />
-<p>Language and Skills: Java, OSGi, BridgeDb</p>
+<p><b>Language and Skills</b>: Java, OSGi, BridgeDb</p>
 
-<p>Potential Mentors: Martina Kutmon, Anwesha Bohler</p>
+<p><b>Potential Mentors</b>: Martina Kutmon, Anwesha Bohler</p>
 
-<p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <br />
 <h2 dir="ltr" >Idea 19: Publication Reference Plugin for PathVisio</h2>
 
-<p>Currently<a href="http://www.pathvisio.org" > PathVisio</a> supports publication reference annotation of pathways, data nodes and interactions with PubMed identifiers. The goal of this plugin is to provide a more advanced framework for reference annotations.</p>
+<p>Currently<a href="http://www.pathvisio.org" > PathVisio</a> supports publication reference annotation of pathways, data 
+nodes and interactions with PubMed identifiers. The goal of this plugin is to provide a more advanced framework for reference 
+annotations.</p>
 
 <p>This plugin should provide (can be extended):</p>
-
 <ul>
-<li><p>functionality to use other identifiers than pubmed (e.g. DOI) (might be possible to use an existing java library for that (e.g. Jabref))</p>
-
-</li>
-<li><p>show all references in a side tab with linkouts</p>
-
-</li>
-<li><p>exporting all references in different reference style formats</p>
-
-</li>
+<li>functionality to use other identifiers than pubmed (e.g. DOI) (might be possible to use an existing java library for that 
+(e.g. Jabref))</li>
+<li>show all references in a side tab with linkouts</li>
+<li>exporting all references in different reference style formats</li>
 </ul>
 
-<br />
-<p>Language and Skills: Java, OSGi</p>
-
-<p>Potential Mentors: Sravanthi Sinha, Martina Kutmon</p>
-
-<p>Contact: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<p><b>Language and Skills</b>: Java, OSGi</p>
+<p><b>Potential Mentors</b>: Sravanthi Sinha, Martina Kutmon</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <br />
 
