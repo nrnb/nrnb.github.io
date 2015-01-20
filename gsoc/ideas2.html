@@ -125,28 +125,43 @@
 
 <br />
 
-<h2 dir="ltr" >Idea 5: Cytoscape.js Based Viewer for SBGN Process Description Diagrams with Built-In Complexity Management Operations</h2>
+<h2 dir="ltr" >Idea 5: Improving Cytoscape.js Based Viewer for SBGN Process Description Diagrams with Better Layout and 
+Advanced Complexity Management Operations</h2>
 
-<p>Background: </p>
-
-<p>Cytoscape.js is a JavaScript graph library for analysis and visualization of relational information [1]. The Systems Biology Graphical Notation (SBGN) is a visual language developed by the community with the intention of enabling scientists to represent networks, including models of cellular processes, in a standard, unambiguous way [2]. SBGN comprises three complementary languages suited to represent different types of pathways. SBGN Process Descriptions is a language that permits the description of the processes (e.g. biochemical reactions) taking place in a biological system and makes heavy use of compound structures (e.g. compartments and molecular complexes). Support for compound structures has been added to Cytoscape.js core recently.</p>
-
-<p>Often times, SBGN PD networks are too large to visualize and details become obscured. Strategies to conceal the "unwanted" details of a network, allowing one to temporarily remove certain nodes and edges and subsequently reintroduce the removed details. Complexity management techniques in graph visualization such as filtering, hiding, folding, and nesting play an important role in effective analysis of biological networks as much as any other domain.</p>
-
+<p><b>Background</b>:
+Cytoscape.js is a JavaScript graph library for analysis and visualization of relational information [1]. The Systems Biology 
+Graphical Notation (SBGN) is a visual language developed by the community with the intention of enabling scientists to 
+represent networks, including models of cellular processes, in a standard, unambiguous way [2]. SBGN comprises three 
+complementary languages suited to represent different types of pathways. SBGN Process Descriptions is a language that permits 
+the description of the processes (e.g. biochemical reactions) taking place in a biological system and makes heavy use of 
+compound structures (e.g. compartments and molecular complexes). 
+Often times, SBGN PD networks are too large to visualize and details become obscured. Strategies to conceal the "unwanted" 
+details of a network, allowing one to temporarily remove certain nodes and edges and subsequently reintroduce the removed 
+details. Complexity management techniques in graph visualization such as filtering, hiding, folding, and nesting play an 
+important role in effective analysis of biological networks as much as any other domain.
+Last year, support for compound structures has been added to Cytoscape.js core and an SBGN viewer named SBGNViz has been 
+built [3]. Some complexity management operations have also been designed and implemented within this tool to hide unwanted 
+details on demand without violating SBGN PD network invariants (e.g. all substrates and products of a process must be shown 
+at any point).</p>
 <br />
-<p>Goal:</p>
-
-<p>Currently we are in the process of customizing Cytoscape.js to display biological networks drawn in SBGN Process Description notation. The goal of this project is to help with any work left for this purpose and then implement necessary operations to properly manage the complexity of SBGN PD networks.</p>
+<p><b>Goal</b>:
+This year, we'd like to improve this tool in certain ways. First, it'd be great to improve the layout implementation that 
+supports compound graphs. Secondly, existing complexity management operations could be extended to include folding/unfolding. 
+Notice however that this is not a straightforward topology change. For instance collapsing a compound node into a single "meta" 
+node requires calculation of any inter-graph edges going into the compound node and representing them with "meta" edges in the 
+collapsed network. Similarly, expanding a collapsed node back requires undoing it. The situation becomes cumbersome since 
+arbitrary level of nesting is allowed and folding can take place at an arbitrary level.</p>
 
 <br />
 <p>[1] <a href="http://cytoscape.github.io/cytoscape.js/" >http://cytoscape.github.io/cytoscape.js/</a></p>
 
 <p>[2] <a href="http://www.sbgn.org/" >http://www.sbgn.org/</a></p>
 
-<br />
-<p>Language and Skills: Java, JavaScript</p>
+<p>[3] <a href="https://code.google.com/p/sbgnviz-js/">https://code.google.com/p/sbgnviz-js/</a></p>
 
-<p>Potential Mentors: Ugur Dogrusoz (Bilkent University) and S. Onur Sumer (MSKCC)</p>
+<p>Language and Skills: JavaScript, Java, Data Structures and Algorithms</p>
+
+<p>Potential Mentors: Ugur Dogrusoz (Bilkent University & MSKCC) and S. Onur Sumer (MSKCC)</p>
 
 <p>Contact: <a href="mailto:ugur@cs.bilkent.edu.tr" >ugur@cs.bilkent.edu.tr</a> and <a href="mailto:onur@cbio.mskcc.org" >onur@cbio.mskcc.org</a> </p>
 
@@ -686,7 +701,7 @@ algorithm to align with known information about biological pathways, as taken fr
 BIOCARTA, PathwayCommons, etc.</p>
 <p>The basic implementation of the algorithm is already in place. It remains to optimize the implementation for handling 
 full-scale genomic datasets (~20k features and thousands of samples) by moving parts of the code from R to C / C++, and to 
-implement the pathway-based component discussed above.</p><br />
+implement the pathway-based component discussed above.</p>
 <p>Language and Skills: R, C / C++, Linear Algebra</p>
 <p>Potential Mentors: Artem Sokolov (UCSC)</p>
 <p>Contact: <a href="mailto:sokolov@soe.ucsc.edu">Artem Sokolov</a></p>
@@ -726,6 +741,31 @@ them or to propose other options.</p>
 <p>Language and Skills: Javascript, JSON, PHP, JQuery</p>
 <p>Potential Mentors: Mohamed Helmy, Gary Bader</p>
 <p>Contact: mohamed.attiashahata@utoronto.ca, gary.bader@utoronto.ca</p>
+
+<br />
+<h2 dir="ltr">Idea 28: Full Compound Support in Cytoscape 3</h2>
+<p><b>Background</b>: The notion of compound graphs is used to represent more complex types of relationships or varying levels 
+of abstractions in data visualization. Networks from almost all domains need such abstractions and nesting, including 
+biological networks. The recently developed standard notation of SBGN [1] makes heavy use of such structures for molecular 
+complexes and cellular locations.</p>
+<p><b>Goal</b>: We would like to first implement full compound support in Cytoscape 3 [2] core. This will not only allow users 
+to nest nodes of a network but also automatically adjust size of a compound node as its child nodes get  moved, resized or  
+deleted. Then, we'd like to implement a native spring embedder based layout algorithm named CoSE [3] that takes such structures 
+into account during layout. A Java implementation of CoSE is already publicly available [4] and needs to be integrated into 
+Cytoscape 3.</p>
+<br />
+<p>[1]<a href="http://www.sbgn.org/">http://www.sbgn.org/</a></p>
+<p>[2]<a href="http://www.cytoscape.org/">http://www.cytoscape.org/</a></p>
+<p>[3] U. Dogrusoz, E. Giral, A. Cetintas, A. Civril, and E. Demir, "A Layout Algorithm For Undirected Compound Graphs", 
+Information Sciences, 179, pp. 980-994, 2009. <a href="http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html">
+     http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html</a></p>
+<p>[4]<a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html">http://www.cs.bilkent.edu.tr/~ivis/chilay.html</a></p>
+</p>
+<p>Language and Skills: Java, Data Structures and Algorithms</p>
+<p>Potential Mentors: Ugur Dogrusoz (Bilkent University & MSKCC) and Gerardo Huck (U of Toronto)</p>
+<p>Contact: ugur@cs.bilkent.edu.tr and onur@cbio.mskcc.org </p>
+<br />
+
 <!-- END PASTE -->
 
     </div> <!-- .span9 !-->
