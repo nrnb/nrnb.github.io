@@ -43,19 +43,27 @@ Creativity and self-motivation are great traits for open source programmers, but
 network of proteins or genes and also look at the inter-connectedness between colleagues and institutions. Who tends to 
 publish together? What institutions are most collaborative? Are there inter-disciplinary connections in my institution?</p>
 
-<br />
-<p>Goal: Create a visual summary of how individuals are connected. An existing App currently queries PubMed directly or takes in a file with a set of publications (from scopus or incites) and builds a co-publication network where nodes are authors and edges the number of publications two authors share. Different sources have different depths of data, for instance PubMed, the most widely accessible of the three main sources, has citation counts but they are limited to only those articles cited in pubmed central and its institution data is limited to the first author. Given that PubMed is the most accessible source we want to expand its functionality to include computed institution data as well as better citation count approximations, and H-index calculation for individuals or subsets of papers. </p>
+<p>Goal: Create a visual summary of how individuals are connected. An existing App currently queries PubMed directly or take
+in a file with a set of publications (from scopus or incites) and builds a co-publication network where nodes are authors and 
+edges the number of publications two authors share. Different sources have different depths of data, for instance PubMed, the 
+most widely accessible of the three main sources, has citation counts but they are limited to only those articles cited in 
+pubmed central and its institution data is limited to the first author. Given that PubMed is the most accessible source we 
+want to expand its functionality to include computed institution data as well as better citation count approximations, and 
+H-index calculation for individuals or subsets of papers. </p>
 
-<p>This functionality can be applied to several data types outside academia, whenever relationships between people is of interest. An example is professional social networks (e.g. linked-in), where individuals are connected by who they have worked with in the past or the twitter-verse where individuals are connected when they each reference the same (#) hash tag. This project will start with support for co-publication networks and extend to other networks like twitter and linked-in as time permits. Additionally, we want to expand our co-authorship cytoscape App to include generic file formats to easily create the above networks.</p>
+<p>This functionality can be applied to several data types outside academia, whenever relationships between people is of 
+interest. An example is professional social networks (e.g. linked-in), where individuals are connected by who they have worked 
+with in the past or the twitter-verse where individuals are connected when they each reference the same (#) hash tag. This 
+project will start with support for co-publication networks and extend to other networks like twitter and linked-in as time 
+permits. Additionally, we want to expand our co-authorship cytoscape App to include generic file formats to easily create the 
+above networks.</p>
 
-<br />
 <p>Links:</p>
 
 <p>Existing code - <a href="https://github.com/BaderLab/SocialNetworkApp" >https://github.com/BaderLab/SocialNetworkApp</a></p>
 
 <p>Existing userguide - <a href="http://baderlab.org/UserguideSocialNetworkApp" >http://baderlab.org/UserguideSocialNetworkApp</a></p>
 
-<br />
 <p>Language and Skills: Java, XML, PubMed e-utils</p>
 
 <p>Potential Mentors: Sergio Baranzini, Gary Bader, Ruth Isserlin</p>
@@ -65,30 +73,33 @@ publish together? What institutions are most collaborative? Are there inter-disc
 <br />
 <h2 dir="ltr" >Idea 3: User Interaction on Biomedical Linked Data</h2>
 
-<p>During the GSoC 2012, we developed<a href="http://vsdlc3.blogspot.com" > SemScape</a>, a plugin that allows the use of Cytoscape as a browser for Semantic Web (Linked Data) knowledge bases. We are currently in the process of updating libs and packaging the plugin for the Cytoscape App Store.</p>
+<p>During the GSoC 2012, we developed<a href="http://vsdlc3.blogspot.com" > SemScape</a>, a plugin that allows the use of 
+Cytoscape as a browser for Semantic Web (Linked Data) knowledge bases. We are currently in the process of updating libs and 
+packaging the plugin for the Cytoscape App Store.</p>
 
-<p>The idea for this year’s project is to go one step further and to allow the use of Cytoscape to visually define queries in SPARQL. The basic idea is that from a graph, a sub-graph can be defined where a few nodes or edges can be marked as variables (and eventually filters can be associated to them): this is equivalent to a (simple) SPARQL query. The user can then define queries in a simple and interactive way, without knowing the underlying syntax, that can be stored and applied on different data sources.</p>
+<p>The idea for this year’s project is to go one step further and to allow the use of Cytoscape to visually define queries in 
+SPARQL. The basic idea is that from a graph, a sub-graph can be defined where a few nodes or edges can be marked as variables 
+(and eventually filters can be associated to them): this is equivalent to a (simple) SPARQL query. The user can then define 
+queries in a simple and interactive way, without knowing the underlying syntax, that can be stored and applied on different
+data sources.</p>
 
 <p>The project can then be extended in three directions, depending on the interest of the student:</p>
 
 <ul>
-<li><p>allowing users to push such queries to a repositories and hence share them (the current plugin support updates of queries from remote repositories)</p>
-
-</li>
-<li><p>Implementing more complex queries (unions, negation, …)</p>
-
-</li>
-<li><p>Implementing heuristics for query-selection: in the current plugin, queries can be performed on demand, but they are also associated to specific actions. For instance, right-selecting a node of type protein can present as an option to expend the graph with the results of a query which is can include the specific protein as a value. This is possible through a simple markup through which queries are annotated by the user. Such markup could be included in the visual query/construction process and/or extracted from simple query patterns.</p>
-
-</li>
+<li><p>allowing users to push such queries to a repositories and hence share them (the current plugin 
+support updates of queries from remote repositories)</p></li>
+<li><p>Implementing more complex queries (unions, negation, …)</p></li>
+<li><p>Implementing heuristics for query-selection: in the current plugin, queries can be performed on demand, but they are 
+also associated to specific actions. For instance, right-selecting a node of type protein can present as an option to expend 
+the graph with the results of a query which is can include the specific protein as a value. This is possible through a simple 
+markup through which queries are annotated by the user. Such markup could be included in the visual query/construction process
+and/or extracted from simple query patterns.</p></li>
 </ul>
 
-<br />
 <p>Some of the ideas in this project<a href="http://www.biomedcentral.com/1471-2105/9/S4/S6" > have been already prototyped</a>, so we have a good understanding of the difficulty and timing required. </p>
 
 <p>This project has the potential to make Cytoscape an ideal tool to navigate and query Linked Data resources (both in biomedical and, more generally, in Open Data domains). It also opens interesting possibilities in analyzing graphs from graph knowledge bases that can be represented as RDF (e.g.: dbpedia, freebase,...).</p>
 
-<br />
 <p>Language and Skills: Java/Maven. Knowledge of OSGi would be helpful. Knowledge of Semantic Web technologies would be a plus.</p>
 
 <p>Potential Mentors: Andrea Splendiani, Andra Waagmeester</p>
@@ -99,27 +110,36 @@ publish together? What institutions are most collaborative? Are there inter-disc
 
 <h2 dir="ltr" >Idea 4: CentiScaPe for multiple networks analysis and graphical output enhancement</h2>
 
-<p>Background: CentiScaPe is a Cytoscape plugin that allows to compute network centrality parameters. It is the most complete Cytoscape plugin for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, Betweenness, Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected networks. CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. CentiScaPe also provides a Boolean logic- based tool that allows easy characterization of nodes whose topological relevance depends on more than one centrality. Finally, different graphic outputs and the included description of biological significance for each computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing easy node categorization and experimental prioritization.</p>
+<p>Background: CentiScaPe is a Cytoscape plugin that allows to compute network centrality parameters. It is the most complete 
+Cytoscape plugin for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, Betweenness, 
+Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected networks. 
+CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. CentiScaPe 
+also provides a Boolean logic- based tool that allows easy characterization of nodes whose topological relevance depends on 
+more than one centrality. Finally, different graphic outputs and the included description of biological significance for each 
+computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing easy node categorization 
+and experimental prioritization.</p>
 
-<br />
-<p>Goal: The new beta version of CentiScaPe provides also the possibilities to analyze multiple networks and to integrate the analysis with experimental data set. This implies that a user can automatically start a computation of several networks and waits for the results. Anyway, the output of the analysis of a lot of networks (say 100) is useless if not supported by a smart and user friendly system to analyze the results. The Idea is to implements some techniques used in software analysis to extract information from the results of multiple computation in order to compare different networks and to extract topological based biomarkers:</p>
+<p>Goal: The new beta version of CentiScaPe provides also the possibilities to analyze multiple networks and to integrate the 
+analysis with experimental data set. This implies that a user can automatically start a computation of several networks and 
+waits for the results. Anyway, the output of the analysis of a lot of networks (say 100) is useless if not supported by a 
+smart and user friendly system to analyze the results. The Idea is to implements some techniques used in software analysis to 
+extract information from the results of multiple computation in order to compare different networks and to extract topological 
+based biomarkers:</p>
 
 <ul>
-<li><p>The main framework for the results analysis is the Abstract Interpretation theory, particularly the interval analysis (and eventually others) [1].</p>
-
-</li>
-<li><p>Some statistical parameters, automatic analysis of the output, and new kinds of graphical outputs that can help to extract information from a multiple networks centrality analysis should be provided. The tools should for example be able to answer to questions as “How does the centroid value of the protein A chenge in the submitted 100 different networks?” or “How does the betweenness of protein B change if we consider 30 different phosporilation values for each proteins in the network N (this means we have 30 different experimental data set for the same network that must be included in the computation)?”.</p>
-
-</li>
-<li><p>The tools should also provide the implementation of the integration of experimental data-sets for the eigenvector, bridging centrality and edge betweenness (they are now available for all the other centralities).</p>
-
-</li>
+<li><p>The main framework for the results analysis is the Abstract Interpretation theory, particularly the interval analysis 
+(and eventually others) [1].</p></li>
+<li><p>Some statistical parameters, automatic analysis of the output, and new kinds of graphical outputs that can help to extract 
+information from a multiple networks centrality analysis should be provided. The tools should for example be able to answer to 
+questions as “How does the centroid value of the protein A chenge in the submitted 100 different networks?” or “How does the 
+betweenness of protein B change if we consider 30 different phosporilation values for each proteins in the network N (this 
+means we have 30 different experimental data set for the same network that must be included in the computation)?”.</p></li>
+<li><p>The tools should also provide the implementation of the integration of experimental data-sets for the eigenvector,
+bridging centrality and edge betweenness (they are now available for all the other centralities).</p></li>
 </ul>
 
-<br />
 <p>[1] Patrick Cousot and Radhia Cousot. 1977. Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints. In Proceedings of the 4th ACM SIGACT-SIGPLAN symposium on Principles of programming languages (POPL ‘77). <a href="http://doi.acm.org/10.1145/512950.512973" >http://doi.acm.org/10.1145/512950.512973</a></p>
 
-<br />
 <a href="http://doi.acm.org/10.1145/512950.512973" ></a><p>Language and Skills: Java, software analysis (possibly abstract interpretation theory)</p>
 
 <p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
@@ -615,10 +635,10 @@ and SBGN formats.</p>
 that this should be a reasonably straight forward project; many of the mapping issues have already been addressed. The project 
 will make use of two Java libraries Paxtools ([3], for BioPAX) and libSBGN ([4], for SBGN).</p
 
-<p>[1]<a href="http://www.pathwaycommons.org/">Pathway Commons</a></li></p>
-<p>[2]<a href="http://www.ncbi.nlm.nih.gov/pubmed/20829833">BioPAX</a></p>
-<p>[3]<a href="http://www.biopax.org/paxtools.php">Paxtools</a></p>
-<p>[4]<a href="http://www.sbgn.org/LibSBGN">LibSBGN</a></p>
+<p>[1] <a href="http://www.pathwaycommons.org/">Pathway Commons</a></li></p>
+<p>[2] <a href="http://www.ncbi.nlm.nih.gov/pubmed/20829833">BioPAX</a></p>
+<p>[3] <a href="http://www.biopax.org/paxtools.php">Paxtools</a></p>
+<p>[4] <a href="http://www.sbgn.org/LibSBGN">LibSBGN</a></p>
 
 <p><b>Language and Skills</b>: Java and XML</p>
 <p><b>Potential Mentors</b>: Augustin Luna</p>
@@ -741,17 +761,42 @@ to nest nodes of a network but also automatically adjust size of a compound node
 deleted. Then, we'd like to implement a native spring embedder based layout algorithm named CoSE [3] that takes such structures 
 into account during layout. A Java implementation of CoSE is already publicly available [4] and needs to be integrated into 
 Cytoscape 3.</p>
-<p>[1]<a href="http://www.sbgn.org/">http://www.sbgn.org/</a></p>
-<p>[2]<a href="http://www.cytoscape.org/">http://www.cytoscape.org/</a></p>
+<p>[1] <a href="http://www.sbgn.org/">http://www.sbgn.org/</a></p>
+<p>[2] <a href="http://www.cytoscape.org/">http://www.cytoscape.org/</a></p>
 <p>[3] U. Dogrusoz, E. Giral, A. Cetintas, A. Civril, and E. Demir, "A Layout Algorithm For Undirected Compound Graphs", 
 Information Sciences, 179, pp. 980-994, 2009. <a href="http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html">
      http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html</a></p>
-<p>[4]<a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html">http://www.cs.bilkent.edu.tr/~ivis/chilay.html</a></p>
+<p>[4] <a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html">http://www.cs.bilkent.edu.tr/~ivis/chilay.html</a></p>
 
 <p><b>Language and Skills</b>: Java, Data Structures and Algorithms</p>
 <p><b>Potential Mentors</b>: Ugur Dogrusoz (Bilkent University & MSKCC) and Gerardo Huck (U of Toronto)</p>
 <p><b>Contact</b>: ugur@cs.bilkent.edu.tr and onur@cbio.mskcc.org </p>
 <br />
+
+<h2 dir="ltr">Idea 29: Extending and improving PathVisio Data Import - GSoc 2015</h2>
+<p><b>Background</b>: PathVisio [1] is a pathway editor and analysis tool. PathVisio allows users to upload and visualize data on 
+biological pathways. Currently, it is possible to upload only one dataset at a time as a comma separated file. </p>
+<p><b>Goal</b>: This functionality should be extended to allow uploading a number of data files at the same time as well 
+as uploading of multiple data file formats (for eg. Excel sheets) should be allowed.
+This will involve extending the gex [2] and data [3] modules  of PathVisio. These modules are part of the PathVisio core and take care 
+of importing experimental data and mapping it to the elements in a pathway. </p>
+<p>Features of the new plugin:
+<ul>
+<li>Uploading multiple datasets at once : these could be any kind of quantitative or qualitative data about any pathway 
+element, such as genes, proteins, metabolites, and interactions.</li>
+<li>Linking each individual dataset to a particular element on a pathway, for eg. linking a gene expression dataset to genes 
+on pathways and a flux data set to interactions on pathways.</li>
+<li>Importing data from multiple file formats (For eg: .xls, .ods).</li>
+<li>Create a pop-up panel accessible from the menubar of the PathVisio main window to show 1) all the currently loaded datasets, 
+2) the biological elements they are linked to and 3) the currently loaded annotation databases.</li>
+</ul></p>
+<p>[1] <a href="http://pathvisio.org">PathVisio</a></p>
+<p>[2] <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.gex">PathVisio gex module</a></p>
+<p>[3] <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.data">PathVisio data module</a></p>
+<p><b>Language and Skills</b>: Java</p>
+<p><b>Potential Mentors</b>: Anwesha Bohler</p>
+<p><b>Contact</b>: wikipathways-devel@googlegroups.com</p>
+
 
 <!-- END PASTE -->
 
