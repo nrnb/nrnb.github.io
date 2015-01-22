@@ -756,7 +756,7 @@ Information Sciences, 179, pp. 980-994, 2009. <a href="http://www.cs.bilkent.edu
 <p><b>Contact</b>: ugur@cs.bilkent.edu.tr and onur@cbio.mskcc.org </p>
 <br />
 
-<h2 dir="ltr">Idea 29: Extending and improving PathVisio Data Import - GSoc 2015</h2>
+<h2 dir="ltr">Idea 29: Extending and improving PathVisio Data Import</h2>
 <p><b>Background</b>: PathVisio [1] is a pathway editor and analysis tool. PathVisio allows users to upload and visualize data on 
 biological pathways. Currently, it is possible to upload only one dataset at a time as a comma separated file. </p>
 <p><b>Goal</b>: This functionality should be extended to allow uploading a number of data files at the same time as well 
@@ -784,6 +784,72 @@ on pathways and a flux data set to interactions on pathways.</li>
 <p><b>Potential Mentors</b>: Anwesha Bohler</p>
 <p><b>Contact</b>: wikipathways-devel@googlegroups.com</p>
 
+<br />
+<h2 dir="ltr">Idea 30: Collaborative System for Creating/Sharing Biological Icons</h2>
+<p><b>Background</b>: Biological pathways [1] provide intuitive diagrams of the interactions underlying biological processes. 
+For example, the SIDS Susceptibility Pathways [2] shows interactions between metabolites, genes and proteins, such as DDC 
+catalyzing the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site 
+WikiPathways [3] is an open, collaborative platform dedicated to drawing and sharing biological pathways. These pathways often 
+use icons to represent items like mitochondria or cardiac myocytes (heart muscle cells). The WikiPathways drawing editor has 
+a limited set of icons built in, but it does not allow pathway authors to create and re-use custom icons. For example, the 
+cardiac myocyte icon is repeated in the SIDS Susceptibility Pathways for Mouse [4] and for Human [5], but the only way to re-use the 
+icon is to manually redraw or copy/paste it. Updates to the icon in pathway do not appear in the other.</p>
+<p><b>Goal</b>: Build a biological icon library that allows pathway authors to create icons, share them with other 
+WikiPathways’ users and reuse them across pathways. It could work like Github for icons, allowing users to create, fork and 
+merge their work, with the best icons rising to the top via a rating system. The library will work as a plugin for the current 
+WikiPathways viewer/editor pathvisiojs [6], allowing pathway authors to create new icons from scratch or to create icons from 
+sections of existing pathways, e.g., the cardiac myocyte from the previously referenced pathways. It will have a backend 
+component to store the icons and a front-end component to allow WikiPathways users to view and search for icons.
+     <ul>
+     <li> [1] <a href="http://wikipathways.org/index.php/WikiPathways:About">About WikiPathways</a></li>
+     <li> [2] <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Pathway</a></li>
+     <li> [3] <a href="http://www.wikipathways.org">WikiPathways</a></li>
+     <li> [4] <a href="http://wikipathways.org/index.php/Pathway:WP1266">SIDS pathway, mouse</a></li>
+     <li> [5] <a href="http://wikipathways.org/index.php/Pathway:WP706">SIDS pathway, human</a></li>
+     <li> [6] <a href="https://github.com/wikipathways/pathvisiojs">pathvisiojs</a></li>
+</ul>
+</p>
+<p><b>Skills</b>: JavaScript required. Some backend experience (PHP, Node.js or Python) to create a backend for saving the 
+icons. SVG or Canvas a plus.
+</p>
+<p><b>Links</b>: An <a href="https://code.google.com/p/svg-edit/">SVG drawing tool </a>with a large number of icons available might provide some ideas. 
+</p>
+<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+
+
+<h2 dir="ltr">Idea 31: Biological Pathway Styling Themes</h2>
+<p><b>Background</b>: Description: Biological pathways [1] provide intuitive diagrams of the interactions underlying biological 
+processes. For example, the SIDS Susceptibility Pathways [2] shows interactions between metabolites, genes and proteins, such as 
+DDC catalyzing the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site 
+WikiPathways [3] is an open, collaborative platform dedicated to drawing and sharing biological pathways. These diagrams are viewed 
+in many different environments, such as laptop screens, presentation slides and printed science journals. At WikiPathways today, 
+the default styling theme for these diagrams is best suited for viewing by an individual on a computer screen, but it would be 
+useful to export the diagrams with themes optimized for print and for presentations.</p>
+<p><b>Goal</b>: Develop a custom theming system to allow for exporting pathways with themes optimized for print and for 
+projected presentation slides. For example, the presentation export option might make pathway diagrams easier to read by 
+removing some text, enlarging the remaining text and inverting the colors of the diagram. Optionally, the presentation option 
+could integrate with one or more existing online presentation framework(s).
+          <ul>
+     <li> [1] <a href="http://wikipathways.org/index.php/WikiPathways:About">About WikiPathways</a></li>
+     <li> [2] <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Pathway</a></li>
+     <li> [3] <a href="http://www.wikipathways.org">WikiPathways</a></li>
+</ul>
+</p>
+<p><b>Skills</b>: User experience, graphical design, CSS, some JavaScript.</p>
+<p><b>Links</b>:
+<ul>
+<li><a href="https://github.com/wikipathways/pathvisiojs">WikiPathways pathway viewer/editor</a></li>
+<p>Example online presentation frameworks:
+<ul>
+     <li><a href="https://github.com/hakimel/reveal.js">github.com/hakimel/reveal.js</a></li>
+     <li><a href="https://github.com/bartaz/impress.js">github.com/bartaz/impress.js</a></li>
+     <li><a href="https://docs.google.com/presentation">docs.google.com/presentation</a></li>
+</ul></p>
+</ul>
+</p>
+<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
 <!-- END PASTE -->
 
