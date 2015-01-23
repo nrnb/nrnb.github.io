@@ -233,7 +233,7 @@ is linked to a dataset and has to be created again for a new dataset)</li>
 
 <p>Potential Mentors: Scooter Morri, Alex Pico</p>
 
-<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >scooter@cgl.ucsf.edu</a> </p>
+<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 
 <br />
 <h2 dir="ltr" >Idea 9: Improve and expand Cytoscape’s color mapping options</h2>
@@ -245,7 +245,7 @@ is linked to a dataset and has to be created again for a new dataset)</li>
 
 <p>Potential Mentors: Scooter Morris, Michael Heuer, Alex Pico</p>
 
-<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >scooter@cgl.ucsf.edu</a> </p>
+<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 
 <br />
 
@@ -291,7 +291,7 @@ is linked to a dataset and has to be created again for a new dataset)</li>
 
 <p>Potential Mentors: Scooter Morris, Alex Pico, Bruce Aronow</p>
 
-<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >scooter@cgl.ucsf.edu</a> </p>
+<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 
 <br />
 <h2 dir="ltr" >Idea 11: A SPARQL query plugin for Pathvisio</h2>
@@ -567,18 +567,18 @@ annotations.</p>
 
 <br />
 
-<h2 dir="ltr" >Idea 20: Improved Layering/Interaction in Cytoscape 3 Networks</h2>
-
-<p>This project involves working on the visualization core in Cytoscape 3 (ding) to significantly improve the user experience. Currently, Cytoscape supports a single canvas to visualize the network. When moving or changing graphic objects (nodes and edges), the entire visible portion of the canvas needs to be updated. It has been pointed out by visualization experts that this problem can be easily solved by adding an additional “selection” canvas. Motion of nodes and edges could be performed in this canvas rather than the main canvas, significantly improving the interactivity on dense networks. The addition of a “selection” canvas also enables a number of visualization techniques that are too computationally expensive in the current Cytoscape model.</p>
-
+<h2 dir="ltr" >Idea 20: Enhanced Layout Algorithms</h2>
+<p><b>Background</b>: As Cytoscape is used for increasingly large networks, the performance of our layout algorithms becomes 
+a limiting factor. There are a number of layout algorithms that perform very well in real-world scenarios that have not been 
+implemented in Cytoscape. For example, the Yifan Hu Multi-level layout algorithm [1], a Fast Muiltipole Multilevel layout [2], Yifan Hu proportional, and potentially some of the better algorithms from Gephi. Cytoscape provides a 
+framework for adding new layout algorithms as Apps, so this work could all be done as a series of separate apps.</p>
+<p>[1] <a href="http://yifanhu.net/PUB/graph_draw_small.pdf">Yifan Hu Multi-level layout</a></p>
+<p>[2] <a href="http://www.ogdf.net/doc-ogdf/classogdf_1_1_f_m_m_m_layout.html">OGDF</a></p>
+<p><b>Language and Skills</b>: </p>
+<p><b>Potential Mentors</b>: Scooter Morris</p>
+<p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
-<p>Language and Skills: Java</p>
 
-<p>Potential Mentors: Scooter Morris</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 21: Compound Graph Visualization in Cytoscape 3</h2>
 
 <p>Cytoscape 3 has introduce two concepts into the core, groups and annotations, that could be combined to provide a compound graph visualization. Currently groups can be either in a “collapsed” or “expanded” state. For a compound graph, a new visualization state needs to be introduced that allows the compound node (group) to be visualized as a shape (concave or convex hull) around it’s children. Moving that shape would move all of it’s children, etc.</p>
@@ -677,7 +677,7 @@ activity of various signaling and metabolic pathways in a cell. Semi-supervised 
 unlabeled data to uncover such pathways and then utilize the labeled samples to correlate these pathways to phenotypic 
 outcomes.</p>
 <p><b>Goal</b>: To implement a specific semi-supervised learning algorithm and to work with the mentor on modifying this 
-algorithm to tailor to biological data. The algorithm was originally proposed by Ando & Zhang (2005) and operates by 
+algorithm to tailor to biological data. The algorithm was originally proposed by Ando & Zhang [1] and operates by 
 constructing multiple predictive tasks from the unlabeled data and learning across all those tasks simultaneously. The 
 intuition behind the algorithm is that, if a molecular feature X is highly correlated with the phenotype F, then learning to 
 predict X is just as valuable as learning to predict F directly. The advantage of predicting X is the fact that it's observed 
@@ -693,12 +693,11 @@ BIOCARTA, PathwayCommons, etc.</p>
 <p>The basic implementation of the algorithm is already in place. It remains to optimize the implementation for handling 
 full-scale genomic datasets (~20k features and thousands of samples) by moving parts of the code from R to C / C++, and to 
 implement the pathway-based component discussed above.</p>
+<p>[1] <a href="http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf">Ando, R. K., & Zhang, T. (2005). A framework for learning predictive structures from multiple tasks and unlabeled data. The 
+Journal of Machine Learning Research, 6, 1817-1853.</a></p>
 <p>Language and Skills: R, C / C++, Linear Algebra</p>
 <p>Potential Mentors: Artem Sokolov (UCSC)</p>
 <p>Contact: <a href="mailto:sokolov@soe.ucsc.edu">Artem Sokolov</a></p>
-<p>References:<br />
-Ando, R. K., & Zhang, T. (2005). A framework for learning predictive structures from multiple tasks and unlabeled data. The 
-Journal of Machine Learning Research, 6, 1817-1853.</p>
 
 <br />
 <h2 dir="ltr">Idea 27: Developing Web Interface For The Online Resource for Interface- Based Interaction Networks (TOR-IBIN) 
@@ -799,20 +798,17 @@ WikiPathways’ users and reuse them across pathways. It could work like Github 
 merge their work, with the best icons rising to the top via a rating system. The library will work as a plugin for the current 
 WikiPathways viewer/editor pathvisiojs [6], allowing pathway authors to create new icons from scratch or to create icons from 
 sections of existing pathways, e.g., the cardiac myocyte from the previously referenced pathways. It will have a backend 
-component to store the icons and a front-end component to allow WikiPathways users to view and search for icons.
-     <ul>
-     <li> [1] <a href="http://wikipathways.org/index.php/WikiPathways:About">About WikiPathways</a></li>
-     <li> [2] <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Pathway</a></li>
-     <li> [3] <a href="http://www.wikipathways.org">WikiPathways</a></li>
-     <li> [4] <a href="http://wikipathways.org/index.php/Pathway:WP1266">SIDS pathway, mouse</a></li>
-     <li> [5] <a href="http://wikipathways.org/index.php/Pathway:WP706">SIDS pathway, human</a></li>
-     <li> [6] <a href="https://github.com/wikipathways/pathvisiojs">pathvisiojs</a></li>
-</ul>
-</p>
-<p><b>Skills</b>: JavaScript required. Some backend experience (PHP, Node.js or Python) to create a backend for saving the 
-icons. SVG or Canvas a plus.
-</p>
+component to store the icons and a front-end component to allow WikiPathways users to view and search for icons.</p>
+<p>[1] <a href="http://wikipathways.org/index.php/WikiPathways:About">About WikiPathways</a></p>
+<p>[2] <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Pathway</a></p>
+<p>[3] <a href="http://www.wikipathways.org">WikiPathways</a></p>
+<p>[4] <a href="http://wikipathways.org/index.php/Pathway:WP1266">SIDS pathway, mouse</a></p>
+<p>[5] <a href="http://wikipathways.org/index.php/Pathway:WP706">SIDS pathway, human</a></p>
+<p>[6] <a href="https://github.com/wikipathways/pathvisiojs">pathvisiojs</a></p>
 <p><b>Links</b>: An <a href="https://code.google.com/p/svg-edit/">SVG drawing tool </a>with a large number of icons available might provide some ideas. 
+</p>
+<p><b>Language and Skills</b>: JavaScript required. Some backend experience (PHP, Node.js or Python) to create a backend for saving the 
+icons. SVG or Canvas a plus.
 </p>
 <p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
@@ -829,14 +825,10 @@ useful to export the diagrams with themes optimized for print and for presentati
 <p><b>Goal</b>: Develop a custom theming system to allow for exporting pathways with themes optimized for print and for 
 projected presentation slides. For example, the presentation export option might make pathway diagrams easier to read by 
 removing some text, enlarging the remaining text and inverting the colors of the diagram. Optionally, the presentation option 
-could integrate with one or more existing online presentation framework(s).
-          <ul>
-     <li> [1] <a href="http://wikipathways.org/index.php/WikiPathways:About">About WikiPathways</a></li>
-     <li> [2] <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Pathway</a></li>
-     <li> [3] <a href="http://www.wikipathways.org">WikiPathways</a></li>
-</ul>
-</p>
-<p><b>Skills</b>: User experience, graphical design, CSS, some JavaScript.</p>
+could integrate with one or more existing online presentation framework(s).</p>
+<p>[1] <a href="http://wikipathways.org/index.php/WikiPathways:About">About WikiPathways</a></p>
+<p>[2] <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Pathway</a></p>
+<p>[3] <a href="http://www.wikipathways.org">WikiPathways</a></p>
 <p><b>Links</b>:
 <ul>
 <li><a href="https://github.com/wikipathways/pathvisiojs">WikiPathways pathway viewer/editor</a></li>
@@ -848,9 +840,75 @@ could integrate with one or more existing online presentation framework(s).
 </ul>
 </ul>
 </p>
+<p><b>Language and Skills</b>: User experience, graphical design, CSS, some JavaScript.</p>
 <p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 
+<h2 dir="ltr" >Idea 32: Principal Component Analysis</h2>
+<p><b>Background</b>: One of the common multidimensional analysis tools is principal component analysis. At this point, there 
+is no good PCA tool integrated with Cytoscape.  The ideal tool would support performing the analysis, visualizing the results 
+of the analysis using standard approaches, and then visualizing the results in the context of the Cytoscape network itself.
+There are many tools that could assist in this task and the analysis itself is pretty well understood. The challenge to this 
+idea is looking for ways to integrate the results of the analysis into Cytoscape.</p>
+<p><b>Language and Skills</b>: </p>
+<p><b>Potential Mentors</b>: Scooter Morris</p>
+<p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 33: Incremental Loading of Networks</h2>
+<p><b>Background</b>: Cytoscape now supports using JSON as a format for loading networks. In an effort to improve exploration 
+of extremely large networks, it would be extremely useful to be able to load parts of the network on request.  One use case 
+for this is loading networks from the Structure-Function Linkage Database, which creates Cytoscape networks representing 
+similarity between groups of proteins.  Some of these networks are extremely large (millions of edges) and usually users are 
+only interested in local neighborhoods of the network.  This project would involve writing a Cytoscape App that would load an 
+abstraction of these networks (where multiple nodes are represented by a single "meta" node) into Cytoscape and then allow 
+users to incrementally load all of the nodes within that metanode.</p>
+<p><b>Language and Skills</b>: </p>
+<p><b>Potential Mentors</b>: Scooter Morris, Samad Lotia</p>
+<p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 34: Add t-SNE to clusterMaker</h2>
+<p><b>Background</b>: t-SNE [1] is a technique for dimensionality reduction that is widely used.  
+It would be extremely useful to add this algorithm into the existing clusterMaker app.</p>
+<p>[1] <a href="http://lvdmaaten.github.io/tsne/">t-SNE</a></p>
+<p><b>Language and Skills</b>: </p>
+<p><b>Potential Mentors</b>: Scooter Morris</p>
+<p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 35: cyRecommender - New Cytoscape 3 plugin for recommending network ontologies</h2>
+<p><b>Background</b>: Cytoscape 3 is a powerful software for networks that provides diverse plugins in order to combine 
+external knowledge with the network connectivity. There are a few plugins that allow to link ontology details with node labels. 
+However, existing plugins require the user to decide what ontology or ontologies are best for each network, which may be a 
+hard and time‑consuming task. The NCBO Recommender is a service developed by Stanford University that has been designed to 
+recommend the most appropriate ontologies for a corpus or a list of keywords. Integrating the NCBO Recommender with Cytoscape 
+will make it possible to automatically obtain the best ontological representation for a set of network nodes. The NCBO is 
+developing a new version of the Recommender, which will be available in a few months. The proposed Cytoscape plugin will be 
+one of the first tools using the new version of the Recommender.</p>
+<p><b>Goal</b>:  To integrate the NCBO Recommender service into a new Cytoscape plugin. After selecting a set of network nodes, 
+the Recommender will be invoked to obtain the best ontologies to represent the node labels, and the network will be presented 
+using the recommended ontologies. The integration will consist on an easy to use graphical interface for any level of ontology
+experience.</p>
+<p><b>Description</b>: You will use Java to write an app for Cytoscape 3 [1] that will access the NCBO Recommender REST services. 
+Your tool will make it possible to:
+<ul>
+<li>Get the keywords from the selected node labels, send them to NCBO Recommender[2] REST services [3], and obtain the recommended 
+ontologies (the selection could be a subnetwork or the entire network).</li>
+<li>Visualize the network using the recommended ontologies.</li>
+<li>Save the recommendations as CSV or TAB-separated files.</li>
+<li>Save the network with the new added ontology information for each node.</li>
+</ul>
+This work involves programming a new plugin that will interact with Cytoscape in the node selection, network plotting, etc. 
+The code will be available as an open source GitHub project.</p>
+
+<p>[1] <a href="http://www.cytoscape.org/cy3.html">Cytoscape 3</a></p>
+<p>[2] <a href="http://bioportal.bioontology.org/recommender">NCBO Recommender</a></p>
+<p>[3] <a href="http://data.bioontology.org/documentation">NCBO REST services</a></p>
+<p><b>Language and Skills</b>: Java, GitHub</p>
+<p><b>Potential Mentors</b>: Cristian R Munteanu, Marcos Martinez, Alejandro Pazos</p>
+<p><b>Contact</b>: <a href="mailto:muntisa@gmail.com">Cristian R Munteanu</a></p>
+<br />
 <!-- END PASTE -->
 
     </div> <!-- .span9 !-->
