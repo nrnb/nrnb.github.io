@@ -138,14 +138,12 @@ means we have 30 different experimental data set for the same network that must 
 bridging centrality and edge betweenness (they are now available for all the other centralities).</p></li>
 </ul>
 
-<p>[1] Patrick Cousot and Radhia Cousot. 1977. Abstract interpretation: a unified lattice model for static analysis of programs by construction or approximation of fixpoints. In Proceedings of the 4th ACM SIGACT-SIGPLAN symposium on Principles of programming languages (POPL ‘77). <a href="http://doi.acm.org/10.1145/512950.512973" >http://doi.acm.org/10.1145/512950.512973</a></p>
+<p>[1] <a href="http://doi.acm.org/10.1145/512950.512973">Abstract interpretation: a unified lattice model for static analysis of 
+programs by construction or approximation of fixpoints. Patrick Cousot and Radhia Cousot. 1977.</a></p>
 
-<a href="http://doi.acm.org/10.1145/512950.512973" ></a><p>Language and Skills: Java, software analysis (possibly abstract interpretation theory)</p>
-
+<p>Language and Skills: Java, software analysis (possibly abstract interpretation theory)</p>
 <p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
-
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
 <br />
 
 <h2 dir="ltr" >Idea 5: Improving Cytoscape.js Based Viewer for SBGN Process Description Diagrams with Better Layout and 
@@ -189,12 +187,10 @@ arbitrary level of nesting is allowed and folding can take place at an arbitrary
 
 <br />
 <h2 dir="ltr" >Idea 6: Advanced data visualization in PathVisio</h2>
-
-<p><b>Background</b>:<a href="http://pathvisio.org/" >PathVisio</a> is a pathway editor and analysis tool. PathVisio allows users to upload and 
+<p><b>Background</b>: <a href="http://pathvisio.org/" >PathVisio</a> is a pathway editor and analysis tool. PathVisio allows users to upload and 
 visualize data on biological pathways. We want to extend the visualization module in PathVisio which is part of the PathVisio 
 core application. A central visualization registry should allow plugins to create and register new visualization options. The 
 current visualization interface in PathVisio is very complex and should be made more user-friendly and intuitive for the users. </p>
-
 <p><b>Goals</b>:</p>
 <ul>
 <li>Independent visualization module and registry</li>
@@ -205,48 +201,43 @@ is linked to a dataset and has to be created again for a new dataset)</li>
 <p><b>Language and Skills</b>: Java, OSGi</p>
 <p><b>Potential Mentors</b>: Martina Kutmon, Anwesha Bohler (Unimaas, NL)<br /></p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-
 <br />
 
 <h2 dir="ltr" >Idea 7: Develop a Method for Aligning Pathways and Visualizing these Alignments</h2>
-
-<p>There is continued growth in the groups generating machine-readable representations of biological pathways (such as <a href="http://www.reactome.org/" >Reactome</a> or <a href="http://wikipathways.org/" >WikiPathways</a>) and subsequent efforts to aggregate these pathways into unified repositories, such as Pathway Commons. Aggregation of these pathways suffers from multiple pathways being aggregated that differ due to mismatches in author representations of these pathways. The goal of this project is to develop a method for aligning pathways and then visualizing the results of these alignment. Starting points could be to find interactions that use the same substrates and produce the same products. </p>
-
-<br />
-<p>There are many uses of such a tool including helping to validate pathways as they are added to repositories, merging pathways across different resources, and the comparative analyses of pathways across organisms. One way to think about this project, is if you're given multiple representations of the same pathway (<a href="http://wikipathways.org//index.php?query=wnt&amp;species=Homo+sapiens&amp;title=Special%3ASearchPathways&amp;doSearch=1&amp;ids=&amp;codes=&amp;type=query" >examples of several human Wnt pathways</a>) can you develop a method to show a unified pathway and how the original representations map to the unified pathway. </p>
-
-<br />
-<p>Language and Skills: Java, XML</p>
-
-<p>Potential Mentors: Augustin Luna (MSKCC)</p>
-
-<p>Contact: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
-
+<p>There is continued growth in the groups generating machine-readable representations of biological pathways 
+(such as <a href="http://www.reactome.org/" >Reactome</a> or <a href="http://wikipathways.org/" >WikiPathways</a>) and 
+subsequent efforts to aggregate these pathways into unified repositories, such as Pathway Commons. Aggregation of these 
+pathways suffers from multiple pathways being aggregated that differ due to mismatches in author representations of these 
+pathways. The goal of this project is to develop a method for aligning pathways and then visualizing the results of these 
+alignment. Starting points could be to find interactions that use the same substrates and produce the same products. </p>
+<p>There are many uses of such a tool including helping to validate pathways as they are added to repositories, merging 
+pathways across different resources, and the comparative analyses of pathways across organisms. One way to think about this 
+project, is if you're given multiple representations of the same pathway 
+(<a href="http://wikipathways.org//index.php?query=wnt&amp;species=Homo+sapiens&amp;title=Special%3ASearchPathways&amp;doSearch=1&amp;ids=&amp;codes=&amp;type=query" >examples of several human Wnt pathways</a>) can you develop a method to show a unified pathway and how the original representations map to the unified pathway. </p>
+<p><b>Language and Skills</b>: Java, XML</p>
+<p><b>Potential Mentors</b>: Augustin Luna (MSKCC)</p>
+<p><p>Contact</p>: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 8: Drag &amp; Drop or Palette Editor for SBGN and other graphical notations in Cytoscape</h2>
-
-<p>The goal is to design and implement a drag-and-drop or palette-based editor for Cytoscape that would include nodes, edges, and graphical annotations. In the ideal case, this would be extensible so that apps add their own nodes or edges with specific graphical attributes. The Systems Biology Graphical Notation (SBGN) is a standard graphical notation for presenting pathways and protein interactions. Currently, Cytoscape lacks the node symbols and edge types required for SBGN. In this project, those notations will be added to the Cytoscape core, and a simple palette editor developed for user interaction.</p>
-
-<br />
+<p>The goal is to design and implement a drag-and-drop or palette-based editor for Cytoscape that would include nodes, edges, 
+and graphical annotations. In the ideal case, this would be extensible so that apps add their own nodes or edges with specific 
+graphical attributes. The Systems Biology Graphical Notation (SBGN) is a standard graphical notation for presenting pathways 
+and protein interactions. Currently, Cytoscape lacks the node symbols and edge types required for SBGN. In this project, those
+notations will be added to the Cytoscape core, and a simple palette editor developed for user interaction.</p>
 <p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Scooter Morri, Alex Pico</p>
-
+<p>Potential Mentors: Scooter Morris, Alex Pico</p>
 <p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
-
 <br />
+
 <h2 dir="ltr" >Idea 9: Improve and expand Cytoscape’s color mapping options</h2>
-
-<p>Currently, the color options for Cytoscape’s discrete color mappings are very limited. Brewer palettes provide a luminosity-neutral set of colors that would be extremely useful to add to Cytoscape, and there are several other approaches to choosing sets of colors that contrast nicely. Creating these color palettes and providing them for use within Cytoscape’s visual style interface would be extremely useful to Cytoscape users.</p>
-
-<br />
-<p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Scooter Morris, Michael Heuer, Alex Pico</p>
-
-<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
-
+<p>Currently, the color options for Cytoscape’s discrete color mappings are very limited. Brewer palettes provide a 
+luminosity-neutral set of colors that would be extremely useful to add to Cytoscape, and there are several other approaches 
+to choosing sets of colors that contrast nicely. Creating these color palettes and providing them for use within Cytoscape’s 
+visual style interface would be extremely useful to Cytoscape users.</p>
+<p><b>Language and Skills</b>: Java</p>
+<p><b>Potential Mentors</b>: Scooter Morris, Michael Heuer, Alex Pico</p>
+<p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 <br />
 
 <h2 dir="ltr" >Idea 10: Constrained layout algorithms in Cytoscape</h2>
