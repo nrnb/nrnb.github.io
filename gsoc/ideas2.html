@@ -116,31 +116,24 @@ Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality,
 CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. CentiScaPe 
 also provides a Boolean logic- based tool that allows easy characterization of nodes whose topological relevance depends on 
 more than one centrality. Finally, different graphic outputs and the included description of biological significance for each 
-computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing easy node categorization 
-and experimental prioritization.</p>
+computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing easy node 
+categorization and experimental prioritization.</p>
 
 <p>Goal: The new beta version of CentiScaPe provides also the possibilities to analyze multiple networks and to integrate the 
 analysis with experimental data set. This implies that a user can automatically start a computation of several networks and 
 waits for the results. Anyway, the output of the analysis of a lot of networks (say 100) is useless if not supported by a 
-smart and user friendly system to analyze the results. The Idea is to implements some techniques used in software analysis to 
-extract information from the results of multiple computation in order to compare different networks and to extract topological 
-based biomarkers:</p>
-
+smart and user friendly system to analyze the results. The Idea is to implements some techniques used in software analysis, 
+some graphical outputs and some statistical parameters to extract information from the results of multiple computation in 
+order to compare different networks and to extract topological based biomarkers:</p>
 <ul>
-<li><p>The main framework for the results analysis is the Abstract Interpretation theory, particularly the interval analysis 
-(and eventually others) [1].</p></li>
-<li><p>Some statistical parameters, automatic analysis of the output, and new kinds of graphical outputs that can help to extract 
-information from a multiple networks centrality analysis should be provided. The tools should for example be able to answer to 
+<li>Some statistical parameters, automatic analysis of the output, and new kinds of graphical outputs that can help to extract 
+information from a multiple networks centrality analysis should be provided. The tools should for example be able to answer to
 questions as “How does the centroid value of the protein A chenge in the submitted 100 different networks?” or “How does the 
 betweenness of protein B change if we consider 30 different phosporilation values for each proteins in the network N (this 
-means we have 30 different experimental data set for the same network that must be included in the computation)?”.</p></li>
-<li><p>The tools should also provide the implementation of the integration of experimental data-sets for the eigenvector,
-bridging centrality and edge betweenness (they are now available for all the other centralities).</p></li>
+means we have 30 different experimental data set for the same network that must be included in the computation)?”.</li>
+<li>The tool should also provide the implementation of the integration of experimental data-sets in order to include them in 
+the topological analysis (more info will be provided to the interested students)</li>
 </ul>
-
-<p>[1] <a href="http://doi.acm.org/10.1145/512950.512973">Abstract interpretation: a unified lattice model for static analysis of 
-programs by construction or approximation of fixpoints. Patrick Cousot and Radhia Cousot. 1977.</a></p>
-
 <p>Language and Skills: Java, software analysis (possibly abstract interpretation theory)</p>
 <p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
@@ -925,6 +918,58 @@ modules to provide additional tutorials that can be selected if the plugins are 
 <p><b>Potential Mentors</b>: Martina Summer-Kutmon, Kristina Hanspers</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br/ >
+
+<h2 dir="ltr" >Idea 39: SIR model for CentiScaPe</h2>
+<p><b>Background</b>: CentiScaPe is a Cytoscape plugin that allows to compute network centrality parameters. It is the most 
+complete Cytoscape plugin for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, 
+Betweenness, Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected 
+networks. CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. 
+CentiScaPe also provides a Boolean logic- based tool that allows easy characterization of nodes whose topological relevance 
+depends on more than one centrality. Finally, different graphic outputs and the included description of biological 
+significance for each computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing 
+easy node categorization and experimental prioritization.</p>
+<p><b>Goal</b>: CentiScaPe can provide only static analysis of a network. We want to develop a tool that can compute 
+semi-dynamic simulation, particularly the SIR model [1]. The SIR model is a Compartmental model used in epidemiology to 
+simulate the establishment and spread of infectious diseases. It serve as a base mathematical framework for understanding the 
+complex dynamics of such system. Population is divided in three states: susceptible to the infection of the pathogen (often 
+denoted by S), infected by the pathogen (given the symbol I) and  recovered/removed/immune  (denoted R). The way that these 
+compartments interact is often based on a network model, hence the idea to include the SIR model in the CentiScaPe tool for 
+network analysis</p>
+<p>[1] <a href="http://www.ncbi.nlm.nih.gov/pubmed/2059741">Kermack WO, McKendrick AG: A contribution to the mathematical theory of epidemics.
+Proc Roy Soc Lond 1927, 115:700-721.</a></p>
+<p><b>Technology</b>: Java</p>
+<p><b>Potential Mentors</b>: Giovanni Scardoni (CBMC, University of Verona)</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 40: Random networks for CentiScaPe</h2>
+<p><b>Background</b>: CentScaPe is a Cytoscape app that allows, by using a very plain interface, to compute different network 
+centrality parameters in single and in multiple networks at the same time. It allows to plot the results by using real and 
+normalized values in different plots. Several centralities are available: Degree, Average Shortest Path, Eccentricity, 
+Closeness, Betweenness, Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality. Each one could be 
+computed for directed and undirected networks; CentiScaPe gives the possibility to assign a weigth to the edges and, currently, 
+we added a new feature that permits to assign a weight to each node by using an attribute.</p>
+<p><b>Goal</b>: The new version permits an in-depth analysis of biological networks, from the topological point of view. The 
+main issue with this methodology is that it requires a lot of literature mining in order to validate and verify the results 
+that, in general, remain speculative. In order to overcome this limitation we decided to add a feature that allows to validate
+the results by using random networks, i.e. by adding a sort of statistical evaluation. By randomizing a network we expect to 
+highlight all the differences between the real and the random process[1]: this step gives strength to all the findings that 
+come from a topological analysis and adds a statistical background that could integrate the biological information from 
+experimental data or text mining.</p>
+<p>We will integrate CentiScaPe with some algorithms that were already developed in an existing, but no more supported, plugin 
+for the Cytoscape platform, version 2.6, that is RandomNetworks [2][3]. We will develop some algorithms that are able to generate 
+newtorks by following a specific model: Watt-Strogatz, Erdos-Renyi, Barabasi-Albert and some others. Another interesting 
+feature will be the degree-preserving algorithm that is able to randomize the edges by keeping the degree of each node fixed. 
+Finally the comparison between the centralities before and after the randomization could be analysed by using the topological 
+measures of CentiScaPe.</p>
+<p>[1] <a href="http://www.ncbi.nlm.nih.gov/pubmed/12399590">Network Motifs: Simple Building Blocks of Complex Networks. Milo et al, Science 25 October 2002.</a></p>
+<p>[2] <a href="http://apps.cytoscape.org/apps/randomnetworks">RandomNetworks App</a></p>
+<p>[3] <a href="https://sites.google.com/site/randomnetworkplugin/">RandomNetworks Project Website</a></p>
+
+<p><b>Technology</b>: Java</p>
+<p><b>Potential Mentors</b>: Giovanni Scardoni (CBMC, University of Verona)</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
 
 <!-- END PASTE -->
 
