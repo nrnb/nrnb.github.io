@@ -186,22 +186,6 @@ arbitrary level of nesting is allowed and folding can take place at an arbitrary
 <p><b>Contact</b>: <a href="mailto:ugur@cs.bilkent.edu.tr" >ugur@cs.bilkent.edu.tr</a> and <a href="mailto:onur@cbio.mskcc.org" >onur@cbio.mskcc.org</a> </p>
 
 <br />
-<h2 dir="ltr" >Idea 6: Advanced data visualization in PathVisio</h2>
-<p><b>Background</b>: <a href="http://pathvisio.org/" >PathVisio</a> is a pathway editor and analysis tool. PathVisio allows users to upload and 
-visualize data on biological pathways. We want to extend the visualization module in PathVisio which is part of the PathVisio 
-core application. A central visualization registry should allow plugins to create and register new visualization options. The 
-current visualization interface in PathVisio is very complex and should be made more user-friendly and intuitive for the users. </p>
-<p><b>Goals</b>:</p>
-<ul>
-<li>Independent visualization module and registry</li>
-<li>More user-friendly visualization interface</li>
-<li>Possibility for users to define visualization templates that can be used for different datasets (currently a visualization 
-is linked to a dataset and has to be created again for a new dataset)</li>
-</ul>
-<p><b>Language and Skills</b>: Java, OSGi</p>
-<p><b>Potential Mentors</b>: Martina Kutmon, Anwesha Bohler (Unimaas, NL)<br /></p>
-<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-<br />
 
 <h2 dir="ltr" >Idea 7: Develop a Method for Aligning Pathways and Visualizing these Alignments</h2>
 <p>There is continued growth in the groups generating machine-readable representations of biological pathways 
@@ -513,49 +497,43 @@ interface with methods that can be run from the scripting language.</p>
 <p>Potential Mentors: Kei Ono, Christian Lopes, Max Franz, Gary Bader</p>
 
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
 <br />
+
 <h2 dir="ltr" >Idea 18: BridgeDb config plugin in PathVisio</h2>
 
-<p><b>Background</b>:<a href="http://www.bridgedb.org" >BridgeDb</a> is an identifier mapping framework used in PathVisio and 
-WikiPathways. Currently it is possible to load a mapping databases for gene products and metabolites. The 
-existing<a href="http://www.pathvisio.org/wiki/BridgeDbConfigPluginHelp" > BridgeDb config plugin</a> provides functionality 
-to load more mapping databases or to use other webservices for the mappings. This functionality should be extended and 
-integrated into the core PathVisio application as another core module. The configuration dialog has to be improved so it is 
-more intuitive and user friendly.</p>
+<p><b>Background</b>: BridgeDb [1] is an identifier mapping framework used in PathVisio and WikiPathways. 
+Currently it is possible to load a mapping databases for gene products and metabolites [2]. This should be extended with 
+interaction mapping databases.</p>
+<p><b>Goal</b>: The existing BridgeDbConfig plugin (http://www.pathvisio.org/plugin/bridgedbconfig-plugin/) provides 
+functionality to load more mapping databases or to use other webservices for the mappings. This functionality should be 
+extended and integrated into the core PathVisio application as another core module. The configuration dialog has to be 
+improved so it is more intuitive and user friendly. Furthermore the plugin should allow users to download and update BridgeDb 
+mapping databases from within PathVisio. Currently the users have to download the databases first and then load them into 
+PathVisio. This step should be automatized by the plugin.</p>
 
-<p>The main features of this module should be:</p>
-<ul>
-<li>user friendly dialog to configure mapping services</li>
-<li>centralized module for identifier mapping in PathVisio</li>
-<li>system to define which databases are used for which species and/or data node type</li>
-</ul>
-
-<p><b>Language and Skills</b>: Java, OSGi, BridgeDb</p>
-
-<p><b>Potential Mentors</b>: Martina Kutmon, Anwesha Bohler</p>
-
-<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-
+<p>[1] <a href="http://www.bridgedb.org" >BridgeDb</a></p>
+<p>[2] <a href="http://www.pathvisio.org/wiki/BridgeDbConfigPluginHelp" >BridgeDb config plugin</a></p>
+<p><b>Language and Skills</b>: Java</p>
+<p><b>Potential Mentors</b>:  Kutmon, Jonathan Melius</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com" >wikipathways-devel@googlegroups.com</a></p>
 <br />
-<h2 dir="ltr" >Idea 19: Publication Reference Plugin for PathVisio</h2>
 
-<p>Currently<a href="http://www.pathvisio.org" > PathVisio</a> supports publication reference annotation of pathways, data 
-nodes and interactions with PubMed identifiers. The goal of this plugin is to provide a more advanced framework for reference 
-annotations.</p>
+<h2 dir="ltr" >Idea 19: Citing publications in biological pathways - PathVisio and WikiPathways</h2>
 
-<p>This plugin should provide (can be extended):</p>
-<ul>
-<li>functionality to use other identifiers than pubmed (e.g. DOI) (might be possible to use an existing java library for that 
-(e.g. Jabref))</li>
-<li>show all references in a side tab with linkouts</li>
-<li>exporting all references in different reference style formats</li>
-</ul>
+<p><b>Background</b>: PathVisio [1] is a commonly-used pathway editor, visualization and analysis tool implemented in Java and is 
+linked with the collaborative pathway database WikiPathways [2]. Currently, PathVisio and WikiPathways 
+allow users to add publication references to Pubmed [3].</p>
+<p><b>Goal</b>: The goal of this project is to extend the functionality to allow the reference of other identifiers like DOIs, 
+export references in standard formats like Bibtex or EndNote and provide statistics about citations used on WikiPathways 
+(total number of citations, avg. number of citations per pathway, top cited papers/journals, ...).</p>
 
-<p><b>Language and Skills</b>: Java, OSGi</p>
-<p><b>Potential Mentors</b>: Sravanthi Sinha, Martina Kutmon</p>
-<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<p>[1] <a href="http://www.pathvisio.org" >PathVisio</a></p>
+<p>[2] <a href="http://www.wikipathways.org" >WikiPathways</a></p>
+<p>[3] <a href="http://www.ncbi.nlm.nih.gov/pubmed">PubMed</a></p>
 
+<p><b>Language and Skills</b>: Java, PHP, Mediawiki</p>
+<p><b>Potential Mentors</b>: Sravanthi Sinah, Martina Summer-Kutmon, Anwesha Bohler</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com" >wikipathways-devel@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 20: Enhanced Layout Algorithms</h2>
@@ -771,8 +749,8 @@ on pathways and a flux data set to interactions on pathways.</li>
 <p>[2] <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.gex">PathVisio gex module</a></p>
 <p>[3] <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.data">PathVisio data module</a></p>
 <p><b>Language and Skills</b>: Java</p>
-<p><b>Potential Mentors</b>: Anwesha Bohler</p>
-<p><b>Contact</b>: wikipathways-devel@googlegroups.com</p>
+<p><b>Potential Mentors</b>: Anwesha Bohler, Martina Summer-Kutmon</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 
 <br />
 <h2 dir="ltr">Idea 30: Collaborative System for Creating/Sharing Biological Icons</h2>
@@ -900,6 +878,54 @@ The code will be available as an open source GitHub project.</p>
 <p><b>Potential Mentors</b>: Cristian R Munteanu, Marcos Martinez, Alejandro Pazos</p>
 <p><b>Contact</b>: <a href="mailto:muntisa@gmail.com">Cristian R Munteanu</a></p>
 <br />
+
+<h2 dir="ltr" >Idea 36: Advanced search on WikiPathways</h2>
+<p><b>Background</b>: WikiPathways [1] is a collaborative pathway database that is build on Mediawiki. 
+Currently our pathways can be annotated with ontology tags from the pathway ontology, cell type ontology and disease ontology.</p> 
+<p><b>Goal</b>: The advanced search should provide an interface to search for pathways containing one or more pathway 
+elements (genes, proteins, metabolites), for pathways that are annotated with specific ontology tags or pathways that contain 
+a specific interactions. The advanced search allows users to filter pathways based on species, curation tags, authors, 
+creation date, number of edits, etc.</p>
+<p>[1] <a href="http://www.wikipathways.org">WikiPathways</a></p>
+
+<p><b>Language and Skills</b>: PHP, Mediawiki</p>
+<p><b>Potential Mentors</b>: Martina Summer-Kutmon, Alex Pico</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 37: Over-representation module for WikiPathways</h2>
+<p><b>Background</b>: PathVisio [1] is a commonly-used pathway editor, visualization and analysis tool 
+implemented in Java. Currently, PathVisio provides an advanced statistics module that allows users to define criterias 
+to perform pathway statistics which is sometimes not needed.</p>
+<p><b>Goal</b>: In this project, the student will extend the statistics module with a basic over-representation methods 
+that uses a gene list as input and provides ranked pathways as output. The genes in the pathways are highlighted when they 
+are in the input gene list. Additionally this basic analysis module will also be integrated on WikiPathways [2]. The student 
+will develop a page where the user can provide a list of genes, then the PathVisio 
+statistics module gets called to calculate the over-representation and the result will be shown on WikiPathways. The pathways 
+will be shown in the pathvisiojs viewer and the genes in the input list will be highlighted.</p>
+<p>[1] <a href="http://www.pathvisio.org">PathVisio</a></p>
+<p>[2] <a href="http://www.wikipathways.org">WikiPathways</a></p>
+
+<p><b>Language and Skills</b>: Java, PHP</p>
+<p><b>Potential Mentors</b>: Martina Summer-Kutmon, Anwesha Bohler</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
+<br/ >
+
+<h2 dir="ltr" >Idea 38: Tutorial mode for PathVisio</h2>
+<p><b>Background</b>: PathVisio [1] is a commonly-used pathway editor, visualization and analysis tool 
+implemented in Java. The analyses in PathVisio and the different advanced visualization methods can become very complex 
+and having an integrated tutorial mode in the application is a powerful tool to give detailed instructions while performing 
+a task.</p>
+<p><b>Goal</b>: This will give the users a step-by-step guide with hints and additional information while learning how to use 
+PathVisio. Documentation and tutorials are crucial elements of software development and the goal of this project is to 
+implement a tutorial mode in PathVisio. PathVisio can be extended through plugins, so the tutorial mode should allow other 
+modules to provide additional tutorials that can be selected if the plugins are installed.</p>
+<p>[1] <a href="http://www.pathvisio.org">PathVisio</a></p>
+<p><b>Language and Skills</b>: Java, development of tutorials</p>
+<p><b>Potential Mentors</b>: Martina Summer-Kutmon, Kristina Hanspers</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
+<br/ >
+
 <!-- END PASTE -->
 
     </div> <!-- .span9 !-->
