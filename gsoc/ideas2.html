@@ -448,48 +448,28 @@ interface with methods that can be run from the scripting language.</p>
 
 <br />
 
-<h2 dir="ltr" >Idea 17: Publish Cytoscape 3 Session to cytoscape.js</h2>
-
-<p><a href="http://www.cytoscape.org/cy3.html" >Cytoscape 3</a> and<a href="http://cytoscape.github.com/cytoscape.js/" > cytoscape.js</a> are completely independent software packages; 3 is a Java Desktop application and .js is a JavaScript library to visualize network data. However, it shares some basic concepts, such as Visual Styles. It is very useful if we can reproduce same/similar Cytoscape 3 network views in web browsers to share/publish data sets.</p>
-
-<p>The goal of this project is exporting Cytoscape 3 data as JSON, and reproducing same/similar interactive network views with cytoscape.js and other JavaScript libraries.</p>
-
+<h2 dir="ltr" >Idea 17: Export as D3.js-Based Web Application</h2>
+<p><b>Background</b>: From Cytoscape 3.2, users can <a href="http://wiki.cytoscape.org/Cytoscape_3/UserManual/Publish">export 
+their network visualizations as a simple web application</a>. This feature uses <a href="http://js.cytoscape.org/">cytoscape.js</a> 
+and other popular libraries such as <a href="https://angularjs.org/">Angular.js</a> to reproduce visualizations generated with 
+Cytoscape 3 Desktop application using modern web technologies.</p>
+<p><b>Goal</b>: This project is extending this idea. In addtion to exporting Cytoscape-generated visualizations as simple 
+node-link diagrams, you will add new options for this feature, including:</p>
 <ul>
-<li><p>Export Cytoscape 3 data as JSON</p>
-
-</li>
-<ul>
-<li><p>Networks</p>
-
-</li>
-<li><p>Data Tables</p>
-
-</li>
-<li><p>Visual Styles</p>
-
-</li>
+<li>TreeMap</li>
+<li>Dendrogram</li>
+<li>Circle Packing</li>
+<li>Node-Link Tree</li>
+<li>Adj. Matrix</li>
 </ul>
-
-<li><p>This is a JAVA programming project. JavaScript knowledge is optional, but Java/OSGi knowledge is REQUIRED. You need to write a lot of Java classes to convert Cytoscape 3 data objects into JSON using Jackson library.</p>
-
-</li>
-<li><p><a href="https://github.com/idekerlab/json-impl" >Prototype is available</a></p>
-
-</li>
-<li><p>Create a test HTML5 page to visualize Cytoscape 3 network views with cytoscape.js</p>
-
-</li>
-<li><p>(Optional) Add import JSON function for Cytoscape 3</p>
-
-</li>
-</ul>
-
-<br />
-<p>Language and Skills: Java, JavaScript, HTML5, Git/GitHub</p>
-
-<p>Potential Mentors: Kei Ono, Christian Lopes, Max Franz, Gary Bader</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
+<p>This enables users to visualize the same data set in different ways. In this project, you need to extend the existing 
+<a href="http://apps.cytoscape.org/apps/d3jsexporter">D3.js</a> Exporter App and add new export options. Note that you need 
+both of Java and JavaScript knowledge to implement this feature. Also, we assume you are comfortable with modern web 
+application development tools, such as command-line tools running on node.js, JavaScript frameworks like Angular.js, testing 
+frameworks, and of course, <a href="http://d3js.org/">D3.js</a>.</p>
+<p><b>Technology</b>: JavaScript, D3.js, Java, knowledge of modern web development tools such as node.js/grunt/gulp/yeoman.</p>
+<p><b>Potential Mentors</b>: Kei Ono</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 18: BridgeDb config plugin in PathVisio</h2>
