@@ -117,7 +117,6 @@ also provides a Boolean logic- based tool that allows easy characterization of n
 more than one centrality. Finally, different graphic outputs and the included description of biological significance for each 
 computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing easy node 
 categorization and experimental prioritization.</p>
-
 <p>Goal: The new beta version of CentiScaPe provides also the possibilities to analyze multiple networks and to integrate the 
 analysis with experimental data set. This implies that a user can automatically start a computation of several networks and 
 waits for the results. Anyway, the output of the analysis of a lot of networks (say 100) is useless if not supported by a 
@@ -133,18 +132,19 @@ means we have 30 different experimental data set for the same network that must 
 <li>The tool should also provide the implementation of the integration of experimental data-sets in order to include them in 
 the topological analysis (more info will be provided to the interested students)</li>
 </ul>
-<p>Language and Skills: Java, software analysis (possibly abstract interpretation theory)</p>
-<p>Potential Mentors: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
+<p><b>Technology and Skills</b>: Java, software analysis (possibly abstract interpretation theory)</p>
+<p><b>Potential Mentors</b>: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 5: Improving Cytoscape.js Based Viewer for SBGN Process Description Diagrams with Better Layout and 
 Advanced Complexity Management Operations</h2>
 
 <p><b>Background</b>:
-Cytoscape.js is a JavaScript graph library for analysis and visualization of relational information [1]. The Systems Biology 
-Graphical Notation (SBGN) is a visual language developed by the community with the intention of enabling scientists to 
-represent networks, including models of cellular processes, in a standard, unambiguous way [2]. SBGN comprises three 
+<a href="http://cytoscape.github.io/cytoscape.js/">Cytoscape.js</a> is a JavaScript graph library for analysis and 
+visualization of relational information. The <a href="http://www.sbgn.org/">Systems Biology 
+Graphical Notation</a> (SBGN) is a visual language developed by the community with the intention of enabling scientists to 
+represent networks, including models of cellular processes, in a standard, unambiguous way. SBGN comprises three 
 complementary languages suited to represent different types of pathways. SBGN Process Descriptions is a language that permits 
 the description of the processes (e.g. biochemical reactions) taking place in a biological system and makes heavy use of 
 compound structures (e.g. compartments and molecular complexes). 
@@ -152,7 +152,8 @@ Often times, SBGN PD networks are too large to visualize and details become obsc
 details of a network, allowing one to temporarily remove certain nodes and edges and subsequently reintroduce the removed 
 details. Complexity management techniques in graph visualization such as filtering, hiding, folding, and nesting play an 
 important role in effective analysis of biological networks as much as any other domain.
-Last year, support for compound structures has been added to Cytoscape.js core and an SBGN viewer named SBGNViz has been 
+Last year, support for compound structures has been added to Cytoscape.js core and an SBGN viewer named 
+<a href="https://code.google.com/p/sbgnviz-js/">SBGNViz</a> has been 
 built [3]. Some complexity management operations have also been designed and implemented within this tool to hide unwanted 
 details on demand without violating SBGN PD network invariants (e.g. all substrates and products of a process must be shown 
 at any point).</p>
@@ -165,10 +166,7 @@ node requires calculation of any inter-graph edges going into the compound node 
 collapsed network. Similarly, expanding a collapsed node back requires undoing it. The situation becomes cumbersome since 
 arbitrary level of nesting is allowed and folding can take place at an arbitrary level.</p>
 
-<p>[1] <a href="http://cytoscape.github.io/cytoscape.js/" >http://cytoscape.github.io/cytoscape.js/</a></p>
-<p>[2] <a href="http://www.sbgn.org/" >http://www.sbgn.org/</a></p>
-<p>[3] <a href="https://code.google.com/p/sbgnviz-js/">https://code.google.com/p/sbgnviz-js/</a></p>
-<p><b>Language and Skills</b>: JavaScript, Java, Data Structures and Algorithms</p>
+<p><b>Technology and Skills</b>: JavaScript, Java, Data Structures and Algorithms</p>
 <p><b>Potential Mentors</b>: Ugur Dogrusoz (Bilkent University & MSKCC) and S. Onur Sumer (MSKCC)</p>
 <p><b>Contact</b>: <a href="mailto:ugur@cs.bilkent.edu.tr" >ugur@cs.bilkent.edu.tr</a> and <a href="mailto:onur@cbio.mskcc.org" >onur@cbio.mskcc.org</a> </p>
 <br />
@@ -189,15 +187,15 @@ need to be developed. Development will focus on optimizing the workflow, and cre
 computing and visualization functionality. Rcpp (R interfacing with Cpp) will be used to program the software. C++ matrix 
 libraries (e.g. Armadillo) will be used to reduce memory footprint and speed computations.</p>
 <p><b>Publications</b>: 
-     <h2>
+     <ul>
           <li>Wang B. et al. (2014). Similarity network fusion for aggregating data types on a genomic scale. Nature 
           Methods 11(3): 333-7.</li> 
           <li>Mostafavi S. et al. (2008). GeneMANIA: a real-time multiple association network integration algorithm for 
           predicting gene function. Genome Biol. 9 Suppl 1:S4.</li> 
 
-     </h2>
+     </ul>
 </p>
-<p><b>Technology</b>: R statistical programming language, C++, Java</p>
+<p><b>Technology and Skills</b>: R statistical programming language, C++, Java</p>
 <p><b>Potential Mentors</b>: Gary Bader, Shraddha Pai</p>
 <p><b>Contact</b>: <a href="mailto:shraddhapai.neuro@gmail.com">Shraddha Pai</a></p>
 <br />
@@ -213,12 +211,12 @@ alignment. Starting points could be to find interactions that use the same subst
 pathways across different resources, and the comparative analyses of pathways across organisms. One way to think about this 
 project, is if you're given multiple representations of the same pathway 
 (<a href="http://wikipathways.org//index.php?query=wnt&amp;species=Homo+sapiens&amp;title=Special%3ASearchPathways&amp;doSearch=1&amp;ids=&amp;codes=&amp;type=query" >examples of several human Wnt pathways</a>) can you develop a method to show a unified pathway and how the original representations map to the unified pathway. </p>
-<p><b>Language and Skills</b>: Java, XML</p>
+<p><b>Technology and Skills</b>: Java, XML</p>
 <p><b>Potential Mentors</b>: Augustin Luna (MSKCC)</p>
-<p><p>Contact</p>: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
+<p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 8: Drag &amp; Drop or Palette Editor for SBGN and other graphical notations in Cytoscape</h2>
+<h2 dir="ltr" >Idea 8: Drag and Drop or Palette Editor for SBGN and other graphical notations in Cytoscape</h2>
 <p>The goal is to design and implement a drag-and-drop or palette-based editor for Cytoscape that would include nodes, edges, 
 and graphical annotations. In the ideal case, this would be extensible so that apps add their own nodes or edges with specific 
 graphical attributes. The Systems Biology Graphical Notation (SBGN) is a standard graphical notation for presenting pathways 
@@ -489,44 +487,38 @@ node-link diagrams, you will add new options for this feature, including:</p>
 both of Java and JavaScript knowledge to implement this feature. Also, we assume you are comfortable with modern web 
 application development tools, such as command-line tools running on node.js, JavaScript frameworks like Angular.js, testing 
 frameworks, and of course, <a href="http://d3js.org/">D3.js</a>.</p>
-<p><b>Technology</b>: JavaScript, D3.js, Java, knowledge of modern web development tools such as node.js/grunt/gulp/yeoman.</p>
+<p><b>Technology and Skills</b>: JavaScript, D3.js, Java, knowledge of modern web development tools such as node.js/grunt/gulp/yeoman.</p>
 <p><b>Potential Mentors</b>: Kei Ono</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 18: BridgeDb config plugin in PathVisio</h2>
 
-<p><b>Background</b>: BridgeDb [1] is an identifier mapping framework used in PathVisio and WikiPathways. 
-Currently it is possible to load a mapping databases for gene products and metabolites [2]. This should be extended with 
-interaction mapping databases.</p>
-<p><b>Goal</b>: The existing BridgeDbConfig plugin (http://www.pathvisio.org/plugin/bridgedbconfig-plugin/) provides 
+<p><b>Background</b>: <a href="http://www.bridgedb.org" >BridgeDb</a> is an identifier mapping framework used in PathVisio and WikiPathways. 
+Currently it is possible to <a href="http://www.pathvisio.org/wiki/BridgeDbConfigPluginHelp" >load a mapping databases for gene products and metabolites</a>. 
+This should be extended with interaction mapping databases.</p>
+<p><b>Goal</b>: The existing <a href="http://www.pathvisio.org/plugin/bridgedbconfig-plugin/">BridgeDbConfig plugin</a> provides 
 functionality to load more mapping databases or to use other webservices for the mappings. This functionality should be 
 extended and integrated into the core PathVisio application as another core module. The configuration dialog has to be 
 improved so it is more intuitive and user friendly. Furthermore the plugin should allow users to download and update BridgeDb 
 mapping databases from within PathVisio. Currently the users have to download the databases first and then load them into 
 PathVisio. This step should be automatized by the plugin.</p>
 
-<p>[1] <a href="http://www.bridgedb.org" >BridgeDb</a></p>
-<p>[2] <a href="http://www.pathvisio.org/wiki/BridgeDbConfigPluginHelp" >BridgeDb config plugin</a></p>
-<p><b>Language and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>:  Kutmon, Jonathan Melius</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com" >wikipathways-devel@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 19: Citing publications in biological pathways - PathVisio and WikiPathways</h2>
 
-<p><b>Background</b>: PathVisio [1] is a commonly-used pathway editor, visualization and analysis tool implemented in Java and is 
-linked with the collaborative pathway database WikiPathways [2]. Currently, PathVisio and WikiPathways 
-allow users to add publication references to Pubmed [3].</p>
+<p><b>Background</b>: <a href="http://www.pathvisio.org" >PathVisio</a> is a commonly-used pathway editor, visualization and analysis tool implemented in Java and is 
+linked with the collaborative pathway database <a href="http://www.wikipathways.org" >WikiPathways</a>. Currently, PathVisio and WikiPathways 
+allow users to add publication references to <a href="http://www.ncbi.nlm.nih.gov/pubmed">PubMed</a>.</p>
 <p><b>Goal</b>: The goal of this project is to extend the functionality to allow the reference of other identifiers like DOIs, 
 export references in standard formats like Bibtex or EndNote and provide statistics about citations used on WikiPathways 
 (total number of citations, avg. number of citations per pathway, top cited papers/journals, ...).</p>
 
-<p>[1] <a href="http://www.pathvisio.org" >PathVisio</a></p>
-<p>[2] <a href="http://www.wikipathways.org" >WikiPathways</a></p>
-<p>[3] <a href="http://www.ncbi.nlm.nih.gov/pubmed">PubMed</a></p>
-
-<p><b>Language and Skills</b>: Java, PHP, Mediawiki</p>
+<p><b>Technology and Skills</b>: Java, PHP, Mediawiki</p>
 <p><b>Potential Mentors</b>: Sravanthi Sinah, Martina Summer-Kutmon, Anwesha Bohler</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com" >wikipathways-devel@googlegroups.com</a></p>
 <br />
@@ -534,60 +526,62 @@ export references in standard formats like Bibtex or EndNote and provide statist
 <h2 dir="ltr" >Idea 20: Enhanced Layout Algorithms</h2>
 <p><b>Background</b>: As Cytoscape is used for increasingly large networks, the performance of our layout algorithms becomes 
 a limiting factor. There are a number of layout algorithms that perform very well in real-world scenarios that have not been 
-implemented in Cytoscape. For example, the Yifan Hu Multi-level layout algorithm [1], a Fast Muiltipole Multilevel layout [2], Yifan Hu proportional, and potentially some of the better algorithms from Gephi. Cytoscape provides a 
+implemented in Cytoscape. For example, the <a href="http://yifanhu.net/PUB/graph_draw_small.pdf">Yifan Hu Multi-level layout 
+algorithm</a>, a Fast Muiltipole Multilevel layout (See <a href="http://www.ogdf.net/doc-ogdf/classogdf_1_1_f_m_m_m_layout.html">OGDF</a> 
+for example), Yifan Hu proportional, and potentially some of the better algorithms from Gephi. Cytoscape provides a 
 framework for adding new layout algorithms as Apps, so this work could all be done as a series of separate apps.</p>
-<p>[1] <a href="http://yifanhu.net/PUB/graph_draw_small.pdf">Yifan Hu Multi-level layout</a></p>
-<p>[2] <a href="http://www.ogdf.net/doc-ogdf/classogdf_1_1_f_m_m_m_layout.html">OGDF</a></p>
-<p><b>Language and Skills</b>: </p>
+
+<p><b>Technology and Skills</b>: </p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 21: Compound Graph Visualization in Cytoscape 3</h2>
 
-<p>Cytoscape 3 has introduce two concepts into the core, groups and annotations, that could be combined to provide a compound graph visualization. Currently groups can be either in a “collapsed” or “expanded” state. For a compound graph, a new visualization state needs to be introduced that allows the compound node (group) to be visualized as a shape (concave or convex hull) around it’s children. Moving that shape would move all of it’s children, etc.</p>
+<p><b>Background</b>: Cytoscape 3 has introduced two concepts into the core, groups and annotations, that could be combined to provide a compound 
+graph visualization. Currently groups can be either in a “collapsed” or “expanded” state. 
+<p><b>Goal</b>: </p>For a compound graph, a new visualization state needs to be introduced that allows the compound node 
+(group) to be visualized as a shape (concave or 
+convex hull) around it’s children. Moving that shape would move all of it’s children, etc.</p>
 
-<br />
-<p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Scooter Morris</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
+<p><b>Technology and Skills</b>: Java</p>
+<p><b>Potential Mentors</b>: Scooter Morris</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 22: Visualization of Time-series Cluster Data</h2>
 
-<p>Currently, the clusterMaker plugin uses standard heat maps to visualize attribute cluster data (based on Java TreeView). Increasingly, time series data is becoming important for clustering applications and it would be useful to expand the provided visualization options to explicitly support time series data. For these purposes, we’re thinking about time-series that have multiple conditions in each series, which means we need to move beyond the standard two-dimensional heat map. This project can explore utilizing animation, small multiples, or other standard visualization techniques (or your own novel techniques) to provide new visualization opportunities to users. Ideally, this would be integrated with network-based animation tools such as DynNetwork or CyAnimator.</p>
+<p><b>Background</b>: Currently, the clusterMaker plugin uses standard heat maps to visualize attribute cluster data (based on Java TreeView). 
+Increasingly, time series data is becoming important for clustering applications and it would be useful to expand the provided
+visualization options to explicitly support time series data. For these purposes, we’re thinking about time-series that have 
+multiple conditions in each series, which means we need to move beyond the standard two-dimensional heat map. 
+<p><b>Goal</b>: </p>This project 
+can explore utilizing animation, small multiples, or other standard visualization techniques (or your own novel techniques) 
+to provide new visualization opportunities to users. Ideally, this would be integrated with network-based animation tools 
+such as DynNetwork or CyAnimator.</p>
 
-<br />
-<p>Language and Skills: Java</p>
-
-<p>Potential Mentors: Scooter Morris</p>
-
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
+<p><b>Technology and Skills</b>: Java</p>
+<p><b>Potential Mentors</b>: Scooter Morris</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
 
 <h2 dir="ltr" >Idea 23: Develop a Converter between Visual and Textual Representations of Biological Pathways</h2>
 
-<p><b>Goal</b>: Pathway Commons [1] seeks to aggregate all pathway data available in literature, public databases, and 
+<p><b>Goal</b>: <a href="http://www.pathwaycommons.org/">Pathway Commons</a> seeks to aggregate all pathway data available in literature, public databases, and 
 curation/crowdsourced efforts. Our goal is to accelerate this process by leveraging pathway diagram editors that support a 
 widely used visual representation for biological pathways.</p>
-<p><b>Problem</b>: Pathway Commons data is represented in the Biological Pathway Exchange (BioPAX) community standard format [2], 
+<p><b>Problem</b>: Pathway Commons data is represented in the <a href="http://www.ncbi.nlm.nih.gov/pubmed/20829833">Biological Pathway Exchange (BioPAX)</a> 
+community standard format, 
 but the BioPAX format lacks a simple graphical editor. On the other hand, the System Biology Graphical Notation (SBGN) is a 
 visual representation for pathways that is supported in about 20 tools. We'd like you to build a converter between the BioPAX 
 and SBGN formats.</p>
 <p>A similar project has been developed with the editor CellDesigner (that shares a format similar to SBGN) making us believe 
 that this should be a reasonably straight forward project; many of the mapping issues have already been addressed. The project 
-will make use of two Java libraries Paxtools ([3], for BioPAX) and libSBGN ([4], for SBGN).</p
+will make use of two Java libraries <a href="http://www.biopax.org/paxtools.php">Paxtools</a> (for BioPAX) and 
+<a href="http://www.sbgn.org/LibSBGN">LibSBGN</a> (for SBGN).</p
 
-<p>[1] <a href="http://www.pathwaycommons.org/">Pathway Commons</a></li></p>
-<p>[2] <a href="http://www.ncbi.nlm.nih.gov/pubmed/20829833">BioPAX</a></p>
-<p>[3] <a href="http://www.biopax.org/paxtools.php">Paxtools</a></p>
-<p>[4] <a href="http://www.sbgn.org/LibSBGN">LibSBGN</a></p>
-
-<p><b>Language and Skills</b>: Java and XML</p>
+<p><b>Technology and Skills</b>: Java and XML</p>
 <p><b>Potential Mentors</b>: Augustin Luna</p>
 <p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >Augustin Luna</a></p>
 
@@ -614,7 +608,7 @@ will make use of two Java libraries Paxtools ([3], for BioPAX) and libSBGN ([4],
 annotate biological interactions that occur in the text of academic publications in a machine-readable manner. Currently, 
 Factoid uses basic entity-recognition to identify genes, proteins, biological processes to identify interactions between 
 these entities. 
-<p><b>Goal</b>: </p>The goal of this project is to integrate more sophisticated algorithms into the extraction of 
+<p><b>Goal</b>: The goal of this project is to integrate more sophisticated algorithms into the extraction of 
 interactions from text content. A starting point for some of these would be the algorithms outlined by the EBI website 
 WhatIzIt.</p>
 <p><b>Technology and Skills</b>: Experience connecting web services, Javascript</p>
@@ -694,37 +688,36 @@ them or to propose other options.</p>
 
 <p><b>Technology and Skills</b>: Javascript, JSON, PHP, JQuery</p>
 <p><b>Potential Mentors</b>: Mohamed Helmy, Gary Bader</p>
-<p><b>Contact</b>: mohamed.attiashahata@utoronto.ca, gary.bader@utoronto.ca</p>
+<p><b>Contact</b>: <a href="mailto:mohamed.attiashahata@utoronto.ca">Mohamed Helmy</a>, <a href="mailto:gary.bader@utoronto.ca">Gary Bader</a></p>
 
 <br />
 <h2 dir="ltr">Idea 28: Full Compound Support in Cytoscape 3</h2>
 <p><b>Background</b>: The notion of compound graphs is used to represent more complex types of relationships or varying levels 
 of abstractions in data visualization. Networks from almost all domains need such abstractions and nesting, including 
-biological networks. The recently developed standard notation of SBGN [1] makes heavy use of such structures for molecular 
+biological networks. The recently developed standard notation of <a href="http://www.sbgn.org/">SBGN</a> makes heavy use of such structures for molecular 
 complexes and cellular locations.</p>
-<p><b>Goal</b>: We would like to first implement full compound support in Cytoscape 3 [2] core. This will not only allow users 
+<p><b>Goal</b>: We would like to first implement full compound support in <a href="http://www.cytoscape.org/">Cytoscape</a> 3 [2] core. This will not only allow users 
 to nest nodes of a network but also automatically adjust size of a compound node as its child nodes get  moved, resized or  
-deleted. Then, we'd like to implement a native spring embedder based layout algorithm named CoSE [3] that takes such structures 
-into account during layout. A Java implementation of CoSE is already publicly available [4] and needs to be integrated into 
+deleted. Then, we'd like to implement a native spring embedder based layout algorithm named CoSE [1] that takes such structures 
+into account during layout. A Java implementation of CoSE is already publicly available [2] and needs to be integrated into 
 Cytoscape 3.</p>
-<p>[1] <a href="http://www.sbgn.org/">http://www.sbgn.org/</a></p>
-<p>[2] <a href="http://www.cytoscape.org/">http://www.cytoscape.org/</a></p>
-<p>[3] U. Dogrusoz, E. Giral, A. Cetintas, A. Civril, and E. Demir, "A Layout Algorithm For Undirected Compound Graphs", 
+<p>[1] U. Dogrusoz, E. Giral, A. Cetintas, A. Civril, and E. Demir, "A Layout Algorithm For Undirected Compound Graphs", 
 Information Sciences, 179, pp. 980-994, 2009. <a href="http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html">
      http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html</a></p>
-<p>[4] <a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html">http://www.cs.bilkent.edu.tr/~ivis/chilay.html</a></p>
+<p>[2] <a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html">http://www.cs.bilkent.edu.tr/~ivis/chilay.html</a></p>
 
 <p><b>Technology and Skills</b>: Java, Data Structures and Algorithms</p>
 <p><b>Potential Mentors</b>: Ugur Dogrusoz (Bilkent University & MSKCC) and Gerardo Huck (U of Toronto)</p>
-<p><b>Contact</b>: ugur@cs.bilkent.edu.tr and onur@cbio.mskcc.org </p>
+<p><b>Contact</b>: <a href="mailto:ugur@cs.bilkent.edu.tr">ugur@cs.bilkent.edu.tr</a>, <a href="mailto:onur@cbio.mskcc.org">onur@cbio.mskcc.org</a></p>
 <br />
 
 <h2 dir="ltr">Idea 29: Extending and improving PathVisio Data Import</h2>
-<p><b>Background</b>: PathVisio [1] is a pathway editor and analysis tool. PathVisio allows users to upload and visualize data on 
+<p><b>Background</b>: <a href="http://pathvisio.org">PathVisio</a> is a pathway editor and analysis tool. PathVisio allows users to upload and visualize data on 
 biological pathways. Currently, it is possible to upload only one dataset at a time as a comma separated file. </p>
 <p><b>Goal</b>: This functionality should be extended to allow uploading a number of data files at the same time as well 
 as uploading of multiple data file formats (for eg. Excel sheets) should be allowed.
-This will involve extending the gex [2] and data [3] modules  of PathVisio. These modules are part of the PathVisio core and take care 
+This will involve extending the <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.gex">gex</a> and 
+<a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.data">data</a> modules  of PathVisio. These modules are part of the PathVisio core and take care 
 of importing experimental data and mapping it to the elements in a pathway. </p>
 <p>Features of the new plugin:
 <ul>
@@ -740,35 +733,28 @@ on pathways and a flux data set to interactions on pathways.</li>
           <li>the currently loaded annotation databases</li>
      </ul>
 </ul></p>
-<p>[1] <a href="http://pathvisio.org">PathVisio</a></p>
-<p>[2] <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.gex">PathVisio gex module</a></p>
-<p>[3] <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.data">PathVisio data module</a></p>
 <p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>: Anwesha Bohler, Martina Summer-Kutmon</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 
 <br />
 <h2 dir="ltr">Idea 30: Collaborative System for Creating/Sharing Biological Icons</h2>
-<p><b>Background</b>: Biological pathways [1] provide intuitive diagrams of the interactions underlying biological processes. 
-For example, the SIDS Susceptibility Pathways [2] shows interactions between metabolites, genes and proteins, such as DDC 
+<p><b>Background</b>: <a href="http://wikipathways.org/index.php/WikiPathways:About">Biological pathways</a> provide intuitive 
+diagrams of the interactions underlying biological processes. 
+For example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Susceptibility Pathways</a> shows interactions between metabolites, genes and proteins, such as DDC 
 catalyzing the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site 
-WikiPathways [3] is an open, collaborative platform dedicated to drawing and sharing biological pathways. These pathways often 
+<a href="http://www.wikipathways.org">WikiPathways</a> is an open, collaborative platform dedicated to drawing and sharing biological pathways. These pathways often 
 use icons to represent items like mitochondria or cardiac myocytes (heart muscle cells). The WikiPathways drawing editor has 
 a limited set of icons built in, but it does not allow pathway authors to create and re-use custom icons. For example, the 
-cardiac myocyte icon is repeated in the SIDS Susceptibility Pathways for Mouse [4] and for Human [5], but the only way to re-use the 
+cardiac myocyte icon is repeated in the SIDS Susceptibility Pathways for <a href="http://wikipathways.org/index.php/Pathway:WP1266">mouse</a>
+and for <a href="http://wikipathways.org/index.php/Pathway:WP706">human</a>, but the only way to re-use the 
 icon is to manually redraw or copy/paste it. Updates to the icon in pathway do not appear in the other.</p>
 <p><b>Goal</b>: Build a biological icon library that allows pathway authors to create icons, share them with other 
 WikiPathways’ users and reuse them across pathways. It could work like Github for icons, allowing users to create, fork and 
 merge their work, with the best icons rising to the top via a rating system. The library will work as a plugin for the current 
-WikiPathways viewer/editor pathvisiojs [6], allowing pathway authors to create new icons from scratch or to create icons from 
+WikiPathways viewer/editor <a href="https://github.com/wikipathways/pathvisiojs">pathvisiojs</a>, allowing pathway authors to create new icons from scratch or to create icons from 
 sections of existing pathways, e.g., the cardiac myocyte from the previously referenced pathways. It will have a backend 
 component to store the icons and a front-end component to allow WikiPathways users to view and search for icons.</p>
-<p>[1] <a href="http://wikipathways.org/index.php/WikiPathways:About">About WikiPathways</a></p>
-<p>[2] <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Pathway</a></p>
-<p>[3] <a href="http://www.wikipathways.org">WikiPathways</a></p>
-<p>[4] <a href="http://wikipathways.org/index.php/Pathway:WP1266">SIDS pathway, mouse</a></p>
-<p>[5] <a href="http://wikipathways.org/index.php/Pathway:WP706">SIDS pathway, human</a></p>
-<p>[6] <a href="https://github.com/wikipathways/pathvisiojs">pathvisiojs</a></p>
 <p><b>Links</b>: An <a href="https://code.google.com/p/svg-edit/">SVG drawing tool </a>with a large number of icons available might provide some ideas. 
 </p>
 <p><b>Technology and Skills</b>: JavaScript required. Some backend experience (PHP, Node.js or Python) to create a backend for saving the 
@@ -779,10 +765,11 @@ icons. SVG or Canvas a plus.
 <br />
 
 <h2 dir="ltr">Idea 31: Biological Pathway Styling Themes</h2>
-<p><b>Background</b>: Description: Biological pathways [1] provide intuitive diagrams of the interactions underlying biological 
-processes. For example, the SIDS Susceptibility Pathways [2] shows interactions between metabolites, genes and proteins, such as 
+<p><b>Background</b>: Description: <a href="http://wikipathways.org/index.php/WikiPathways:About">Biological pathways</a> provide intuitive diagrams of the interactions underlying biological 
+processes. For example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Susceptibility Pathways</a>
+shows interactions between metabolites, genes and proteins, such as 
 DDC catalyzing the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site 
-WikiPathways [3] is an open, collaborative platform dedicated to drawing and sharing biological pathways. These diagrams are viewed 
+<a href="http://www.wikipathways.org">WikiPathways</a> is an open, collaborative platform dedicated to drawing and sharing biological pathways. These diagrams are viewed 
 in many different environments, such as laptop screens, presentation slides and printed science journals. At WikiPathways today, 
 the default styling theme for these diagrams is best suited for viewing by an individual on a computer screen, but it would be 
 useful to export the diagrams with themes optimized for print and for presentations.</p>
@@ -790,9 +777,6 @@ useful to export the diagrams with themes optimized for print and for presentati
 projected presentation slides. For example, the presentation export option might make pathway diagrams easier to read by 
 removing some text, enlarging the remaining text and inverting the colors of the diagram. Optionally, the presentation option 
 could integrate with one or more existing online presentation framework(s).</p>
-<p>[1] <a href="http://wikipathways.org/index.php/WikiPathways:About">About WikiPathways</a></p>
-<p>[2] <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Pathway</a></p>
-<p>[3] <a href="http://www.wikipathways.org">WikiPathways</a></p>
 <p><b>Links</b>:
 <ul>
 <li><a href="https://github.com/wikipathways/pathvisiojs">WikiPathways pathway viewer/editor</a></li>
@@ -809,10 +793,12 @@ could integrate with one or more existing online presentation framework(s).</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
 <h2 dir="ltr" >Idea 32: Details Panel for Semantic Terms</h2>
-<p><b>Background</b>: Biological pathways provide intuitive diagrams of the interactions underlying biological processes. For 
-example, the SIDS Susceptibility Pathways show interactions between metabolites, genes and proteins, such as DDC catalyzing 
-the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site WikiPathways is 
-an open, collaborative platform dedicated to drawing and sharing biological pathways.</p>
+<p><b>Background</b>: <a href="http://wikipathways.org/index.php/WikiPathways:About">Biological pathways</a> provide intuitive 
+diagrams of the interactions underlying biological processes. For 
+example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow">SIDS Susceptibility Pathways</a> 
+show interactions between metabolites, genes and proteins, such as DDC catalyzing 
+the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site <a href="http://www.wikipathways.org">WikiPathways</a>
+is an open, collaborative platform dedicated to drawing and sharing biological pathways.</p>
 <p>A common challenge in biological research is dealing with an ever-growing number of terms, some of them 
 synonyms and others almost synonyms but with important differences in meaning. For instance, WikiPathways uses the term 
 “GeneProduct” in its annotation panels (to see an example, click the “TNF” box in the upper left corner of the SIDS pathway). 
