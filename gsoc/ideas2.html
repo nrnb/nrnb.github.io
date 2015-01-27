@@ -191,16 +191,16 @@ computing and visualization functionality. Rcpp (R interfacing with Cpp) will be
 libraries (e.g. Armadillo) will be used to reduce memory footprint and speed computations.</p>
 <p><b>Publications</b>: 
      <h2>
-          <li>[1] Wang B. et al. (2014). Similarity network fusion for aggregating data types on a genomic scale. Nature 
+          <li>Wang B. et al. (2014). Similarity network fusion for aggregating data types on a genomic scale. Nature 
           Methods 11(3): 333-7.</li> 
-          <li>[2] Mostafavi S. et al. (2008). GeneMANIA: a real-time multiple association network integration algorithm for 
+          <li>Mostafavi S. et al. (2008). GeneMANIA: a real-time multiple association network integration algorithm for 
           predicting gene function. Genome Biol. 9 Suppl 1:S4.</li> 
 
      </h2>
 </p>
 <p><b>Technology</b>: R statistical programming language, C++, Java</p>
 <p><b>Potential Mentors</b>: Gary Bader, Shraddha Pai</p>
-<p><p>Contact</p>: <a href="mailto:shraddhapai.neuro@gmail.com">Shraddha Pai</a></p>
+<p><b>Contact</b>: <a href="mailto:shraddhapai.neuro@gmail.com">Shraddha Pai</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 7: Develop a Method for Aligning Pathways and Visualizing these Alignments</h2>
@@ -777,7 +777,7 @@ icons. SVG or Canvas a plus.
 </p>
 <p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-
+<br />
 
 <h2 dir="ltr">Idea 31: Biological Pathway Styling Themes</h2>
 <p><b>Background</b>: Description: Biological pathways [1] provide intuitive diagrams of the interactions underlying biological 
@@ -808,8 +808,42 @@ could integrate with one or more existing online presentation framework(s).</p>
 <p><b>Language and Skills</b>: User experience, graphical design, CSS, some JavaScript.</p>
 <p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<br />
+<h2 dir="ltr" >Idea 32: Details Panel for Semantic Terms</h2>
+<p><b>Background</b>: Biological pathways provide intuitive diagrams of the interactions underlying biological processes. For 
+example, the SIDS Susceptibility Pathways show interactions between metabolites, genes and proteins, such as DDC catalyzing 
+the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site WikiPathways is 
+an open, collaborative platform dedicated to drawing and sharing biological pathways.</p>
+<p>A common challenge in biological research is dealing with an ever-growing number of terms, some of them 
+synonyms and others almost synonyms but with important differences in meaning. For instance, WikiPathways uses the term 
+“GeneProduct” in its annotation panels (to see an example, click the “TNF” box in the upper left corner of the SIDS pathway). 
+A WikiPathways user might be unsure of the exact definition of the “GeneProduct”, so it would be useful to point the user to 
+the definition of the term in the WikiPathways vocabulary. This could be done with a link or a mouseover display. Another 
+example from the SIDS pathway is the Extracellular Space, which could display information from this IRI: 
+http://identifiers.org/go/GO:0005615.</p>
+<p>The first two examples are easy to display because each IRI has an HTML representation, but a more challenging example is 
+Protein: http://www.biopax.org/release/biopax-level3.owl#Protein. This IRI returns RDF but does not have an HTML 
+representation, so it would be necessary to extract information from the RDF, such as the definition, and display it in a 
+small, easy-to-read panel.</p>
+<p><b>Goal</b>: Develop a browser-based display system for dereferenced IRIs. The system will use content-type negotiation to 
+request an HTML representation of a resource, but it will be able to convert JSON-LD, RDF and OWL representations into an HTML 
+representation for display in a small details panel or pop-over. Additionally, develop a plugin for the WikiPathways 
+viewer/editor pathvisiojs that integrates the display system. Optionally, if time allows, add functionality to allow 
+pathvisiojs users to switch vocabularies for the GUI display, mapping from the built-in vocabularies to the user-preferred 
+vocabularies with SKOS files.</p>
+<p><b>Links</b>:
+<ul>
+<li><a href="https://github.com/wikipathways/pathvisiojs">WikiPathways pathway viewer/editor</a></li>
+<li><a href="https://semantic-mediawiki.org/">Project with related functionality</a></li>
+<li><a href="https://github.com/alexmilowski/green-turtle">An RDFa implementation for browsers</a></li>
+<li><a href="https://code.google.com/p/ubiquity-rdfa/wiki/TutorialIntroduction">Possibly relevant project</a></li>
+<ul>
+<p><b>Technology</b>: JavaScript, JSON-LD, RDF, OWL, optionally SKOS</p>
+<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<br />
 
-<h2 dir="ltr" >Idea 32: Principal Component Analysis</h2>
+<h2 dir="ltr" >Idea 33: Principal Component Analysis</h2>
 <p><b>Background</b>: One of the common multidimensional analysis tools is principal component analysis. At this point, there 
 is no good PCA tool integrated with Cytoscape.  The ideal tool would support performing the analysis, visualizing the results 
 of the analysis using standard approaches, and then visualizing the results in the context of the Cytoscape network itself.
@@ -820,7 +854,7 @@ idea is looking for ways to integrate the results of the analysis into Cytoscape
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 33: Incremental Loading of Networks</h2>
+<h2 dir="ltr" >Idea 34: Incremental Loading of Networks</h2>
 <p><b>Background</b>: Cytoscape now supports using JSON as a format for loading networks. In an effort to improve exploration 
 of extremely large networks, it would be extremely useful to be able to load parts of the network on request.  One use case 
 for this is loading networks from the Structure-Function Linkage Database, which creates Cytoscape networks representing 
@@ -833,7 +867,7 @@ users to incrementally load all of the nodes within that metanode.</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 34: Add t-SNE to clusterMaker</h2>
+<h2 dir="ltr" >Idea 35: Add t-SNE to clusterMaker</h2>
 <p><b>Background</b>: t-SNE [1] is a technique for dimensionality reduction that is widely used.  
 It would be extremely useful to add this algorithm into the existing clusterMaker app.</p>
 <p>[1] <a href="http://lvdmaaten.github.io/tsne/">t-SNE</a></p>
@@ -842,7 +876,7 @@ It would be extremely useful to add this algorithm into the existing clusterMake
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 35: cyRecommender - New Cytoscape 3 plugin for recommending network ontologies</h2>
+<h2 dir="ltr" >Idea 36: cyRecommender - New Cytoscape 3 plugin for recommending network ontologies</h2>
 <p><b>Background</b>: Cytoscape 3 is a powerful software for networks that provides diverse plugins in order to combine 
 external knowledge with the network connectivity. There are a few plugins that allow to link ontology details with node labels. 
 However, existing plugins require the user to decide what ontology or ontologies are best for each network, which may be a 
@@ -875,7 +909,7 @@ The code will be available as an open source GitHub project.</p>
 <p><b>Contact</b>: <a href="mailto:muntisa@gmail.com">Cristian R Munteanu</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 36: Advanced search on WikiPathways</h2>
+<h2 dir="ltr" >Idea 37: Advanced search on WikiPathways</h2>
 <p><b>Background</b>: WikiPathways [1] is a collaborative pathway database that is build on Mediawiki. 
 Currently our pathways can be annotated with ontology tags from the pathway ontology, cell type ontology and disease ontology.</p> 
 <p><b>Goal</b>: The advanced search should provide an interface to search for pathways containing one or more pathway 
@@ -889,7 +923,7 @@ creation date, number of edits, etc.</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 37: Over-representation module for WikiPathways</h2>
+<h2 dir="ltr" >Idea 38: Over-representation module for WikiPathways</h2>
 <p><b>Background</b>: PathVisio [1] is a commonly-used pathway editor, visualization and analysis tool 
 implemented in Java. Currently, PathVisio provides an advanced statistics module that allows users to define criterias 
 to perform pathway statistics which is sometimes not needed.</p>
@@ -907,7 +941,7 @@ will be shown in the pathvisiojs viewer and the genes in the input list will be 
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br/ >
 
-<h2 dir="ltr" >Idea 38: Tutorial mode for PathVisio</h2>
+<h2 dir="ltr" >Idea 39: Tutorial mode for PathVisio</h2>
 <p><b>Background</b>: PathVisio [1] is a commonly-used pathway editor, visualization and analysis tool 
 implemented in Java. The analyses in PathVisio and the different advanced visualization methods can become very complex 
 and having an integrated tutorial mode in the application is a powerful tool to give detailed instructions while performing 
@@ -922,7 +956,7 @@ modules to provide additional tutorials that can be selected if the plugins are 
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br/ >
 
-<h2 dir="ltr" >Idea 39: SIR model for CentiScaPe</h2>
+<h2 dir="ltr" >Idea 40: SIR model for CentiScaPe</h2>
 <p><b>Background</b>: CentiScaPe is a Cytoscape plugin that allows to compute network centrality parameters. It is the most 
 complete Cytoscape plugin for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, 
 Betweenness, Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected 
@@ -945,7 +979,7 @@ Proc Roy Soc Lond 1927, 115:700-721.</a></p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 40: Random networks for CentiScaPe</h2>
+<h2 dir="ltr" >Idea 41: Random networks for CentiScaPe</h2>
 <p><b>Background</b>: CentScaPe is a Cytoscape app that allows, by using a very plain interface, to compute different network 
 centrality parameters in single and in multiple networks at the same time. It allows to plot the results by using real and 
 normalized values in different plots. Several centralities are available: Degree, Average Shortest Path, Eccentricity, 
