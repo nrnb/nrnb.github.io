@@ -167,17 +167,40 @@ collapsed network. Similarly, expanding a collapsed node back requires undoing i
 arbitrary level of nesting is allowed and folding can take place at an arbitrary level.</p>
 
 <p>[1] <a href="http://cytoscape.github.io/cytoscape.js/" >http://cytoscape.github.io/cytoscape.js/</a></p>
-
 <p>[2] <a href="http://www.sbgn.org/" >http://www.sbgn.org/</a></p>
-
 <p>[3] <a href="https://code.google.com/p/sbgnviz-js/">https://code.google.com/p/sbgnviz-js/</a></p>
-
 <p><b>Language and Skills</b>: JavaScript, Java, Data Structures and Algorithms</p>
-
 <p><b>Potential Mentors</b>: Ugur Dogrusoz (Bilkent University & MSKCC) and S. Onur Sumer (MSKCC)</p>
-
 <p><b>Contact</b>: <a href="mailto:ugur@cs.bilkent.edu.tr" >ugur@cs.bilkent.edu.tr</a> and <a href="mailto:onur@cbio.mskcc.org" >onur@cbio.mskcc.org</a> </p>
+<br />
 
+<h2 dir="ltr" >Idea 6: Computing patient similarity networks for 100K samples</h2>
+<p><b>Background</b>: A major goal of modern biomedical research is to tailor patient treatment based on individual genomic 
+profiles and/or other patient information. Network-guided approaches can integrate several types of patient data  - e.g. 
+genetic, RNA, clinical, brain imaging – to identify networks of patient similarities (PSN). These networks could identify 
+biological pathways reflecting different disease subcategories or explain why responses to the same medication vary among 
+people. Software for computing PSN exists, but currently requires the user to use a patchwork of different tools. Moreover, 
+existing machine learning operations don’t easily scale to the size of contemporary datasets (~100K patients).</p>
+<p><b>Goal</b>: To create fast, streamlined software to compute and validate PSN.  The software will compute PSN based on 
+different types of data (e.g. molecular profiles, pathway information, clinical data), by using a similarity measure, such as 
+Pearson correlation. It will perform K-fold cross validation for training. Finally it will generate ROC curves to measure the 
+sensitivity-specificity of the prediction system.</p>
+<p><b>Existing Software</b>: A software pipeline for this workflow already exists, therefore the algorithm itself will not 
+need to be developed. Development will focus on optimizing the workflow, and creating a separate software package with 
+computing and visualization functionality. Rcpp (R interfacing with Cpp) will be used to program the software. C++ matrix 
+libraries (e.g. Armadillo) will be used to reduce memory footprint and speed computations.</p>
+<p><b>Publications</b>: 
+     <h2>
+          <li>[1] Wang B. et al. (2014). Similarity network fusion for aggregating data types on a genomic scale. Nature 
+          Methods 11(3): 333-7.</li> 
+          <li>[2] Mostafavi S. et al. (2008). GeneMANIA: a real-time multiple association network integration algorithm for 
+          predicting gene function. Genome Biol. 9 Suppl 1:S4.</li> 
+
+     </h2>
+</p>
+<p><b>Technology</b>: R statistical programming language, C++, Java</p>
+<p><b>Potential Mentors</b>: Gary Bader, Shraddha Pai</p>
+<p><p>Contact</p>: <a href="mailto:shraddhapai.neuro@gmail.com">Shraddha Pai</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 7: Develop a Method for Aligning Pathways and Visualizing these Alignments</h2>
