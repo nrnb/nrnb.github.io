@@ -803,27 +803,27 @@ is an open, collaborative platform dedicated to drawing and sharing biological p
 synonyms and others almost synonyms but with important differences in meaning. For instance, WikiPathways uses the term 
 “GeneProduct” in its annotation panels (to see an example, click the “TNF” box in the upper left corner of the SIDS pathway). 
 A WikiPathways user might be unsure of the exact definition of the “GeneProduct”, so it would be useful to point the user to 
-the definition of the term in the WikiPathways vocabulary. This could be done with a link or a mouseover display. Another 
+the <a href="http://vocabularies.wikipathways.org/wp#GeneProduct">definition of the term</a> in the WikiPathways vocabulary. This could be done with a link or a mouseover display. Another 
 example from the SIDS pathway is the Extracellular Space, which could display information from this IRI: 
-http://identifiers.org/go/GO:0005615.</p>
+<a href="http://identifiers.org/go/GO:0005615">href="http://identifiers.org/go/GO:0005615"</a>.</p>
 <p>The first two examples are easy to display because each IRI has an HTML representation, but a more challenging example is 
-Protein: http://www.biopax.org/release/biopax-level3.owl#Protein. This IRI returns RDF but does not have an HTML 
+Protein: <a href="http://www.biopax.org/release/biopax-level3.owl#Protein">http://www.biopax.org/release/biopax-level3.owl#Protein</a>. 
+This IRI returns RDF but does not have an HTML 
 representation, so it would be necessary to extract information from the RDF, such as the definition, and display it in a 
 small, easy-to-read panel.</p>
 <p><b>Goal</b>: Develop a browser-based display system for dereferenced IRIs. The system will use content-type negotiation to 
 request an HTML representation of a resource, but it will be able to convert JSON-LD, RDF and OWL representations into an HTML 
 representation for display in a small details panel or pop-over. Additionally, develop a plugin for the WikiPathways 
-viewer/editor pathvisiojs that integrates the display system. Optionally, if time allows, add functionality to allow 
+viewer/editor <a href="https://github.com/wikipathways/pathvisiojs">pathvisiojs</a> that integrates the display system. Optionally, if time allows, add functionality to allow 
 pathvisiojs users to switch vocabularies for the GUI display, mapping from the built-in vocabularies to the user-preferred 
-vocabularies with SKOS files.</p>
+vocabularies with <a href="http://www.w3.org/TR/skos-primer/">SKOS</a> files.</p>
 <p><b>Links</b>:
 <ul>
-<li><a href="https://github.com/wikipathways/pathvisiojs">WikiPathways pathway viewer/editor</a></li>
 <li><a href="https://semantic-mediawiki.org/">Project with related functionality</a></li>
 <li><a href="https://github.com/alexmilowski/green-turtle">An RDFa implementation for browsers</a></li>
 <li><a href="https://code.google.com/p/ubiquity-rdfa/wiki/TutorialIntroduction">Possibly relevant project</a></li>
 <ul>
-<p><b>Technology and Skills</b>: JavaScript, JSON-LD, RDF, OWL, optionally SKOS</p>
+<p><b>Technology and Skills</b>: JavaScript, <a href="http://json-ld.org/">JSON-LD</a>, RDF, OWL, optionally SKOS</p>
 <p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
