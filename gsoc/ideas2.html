@@ -894,6 +894,151 @@ measures of CentiScaPe.</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
+<h2 dir="ltr" >Idea 42: Implement support for the SBML Multistate/Multicomponent Species package</h2>
+<p><b>Description</b>: One of the <a href="http://sbml.org/Community/Wiki#SBML_Level_3_Status_Summary_Table" target="_blank">many packages</a> 
+for SBML Level 3 is <a href="http://sbml.org/Community/Wiki/SBML_Level_3_Proposals/Multistate_and_Multicomponent_Species" target="_blank">
+Multistate and multicomponent species</a>. This package 
+defines constructs for models and modelers to represent biochemical species that have internal structure or state properties. 
+These may involve molecules that have multiple potential states, such as a protein that may be covalently modified, and 
+molecules that combine to form heterogeneous complexes located among multiple compartments. The JSBML team has already 
+initiated an implementation of the multi package, which will be a useful starting point for this project.</p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java, some exposure to biochemistry.</p>
+<p><b>Potential Mentors</b>: Nicolas Rodriguez, Nicolas Le Novère</p>
+<p><b>Contact</b>: <a href="mailto:rodrigue@ebi.ac.uk">Nicolas Rodriguez</a>, <a href="mailto:nicolas.lenovere@babraham.ac.uk">Nicolas Le Novère</a></p> 
+<br />
+
+<h2 dir="ltr" >Idea 43: Add support for Schema-based validation of SBML</h2>
+<p><b>Description</b>: SBML files need to be validated carefully to ensure that they conform to the specification. Currently, 
+the most complete implementation of SBML validation is embodied in libSBML, although the rules of SBML validity are defined 
+in the SBML specification documents. It is possible to validate SBML from JSBML using either the 
+<a href="http://sbml.org/Facilities/Validator/" target="_blank">Online SBML Validator</a> or a 
+Java package we provide for calling libSBML locally (i.e., without a network connection) but we want to move toward capturing 
+all of the SBML's validity rules in schema languages such as <a href="http://relaxng.org/" target="_blank">RELAX NG</a> and 
+<a href="http://www.schematron.com/" target="_blank">Schematron</a>, then having both libSBML and JSBML (and 
+any other SBML-using system) use schema validation engines instead of hardcoded validation. This will be especially important 
+as more SBML Level 3 packages become implemented. We have already started to define the RELAX NG schemas for SBML Level 3, but 
+we need to implement all of the validations rules for SBML core and the different packages and provide the hooks in JSBML to 
+using those schemas for validating SBML files.</p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java, XML, RELAX NG, Schematron, SBML</p>
+<p><b>Potential Mentors</b>: Sarah Keating, Andreas Dräger</p>
+<p><b>Contact</b>: <a href="mailto:skeating@ebi.ac.uk">Sarah Keating</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
+<br />
+
+<h2 dir="ltr" >Idea 44: Representation and evaluation of mathematical fomulas</h2>
+<p><b>Description</b>: JSBML uses the concept of abstract syntax trees to work with mathematical expressions. In the Google 
+Summer of Code 2014, a new math package was implemented that captures all different kinds of tree nodes that can occur in 
+formulas (e.g., real numbers or algebraic symbols such as 'plus' or 'minus') an own, specialized class, i.e., a specific 
+abstract syntax tree node. In this way, the handling of formulas has become much more straightforward and even more efficient. 
+However, this new package requires some adaption of dependent parts of JSBML. This project focuses on the optimization of the 
+performance of mathematical operations when used in large-scale simulations, as this is, for instance, done by the 
+<a href="http://simulation-core.sourceforge.net/" target="_blank">Systems 
+Biology Simulation Core Library</a>. When parsing infix formulas JSBML relies on the Java Compiler Compiler (JavaCC) project to 
+create abstract syntax trees. With the availability of the new math package, some adaptation of existing grammar files for 
+the JavaCC parser generator will also be required and will be part of this project.</p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java, <a href="https://javacc.java.net/" target="_blank">JavaCC</a></p> 
+<p><b>Potential Mentors</b>: Victor Kofia, Andreas Dräger, Alex Thomas, Sarah Keating</p>
+<p><b>Contact</b>: <a href="mailto:victor.kofia@gmail.com">Victor Kofia</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a>, 
+     <a href="mailto:althomas@ucsd.edu">Alex Thomas</a>, <a href="mailto:skeating@ebi.ac.uk">Sarah Keating</a></p> 
+<br />
+
+<h2 dir="ltr" >Idea 45: Improving the plugin interface for CellDesigner</h2>
+<p><b>Description</b>: One of the most frequently used programs in computational systems biology is 
+<a href="http://celldesigner.org/" target="_blank">CellDesigner</a>. JSBML 
+provides an interface that facilitates the development of plugins for this program. This interface has recently been revised 
+and improved. Now, test cases and plugins for CellDesigner are to be implemented in order to make use of it and ensure its 
+correct behavior. It is, for instance, possible to use CellDesigner's complex canvas user interface to create or manipulate 
+biochemical networks and to conduct numerical computation. Complex drawing styles for biological networks can be encoded in 
+SBML through its rendering extension. JSBML's current plugin interface to CellDesigner does, however, not support the 
+rendering extension. In this project, important rendering styles that are used in CellDesigner should be implemented in the 
+plugin interface.</p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java, some basic understanding of visualization algorithms</p> 
+<p><b>Potential Mentors</b>: Akira Funahashi, Ibrahim Y. Vazirabad, Andreas Dräger</p>
+<p><b>Contact</b>: <a href="mailto:funa@bio.keio.ac.jp">Akira Funahashi</a>, <a href="mailto:yvazirabad@gmail.com">Ibrahim Y. Vazirabad</a>,
+     <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
+<br />
+
+<h2 dir="ltr" >Idea 46: Tests for JSBML</h2>
+<p><b>Description</b>: JSBML class and method structure largely corresponds with 
+<a href="http://sbml.org/Software/libSBML" target="_blank">libSBML</a>, our C++ language counterpart. One area that will need 
+to be standardized between the two parsing libraries are the test cases for proper SBML syntax. LibSBML has a set of files 
+(and corresponding tests) which test a large set of these SBML syntax rules. This project will require the programmer to 
+create important tests for core and extension libraries for JSBML which correspond to the libSBML rules. The programmer could 
+also suggest further tests, and he/she would be essential in building the code base that enacts quality control for JSBML.</p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Potential Mentors</b>: Andreas Dräger, Alex Thomas</p>
+<p><b>Contact</b>: <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a>, <a href="mailto:althomas@ucsd.edu">Alex Thomas</a></p> 
+<br />
+
+<h2 dir="ltr" >Idea 47: Flattening of hierarchically structured models</h2>
+<p><b>Description</b>: The <a href="http://sbml.org/Documents/Specifications/SBML_Level_3/Packages/comp" target="_blank">hierarchical modeling package</a> 
+enables SBML files to be composed of multiple individual submodels. These submodels can be stored in the same file, or be 
+distributed in a file system, even be linked through resource identifiers. Hence, comp allows models in SBML to be similarly 
+composed as HTML documents. While this format adds a large number of benefits and freedom to the model creator, it also 
+significantly increases the complexity of the SBML documents. In order to run regular analysis methods on those composite 
+models, a flattening procedure, i.e., a conversion into one large single model, is prerequisite. The specification of the comp 
+package describes how such a flattening algorithm can work. The aim of this project is now to implement such a flattening 
+routine in JSBML in order to create an SBML file without comp. An additional goal of this project is the implementation of 
+basic validation rules for the comp package.</p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Potential Mentors</b>: Lucian Smith, Chris Myers, Leandro Watanabe</p>
+<p><b>Contact</b>: <a href="mailto:lucianoelsmitho@gmail.com">Lucian Smith</a>, <a href="mailto:myers@ece.utah.edu">Chris Myers</a>,
+     <a href="mailto:l.watanabe@utah.edu">Leandro Watanabe</a></p> 
+<br />
+
+<h2 dir="ltr" >Idea 48: Better support for constraint-based modeling</h2>
+<p><b>Description</b>: One popular modeling technique in systems biology is 
+<a href="http://cobramethods.wikidot.com/" target="_blank">Constraint-Based Reconstruction and Analysis (COBRA)</a>. 
+<a href="http://sbml.org/Documents/Specifications/SBML_Level_3/Packages/fbc" target="_blank">The Flux Balance Constraints</a>
+(fbc) package has been defined in order to represent the specific requirements of this modeling technique in SBML. The 
+<a href="http://opencobra.github.io/" target="_blank">COBRA toolbox</a> for <a href="http://www.mathworks.com/products/matlab/" target="_blank">MATLAB</a> 
+and its <a href="https://www.python.org/" target="_blank">Python</a> counterpart <a href="https://github.com/opencobra/cobrapy" target="_blank">COBRApy</a> 
+belong to the most widely used programs for this modeling approach. Since these programs preceded the development of fbc, an 
+SBML dialect has evolved. The aim of this project is to better support constraint-based modeling in JSBML. To this end, a 
+converter from COBRA's SBML dialect to fbc needs to be implemented. This also includes an update of the fbc package implementation in JSBML to the next version.</p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Potential Mentors</b>: Alex Thomas, Andreas Dräger</p>
+<p><b>Contact</b>: <a href="mailto:althomas@ucsd.edu">Alex Thomas</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
+<br />
+
+<h2 dir="ltr" >Idea 49: Converter of CellDesigner's annotations to pure SBML</h2>
+<p><b>Description</b>: One very popular software in systems biology is <a href="http://celldesigner.org/" target="_blank">CellDesigner</a>. 
+Long before the SBML extensions for 
+<a href="http://sbml.org/Documents/Specifications/SBML_Level_3/Packages/layout" target="_blank">Layout</a> and 
+<a href="http://sbml.org/Documents/Specifications/SBML_Level_3/Packages/render" target="_blank">Render</a>Render have 
+been defined, this program already provided mechanisms to display network diagrams. To this end, the 
+developers of CellDesigner have created their specific SBML dialect. In this project, a parser should be created that 
+understands CellDesigner's SBML dialect and converts it to SBML with layout and render extension without the need to use a 
+CellDesigner plug-in. If time permits, it would also be nice to have as well a converter from SBML with layout and render to 
+<a href="http://www.sbgn.org/LibSBGN" target="_blank">SBGN-ML</a> and vice-versa. Those could be integrated into the 
+<a href="http://sourceforge.net/projects/sbfc/" target="_blank">Systems Biology Format Converter (SBFC)</a></p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Potential Mentors</b>: Akira Funahashi, Andreas Dräger</p>
+<p><b>Contact</b>: <a href="mailto:funa@bio.keio.ac.jp">Akira Funahashi</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
+<br />
+
+<h2 dir="ltr" >Idea 50: Make CySBML a Cytoscape 3 App</h2>
+<p><b>Description</b>: <a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a> belongs to the most popular open 
+source software platforms for visualizing complex networks 
+and integrating these with any type of attribute data. The capabilities of this program can be extended through plug-ins 
+(Apps). In order to add improved support for SBML to Cytoscape, the plugin 
+<a href="http://www.charite.de/sysbio/people/koenig/software/cysbml/" target="_blank">CySBML</a> has been created. However, with the release
+of its version 3, Cytoscape's plugin interface has undergone significant changes and all earlier plugins, including CySBML 
+are therefore not compatible with the latest version of Cytoscape. The aim of this project is therefore to update CySBML and 
+to turn it to a new Cytoscape App that supports the latest features of the SBML standard.</p>
+<p>More information about SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
+<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Potential Mentors</b>: Matthias König, Andreas Dräger</p>
+<p><b>Contact</b>: <a href="mailto:matthias.koenig@charite.de">Matthias König</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
+<br />
+
 <!-- END PASTE -->
 
     </div> <!-- .span9 !-->
