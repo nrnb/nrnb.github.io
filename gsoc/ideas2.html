@@ -105,8 +105,8 @@ and/or extracted from simple query patterns.</p></li>
 
 <h2 dir="ltr" >Idea 4: CentiScaPe for multiple networks analysis and graphical output enhancement</h2>
 
-<p>Background: CentiScaPe is a Cytoscape plugin that allows to compute network centrality parameters. It is the most complete 
-Cytoscape plugin for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, Betweenness, 
+<p>Background: CentiScaPe is a Cytoscape app that allows to compute network centrality parameters. It is the most complete 
+Cytoscape app for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, Betweenness, 
 Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected networks. 
 CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. CentiScaPe 
 also provides a Boolean logic- based tool that allows easy characterization of nodes whose topological relevance depends on 
@@ -169,12 +169,12 @@ arbitrary level of nesting is allowed and folding can take place at an arbitrary
 
 <h2 dir="ltr" >Idea 6: Computing patient similarity networks for 100K samples</h2>
 <p><b>Background</b>: A major goal of modern biomedical research is to tailor patient treatment based on individual genomic 
-profiles and/or other patient information. Network-guided approaches can integrate several types of patient data  - e.g. 
+profiles and/or other patient information. Network-guided approaches can integrate several types of patient data - e.g. 
 genetic, RNA, clinical, brain imaging – to identify networks of patient similarities (PSN). These networks could identify 
 biological pathways reflecting different disease subcategories or explain why responses to the same medication vary among 
 people. Software for computing PSN exists, but currently requires the user to use a patchwork of different tools. Moreover, 
 existing machine learning operations don’t easily scale to the size of contemporary datasets (~100K patients).</p>
-<p><b>Goal</b>: To create fast, streamlined software to compute and validate PSN.  The software will compute PSN based on 
+<p><b>Goal</b>: To create fast, streamlined software to compute and validate PSN. The software will compute PSN based on 
 different types of data (e.g. molecular profiles, pathway information, clinical data), by using a similarity measure, such as 
 Pearson correlation. It will perform K-fold cross validation for training. Finally it will generate ROC curves to measure the 
 sensitivity-specificity of the prediction system.</p>
@@ -270,13 +270,13 @@ need to compose the appropriate SPARQL queries, get the data and write various p
 data models.</p>
 <p><b>Goal</b>: To make a Pathvisio plugin that allows a pathway curator to write SPARQL queries against a variety of semantic 
 web based pathways resources and include the obtained triples into the Pathway under scrutiny. The plugin should also provide 
-an interface to SPARQL results for other Pathvisio plugins. Having such SPARQL interface still requires a pathway editor to 
+an interface to SPARQL results for other Pathvisio s. Having such SPARQL interface still requires a pathway editor to 
 become knowledgeable in writing SPARQL queries. The burden of having to write various parsers for semantic web data however, 
 is taken away. The plugin should:</p>
 <ul>
 <li>Provide a SPARQL query editor, from where the user could compose queries, which are then subsequently launched to the 
 respective SPARQL endpoints.</li>
-<li>Provide an interface that wrap specific SPARQL queries for other Pathvisio plugins.</li>
+<li>Provide an interface that wrap specific SPARQL queries for other Pathvisio s.</li>
 <li>Link to a centralized repository (e.g. Github) where SPARQL queries can be stored for future reference and others to use.</li>
 <li>Link to a centralized index of relevant SPARQL endpoints. This index might again be stored on platforms like Github.</li>
 <li>Import the resulting triples, which can then be linked to recognizable pathway components, or as data elements to use in 
@@ -454,7 +454,7 @@ mapping databases from within PathVisio. Currently the users have to download th
 PathVisio. This step should be automatized by the plugin.</p>
 
 <p><b>Technology and Skills</b>: Java</p>
-<p><b>Potential Mentors</b>:  Kutmon, Jonathan Melius</p>
+<p><b>Potential Mentors</b>: Kutmon, Jonathan Melius</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com" >wikipathways-devel@googlegroups.com</a></p>
 <br />
 
@@ -500,7 +500,7 @@ convex hull) around it’s children. Moving that shape would move all of it’s 
 
 <h2 dir="ltr" >Idea 22: Visualization of Time-series Cluster Data</h2>
 
-<p><b>Background</b>: Currently, the clusterMaker plugin uses standard heat maps to visualize attribute cluster data (based on Java TreeView). 
+<p><b>Background</b>: Currently, the clusterMaker app uses standard heat maps to visualize attribute cluster data (based on Java TreeView). 
 Increasingly, time series data is becoming important for clustering applications and it would be useful to expand the provided
 visualization options to explicitly support time series data. For these purposes, we’re thinking about time-series that have 
 multiple conditions in each series, which means we need to move beyond the standard two-dimensional heat map. 
@@ -587,13 +587,12 @@ of abstractions in data visualization. Networks from almost all domains need suc
 biological networks. The recently developed standard notation of <a href="http://www.sbgn.org/" target="_blank">SBGN</a> makes heavy use of such structures for molecular 
 complexes and cellular locations.</p>
 <p><b>Goal</b>: We would like to first implement full compound support in <a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a> 3 [2] core. This will not only allow users 
-to nest nodes of a network but also automatically adjust size of a compound node as its child nodes get  moved, resized or  
+to nest nodes of a network but also automatically adjust size of a compound node as its child nodes get moved, resized or 
 deleted. Then, we'd like to implement a native spring embedder based layout algorithm named CoSE [1] that takes such structures 
 into account during layout. A Java implementation of CoSE is already publicly available [2] and needs to be integrated into 
 Cytoscape 3.</p>
 <p>[1] U. Dogrusoz, E. Giral, A. Cetintas, A. Civril, and E. Demir, "A Layout Algorithm For Undirected Compound Graphs", 
-Information Sciences, 179, pp. 980-994, 2009. <a href="http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html" target="_blank">
-     http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html</a></p>
+Information Sciences, 179, pp. 980-994, 2009. <a href="http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html" target="_blank">http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html</a></p>
 <p>[2] <a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html" target="_blank">http://www.cs.bilkent.edu.tr/~ivis/chilay.html</a></p>
 
 <p><b>Technology and Skills</b>: Java, Data Structures and Algorithms</p>
@@ -607,7 +606,7 @@ biological pathways. Currently, it is possible to upload only one dataset at a t
 <p><b>Goal</b>: This functionality should be extended to allow uploading a number of data files at the same time as well 
 as uploading of multiple data file formats (for eg. Excel sheets) should be allowed.
 This will involve extending the <a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.gex" target="_blank">gex</a> and 
-<a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.data" target="_blank">data</a> modules  of PathVisio. These modules are part of the PathVisio core and take care 
+<a href="http://developers.pathvisio.org/browser/trunk/modules/org.pathvisio.data" target="_blank">data</a> modules of PathVisio. These modules are part of the PathVisio core and take care 
 of importing experimental data and mapping it to the elements in a pathway. </p>
 <p>Features of the new plugin:
 <ul>
@@ -720,7 +719,7 @@ vocabularies with <a href="http://www.w3.org/TR/skos-primer/" target="_blank">SK
 
 <h2 dir="ltr" >Idea 33: Principal Component Analysis</h2>
 <p><b>Background</b>: One of the common multidimensional analysis tools is principal component analysis. At this point, there 
-is no good PCA tool integrated with Cytoscape.  The ideal tool would support performing the analysis, visualizing the results 
+is no good PCA tool integrated with Cytoscape. The ideal tool would support performing the analysis, visualizing the results 
 of the analysis using standard approaches, and then visualizing the results in the context of the Cytoscape network itself.
 There are many tools that could assist in this task and the analysis itself is pretty well understood. The challenge to this 
 idea is looking for ways to integrate the results of the analysis into Cytoscape.</p>
@@ -731,10 +730,10 @@ idea is looking for ways to integrate the results of the analysis into Cytoscape
 
 <h2 dir="ltr" >Idea 34: Incremental Loading of Networks</h2>
 <p><b>Background</b>: Cytoscape now supports using JSON as a format for loading networks. In an effort to improve exploration 
-of extremely large networks, it would be extremely useful to be able to load parts of the network on request.  One use case 
+of extremely large networks, it would be extremely useful to be able to load parts of the network on request. One use case 
 for this is loading networks from the Structure-Function Linkage Database, which creates Cytoscape networks representing 
-similarity between groups of proteins.  Some of these networks are extremely large (millions of edges) and usually users are 
-only interested in local neighborhoods of the network.  This project would involve writing a Cytoscape App that would load an 
+similarity between groups of proteins. Some of these networks are extremely large (millions of edges) and usually users are 
+only interested in local neighborhoods of the network. This project would involve writing a Cytoscape App that would load an 
 abstraction of these networks (where multiple nodes are represented by a single "meta" node) into Cytoscape and then allow 
 users to incrementally load all of the nodes within that metanode.</p>
 <p><b>Technology and Skills</b>: Java</p>
@@ -751,16 +750,16 @@ It would be extremely useful to add this algorithm into the existing clusterMake
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 36: cyRecommender - New Cytoscape 3 plugin for recommending network ontologies</h2>
-<p><b>Background</b>: Cytoscape 3 is a powerful software for networks that provides diverse plugins in order to combine 
-external knowledge with the network connectivity. There are a few plugins that allow to link ontology details with node labels. 
-However, existing plugins require the user to decide what ontology or ontologies are best for each network, which may be a 
+<h2 dir="ltr" >Idea 36: cyRecommender - New Cytoscape 3 app for recommending network ontologies</h2>
+<p><b>Background</b>: Cytoscape 3 is a powerful software for networks that provides diverse apps in order to combine 
+external knowledge with the network connectivity. There are a few apps that allow to link ontology details with node labels. 
+However, existing apps require the user to decide what ontology or ontologies are best for each network, which may be a 
 hard and time‑consuming task. The NCBO Recommender is a service developed by Stanford University that has been designed to 
 recommend the most appropriate ontologies for a corpus or a list of keywords. Integrating the NCBO Recommender with Cytoscape 
 will make it possible to automatically obtain the best ontological representation for a set of network nodes. The NCBO is 
-developing a new version of the Recommender, which will be available in a few months. The proposed Cytoscape plugin will be 
+developing a new version of the Recommender, which will be available in a few months. The proposed Cytoscape app will be 
 one of the first tools using the new version of the Recommender.</p>
-<p><b>Goal</b>:  To integrate the NCBO Recommender service into a new Cytoscape plugin. After selecting a set of network nodes, 
+<p><b>Goal</b>: To integrate the NCBO Recommender service into a new Cytoscape app. After selecting a set of network nodes, 
 the Recommender will be invoked to obtain the best ontologies to represent the node labels, and the network will be presented 
 using the recommended ontologies. The integration will consist on an easy to use graphical interface for any level of ontology
 experience.</p>
@@ -774,7 +773,7 @@ ontologies (the selection could be a subnetwork or the entire network).</li>
 <li>Save the recommendations as CSV or TAB-separated files.</li>
 <li>Save the network with the new added ontology information for each node.</li>
 </ul>
-This work involves programming a new plugin that will interact with Cytoscape in the node selection, network plotting, etc. 
+This work involves programming a new app that will interact with Cytoscape in the node selection, network plotting, etc. 
 The code will be available as an open source GitHub project.</p>
 
 <p><b>Technology and Skills</b>: Java, GitHub</p>
@@ -826,8 +825,8 @@ modules to provide additional tutorials that can be selected if the plugins are 
 <br/ >
 
 <h2 dir="ltr" >Idea 40: SIR model for CentiScaPe</h2>
-<p><b>Background</b>: CentiScaPe is a Cytoscape plugin that allows to compute network centrality parameters. It is the most 
-complete Cytoscape plugin for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, 
+<p><b>Background</b>: CentiScaPe is a Cytoscape app that allows to compute network centrality parameters. It is the most 
+complete Cytoscape app for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, 
 Betweenness, Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected 
 networks. CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. 
 CentiScaPe also provides a Boolean logic- based tool that allows easy characterization of nodes whose topological relevance 
@@ -838,7 +837,7 @@ easy node categorization and experimental prioritization.</p>
 semi-dynamic simulation, particularly the SIR model [1]. The SIR model is a Compartmental model used in epidemiology to 
 simulate the establishment and spread of infectious diseases. It serve as a base mathematical framework for understanding the 
 complex dynamics of such system. Population is divided in three states: susceptible to the infection of the pathogen (often 
-denoted by S), infected by the pathogen (given the symbol I) and  recovered/removed/immune  (denoted R). The way that these 
+denoted by S), infected by the pathogen (given the symbol I) and recovered/removed/immune (denoted R). The way that these 
 compartments interact is often based on a network model, hence the idea to include the SIR model in the CentiScaPe tool for 
 network analysis</p>
 <p>[1] <a href="http://www.ncbi.nlm.nih.gov/pubmed/2059741" target="_blank">Kermack WO, McKendrick AG: A contribution to the mathematical theory of epidemics.
@@ -862,7 +861,7 @@ the results by using random networks, i.e. by adding a sort of statistical evalu
 highlight all the differences between the real and the random process[1]: this step gives strength to all the findings that 
 come from a topological analysis and adds a statistical background that could integrate the biological information from 
 experimental data or text mining.</p>
-<p>We will integrate CentiScaPe with some algorithms that were already developed in an existing, but no more supported, plugin 
+<p>We will integrate CentiScaPe with some algorithms that were already developed in an existing, but no more supported, app
 for the Cytoscape platform, version 2.6, that is RandomNetworks [2][3]. We will develop some algorithms that are able to generate 
 newtorks by following a specific model: Watt-Strogatz, Erdos-Renyi, Barabasi-Albert and some others. Another interesting 
 feature will be the degree-preserving algorithm that is able to randomize the edges by keeping the degree of each node fixed. 
@@ -1011,16 +1010,47 @@ CellDesigner plug-in. If time permits, it would also be nice to have as well a c
 <p><b>Description</b>: <a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a> belongs to the most popular open 
 source software platforms for visualizing complex networks 
 and integrating these with any type of attribute data. The capabilities of this program can be extended through plug-ins 
-(Apps). In order to add improved support for SBML to Cytoscape, the plugin 
+(Apps). In order to add improved support for SBML to Cytoscape, the app 
 <a href="http://www.charite.de/sysbio/people/koenig/software/cysbml/" target="_blank">CySBML</a> has been created. However, with the release
-of its version 3, Cytoscape's plugin interface has undergone significant changes and all earlier plugins, including CySBML 
+of its version 3, Cytoscape's app interface has undergone significant changes and all earlier apps, including CySBML 
 are therefore not compatible with the latest version of Cytoscape. The aim of this project is therefore to update CySBML and 
-to turn it to a new Cytoscape App that supports the latest features of the SBML standard.</p>
+to turn it to a new Cytoscape app that supports the latest features of the SBML standard.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
 <p><b>Technology and Skills</b>: Java</p> 
 <p><b>Potential Mentors</b>: Matthias König, Andreas Dräger</p>
 <p><b>Contact</b>: <a href="mailto:matthias.koenig@charite.de">Matthias König</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
+
+<h2 dir="ltr" >Idea 51: Spatial Analysis of Functional Enrichment in Biological Networks</h2>
+<p><b>Background</b>: Biological networks connect genes, proteins and other biological entities that interact with one other 
+to perform their function. These networks tend to have a non-random structure and often form densely connected structures 
+(clusters) that involve closely related elements. Depending on the nature of the network, these clusters may correspond to, 
+for example, genes acting in the same biological pathway or proteins sharing the same evolutionary ancestor. Identifying 
+clusters and uncovering their biological role is an important and challenging aspect of understanding biological networks and 
+making use of the information they contain.</p>
+<p>To address this challenge directly, we have developed an algorithm to test for local functional enrichment in biological 
+networks. Here, functional enrichment indicates statistical overrepresentation of members of a known functional group within 
+a particular area of the network. Using this method we are able to quickly and automatically annotate a biological network 
+without defining cluster boundaries. This method, referred to as Spatial Analysis of Functional Enrichment (SAFE), is 
+currently being used to understand the structure of genetic interaction networks in yeast Saccharomyces cerevisiae (figure 
+attached).</p>
+<p><b>Goal</b>: To make a SAFE app for Cytoscape that would allow researchers to run the SAFE method on any network of 
+their interest and/or with any set of functional annotations. Specifically, the app should:
+     <ul>
+          <li>use the pre-loaded network</li>
+          <li>load Gene Ontology (www.geneontology.org) or a custom set of functional annotations (e.g., a list of node 
+          labels with categorical assignment to any number of groups)</li>
+          <li>perform functional enrichment on the network using the annotations provided (the algorithm will be available 
+          in Matlab and/or in pseudo-code)</li>
+          <li>visually represent the enrichment results on the network (the algorithm will be available in Matlab and/or 
+          in pseudo-code)</li>
+          <li>provide the enrichment results in a list form for browsing and/or export as text file</li>
+     </ul>
+</p>
+<p><b>Additional Links</b>: www.baryshnikova-lab.org</p>
+<p><b>Technology and Skills</b>: Java, basic understanding of biological networks</p> 
+<p><b>Potential Mentors</b>: Anastasia Baryshnikova (Princeton), Dmitriy Gorenshteyn (Princeton)</p>
+<p><b>Contact</b>: <a href="mailto:abarysh@princeton.edu">Anastasia Baryshnikova</a></p> 
 
 <!-- END PASTE -->
 
