@@ -40,74 +40,63 @@ Bioclipse, BridgeDb and PathwayCommons.</p>
 <br />
 
 <h2 dir="ltr" >Idea 2: Co-authorship Social network App</h2>
-<p>Description: Biological networks can be visualized and analyzed using Cytoscape. Often researchers want to go beyond the 
-network of proteins or genes and also look at the inter-connectedness between colleagues and institutions. Who tends to 
+<p><b>Background</b>: Biological networks can be visualized and analyzed using Cytoscape. Often researchers want to go beyond 
+the network of proteins or genes and also look at the inter-connectedness between colleagues and institutions. Who tends to 
 publish together? What institutions are most collaborative? Are there inter-disciplinary connections in my institution?</p>
-
-<p>Goal: Create a visual summary of how individuals are connected. An existing App currently queries PubMed directly or take
-in a file with a set of publications (from scopus or incites) and builds a co-publication network where nodes are authors and 
-edges the number of publications two authors share. Different sources have different depths of data, for instance PubMed, the 
-most widely accessible of the three main sources, has citation counts but they are limited to only those articles cited in 
-pubmed central and its institution data is limited to the first author. Given that PubMed is the most accessible source we 
-want to expand its functionality to include computed institution data as well as better citation count approximations, and 
-H-index calculation for individuals or subsets of papers. </p>
-
-<p>This functionality can be applied to several data types outside academia, whenever relationships between people is of 
-interest. An example is professional social networks (e.g. linked-in), where individuals are connected by who they have worked 
-with in the past or the twitter-verse where individuals are connected when they each reference the same (#) hash tag. This 
-project will start with support for co-publication networks and extend to other networks like twitter and linked-in as time 
-permits. Additionally, we want to expand our co-authorship cytoscape App to include generic file formats to easily create the 
-above networks.</p>
-
-<p>Links:</p>
-
-<p>Existing code - <a href="https://github.com/BaderLab/SocialNetworkApp" target="_blank">https://github.com/BaderLab/SocialNetworkApp</a></p>
-<p>Existing userguide - <a href="http://baderlab.org/UserguideSocialNetworkApp" target="_blank">http://baderlab.org/UserguideSocialNetworkApp</a></p>
-<p>Language and Skills: Java, XML, PubMed e-utils</p>
-<p>Potential Mentors: Sergio Baranzini, Gary Bader, Ruth Isserlin</p>
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
+<p><b>Goal</b>: Create a visual summary of how individuals are connected. An existing App currently displays such a network, 
+where nodes are authors and edges the number of publications two authors share, using publication information from querying 
+PubMed over the web or from a local file downloaded from Scopus or Incites databases. Different data sources have different 
+depths of data, for instance PubMed, the most widely accessible of the three main sources, has citation counts but they are 
+limited to only those articles cited in PubMed Central and its institution data is limited to the first author. Given that 
+PubMed is the easiest to access source, we would like to expand its functionality to capture more data about author 
+institution and publication citation information, as well as H-index calculation for individuals or subsets of papers.</p>
+<p>We would like to expand our co-authorship Cytoscape App to include generic file formats to easily create networks from any 
+new data source. As well as expanding publication network visualization and summarization by integrating with other Cytoscape 
+apps such as WordCloud to create customized node images representing the tag cloud of all the author’s publications, or 
+adjusting node size to account for impact factors of the author’s publications.</p>
+<p><b>Links</b>:</p>
+<ul>
+<li><a href="https://github.com/BaderLab/SocialNetworkApp" target="_blank">Existing code</a></li>
+<li><a href="http://baderlab.org/UserguideSocialNetworkApp" target="_blank">Existing userguide</a></li>
+</ul>
+<p><b>Technology and Skills</b>: Java, XML, PubMed e-utils</p>
+<p><b>Potential Mentors</b>: Sergio Baranzini, Gary Bader, Ruth Isserlin</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 
 <br />
 <h2 dir="ltr" >Idea 3: User Interaction on Biomedical Linked Data</h2>
 
-<p>During the GSoC 2012, we developed<a href="http://vsdlc3.blogspot.com" target="_blank"> SemScape</a>, a plugin that allows the use of 
+<p>During GSoC 2012, we developed<a href="http://vsdlc3.blogspot.com" target="_blank"> SemScape</a>, a plugin that allows the use of 
 Cytoscape as a browser for Semantic Web (Linked Data) knowledge bases. We are currently in the process of updating libs and 
 packaging the plugin for the Cytoscape App Store.</p>
-
 <p>The idea for this year’s project is to go one step further and to allow the use of Cytoscape to visually define queries in 
 SPARQL. The basic idea is that from a graph, a sub-graph can be defined where a few nodes or edges can be marked as variables 
 (and eventually filters can be associated to them): this is equivalent to a (simple) SPARQL query. The user can then define 
 queries in a simple and interactive way, without knowing the underlying syntax, that can be stored and applied on different
-data sources.</p>
-
-<p>The project can then be extended in three directions, depending on the interest of the student:</p>
-
+data sources. The project can then be extended in three directions, depending on the interest of the student:</p>
 <ul>
-<li><p>allowing users to push such queries to a repositories and hence share them (the current plugin 
-support updates of queries from remote repositories)</p></li>
-<li><p>Implementing more complex queries (unions, negation, …)</p></li>
-<li><p>Implementing heuristics for query-selection: in the current plugin, queries can be performed on demand, but they are 
+<li>allowing users to push such queries to a repositories and hence share them (the current plugin 
+support updates of queries from remote repositories)</li>
+<li>Implementing more complex queries (unions, negation, …)</li>
+<li>Implementing heuristics for query-selection: in the current plugin, queries can be performed on demand, but they are 
 also associated to specific actions. For instance, right-selecting a node of type protein can present as an option to expend 
 the graph with the results of a query which is can include the specific protein as a value. This is possible through a simple 
 markup through which queries are annotated by the user. Such markup could be included in the visual query/construction process
-and/or extracted from simple query patterns.</p></li>
+and/or extracted from simple query patterns.</li>
 </ul>
-
-<p>Some of the ideas in this project<a href="http://www.biomedcentral.com/1471-2105/9/S4/S6" target="_blank"> have been already prototyped</a>, so we have a good understanding of the difficulty and timing required. </p>
-
-<p>This project has the potential to make Cytoscape an ideal tool to navigate and query Linked Data resources (both in biomedical and, more generally, in Open Data domains). It also opens interesting possibilities in analyzing graphs from graph knowledge bases that can be represented as RDF (e.g.: dbpedia, freebase,...).</p>
-
+<p>Some of the ideas in this project<a href="http://www.biomedcentral.com/1471-2105/9/S4/S6" target="_blank"> have been 
+already prototyped</a>, so we have a good understanding of the difficulty and timing required. This project has the potential 
+to make Cytoscape an ideal tool to navigate and query Linked Data resources (both in biomedical and, more generally, in Open 
+Data domains). It also opens interesting possibilities in analyzing graphs from graph knowledge bases that can be represented 
+as RDF (e.g.: dbpedia, freebase,...).</p>
 <p>Language and Skills: Java/Maven. Knowledge of OSGi would be helpful. Knowledge of Semantic Web technologies would be a plus.</p>
-
 <p>Potential Mentors: Andrea Splendiani, Andra Waagmeester</p>
-
 <p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
 <br />
 
 <h2 dir="ltr" >Idea 4: CentiScaPe for multiple networks analysis and graphical output enhancement</h2>
 
-<p>Background: CentiScaPe is a Cytoscape app that allows to compute network centrality parameters. It is the most complete 
+<p><b>Background</b>: CentiScaPe is a Cytoscape app that allows to compute network centrality parameters. It is the most complete 
 Cytoscape app for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, Betweenness, 
 Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected networks. 
 CentiScaPe allows identifying network nodes that are relevant from both experimental and topological viewpoints. CentiScaPe 
@@ -115,7 +104,7 @@ also provides a Boolean logic- based tool that allows easy characterization of n
 more than one centrality. Finally, different graphic outputs and the included description of biological significance for each 
 computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing easy node 
 categorization and experimental prioritization.</p>
-<p>Goal: The new beta version of CentiScaPe provides also the possibilities to analyze multiple networks and to integrate the 
+<p><b>Goal</b>: The new beta version of CentiScaPe provides also the possibilities to analyze multiple networks and to integrate the 
 analysis with experimental data set. This implies that a user can automatically start a computation of several networks and 
 waits for the results. Anyway, the output of the analysis of a lot of networks (say 100) is useless if not supported by a 
 smart and user friendly system to analyze the results. The Idea is to implements some techniques used in software analysis, 
@@ -155,7 +144,6 @@ Last year, support for compound structures has been added to Cytoscape.js core a
 built. Some complexity management operations have also been designed and implemented within this tool to hide unwanted 
 details on demand without violating SBGN PD network invariants (e.g. all substrates and products of a process must be shown 
 at any point).</p>
-
 <p><b>Goal</b>:
 This year, we'd like to improve this tool in certain ways. First, it'd be great to improve the layout implementation that 
 supports compound graphs. Secondly, existing complexity management operations could be extended to include folding/unfolding. 
@@ -163,7 +151,6 @@ Notice however that this is not a straightforward topology change. For instance 
 node requires calculation of any inter-graph edges going into the compound node and representing them with "meta" edges in the 
 collapsed network. Similarly, expanding a collapsed node back requires undoing it. The situation becomes cumbersome since 
 arbitrary level of nesting is allowed and folding can take place at an arbitrary level.</p>
-
 <p><b>Technology and Skills</b>: JavaScript, Java, Data Structures and Algorithms</p>
 <p><b>Potential Mentors</b>: Ugur Dogrusoz (Bilkent University & MSKCC) and S. Onur Sumer (MSKCC)</p>
 <p><b>Contact</b>: <a href="mailto:ugur@cs.bilkent.edu.tr" >ugur@cs.bilkent.edu.tr</a> and <a href="mailto:onur@cbio.mskcc.org" >onur@cbio.mskcc.org</a> </p>
@@ -199,50 +186,51 @@ libraries (e.g. Armadillo) will be used to reduce memory footprint and speed com
 <br />
 
 <h2 dir="ltr" >Idea 7: Develop a Method for Aligning Pathways and Visualizing these Alignments</h2>
-<p>There is continued growth in the groups generating machine-readable representations of biological pathways 
-(such as <a href="http://www.reactome.org/" target="_blank">Reactome</a> or <a href="http://wikipathways.org/" target="_blank">WikiPathways</a>) and 
-subsequent efforts to aggregate these pathways into unified repositories, such as Pathway Commons. Aggregation of these 
-pathways suffers from multiple pathways being aggregated that differ due to mismatches in author representations of these 
-pathways. The goal of this project is to develop a method for aligning pathways and then visualizing the results of these 
-alignment. Starting points could be to find interactions that use the same substrates and produce the same products. </p>
-<p>There are many uses of such a tool including helping to validate pathways as they are added to repositories, merging 
+<p><b>Background</b>: There is continued growth in the groups generating machine-readable representations of biological pathways 
+(such as <a href="http://www.reactome.org/" target="_blank">Reactome</a> or <a href="http://wikipathways.org/" target="_blank">WikiPathways</a>) 
+and subsequent efforts to aggregate these pathways into unified repositories, such as 
+<a href="http://www.pathwaycommons.org/" target="_blank">Pathway Commons</a>. Aggregation of these 
+pathways suffers from multiple pathways being aggregated that differ due to mismatches in author representations of these pathways.</p>
+<p><b>Goal</b>: The goal of this project is to develop a method for aligning pathways and then visualizing the results of these 
+alignment. Starting points could be to find interactions that use the same substrates and produce the same products.
+There are many uses of such a tool including helping to validate pathways as they are added to repositories, merging 
 pathways across different resources, and the comparative analyses of pathways across organisms. One way to think about this 
 project, is if you're given multiple representations of the same pathway 
 (<a href="http://wikipathways.org//index.php?query=wnt&amp;species=Homo+sapiens&amp;title=Special%3ASearchPathways&amp;doSearch=1&amp;ids=&amp;codes=&amp;type=query" target="_blank">examples of several human Wnt pathways</a>) 
-can you develop a method to show a unified pathway and how the original representations map to the unified pathway. </p>
+can you develop a method to show a unified pathway and how the original representations map to the unified pathway.</p>
 <p><b>Technology and Skills</b>: Java, XML</p>
 <p><b>Potential Mentors</b>: Augustin Luna (MSKCC)</p>
 <p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 8: Drag and Drop or Palette Editor for SBGN and other graphical notations in Cytoscape</h2>
-<p>The goal is to design and implement a drag-and-drop or palette-based editor for Cytoscape that would include nodes, edges, 
+<p><b>Description</b>: The goal is to design and implement a drag-and-drop or palette-based editor for Cytoscape that would include nodes, edges, 
 and graphical annotations. In the ideal case, this would be extensible so that apps add their own nodes or edges with specific 
-graphical attributes. The Systems Biology Graphical Notation (SBGN) is a standard graphical notation for presenting pathways 
-and protein interactions. Currently, Cytoscape lacks the node symbols and edge types required for SBGN. In this project, those
-notations will be added to the Cytoscape core, and a simple palette editor developed for user interaction.</p>
-<p>Language and Skills: Java</p>
-<p>Potential Mentors: Scooter Morris, Alex Pico</p>
-<p>Contact: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
+graphical attributes. The <a href="http://www.sbgn.org/" target="_blank">Systems Biology Graphical Notation</a> (SBGN) is a 
+standard graphical notation for presenting pathways and protein interactions. Currently, Cytoscape lacks the node symbols and 
+edge types required for SBGN. In this project, those notations will be added to the Cytoscape core, and a simple palette 
+editor developed for user interaction.</p>
+<p><b>Technology and Skills</b>: Java</p>
+<p><b>Potential Mentors</b>: Scooter Morris, Alex Pico</p>
+<p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 9: Improve and expand Cytoscape’s color mapping options</h2>
-<p>Currently, the color options for Cytoscape’s discrete color mappings are very limited. Brewer palettes provide a 
+<p><b>Description</b>: Currently, the color options for Cytoscape’s discrete color mappings are very limited. Brewer palettes provide a 
 luminosity-neutral set of colors that would be extremely useful to add to Cytoscape, and there are several other approaches 
 to choosing sets of colors that contrast nicely. Creating these color palettes and providing them for use within Cytoscape’s 
 visual style interface would be extremely useful to Cytoscape users.</p>
-<p><b>Language and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris, Michael Heuer, Alex Pico</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 <br />
 
 <h2 dir="ltr" >Idea 10: Constrained layout algorithms in Cytoscape</h2>
-
-<p>Most layout algorithms in Cytoscape rely on inherent network topology and only a crude set of spatial constraints 
+<p><b>Description</b>: Most layout algorithms in Cytoscape rely on inherent network topology and only a crude set of spatial constraints 
 (e.g., grid, circle). There are many cases when working with networks in Cytoscape where you want to be able to constrain 
 layouts to user- or attribute-defined spaces. This idea involves implementing layouts that are constrained by:</p>
 <ul>
-<li>specific shapes </li>
+<li>specific shapes</li>
 <ul>
 <li>basic shapes</li>
 <li>cellular templates (e.g., with subcellular organelles)</li>
@@ -255,7 +243,7 @@ layouts to user- or attribute-defined spaces. This idea involves implementing la
 </ul>
 <li>etc...</li>
 </ul>
-<p><b>LTechnology and Skills</b>: Java, and a strong math background</p>
+<p><b>Technology and Skills</b>: Java, and a strong math background</p>
 <p><b>Potential Mentors</b>: Scooter Morris, Alex Pico, Bruce Aronow</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 <br />
@@ -286,15 +274,13 @@ Pathway analysis.</li>
 <li>Make a RDF representation of a Pathway opened in Pathvisio. These triples are to be used as template for SPARQL queries. 
 The user should be able to click on a triple which is then added to the WHERE block in the SPARQL query.</li>
 </ul>
-
-<p><b>Language and Skills</b>: SPARQL, RDF, and Java. This idea is for a student who has solid background in SPARQL queries, or the Semantic web in 
+<p><b>Technology and Skills</b>: SPARQL, RDF, and Java. This idea is for a student who has solid background in SPARQL queries, or the Semantic web in 
 general, and who is looking into opening up the Semantic Web to specific knowledge domains (I.e. Biology and/or Medicine).</p>
 <p><b>Potential Mentors</b>: Andra Waagmeester, Anders Riutta, Martina Kutmon </p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 12: Web publishing of models from Virtual Cell database</h2>
-
 <p>The<a href="http://vcell.org" target="_blank"> Virtual Cell</a> modeling and simulation framework is an open source 
 software for modeling and simulations of biological systems using Java RMI, providing both client- and server- based modeling 
 and simulation capabilities. The biologically oriented user interface allows experimentalists to create models, define 
@@ -360,30 +346,25 @@ http://vcell.org/technology/VcmlSpec.html</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 15: Integration of WikiPathways Visualization with PathVisio into Bioclipse</h2>
+<p><b>Background</b>: Bioclipse is a powerful platform combining a powerful scripting language to write data analysis and 
+visualization workflows, which can easily be shared on, for example, <a href="http://myexperiment.org/" target="_blank">MyExperiment.org</a>. 
+While it has various components to support metabolomics in general, it lacks support for visualization of metabolic pathways.</p>
 
 <p><b>Goal</b>: To integrate PathVisio visualization widget into Bioclipse for visualization of pathway information from 
-WikiPathways. Selecting protein and metabolites in the pathway visualization, will shows of that chemical entity in other 
+WikiPathways. Selecting protein and metabolites in the pathway visualization, will show that chemical entity in other 
 Bioclipse components, using the Jmol and JChemPaint plugins for Bioclipse. Preferably, interaction can be scripted, allowing 
 integration with other metabolomics features in Bioclipse.</p>
 
-<p><b>Motivation</b>: Bioclipse is a powerful platform combining a powerful scripting language to write data analysis and 
-visualization workflows, which can easily be shared on, for example, MyExperiment.org [1]. While it has various components 
-to support metabolomics in general, it lacks support for visualization of metabolic pathways.</p>
-
-<p><b>Description</b>: You will use Java to write a plugin for Bioclipse [2] that uses PathVisio [3] as a library to visualize 
-metabolic pathways from WikiPathways inside Bioclipse. You will use the Eclipse selection event propagation mechanism [4] so 
+<p><b>Description</b>: You will use Java to write a plugin for <a href="http://www.bioclipse.net/" target="_blank">Bioclipse</a> that uses 
+<a href="http://www.pathvisio.org/" target="_blank">PathVisio</a> as a library to visualize 
+metabolic pathways from WikiPathways inside Bioclipse. You will use the 
+<a href="http://www.eclipse.org/articles/Article-WorkbenchSelections/article.html">Eclipse selection event propagation mechanism</a> so 
 that when users select protein and metabolites, Bioclipse will automatically visualize 2D or 3D structural information about 
-those molecules (only the event creation has to be implemented). Preferably, a scripting language extension is written [5], 
+those molecules (only the event creation has to be implemented). Preferably, a 
+<a href="http://www.biomedcentral.com/1471-2105/10/397" target="_blank">scripting language extension</a> is written, 
 to allow extracting information from the pathway and highlighting of parts of the pathway. This involves extending an existing 
 interface with methods that can be run from the scripting language.</p>
-
-<ol><li><a href="http://myexperiment.org/" >myexperiment.org</a></li>
-<li><a href="http://www.bioclipse.net/" >www.bioclipse.net</a></li>
-<li><a href="http://www.pathvisio.org/" >www.pathvisio.org</a></li>
-<li><a href="http://www.eclipse.org/articles/Article-WorkbenchSelections/article.html" >www.eclipse.org/articles/Article-WorkbenchSelections/article.html</a></li>
-<li><a href="http://www.biomedcentral.com/1471-2105/10/397" >www.biomedcentral.com/1471-2105/10/397</a></li>
-</ol>
-<p><b>Language and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>: Egon Willighagen, Jonathan Alvarsson</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
@@ -444,69 +425,62 @@ export references in standard formats like Bibtex or EndNote and provide statist
 <br />
 
 <h2 dir="ltr" >Idea 20: Enhanced Layout Algorithms</h2>
-<p><b>Background</b>: As Cytoscape is used for increasingly large networks, the performance of our layout algorithms becomes 
+<p><b>Description</b>: As Cytoscape is used for increasingly large networks, the performance of our layout algorithms becomes 
 a limiting factor. There are a number of layout algorithms that perform very well in real-world scenarios that have not been 
 implemented in Cytoscape. For example, the <a href="http://yifanhu.net/PUB/graph_draw_small.pdf" target="_blank">Yifan Hu Multi-level layout 
 algorithm</a>, a Fast Muiltipole Multilevel layout (See <a href="http://www.ogdf.net/doc-ogdf/classogdf_1_1_f_m_m_m_layout.html" target="_blank">OGDF</a> 
 for example), Yifan Hu proportional, and potentially some of the better algorithms from Gephi. Cytoscape provides a 
 framework for adding new layout algorithms as Apps, so this work could all be done as a series of separate apps.</p>
-
 <p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 21: Compound Graph Visualization in Cytoscape 3</h2>
-
-<p><b>Background</b>: Cytoscape 3 has introduced two concepts into the core, groups and annotations, that could be combined to provide a compound 
-graph visualization. Currently groups can be either in a “collapsed” or “expanded” state. 
+<p><b>Description</b>: Cytoscape 3 has introduced two concepts into the core, groups and annotations, that could be combined 
+to provide a compound graph visualization. Currently groups can be either in a “collapsed” or “expanded” state. 
 <p><b>Goal</b>: For a compound graph, a new visualization state needs to be introduced that allows the compound node 
 (group) to be visualized as a shape (concave or 
 convex hull) around it’s children. Moving that shape would move all of it’s children, etc.</p>
-
 <p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 22: Visualization of Time-series Cluster Data</h2>
-
-<p><b>Background</b>: Currently, the clusterMaker app uses standard heat maps to visualize attribute cluster data (based on Java TreeView). 
-Increasingly, time series data is becoming important for clustering applications and it would be useful to expand the provided
+<p><b>Description</b>: Currently, the <a href="http://apps.cytoscape.org/apps/clustermaker" target="_blank">clusterMaker app</a> 
+uses standard heat maps to visualize attribute cluster data (based on Java TreeView). Increasingly, time series data is 
+becoming important for clustering applications and it would be useful to expand the provided
 visualization options to explicitly support time series data. For these purposes, we’re thinking about time-series that have 
 multiple conditions in each series, which means we need to move beyond the standard two-dimensional heat map. 
-<p><b>Goal</b>: </p>This project 
-can explore utilizing animation, small multiples, or other standard visualization techniques (or your own novel techniques) 
+<p><b>Goal</b>: This project can explore utilizing animation, small multiples, or other standard visualization techniques (or your own novel techniques) 
 to provide new visualization opportunities to users. Ideally, this would be integrated with network-based animation tools 
-such as DynNetwork or CyAnimator.</p>
-
+such as <a href="http://apps.cytoscape.org/apps/dynnetwork" target="_blank">DynNetwork</a> or 
+<a href="http://apps.cytoscape.org/apps/cyanimator" target="_blank">CyAnimator</a>.</p>
 <p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
 <br />
 
 <h2 dir="ltr" >Idea 23: Develop a Converter between Visual and Textual Representations of Biological Pathways</h2>
-
-<p><b>Goal</b>: <a href="http://www.pathwaycommons.org/" target="_blank">Pathway Commons</a> seeks to aggregate all pathway data available in literature, public databases, and 
-curation/crowdsourced efforts. Our goal is to accelerate this process by leveraging pathway diagram editors that support a 
-widely used visual representation for biological pathways.</p>
-<p><b>Problem</b>: Pathway Commons data is represented in the <a href="http://www.ncbi.nlm.nih.gov/pubmed/20829833" target="_blank">Biological Pathway Exchange (BioPAX)</a> 
-community standard format, 
-but the BioPAX format lacks a simple graphical editor. On the other hand, the System Biology Graphical Notation (SBGN) is a 
-visual representation for pathways that is supported in about 20 tools. We'd like you to build a converter between the BioPAX 
-and SBGN formats.</p>
-<p>A similar project has been developed with the editor CellDesigner (that shares a format similar to SBGN) making us believe 
-that this should be a reasonably straight forward project; many of the mapping issues have already been addressed. The project 
-will make use of two Java libraries <a href="http://www.biopax.org/paxtools.php" target="_blank">Paxtools</a> (for BioPAX) and 
-<a href="http://www.sbgn.org/LibSBGN" target="_blank">LibSBGN</a> (for SBGN).</p
+<p><b>Background</b>: <a href="http://www.pathwaycommons.org/" target="_blank">Pathway Commons</a> seeks to aggregate all 
+pathway data available in literature, public databases, and curation/crowdsourced efforts. Our goal is to accelerate this 
+process by leveraging pathway diagram editors that support a widely used visual representation for biological pathways.
+<p><b>Problem</b>: </p>Pathway Commons data is represented in the 
+<a href="http://www.ncbi.nlm.nih.gov/pubmed/20829833" target="_blank">Biological Pathway Exchange (BioPAX)</a> 
+community standard format, but the BioPAX format lacks a simple graphical editor. On the other hand, the System Biology 
+Graphical Notation (SBGN) is a visual representation for pathways that is supported in about 20 tools.</p>
+<p><b>Goal</b>: We'd like you to build a converter between the BioPAX and SBGN formats. A similar project has been developed 
+with the editor CellDesigner (that shares a format similar to SBGN) making us believe that this should be a reasonably 
+straight forward project; many of the mapping issues have already been addressed. The project will make use of two Java 
+libraries <a href="http://www.biopax.org/paxtools.php" target="_blank">Paxtools</a> (for BioPAX) and 
+<a href="http://www.sbgn.org/LibSBGN" target="_blank">LibSBGN</a> (for SBGN).</p>
 <p><b>Technology and Skills</b>: Java and XML</p>
 <p><b>Potential Mentors</b>: Augustin Luna</p>
 <p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >Augustin Luna</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 25: Improve the Text-Mining Functionality of Factoid</h2>
-
 <p><b>Background</b>: <a href="http://pathwaycommons.github.io/factoid/" target="_blank">Factoid</a> aims to be a tool that helps authors 
 annotate biological interactions that occur in the text of academic publications in a machine-readable manner. Currently, 
 Factoid uses basic entity-recognition to identify genes, proteins, biological processes to identify interactions between 
@@ -555,17 +529,16 @@ them or to propose other options.</p>
 <h2 dir="ltr">Idea 28: Full Compound Support in Cytoscape 3</h2>
 <p><b>Background</b>: The notion of compound graphs is used to represent more complex types of relationships or varying levels 
 of abstractions in data visualization. Networks from almost all domains need such abstractions and nesting, including 
-biological networks. The recently developed standard notation of <a href="http://www.sbgn.org/" target="_blank">SBGN</a> makes heavy use of such structures for molecular 
-complexes and cellular locations.</p>
-<p><b>Goal</b>: We would like to first implement full compound support in <a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a> 3 [2] core. This will not only allow users 
+biological networks. The recently developed standard notation of <a href="http://www.sbgn.org/" target="_blank">SBGN</a> makes 
+heavy use of such structures for molecular complexes and cellular locations.</p>
+<p><b>Goal</b>: We would like to first implement full compound support in 
+<a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a> 3 core. This will not only allow users 
 to nest nodes of a network but also automatically adjust size of a compound node as its child nodes get moved, resized or 
-deleted. Then, we'd like to implement a native spring embedder based layout algorithm named CoSE [1] that takes such structures 
-into account during layout. A Java implementation of CoSE is already publicly available [2] and needs to be integrated into 
-Cytoscape 3.</p>
-<p>[1] U. Dogrusoz, E. Giral, A. Cetintas, A. Civril, and E. Demir, "A Layout Algorithm For Undirected Compound Graphs", 
-Information Sciences, 179, pp. 980-994, 2009. <a href="http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html" target="_blank">http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html</a></p>
-<p>[2] <a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html" target="_blank">http://www.cs.bilkent.edu.tr/~ivis/chilay.html</a></p>
-
+deleted. Then, we'd like to implement a native spring embedder based layout algorithm named 
+<a href="http://www.cs.bilkent.edu.tr/~ivis/layout/cose-animated-demo/cose.html" target="_blank">CoSE</a> that takes such 
+structures 
+into account during layout. A <a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html" target="_blank">Java implementation of 
+CoSE</a> is already publicly available and needs to be integrated into Cytoscape 3.</p>
 <p><b>Technology and Skills</b>: Java, Data Structures and Algorithms</p>
 <p><b>Potential Mentors</b>: Ugur Dogrusoz (Bilkent University & MSKCC) and Gerardo Huck (U of Toronto)</p>
 <p><b>Contact</b>: <a href="mailto:ugur@cs.bilkent.edu.tr">ugur@cs.bilkent.edu.tr</a>, <a href="mailto:onur@cbio.mskcc.org">onur@cbio.mskcc.org</a></p>
@@ -689,7 +662,7 @@ vocabularies with <a href="http://www.w3.org/TR/skos-primer/" target="_blank">SK
 <br />
 
 <h2 dir="ltr" >Idea 33: Principal Component Analysis</h2>
-<p><b>Background</b>: One of the common multidimensional analysis tools is principal component analysis. At this point, there 
+<p><b>Description</b>: One of the common multidimensional analysis tools is principal component analysis. At this point, there 
 is no good PCA tool integrated with Cytoscape. The ideal tool would support performing the analysis, visualizing the results 
 of the analysis using standard approaches, and then visualizing the results in the context of the Cytoscape network itself.
 There are many tools that could assist in this task and the analysis itself is pretty well understood. The challenge to this 
@@ -702,9 +675,10 @@ idea is looking for ways to integrate the results of the analysis into Cytoscape
 <h2 dir="ltr" >Idea 34: Incremental Loading of Networks</h2>
 <p><b>Background</b>: Cytoscape now supports using JSON as a format for loading networks. In an effort to improve exploration 
 of extremely large networks, it would be extremely useful to be able to load parts of the network on request. One use case 
-for this is loading networks from the Structure-Function Linkage Database, which creates Cytoscape networks representing 
-similarity between groups of proteins. Some of these networks are extremely large (millions of edges) and usually users are 
-only interested in local neighborhoods of the network. This project would involve writing a Cytoscape App that would load an 
+for this is loading networks from the <a href="http://sfld.rbvi.ucsf.edu/django/" target="_blank">Structure-Function Linkage 
+Database</a>, which creates Cytoscape networks representing similarity between groups of proteins. Some of these networks are extremely large (millions of edges) and usually users are 
+only interested in local neighborhoods of the network.</p>
+<p><b>Goal</b>: This project would involve writing a Cytoscape app that would load an 
 abstraction of these networks (where multiple nodes are represented by a single "meta" node) into Cytoscape and then allow 
 users to incrementally load all of the nodes within that metanode.</p>
 <p><b>Technology and Skills</b>: Java</p>
@@ -713,9 +687,8 @@ users to incrementally load all of the nodes within that metanode.</p>
 <br />
 
 <h2 dir="ltr" >Idea 35: Add t-SNE to clusterMaker</h2>
-<p><b>Background</b>: t-SNE [1] is a technique for dimensionality reduction that is widely used.  
-It would be extremely useful to add this algorithm into the existing clusterMaker app.</p>
-<p>[1] <a href="http://lvdmaaten.github.io/tsne/" target="_blank">t-SNE</a></p>
+<p><b>Description</b>: <a href="http://lvdmaaten.github.io/tsne/" target="_blank">t-SNE</a> is a technique for dimensionality 
+reduction that is widely used. It would be extremely useful to add this algorithm into the existing clusterMaker app.</p>
 <p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
@@ -805,14 +778,12 @@ depends on more than one centrality. Finally, different graphic outputs and the 
 significance for each computed centrality facilitate the analysis by the end users not expert in graph theory, thus allowing 
 easy node categorization and experimental prioritization.</p>
 <p><b>Goal</b>: CentiScaPe can provide only static analysis of a network. We want to develop a tool that can compute 
-semi-dynamic simulation, particularly the SIR model [1]. The SIR model is a Compartmental model used in epidemiology to 
+semi-dynamic simulation, particularly the <a href="http://www.ncbi.nlm.nih.gov/pubmed/2059741" target="_blank">SIR model</a>. The SIR model is a Compartmental model used in epidemiology to 
 simulate the establishment and spread of infectious diseases. It serve as a base mathematical framework for understanding the 
 complex dynamics of such system. Population is divided in three states: susceptible to the infection of the pathogen (often 
 denoted by S), infected by the pathogen (given the symbol I) and recovered/removed/immune (denoted R). The way that these 
 compartments interact is often based on a network model, hence the idea to include the SIR model in the CentiScaPe tool for 
 network analysis</p>
-<p>[1] <a href="http://www.ncbi.nlm.nih.gov/pubmed/2059741" target="_blank">Kermack WO, McKendrick AG: A contribution to the mathematical theory of epidemics.
-Proc Roy Soc Lond 1927, 115:700-721.</a></p>
 <p><b>Technology and Skills</b>: Java</p>
 <p><b>Potential Mentors</b>: Giovanni Scardoni (CBMC, University of Verona)</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
