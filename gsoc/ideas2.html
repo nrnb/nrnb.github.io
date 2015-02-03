@@ -411,6 +411,36 @@ interface with methods that can be run from the scripting language.</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
 
+<h2 dir="ltr" >Idea 16: Help scientists share data with the Synapse client for Cytoscape</h2>
+<p><b>Background</b>: <a href="http://synapse.org" target="_blank">Synapse</a> is an web-based platform
+that makes it easy for scientists to share datasets. Users can request a DOI number for datasets, which allows them to be 
+cited and promoted in publications. This encourages scientists to share data with the public, even after the data is deemed 
+no longer relevant to them -- but could be to others. Synapse also provides extensive _provenance_ tools for tracking 
+progressive changes to datasets as they are transformed from raw to publishable data. This allows for scientists to 
+collectively establish, review, and share data processing pipelines.</p>
+<p>The <a href="http://apps.cytoscape.org/apps/synapseclient" target="_blank">Synapse client app</a> for Cytoscape allows 
+users browse and search their Synapse files and to import them into Cytoscape. Cytoscape is a powerful analysis network tool 
+that can play an important role in data processing pipelines. The current Synapse app lacks facilities for putting processed 
+data back into Synapse.</p>
+<p><b>Goal</b>: The goal of this project is to expand the Synapse app's abilities so that it can submit data back to Synapse 
+and annotate it using its provenance tools.</p>
+<p>First phase: create menu items and commands for submitting networks, tables, and sessions to a Synapse account. The app 
+would present a very simple UI for asking the user to which project the file belongs.</p>
+<p>Second phase: provide an intuitive, easy-to-use UI for annotating submissions with Synapse's provenance tools. When the 
+user submits files to Synapse, the user can specify a name and description of what was done to the submission and what files 
+were used to create the submission. These files could be from Synapse or from any URL.</p>
+<p><b>Links</b>: 
+<ul>
+     <li><a href="http://apps.cytoscape.org/apps/synapseclient" target="_blank">Synapse app page</a></li>
+     <li><a href="https://github.com/samadlotia/SynapseClientForCytoscape" target="_blank">Synapse app code</a></li>
+     <li><a href="http://hud.rel.rest.doc.sagebase.org.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Synapse REST API reference</a></li>
+</ul>
+</p>
+<p><b>Technology and Skills</b>: Java, OSGi, Using REST APIs in Java, Swing</p>
+<p><b>Potential Mentors</b>: Alex Pico</p>
+<p><b>Contact</b>: <a href="mailto:apico@gladstone.ucsf.edu" >Alex Pico</a></p>
+<br />
+
 <h2 dir="ltr" >Idea 17: Export as D3.js-Based Web Application</h2>
 <p><b>Background</b>: From Cytoscape 3.2, users can <a href="http://wiki.cytoscape.org/Cytoscape_3/UserManual/Publish" target="_blank">export 
 their network visualizations as a simple web application</a>. This feature uses <a href="http://js.cytoscape.org/" target="_blank">cytoscape.js</a> 
