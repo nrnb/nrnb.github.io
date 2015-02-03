@@ -1037,7 +1037,130 @@ their interest and/or with any set of functional annotations. Specifically, the 
 <p><b>Technology and Skills</b>: Java, basic understanding of biological networks</p> 
 <p><b>Potential Mentors</b>: Anastasia Baryshnikova (Princeton), Dmitriy Gorenshteyn (Princeton)</p>
 <p><b>Contact</b>: <a href="mailto:abarysh@princeton.edu">Anastasia Baryshnikova</a></p> 
+<br/ >
 
+<h2 dir="ltr" >Idea 52: Cytoscape.js documentation project</h2>
+<p><b>Background</b>: Cytoscape.js is a JS library that allows for the analysis and visualisation of graphs (a.k.a. networks).  
+This project would give the opportunity for the student to work on and with Cytoscape.js, as follows:</p>
+<p><b>Goal</b>: This project would entail additions (and perhaps minor modifications) to the documentation generation 
+scripts. The object of the project is to allow for automated output of PDF and EPUB formats. The documentation is fully 
+automated, specified with a master JSON file (docmaker.json) and several subsidiary Markdown files to specify blocks of text. 
+There could be an additional Gulp target to generate a PDF/EPUB version of the documentation. 
+<a href="http://johnmacfarlane.net/pandoc/" target="_blank">Pandoc</a> or similar may be useful. LaTeX 
+output of the docs as an intermediary format would allow for easy conversion to whatever formats we would like.
+This project would also entail creating simple demos using Cytoscape.js that showcase the 
+<a href="http://js.cytoscape.org/#layouts" target="_blank">various layouts</a>. Because each layout suits different types of 
+data, there ought to be specialised data for each layout. It may be interesting to have buttons to showcase different layout 
+parameters.</p>
+<p><b>Technology and Skills</b>: JavaScript</p> 
+<p><b>Potential Mentors</b>: Max Franz, Christian Lopes</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 53: Cytoscape.js quadtree support</h2>
+<p><b>Background</b>: Cytoscape.js is a JS library that allows for the analysis and visualisation of graphs (a.k.a. networks).  
+This project would give the opportunity for the student to work on and with Cytoscape.js, as follows:</p>
+<p><b>Goal</b>: A <a href="https://en.wikipedia.org/wiki/Quadtree" target="_blank">quadtree</a> is a datastructure that 
+allows for efficient lookup of sets of spatial co-ordinates. For Cytoscape.js, this could be applied to element (node and 
+edge) hittests: The quadtree could be queried to determine the closest element to the cursor/mouse or finger in an efficient 
+way. It might not be warranted for many usecases because of the additional cost of maintaining the tree, but it could be 
+useful in other cases. This project need not be constrained to quadtrees specifically, as a different particular tree 
+structure may be more appropriate.</p>
+<p><b>Technology and Skills</b>: JavaScript</p> 
+<p><b>Potential Mentors</b>: Max Franz, Christian Lopes</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 54: Cytoscape.js API language alternatives</h2>
+<p><b>Background</b>: Cytoscape.js is a JS library that allows for the analysis and visualisation of graphs (a.k.a. networks).  
+This project would give the opportunity for the student to work on and with Cytoscape.js, as follows:</p>
+<p><b>Goal</b>: JS supports UTF8 variable names and multiple aliases easily, so possibly even non-English versions of the 
+API could exist. This could include variants in English to start (e.g. "node" = "vertex"), with other languages and synonyms 
+to follow. We already support British English spellings in addition to American, so it could follow those extensions as 
+examples. However, the British English spellings are not yet documented. Add aliases of various etymologies: English has 
+words of Germanic, Latin/Norman, and (some) Greek origin. Supporting aliases for these sources allows for improved API 
+comprehension. In addition to spoken language alternatives, there is also the opportunity to support more symbolic aliases 
+as well. For example, eles['+']( eles2 ) is a planned symbolic alternative that uses the + symbol in the sense of addition 
+or set theory, as a synonym of eles.add( eles2 ).</p>
+<p><b>Technology and Skills</b>: JavaScript</p> 
+<p><b>Potential Mentors</b>: Max Franz, Christian Lopes</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 55: Scrollbar in Cytoscape.js</h2>
+<p><b>Background</b>: Cytoscape.js is a JS library that allows for the analysis and visualisation of graphs (a.k.a. networks).  
+This project would give the opportunity for the student to work on and with Cytoscape.js, as follows:</p>
+<p><b>Goal</b>: This project would entail the creation of a Cytoscape.js extension that would show scrollbars in a manner 
+similar to that of touch devices; i.e. the scrollbar would show momentarily on scroll movement and fadeout thereafter. This 
+extension would be useful for showing the relative panning position of the graph in an economical way with regards to 
+computation expense and screenspace. You would have to create new scrollbar logic and possibly also packaging code
+as a reusable extension.</p>
+<p><b>Links</b>: </p>
+<ul>
+     <li><a href=" http://iscrolljs.com/" target="_blank">iScroll</a></li>
+     <li><a href="https://github.com/cytoscape/cytoscape.js-qtip" target="_blank">qTip extension</a></li>
+</ul>
+<p><b>Technology and Skills</b>: JavaScript</p> 
+<p><b>Potential Mentors</b>: Max Franz, Christian Lopes</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 56: Cytoscape.js demos</h2>
+<p><b>Background</b>: Cytoscape.js is a JS library that allows for the analysis and visualisation of graphs (a.k.a. networks).  
+This project would give the opportunity for the student to work on and with Cytoscape.js, as follows:</p>
+<p><b>Goal</b>: To create a set of Cytoscape.js demos. Choose two from the list below:
+<ul>
+     <li><u>Stream of consciousness demo</u>: i.e. a narrated, animated demo, using the Ken Burns panandscan effect, etc. This 
+     project would make heavy use of animations using Cytoscape.js. Certainly, it would also use audio. The subject matter could be 
+     chosen by the project author, though I have a specific script that would be interesting to the audience.</li>
+     <li><u>Dependency tree visualisation demo</u>: Because Cytoscape.js is able to visualise trees effectively, it would be 
+     interesting to have a demo that showcases this for an interesting usecase (or perhaps more than one if time permits). 
+     Possible datasources: Linux kernel modules, npm packages, etc. The featureset of the demo beyond visualising the 
+     dependency tree would depend on the datasource: It's open ended.</li>
+     <li><u>Animated expanding/collapsing nodes demo</u>: This project would entail the creation of a demo that includes 
+     expanding and collapsing subgraphs. The graph content would be well suited to social data or the relationships between 
+     people with some sort of hierarchy (e.g. political groups, companies, etc). It would be interesting if this demo used 
+     more regular, consistent means of expanding and collapsing, like the circle layout with animation, rather than a 
+     physics simulation. This would be a good demo to use with the Dagre layout, especially if the graph content were 
+     hierarchical.</li>
+     <li><u>Social network demo</u>: This demo would visualise a social network (or perhaps several) using external APIs 
+     (e.g. LinkedIn, Google+, Facebook). Showing the connections between people and interesting use of layout is the basic idea,
+     though I'm sure there are many interesting features that could be added. I know that Facebook has restricted their API 
+     for this usecase (only friends who both use an app can "see" each other via the API), so it might be better to use 
+     LinkedIn or Google. Those networks tend to have more professional relationships, anyway. Or perhaps Facebook would be 
+     so generous as to offer us an API key that works for this usecase. In any case, a social demo would be able to showcase 
+     some interesting features -- like analysing the hubs, use of PageRank, etc.</li>
+     <li><u>Live airplane flight path graph demo</u>: This demo would visualise flight paths, probably with a world map 
+     background image. The graph could be annotated by airplane nodes that use live flight information APIs, with the 
+     airplane nodes moving along their flight paths in the graph. It may also be interesting to visualise the relative 
+     frequency of use of the flight paths. Demo features could include things such as flight lookup, filtering based on 
+     departure and destination locations, etc.</li>
+     <li><u>Statistical concentric demo for large graphs</u>: This demo would organise nodes in concentric circles 
+     (probably using the concentric layout). If each circle were a quartile (probably based on associated node data),
+     then it would be possible to autofilter the graph based on zoom level. This would allow for very, very large graphs 
+     that are nicely organised and well understood by the user. The particular dataset and subject matter of the graph 
+     could be decided later, with arbitrary data used in the meantime. A large GeneMANIA dataset may be a good place to start.</li>
+     <li><u>Infinite forcedirected demos</u>: In Cytoscape.js 2.3+, it is possible to run forcedirected layouts infinitely. 
+     Demos that showcase this feature would be interesting. A demo that showed a truely useful usecase of infinite 
+     forcedirected layouts would be great. I've seen several infinite forcedirected demos (like the Arbor website), but a 
+     demo that used the principle in a way that provides real utility to the user would stand out.</li>
+     <li><u>Simultaneous multilayout demo</u>: A demo that runs multiple layouts at once on different parts of a graph would 
+     be very interesting. Perhaps an interactive demo would be good here. For example: The user could select a parts of the 
+     graph of interest and run a layout on that subgraph. Perhaps the overall graph area could be split into several grid 
+     cells so that the user could easily specify the area in which to constrain running the layout.</li>
+     <li><u>Interesting extension demos</u>: Though there are simple demos included with each extension, it would be very 
+     nice to have interesting, more complex demos that showcase some realworld usecases of each extension. The list of 
+     Cytoscape.js extensions can be found <a href="http://js.cytoscape.org/#extensions" target="_blank">here</a>.</li>
+     <li><u>Live visualisation of the Bitcoin Blockchain</u>: Using <a href="http://bitcoinjs.org/" target="_blank">Bitcoin</a> 
+     and Cytoscape.js, it should be relatively straightforward using pure JS to visualise the Blockchain. Algorithmically, 
+     Bitcoin is a graph of transactions and the Blockchain itself is an inductive chain (graph). There could be two views: 
+     One graph would show the Blockchain itself, and another graph would show the transaction flow.</li>
+     </ul>
+</p>
+<p><b>Technology and Skills</b>: JavaScript</p> 
+<p><b>Potential Mentors</b>: Max Franz, Christian Lopes</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
 <!-- END PASTE -->
 
     </div> <!-- .span9 !-->
