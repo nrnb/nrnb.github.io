@@ -344,6 +344,48 @@ http://vcell.org/technology/VcmlSpec.html</a></p>
 <p>Contact: <a href="mailto:apico@gladstone.ucsf.edu" >apico@gladstone.ucsf.edu</a></p>
 
 <br />
+<h2 dir="ltr" >Idea 14: Development of Experiment Data Curation Tools using the NDEx infrastructure and the OpenBEL Knowledge 
+Representation Language</h2>
+<p><b>Background</b>: Biological knowledge can be represented in network form, a methodology that has proved valuable in 
+communicating and computing on biological mechanisms.  In some cases, the biological relationships encoded in the networks 
+correspond directly to experimental results, as in protein binding assays that result in protein-protein interaction 
+assertions. In other cases, scientific findings have been encoded as qualitative causal relationships, providing networks 
+of facts that can be used to build causal reasoning models. These encodings have been frequently performed by manual 
+curation or ad hoc software, so there is an opportunity to develop more general tools for abstracting experimental results 
+into reusable portable knowledge encoded as biological networks. Recent technological progress in modern experimental OMICS 
+techniques allow scientists to generate large data sets that need to be carefully validated and curated, therefore the 
+automation of the interpretation and abstraction of these data to computable scientific findings is a valuable technique to 
+bridge the gap between data generation and its availability for the scientific community.</p>
+<p><b>Goal</b>: To develop and test a set of utilities to process selected types of experimental data into more abstract 
+biological knowledge as networks in the OpenBEL language and to compare the resulting networks with existing, manually 
+curated knowledge networks.  This transformation of data to computable scientific findings represents the automation of a 
+basic scientific process; the abstraction of data tables into statements of inferred causality in a given biological context 
+makes those results more reusable, more computable, and easier to integrate with findings from other studies. This facilitates 
+scientists to take better advantage of one class of “big data” and can potentially help use the experimental data to identify 
+new hypotheses in the biomedical/pharmaceutical  fields.</p>
+<p><b>Project breakdown</b>:</p>
+<p><u>Phase 1</u> of the project aims to develop new software utilities to <u>capture</u> experimental data as OpenBEL statements.</p>
+<p>In <u>Phase 2</u>, the newly developed utilities will be tested with experimental data sets derived from microarray and 
+mass spec analysis. One source of testing will be a set of experimental data generated and validated by the Itkin-Ansari lab 
+at UC San Diego and focused on the involvement of bHLH transcription factor Id3 in pancreatic cancer.</p>
+<p><u>Phase 3</u> will focus on generating additional utilities for the <u>comparison</u> of OpenBEL networks.</p>
+<p>Finally, <u>Phase 4</u> will use these tools to compare and contrast the OpenBEL networks captured from experimental data with 
+existing OpenBEL networks created by manual curation.</p>
+<p>Project milestones and deliverables will include: 
+     <ul>
+          <li>Update/expansion of existing related networks available in public databases and repositories.</li>
+          <li>Pre-publication of all new network data using the NDEx infrastructure 
+          (<a href="http://www.ndexbio.org" target="_blank">www.ndexbio.org</a>). </li>
+          <li>Generation of new leads to support research project progress.</li>
+          <li>Publication of at least 1 research article in an international peer-reviewed journal 
+          showcasing the newly developed tools, their use and potential applications.</li>
+     </ul>
+</p>
+
+<p><b>Technology and Skills</b>: Python, JavaScript</p>
+<p><b>Potential Mentors</b>: Dexter Pratt, Pamela Itkin-Ansari</p>
+<p><b>Contact</b>: <a href="mailto:rudi@ucsd.edu">Rudolf T. Pillich</a></p>
+<br />
 
 <h2 dir="ltr" >Idea 15: Integration of WikiPathways Visualization with PathVisio into Bioclipse</h2>
 <p><b>Background</b>: Bioclipse is a powerful platform combining a powerful scripting language to write data analysis and 
