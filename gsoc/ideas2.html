@@ -59,43 +59,12 @@ adjusting node size to account for impact factors of the author’s publications
 <li><a href="https://github.com/BaderLab/SocialNetworkApp" target="_blank">Existing code</a></li>
 <li><a href="http://baderlab.org/UserguideSocialNetworkApp" target="_blank">Existing userguide</a></li>
 </ul>
-<p><b>Technology and Skills</b>: Java, XML, PubMed e-utils</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java, XML, PubMed e-utils</p>
 <p><b>Potential Mentors</b>: Sergio Baranzini, Gary Bader, Ruth Isserlin</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
-
-<br />
-<h2 dir="ltr" >Idea 3: User Interaction on Biomedical Linked Data</h2>
-
-<p>During GSoC 2012, we developed<a href="http://vsdlc3.blogspot.com" target="_blank"> SemScape</a>, a plugin that allows the use of 
-Cytoscape as a browser for Semantic Web (Linked Data) knowledge bases. We are currently in the process of updating libs and 
-packaging the plugin for the Cytoscape App Store.</p>
-<p>The idea for this year’s project is to go one step further and to allow the use of Cytoscape to visually define queries in 
-SPARQL. The basic idea is that from a graph, a sub-graph can be defined where a few nodes or edges can be marked as variables 
-(and eventually filters can be associated to them): this is equivalent to a (simple) SPARQL query. The user can then define 
-queries in a simple and interactive way, without knowing the underlying syntax, that can be stored and applied on different
-data sources. The project can then be extended in three directions, depending on the interest of the student:</p>
-<ul>
-<li>allowing users to push such queries to a repositories and hence share them (the current plugin 
-support updates of queries from remote repositories)</li>
-<li>Implementing more complex queries (unions, negation, …)</li>
-<li>Implementing heuristics for query-selection: in the current plugin, queries can be performed on demand, but they are 
-also associated to specific actions. For instance, right-selecting a node of type protein can present as an option to expend 
-the graph with the results of a query which is can include the specific protein as a value. This is possible through a simple 
-markup through which queries are annotated by the user. Such markup could be included in the visual query/construction process
-and/or extracted from simple query patterns.</li>
-</ul>
-<p>Some of the ideas in this project<a href="http://www.biomedcentral.com/1471-2105/9/S4/S6" target="_blank"> have been 
-already prototyped</a>, so we have a good understanding of the difficulty and timing required. This project has the potential 
-to make Cytoscape an ideal tool to navigate and query Linked Data resources (both in biomedical and, more generally, in Open 
-Data domains). It also opens interesting possibilities in analyzing graphs from graph knowledge bases that can be represented 
-as RDF (e.g.: dbpedia, freebase,...).</p>
-<p>Language and Skills: Java/Maven. Knowledge of OSGi would be helpful. Knowledge of Semantic Web technologies would be a plus.</p>
-<p>Potential Mentors: Andrea Splendiani, Andra Waagmeester</p>
-<p>Contact: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 4: CentiScaPe for multiple networks analysis and graphical output enhancement</h2>
-
 <p><b>Background</b>: <a href="http://apps.cytoscape.org/apps/centiscape" target="_blank">CentiScaPe</a> is a Cytoscape app that allows to compute network centrality parameters. It is the most complete 
 Cytoscape app for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, Betweenness, 
 Centroid, Stress, Radiality, Eigenvector, Edge Betweenness, Bridging Centrality, for directed and undirected networks. 
@@ -119,14 +88,13 @@ means we have 30 different experimental data set for the same network that must 
 <li>The tool should also provide the implementation of the integration of experimental data-sets in order to include them in 
 the topological analysis (more info will be provided to the interested students)</li>
 </ul>
-<p><b>Technology and Skills</b>: Java, software analysis (possibly abstract interpretation theory)</p>
+<p><b>Technology and Skills</b>: CentiScaPe, Java, software analysis (possibly abstract interpretation theory)</p>
 <p><b>Potential Mentors</b>: Giovanni Scardoni (CBMC, University of Verona), Fausto Spoto (University of Verona)</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 5: Improving Cytoscape.js Based Viewer for SBGN Process Description Diagrams with Better Layout and 
 Advanced Complexity Management Operations</h2>
-
 <p><b>Background</b>:
 <a href="http://cytoscape.github.io/cytoscape.js/" target="_blank">Cytoscape.js</a> is a JavaScript graph library for analysis and 
 visualization of relational information. The <a href="http://www.sbgn.org/" target="_blank">Systems Biology 
@@ -151,7 +119,7 @@ Notice however that this is not a straightforward topology change. For instance 
 node requires calculation of any inter-graph edges going into the compound node and representing them with "meta" edges in the 
 collapsed network. Similarly, expanding a collapsed node back requires undoing it. The situation becomes cumbersome since 
 arbitrary level of nesting is allowed and folding can take place at an arbitrary level.</p>
-<p><b>Technology and Skills</b>: JavaScript, Java, Data Structures and Algorithms</p>
+<p><b>Technology and Skills</b>: Cytoscape.js, JavaScript, Java, Data Structures and Algorithms</p>
 <p><b>Potential Mentors</b>: Ugur Dogrusoz (Bilkent University & MSKCC) and S. Onur Sumer (MSKCC)</p>
 <p><b>Contact</b>: <a href="mailto:ugur@cs.bilkent.edu.tr" >ugur@cs.bilkent.edu.tr</a> and <a href="mailto:onur@cbio.mskcc.org" >onur@cbio.mskcc.org</a> </p>
 <br />
@@ -198,7 +166,7 @@ pathways across different resources, and the comparative analyses of pathways ac
 project, is if you're given multiple representations of the same pathway 
 (<a href="http://wikipathways.org//index.php?query=wnt&amp;species=Homo+sapiens&amp;title=Special%3ASearchPathways&amp;doSearch=1&amp;ids=&amp;codes=&amp;type=query" target="_blank">examples of several human Wnt pathways</a>) 
 can you develop a method to show a unified pathway and how the original representations map to the unified pathway.</p>
-<p><b>Technology and Skills</b>: Java, XML</p>
+<p><b>Technology and Skills</b>: Reactome, PathwayCommons, WikiPathways, Java, XML</p>
 <p><b>Potential Mentors</b>: Augustin Luna (MSKCC)</p>
 <p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >lunaa@cbio.mskcc.org</a></p>
 <br />
@@ -210,7 +178,7 @@ graphical attributes. The <a href="http://www.sbgn.org/" target="_blank">Systems
 standard graphical notation for presenting pathways and protein interactions. Currently, Cytoscape lacks the node symbols and 
 edge types required for SBGN. In this project, those notations will be added to the Cytoscape core, and a simple palette 
 editor developed for user interaction.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris, Alex Pico</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a></p>
 <br />
@@ -220,7 +188,7 @@ editor developed for user interaction.</p>
 luminosity-neutral set of colors that would be extremely useful to add to Cytoscape, and there are several other approaches 
 to choosing sets of colors that contrast nicely. Creating these color palettes and providing them for use within Cytoscape’s 
 visual style interface would be extremely useful to Cytoscape users.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris, Michael Heuer, Alex Pico</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 <br />
@@ -243,107 +211,15 @@ layouts to user- or attribute-defined spaces. This idea involves implementing la
 </ul>
 <li>etc...</li>
 </ul>
-<p><b>Technology and Skills</b>: Java, and a strong math background</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java, and a strong math background</p>
 <p><b>Potential Mentors</b>: Scooter Morris, Alex Pico, Bruce Aronow</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 <br />
 
-<h2 dir="ltr" >Idea 11: A SPARQL query plugin for Pathvisio</h2>
-
-<p><b>Background</b>: The semantic web is becoming a valuable resource for Pathway knowledge. The challenge still remain to 
-smoothly integrate this knowledge into biological frameworks. With their SPARQL endpoints Uniprot 
-(<a href="http://beta.sparql.uniprot.org/" target="_blank">http://beta.sparql.uniprot.org/</a>) or the EBI rdf Platform 
-(<a href="https://www.ebi.ac.uk/rdf/" target="_blank">https://www.ebi.ac.uk/rdf/</a>) , biological data is becoming available as semantic 
-web data. To use this knowledge one need not only to learn SPARQL queries, but also be prepared to convert the semantic data 
-in different formats that comes with the various biological platforms. Using semantic web data in Pathvisio, we currently 
-need to compose the appropriate SPARQL queries, get the data and write various parser to change the data in to the different 
-data models.</p>
-<p><b>Goal</b>: To make a Pathvisio plugin that allows a pathway curator to write SPARQL queries against a variety of semantic 
-web based pathways resources and include the obtained triples into the Pathway under scrutiny. The plugin should also provide 
-an interface to SPARQL results for other Pathvisio s. Having such SPARQL interface still requires a pathway editor to 
-become knowledgeable in writing SPARQL queries. The burden of having to write various parsers for semantic web data however, 
-is taken away. The plugin should:</p>
-<ul>
-<li>Provide a SPARQL query editor, from where the user could compose queries, which are then subsequently launched to the 
-respective SPARQL endpoints.</li>
-<li>Provide an interface that wrap specific SPARQL queries for other Pathvisio s.</li>
-<li>Link to a centralized repository (e.g. Github) where SPARQL queries can be stored for future reference and others to use.</li>
-<li>Link to a centralized index of relevant SPARQL endpoints. This index might again be stored on platforms like Github.</li>
-<li>Import the resulting triples, which can then be linked to recognizable pathway components, or as data elements to use in 
-Pathway analysis.</li>
-<li>Make a RDF representation of a Pathway opened in Pathvisio. These triples are to be used as template for SPARQL queries. 
-The user should be able to click on a triple which is then added to the WHERE block in the SPARQL query.</li>
-</ul>
-<p><b>Technology and Skills</b>: SPARQL, RDF, and Java. This idea is for a student who has solid background in SPARQL queries, or the Semantic web in 
-general, and who is looking into opening up the Semantic Web to specific knowledge domains (I.e. Biology and/or Medicine).</p>
-<p><b>Potential Mentors</b>: Andra Waagmeester, Anders Riutta, Martina Kutmon </p>
-<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-<br />
-
-<h2 dir="ltr" >Idea 12: Web publishing of models from Virtual Cell database</h2>
-<p>The<a href="http://vcell.org" target="_blank"> Virtual Cell</a> modeling and simulation framework is an open source 
-software for modeling and simulations of biological systems using Java RMI, providing both client- and server- based modeling 
-and simulation capabilities. The biologically oriented user interface allows experimentalists to create models, define 
-cellular geometry, specify simulations and analyze the simulation results. The models and results are stored on a remote 
-server in ORACLE database and presently can be reviewed only in the VCell software. You need to implement a content management 
-system that will search and retrieve model information from ORACLE or MySQL database and publish it online. The model 
-structure stored in a relationship database is available at<a href="http://vcell.org/technology/VcmlSpec.html" target="_blank"> 
-http://vcell.org/technology/VcmlSpec.html</a></p>
-<p>Language and Skills: Java</p>
-
-<p>Possible Mentors: Michael Blinov, Jim Schaff</p>
-
-<p>Contact: <a href="mailto:vcell-discuss@googlegroups.com" >vcell-discuss@googlegroups.com</a></p>
-
-<br />
-
 <h2 dir="ltr" >Idea 13: New Features for Online Tutorial System</h2>
 
-<p><a href="http://opentutorials.cgl.ucsf.edu" target="_blank">OpenTutorials</a> is a free, online tutorial resource for open source and NRNB-supported tools. It is built on top of MediaWiki and a handful of extensions. It’s basic function is to provide a wiki-based collection of tutorials that can be viewed as a web page, slide show or printed handout. The wiki approach makes it easy to build and maintain content. The slide show and handout features make it useful for presenters.</p>
-
-<p>There are a number of features that need to be implemented to improve the site and really make it effective to a larger community. What we’re looking for here with this project is an application that is very clear about the use cases of tutorials:</p>
-
-<ul>
-<li><p>for developers wanting to create and maintain tutorial materials</p>
-
-</li>
-<li><p>for presenters of tutorials</p>
-
-</li>
-<li><p>and for users learning from tutorials.</p>
-
-</li>
-</ul>
-
 <br />
-<p>The application should include a number of features that enhance these use cases. When possible, the features should point to other examples were similar approaches have proven successful (e.g., in other popular software). After we discuss the features, your application should then include implementation details and a timeline. These would be implemented as one or more PHP extensions, for example. Experience or some demonstration of familiarity with MediaWiki or PHP would be a plus. Here are some feature ideas to get you started:</p>
 
-<ul>
-<li><p>Mix-and-match: We need a mechanism to allow presenters to mix and match tutorials (or sections of tutorials) into sets that are tailored for their class or workshop audience.</p>
-
-</li>
-<li><p>Transient locks: We need a mechanism for temporarily locking content while it is being presented (so that someone isn’t editing a wiki page while you are presenting it to a class of 100 students!). This can be done either by supporting temporary presenter “copies” that are not publicly editable, or simply locks that presenters can set for specific dates and times.</p>
-
-</li>
-<li><p>Enhanced image replacement tools to make it easier to update screenshots.</p>
-
-</li>
-<li><p>Tutorial builder tools using templates and forms to get a new tutorial started, or an integrated html-to-wiki converter like<a href="http://labs.seapine.com/htmltowiki.cgi" > this</a>.</p>
-
-</li>
-<li><p>Tweaks to the wiki page display of header/meta data and of slide breaks (e.g., a clear, yet unobtrusive icon).</p>
-
-</li>
-</ul>
-
-<br />
-<p>Language and Skills: PHP, MediaWiki</p>
-
-<p>Potential Mentors: Alex Pico, Kristina Hanspers</p>
-
-<p>Contact: <a href="mailto:apico@gladstone.ucsf.edu" >apico@gladstone.ucsf.edu</a></p>
-
-<br />
 <h2 dir="ltr" >Idea 14: Development of Experiment Data Curation Tools using the NDEx infrastructure and the OpenBEL Knowledge 
 Representation Language</h2>
 <p><b>Background</b>: Biological knowledge can be represented in network form, a methodology that has proved valuable in 
@@ -406,7 +282,7 @@ those molecules (only the event creation has to be implemented). Preferably, a
 <a href="http://www.biomedcentral.com/1471-2105/10/397" target="_blank">scripting language extension</a> is written, 
 to allow extracting information from the pathway and highlighting of parts of the pathway. This involves extending an existing 
 interface with methods that can be run from the scripting language.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: WikiPathways, Bioclipse, Java</p>
 <p><b>Potential Mentors</b>: Egon Willighagen, Jonathan Alvarsson</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
@@ -436,7 +312,7 @@ were used to create the submission. These files could be from Synapse or from an
      <li><a href="http://hud.rel.rest.doc.sagebase.org.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Synapse REST API reference</a></li>
 </ul>
 </p>
-<p><b>Technology and Skills</b>: Java, OSGi, Using REST APIs in Java, Swing</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java, OSGi, Using REST APIs in Java, Swing</p>
 <p><b>Potential Mentors</b>: Alex Pico</p>
 <p><b>Contact</b>: <a href="mailto:apico@gladstone.ucsf.edu" >Alex Pico</a></p>
 <br />
@@ -460,13 +336,12 @@ node-link diagrams, you will add new options for this feature, including:</p>
 both of Java and JavaScript knowledge to implement this feature. Also, we assume you are comfortable with modern web 
 application development tools, such as command-line tools running on node.js, JavaScript frameworks like Angular.js, testing 
 frameworks, and of course, <a href="http://d3js.org/" target="_blank">D3.js</a>.</p>
-<p><b>Technology and Skills</b>: JavaScript, D3.js, Java, knowledge of modern web development tools such as node.js/grunt/gulp/yeoman.</p>
+<p><b>Technology and Skills</b>: Cytoscape, JavaScript, D3.js, Java, knowledge of modern web development tools such as node.js/grunt/gulp/yeoman.</p>
 <p><b>Potential Mentors</b>: Kei Ono</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 18: BridgeDb config plugin in PathVisio</h2>
-
 <p><b>Background</b>: <a href="http://www.bridgedb.org" target="_blank">BridgeDb</a> is an identifier mapping framework used in PathVisio and WikiPathways. 
 Currently it is possible to <a href="http://www.pathvisio.org/wiki/BridgeDbConfigPluginHelp" target="_blank">load a mapping databases for gene products and metabolites</a>. 
 This should be extended with interaction mapping databases.</p>
@@ -476,22 +351,19 @@ extended and integrated into the core PathVisio application as another core modu
 improved so it is more intuitive and user friendly. Furthermore the plugin should allow users to download and update BridgeDb 
 mapping databases from within PathVisio. Currently the users have to download the databases first and then load them into 
 PathVisio. This step should be automatized by the plugin.</p>
-
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: PathVisio, Java</p>
 <p><b>Potential Mentors</b>: Kutmon, Jonathan Melius</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com" >wikipathways-devel@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 19: Citing publications in biological pathways - PathVisio and WikiPathways</h2>
-
 <p><b>Background</b>: <a href="http://www.pathvisio.org" target="_blank">PathVisio</a> is a commonly-used pathway editor, visualization and analysis tool implemented in Java and is 
 linked with the collaborative pathway database <a href="http://www.wikipathways.org" target="_blank">WikiPathways</a>. Currently, PathVisio and WikiPathways 
 allow users to add publication references to <a href="http://www.ncbi.nlm.nih.gov/pubmed" target="_blank">PubMed</a>.</p>
 <p><b>Goal</b>: The goal of this project is to extend the functionality to allow the reference of other identifiers like DOIs, 
 export references in standard formats like Bibtex or EndNote and provide statistics about citations used on WikiPathways 
 (total number of citations, avg. number of citations per pathway, top cited papers/journals, ...).</p>
-
-<p><b>Technology and Skills</b>: Java, PHP, Mediawiki</p>
+<p><b>Technology and Skills</b>: PathVisio, WikiPathways, Java, PHP, Mediawiki</p>
 <p><b>Potential Mentors</b>: Sravanthi Sinah, Martina Summer-Kutmon, Anwesha Bohler</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com" >wikipathways-devel@googlegroups.com</a></p>
 <br />
@@ -503,7 +375,7 @@ implemented in Cytoscape. For example, the <a href="http://yifanhu.net/PUB/graph
 algorithm</a>, a Fast Muiltipole Multilevel layout (See <a href="http://www.ogdf.net/doc-ogdf/classogdf_1_1_f_m_m_m_layout.html" target="_blank">OGDF</a> 
 for example), Yifan Hu proportional, and potentially some of the better algorithms from Gephi. Cytoscape provides a 
 framework for adding new layout algorithms as Apps, so this work could all be done as a series of separate apps.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
@@ -514,7 +386,7 @@ to provide a compound graph visualization. Currently groups can be either in a �
 <p><b>Goal</b>: For a compound graph, a new visualization state needs to be introduced that allows the compound node 
 (group) to be visualized as a shape (concave or 
 convex hull) around it’s children. Moving that shape would move all of it’s children, etc.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 <br />
@@ -529,7 +401,7 @@ multiple conditions in each series, which means we need to move beyond the stand
 to provide new visualization opportunities to users. Ideally, this would be integrated with network-based animation tools 
 such as <a href="http://apps.cytoscape.org/apps/dynnetwork" target="_blank">DynNetwork</a> or 
 <a href="http://apps.cytoscape.org/apps/cyanimator" target="_blank">CyAnimator</a>.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
 <br />
@@ -547,7 +419,7 @@ with the editor CellDesigner (that shares a format similar to SBGN) making us be
 straight forward project; many of the mapping issues have already been addressed. The project will make use of two Java 
 libraries <a href="http://www.biopax.org/paxtools.php" target="_blank">Paxtools</a> (for BioPAX) and 
 <a href="http://www.sbgn.org/LibSBGN" target="_blank">LibSBGN</a> (for SBGN).</p>
-<p><b>Technology and Skills</b>: Java and XML</p>
+<p><b>Technology and Skills</b>: PathwayCommons, Java and XML</p>
 <p><b>Potential Mentors</b>: Augustin Luna</p>
 <p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >Augustin Luna</a></p>
 <br />
@@ -589,7 +461,7 @@ these entities.
 <p><b>Goal</b>: The goal of this project is to integrate more sophisticated algorithms into the extraction of 
 interactions from text content. A starting point for some of these would be the algorithms outlined by the EBI website 
 WhatIzIt.</p>
-<p><b>Technology and Skills</b>: Experience connecting web services, Javascript</p>
+<p><b>Technology and Skills</b>: PathwayCommons, Experience connecting web services, Javascript</p>
 <p><b>Potential Mentors</b>: Augustin Luna (MSKCC), Max Franz (U of Toronto) </p>
 <p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >Augustin Luna</a>, <a href="mailto:maxkfranz@gmail.com" >Max Franz</a></p>
 <br />
@@ -639,12 +511,10 @@ download options.</li>
 <li>Develop a visualization and annotation module using Cytoscape.js to visualize the retrieved PPI data as a network with 
 annotations that highlights the features of the predicted PPI such as the prediction confidence and validation...etc.</li>
 </ol></p>
-
 <p><b>Inputs</b>: The student will be provided with the database design and sample data as well as an introduction to the 
 topic and the different possible visualizations and annotations needed. The student will have the freedom to choose among 
 them or to propose other options.</p>
-
-<p><b>Technology and Skills</b>: Javascript, JSON, PHP, JQuery</p>
+<p><b>Technology and Skills</b>: Cytoscape.js, Javascript, JSON, PHP, JQuery</p>
 <p><b>Potential Mentors</b>: Mohamed Helmy, Gary Bader</p>
 <p><b>Contact</b>: <a href="mailto:mohamed.attiashahata@utoronto.ca">Mohamed Helmy</a>, <a href="mailto:gary.bader@utoronto.ca">Gary Bader</a></p>
 
@@ -662,7 +532,7 @@ deleted. Then, we'd like to implement a native spring embedder based layout algo
 structures 
 into account during layout. A <a href="http://www.cs.bilkent.edu.tr/~ivis/chilay.html" target="_blank">Java implementation of 
 CoSE</a> is already publicly available and needs to be integrated into Cytoscape 3.</p>
-<p><b>Technology and Skills</b>: Java, Data Structures and Algorithms</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java, Data Structures and Algorithms</p>
 <p><b>Potential Mentors</b>: Ugur Dogrusoz (Bilkent University & MSKCC) and Gerardo Huck (U of Toronto)</p>
 <p><b>Contact</b>: <a href="mailto:ugur@cs.bilkent.edu.tr">ugur@cs.bilkent.edu.tr</a>, <a href="mailto:onur@cbio.mskcc.org">onur@cbio.mskcc.org</a></p>
 <br />
@@ -689,7 +559,7 @@ on pathways and a flux data set to interactions on pathways.</li>
           <li>the currently loaded annotation databases</li>
      </ul>
 </ul></p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: PathVisio, Java</p>
 <p><b>Potential Mentors</b>: Anwesha Bohler, Martina Summer-Kutmon</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 
@@ -713,7 +583,7 @@ sections of existing pathways, e.g., the cardiac myocyte from the previously ref
 component to store the icons and a front-end component to allow WikiPathways users to view and search for icons.</p>
 <p><b>Links</b>: An <a href="https://code.google.com/p/svg-edit/" target="_blank">SVG drawing tool </a>with a large number of icons available might provide some ideas. 
 </p>
-<p><b>Technology and Skills</b>: JavaScript required. Some backend experience (PHP, Node.js or Python) to create a backend for saving the 
+<p><b>Technology and Skills</b>: WikiPathways, JavaScript required. Some backend experience (PHP, Node.js or Python) to create a backend for saving the 
 icons. SVG or Canvas a plus.
 </p>
 <p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
@@ -744,10 +614,11 @@ could integrate with one or more existing online presentation framework(s).</p>
 </ul>
 </ul>
 </p>
-<p><b>Technology and Skills</b>: User experience, graphical design, CSS, some JavaScript.</p>
+<p><b>Technology and Skills</b>: WikiPathways, User experience, graphical design, CSS, some JavaScript.</p>
 <p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
+
 <h2 dir="ltr" >Idea 32: Details Panel for Semantic Terms</h2>
 <p><b>Background</b>: <a href="http://wikipathways.org/index.php/WikiPathways:About" target="_blank">Biological pathways</a> provide intuitive 
 diagrams of the interactions underlying biological processes. For 
@@ -779,7 +650,7 @@ vocabularies with <a href="http://www.w3.org/TR/skos-primer/" target="_blank">SK
 <li><a href="https://github.com/alexmilowski/green-turtle" target="_blank">An RDFa implementation for browsers</a></li>
 <li><a href="https://code.google.com/p/ubiquity-rdfa/wiki/TutorialIntroduction" target="_blank">Possibly relevant project</a></li>
 </ul></p>
-<p><b>Technology and Skills</b>: JavaScript, <a href="http://json-ld.org/" target="_blank">JSON-LD</a>, RDF, OWL, optionally SKOS</p>
+<p><b>Technology and Skills</b>: WikiPathways, JavaScript, <a href="http://json-ld.org/" target="_blank">JSON-LD</a>, RDF, OWL, optionally SKOS</p>
 <p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
@@ -790,7 +661,7 @@ is no good PCA tool integrated with Cytoscape. The ideal tool would support perf
 of the analysis using standard approaches, and then visualizing the results in the context of the Cytoscape network itself.
 There are many tools that could assist in this task and the analysis itself is pretty well understood. The challenge to this 
 idea is looking for ways to integrate the results of the analysis into Cytoscape.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
@@ -804,7 +675,7 @@ only interested in local neighborhoods of the network.</p>
 <p><b>Goal</b>: This project would involve writing a Cytoscape app that would load an 
 abstraction of these networks (where multiple nodes are represented by a single "meta" node) into Cytoscape and then allow 
 users to incrementally load all of the nodes within that metanode.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris, Samad Lotia</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
@@ -812,7 +683,7 @@ users to incrementally load all of the nodes within that metanode.</p>
 <h2 dir="ltr" >Idea 35: Add t-SNE to clusterMaker</h2>
 <p><b>Description</b>: <a href="http://lvdmaaten.github.io/tsne/" target="_blank">t-SNE</a> is a technique for dimensionality 
 reduction that is widely used. It would be extremely useful to add this algorithm into the existing clusterMaker app.</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
@@ -842,8 +713,7 @@ ontologies (the selection could be a subnetwork or the entire network).</li>
 </ul>
 This work involves programming a new app that will interact with Cytoscape in the node selection, network plotting, etc. 
 The code will be available as an open source GitHub project.</p>
-
-<p><b>Technology and Skills</b>: Java, GitHub</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java, GitHub</p>
 <p><b>Potential Mentors</b>: Cristian R Munteanu, Marcos Martinez,Janna Hastings and Alejandro Pazos</p>
 <p><b>Contact</b>: <a href="mailto:muntisa@gmail.com">Cristian R Munteanu</a></p>
 <br />
@@ -855,8 +725,7 @@ Currently our pathways can be annotated with ontology tags from the pathway onto
 elements (genes, proteins, metabolites), for pathways that are annotated with specific ontology tags or pathways that contain 
 a specific interactions. The advanced search allows users to filter pathways based on species, curation tags, authors, 
 creation date, number of edits, etc.</p>
-
-<p><b>Technology and Skills</b>: PHP, Mediawiki</p>
+<p><b>Technology and Skills</b>: WikiPathways, PHP, Mediawiki</p>
 <p><b>Potential Mentors</b>: Martina Summer-Kutmon, Alex Pico</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br />
@@ -871,8 +740,7 @@ are in the input gene list. Additionally this basic analysis module will also be
 will develop a page where the user can provide a list of genes, then the PathVisio 
 statistics module gets called to calculate the over-representation and the result will be shown on WikiPathways. The pathways 
 will be shown in the pathvisiojs viewer and the genes in the input list will be highlighted.</p>
-
-<p><b>Technology and Skills</b>: Java, PHP</p>
+<p><b>Technology and Skills</b>: WikiPathways, Java, PHP</p>
 <p><b>Potential Mentors</b>: Martina Summer-Kutmon, Anwesha Bohler</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br/ >
@@ -886,7 +754,7 @@ a task.</p>
 PathVisio. Documentation and tutorials are crucial elements of software development and the goal of this project is to 
 implement a tutorial mode in PathVisio. PathVisio can be extended through plugins, so the tutorial mode should allow other 
 modules to provide additional tutorials that can be selected if the plugins are installed.</p>
-<p><b>Technology and Skills</b>: Java, development of tutorials</p>
+<p><b>Technology and Skills</b>: PathVisio, Java, development of tutorials</p>
 <p><b>Potential Mentors</b>: Martina Summer-Kutmon, Kristina Hanspers, Sravanthi Sinha</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br/ >
@@ -908,7 +776,7 @@ complex dynamics of such system. Population is divided in three states: suscepti
 denoted by S), infected by the pathogen (given the symbol I) and recovered/removed/immune (denoted R). The way that these 
 compartments interact is often based on a network model, hence the idea to include the SIR model in the CentiScaPe tool for 
 network analysis</p>
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: CentiScaPe, Java</p>
 <p><b>Potential Mentors</b>: Giovanni Scardoni (CBMC, University of Verona)</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
@@ -937,8 +805,7 @@ measures of CentiScaPe.</p>
 <p>[1] <a href="http://www.ncbi.nlm.nih.gov/pubmed/12399590" target="_blank">Network Motifs: Simple Building Blocks of Complex Networks. Milo et al, Science 25 October 2002.</a></p>
 <p>[2] <a href="http://apps.cytoscape.org/apps/randomnetworks" target="_blank">RandomNetworks App</a></p>
 <p>[3] <a href="https://sites.google.com/site/randomnetworkplugin/" target="_blank">RandomNetworks Project Website</a></p>
-
-<p><b>Technology and Skills</b>: Java</p>
+<p><b>Technology and Skills</b>: CentiScaPe, Java</p>
 <p><b>Potential Mentors</b>: Giovanni Scardoni (CBMC, University of Verona)</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
@@ -952,7 +819,7 @@ These may involve molecules that have multiple potential states, such as a prote
 molecules that combine to form heterogeneous complexes located among multiple compartments. The JSBML team has already 
 initiated an implementation of the multi package, which will be a useful starting point for this project.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java, some exposure to biochemistry.</p>
+<p><b>Technology and Skills</b>: JSBML, SBML, Java, some exposure to biochemistry.</p>
 <p><b>Potential Mentors</b>: Nicolas Rodriguez, Nicolas Le Novère</p>
 <p><b>Contact</b>: <a href="mailto:rodrigue@ebi.ac.uk">Nicolas Rodriguez</a>, <a href="mailto:nicolas.lenovere@babraham.ac.uk">Nicolas Le Novère</a></p> 
 <br />
@@ -970,7 +837,7 @@ as more SBML Level 3 packages become implemented. We have already started to def
 we need to implement all of the validations rules for SBML core and the different packages and provide the hooks in JSBML to 
 using those schemas for validating SBML files.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java, XML, RELAX NG, Schematron, SBML</p>
+<p><b>Technology and Skills</b>: JSBML, SBML, Java, XML, RELAX NG, Schematron, SBML</p>
 <p><b>Potential Mentors</b>: Sarah Keating, Andreas Dräger</p>
 <p><b>Contact</b>: <a href="mailto:skeating@ebi.ac.uk">Sarah Keating</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
@@ -987,7 +854,7 @@ Biology Simulation Core Library</a>. When parsing infix formulas JSBML relies on
 create abstract syntax trees. With the availability of the new math package, some adaptation of existing grammar files for 
 the JavaCC parser generator will also be required and will be part of this project.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java, <a href="https://javacc.java.net/" target="_blank">JavaCC</a></p> 
+<p><b>Technology and Skills</b>: JSBML, SBML, Java, <a href="https://javacc.java.net/" target="_blank">JavaCC</a></p> 
 <p><b>Potential Mentors</b>: Victor Kofia, Andreas Dräger, Alex Thomas, Sarah Keating</p>
 <p><b>Contact</b>: <a href="mailto:victor.kofia@gmail.com">Victor Kofia</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a>, 
      <a href="mailto:althomas@ucsd.edu">Alex Thomas</a>, <a href="mailto:skeating@ebi.ac.uk">Sarah Keating</a></p> 
@@ -1004,7 +871,7 @@ SBML through its rendering extension. JSBML's current plugin interface to CellDe
 rendering extension. In this project, important rendering styles that are used in CellDesigner should be implemented in the 
 plugin interface.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java, some basic understanding of visualization algorithms</p> 
+<p><b>Technology and Skills</b>: JSBML, SBML, Java, some basic understanding of visualization algorithms</p> 
 <p><b>Potential Mentors</b>: Akira Funahashi, Ibrahim Y. Vazirabad, Andreas Dräger</p>
 <p><b>Contact</b>: <a href="mailto:funa@bio.keio.ac.jp">Akira Funahashi</a>, <a href="mailto:yvazirabad@gmail.com">Ibrahim Y. Vazirabad</a>,
      <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
@@ -1018,7 +885,7 @@ to be standardized between the two parsing libraries are the test cases for prop
 create important tests for core and extension libraries for JSBML which correspond to the libSBML rules. The programmer could 
 also suggest further tests, and he/she would be essential in building the code base that enacts quality control for JSBML.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Technology and Skills</b>: JSBML, SBML, Java</p> 
 <p><b>Potential Mentors</b>: Andreas Dräger, Alex Thomas</p>
 <p><b>Contact</b>: <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a>, <a href="mailto:althomas@ucsd.edu">Alex Thomas</a></p> 
 <br />
@@ -1034,7 +901,7 @@ package describes how such a flattening algorithm can work. The aim of this proj
 routine in JSBML in order to create an SBML file without comp. An additional goal of this project is the implementation of 
 basic validation rules for the comp package.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Technology and Skills</b>: JSBML, SBML, Java</p> 
 <p><b>Potential Mentors</b>: Lucian Smith, Chris Myers, Leandro Watanabe</p>
 <p><b>Contact</b>: <a href="mailto:lucianoelsmitho@gmail.com">Lucian Smith</a>, <a href="mailto:myers@ece.utah.edu">Chris Myers</a>,
      <a href="mailto:l.watanabe@utah.edu">Leandro Watanabe</a></p> 
@@ -1051,7 +918,7 @@ belong to the most widely used programs for this modeling approach. Since these 
 SBML dialect has evolved. The aim of this project is to better support constraint-based modeling in JSBML. To this end, a 
 converter from COBRA's SBML dialect to fbc needs to be implemented. This also includes an update of the fbc package implementation in JSBML to the next version.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Technology and Skills</b>: JSBML, SBML, Java</p> 
 <p><b>Potential Mentors</b>: Alex Thomas, Andreas Dräger</p>
 <p><b>Contact</b>: <a href="mailto:althomas@ucsd.edu">Alex Thomas</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
@@ -1068,7 +935,7 @@ CellDesigner plug-in. If time permits, it would also be nice to have as well a c
 <a href="http://www.sbgn.org/LibSBGN" target="_blank">SBGN-ML</a> and vice-versa. Those could be integrated into the 
 <a href="http://sourceforge.net/projects/sbfc/" target="_blank">Systems Biology Format Converter (SBFC)</a></p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Technology and Skills</b>: JSBML, SBML, Java</p> 
 <p><b>Potential Mentors</b>: Akira Funahashi, Andreas Dräger</p>
 <p><b>Contact</b>: <a href="mailto:funa@bio.keio.ac.jp">Akira Funahashi</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
@@ -1083,7 +950,7 @@ of its version 3, Cytoscape's app interface has undergone significant changes an
 are therefore not compatible with the latest version of Cytoscape. The aim of this project is therefore to update CySBML and 
 to turn it to a new Cytoscape app that supports the latest features of the SBML standard.</p>
 <p>More information about the SBML and JSBML projects at <a href="http://sbml.org/GSoC2015#" target="_blank">SBML.org</a>.</p>
-<p><b>Technology and Skills</b>: Java</p> 
+<p><b>Technology and Skills</b>: JSBML, SBML, Cytoscape, Java</p> 
 <p><b>Potential Mentors</b>: Matthias König, Andreas Dräger</p>
 <p><b>Contact</b>: <a href="mailto:matthias.koenig@charite.de">Matthias König</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
@@ -1115,7 +982,7 @@ their interest and/or with any set of functional annotations. Specifically, the 
      </ul>
 </p>
 <p><b>Links</b>: <a href="http://www.baryshnikova-lab.org" target="_blank">Baryshnikova lab</a></p>
-<p><b>Technology and Skills</b>: Java, basic understanding of biological networks</p> 
+<p><b>Technology and Skills</b>: JSBML, SBML, Cytoscape, Java, basic understanding of biological networks</p> 
 <p><b>Potential Mentors</b>: Anastasia Baryshnikova (Princeton), Dmitriy Gorenshteyn (Princeton)</p>
 <p><b>Contact</b>: <a href="mailto:abarysh@princeton.edu">Anastasia Baryshnikova</a></p> 
 <br/ >
@@ -1129,7 +996,7 @@ edge) hittests: The quadtree could be queried to determine the closest element t
 way. It might not be warranted for many usecases because of the additional cost of maintaining the tree, but it could be 
 useful in other cases. This project need not be constrained to quadtrees specifically, as a different particular tree 
 structure may be more appropriate.</p>
-<p><b>Technology and Skills</b>: JavaScript</p> 
+<p><b>Technology and Skills</b>: Cytoscape.js, JavaScript</p> 
 <p><b>Potential Mentors</b>: Max Franz, Christian Lopes</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
@@ -1147,7 +1014,7 @@ as a reusable extension.</p>
      <li><a href=" http://iscrolljs.com/" target="_blank">iScroll</a></li>
      <li><a href="https://github.com/cytoscape/cytoscape.js-qtip" target="_blank">qTip extension</a></li>
 </ul>
-<p><b>Technology and Skills</b>: JavaScript</p> 
+<p><b>Technology and Skills</b>: Cytoscape.js, JavaScript</p> 
 <p><b>Potential Mentors</b>: Max Franz, Christian Lopes</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
