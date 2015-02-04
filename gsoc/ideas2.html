@@ -552,6 +552,35 @@ libraries <a href="http://www.biopax.org/paxtools.php" target="_blank">Paxtools<
 <p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >Augustin Luna</a></p>
 <br />
 
+<h2 dir="ltr" >Idea 24: Visualizing complex data with sets-aware layout algorithms</h2>
+<p><b>Background</b>: Sets app for <a href="http://www.cytoscape.org" target="_blank">Cytoscape</a> is a powerful tool where 
+users can define individual sets for nodes and edges. 
+Users create sets from a selection or from some discrete criteria. For instance, given a network that consists of gene and 
+protein interactions, the user can define a set of all gene nodes and another set of protein nodes. Selecting all gene nodes 
+is a snap, as the user can just click on the gene set. New sets can be made from existing ones by using the union, intersect, 
+and subtract operations.</p>
+<p>The app also provides two set-aware layout algorithms:
+     <ul>
+          <li>Grid layout: creates grids of node sets without taking network topology into account.</li>
+          <li>FDL: strike a balance between set membership and network topology, so unconnected nodes that belong in the same 
+          set move closer together.</li>
+     </ul>
+</p>
+<p><b>Goal</b>: The goal of this project is to expand sets-based layout algorithms. Layout algorithms that take user-defined 
+set membership into consideration can help elucidate complex network data in ways that purely automatic layout algorithms 
+cannot. Here are some planned sets-based layout algorithms:
+     <ul>
+          <li>Inner-FDL: Creates a grid of each set, then applies FDL on each set individually.</li>
+          <li>Ordered grid: Within a set, order each node based on an attribute. This is useful for visualizing genomic 
+          locations, so that nodes in a set will be ordered by where their representative genes are in the genome. The layout 
+          algorithm could also place nodes in some other shape besides a grid, like a circle or spiral.</li>
+     </ul>
+</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
+<p><b>Potential Mentors</b>: Alex Pico, Scooter Morris</p>
+<p><b>Contact</b>: <a href="mailto:apico@gladstone.ucsf.edu" >Alex Pico</a></p>
+<br />
+
 <h2 dir="ltr" >Idea 25: Improve the Text-Mining Functionality of Factoid</h2>
 <p><b>Background</b>: <a href="http://pathwaycommons.github.io/factoid/" target="_blank">Factoid</a> aims to be a tool that helps authors 
 annotate biological interactions that occur in the text of academic publications in a machine-readable manner. Currently, 
@@ -563,6 +592,28 @@ WhatIzIt.</p>
 <p><b>Technology and Skills</b>: Experience connecting web services, Javascript</p>
 <p><b>Potential Mentors</b>: Augustin Luna (MSKCC), Max Franz (U of Toronto) </p>
 <p><b>Contact</b>: <a href="mailto:lunaa@cbio.mskcc.org" >Augustin Luna</a>, <a href="mailto:maxkfranz@gmail.com" >Max Franz</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 26: Export to GPML with WikiPathways app</h2>
+<p><b>Background</b>: <a href="http://wikipathways.org" target="_blank">WikiPathways</a> is an open, collaborative wiki for 
+biological pathways. (Pathways are diagrams representing biochemical processes.) Like WikiPedia articles, all pathways are 
+open and free to everyone, and anyone can contribute content.</p>
+<p>The <a href="http://apps.cytoscape.org/apps/wikipathways" target="_blank">WikiPathways app for Cytoscape</a> allows users 
+to take pathway content from WikiPathways and import it into Cytoscape. Users can then modify the pathway's appearance using 
+Cytoscape's myriad visualization tools.</p>
+<p>The native format for representing pathway content in WikiPathways is GPML, an XML-based format. GPML files can be edited 
+online on WikiPathways or can be edited using the <a href="http://pathvisio.org" target="_blank">PathVisio</a> application. 
+The WikiPathways Cytoscape app provides the means to import GPML files into Cytoscape networks.</p>
+<p><b>Goal</b>: Users often need to update pathway content to reflect new insights from literature or data gleaned from 
+Cytoscape's powerful visualization and data integration tools. The goal of this project is to add the ability to export GPML 
+files, so that users can effortlessly submit new pathway content to the WikiPathways website.</p>
+<p>When pathway content is imported from GPML into Cytoscape, the WikiPathways app reads the GPML content and creates a series 
+of columns in the node table representing the pathway node's visual information. This information is then used by Cytoscape to
+style the network. The exporter would use this node table data to reconstruct the GPML file. Additional node table data could 
+be needed to complete the translation to and from Cytoscape and GPML.</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java, XML</p>
+<p><b>Potential Mentors</b>: Alex Pico</p>
+<p><b>Contact</b>: <a href="mailto:apico@gladstone.ucsf.edu" >Alex Pico</a></p>
 <br />
 
 <h2 dir="ltr">Idea 27: Developing Web Interface For The Online Resource for Interface- Based Interaction Networks (TOR-IBIN) 
