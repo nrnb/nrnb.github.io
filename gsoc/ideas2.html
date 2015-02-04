@@ -35,8 +35,11 @@
 
 <p>Feel free to propose your own idea. As long as it relates to one of our projects, we will give it serious consideration. 
 Creativity and self-motivation are great traits for open source programmers, but make sure your proposal is also relevant. 
-Projects included in NRNBs 2015 GSoC effort are: Cytoscape, Cytoscape.js, PathVisio, WikiPathways, SBML, JSBML, CentiScaPe, 
-Bioclipse, BridgeDb and PathwayCommons.</p>
+Projects included in NRNBs 2015 GSoC effort are: <a href="http://www.cytoscape.org" target="_blank">Cytoscape</a>, 
+<a href="http://js.cytoscape.org/" target="_blank">Cytoscape.js</a>, PathVisio, WikiPathways, <a href="http://sbml.org/" target="_blank">SBML</a>, 
+<a href="http://sbml.org/Software/JSBML" target="_blank">JSBML</a>, <a href="http://www.cbmc.it/~scardonig/centiscape/centiscape.php" target="_blank">CentiScaPe</a>, 
+<a href="http://www.bioclipse.net/" target="_blank">Bioclipse</a>, <a href="http://www.bridgedb.org/" target="_blank">BridgeDb</a> 
+and <a href="http://www.pathwaycommons.org/about/" target="_blank">PathwayCommons</a>.</p>
 <br />
 
 <h2 dir="ltr" >Idea 2: Co-authorship Social network App</h2>
@@ -61,7 +64,22 @@ adjusting node size to account for impact factors of the author’s publications
 </ul>
 <p><b>Technology and Skills</b>: Cytoscape, Java, XML, PubMed e-utils</p>
 <p><b>Potential Mentors</b>: Sergio Baranzini, Gary Bader, Ruth Isserlin</p>
-<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com" >cytoscape-discuss@googlegroups.com</a></p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 3: Upgrading Ontology Tagging at WikiPathways</h2>
+<p><b>Background</b>: <a href="http://www.wikipathways.org" target="_blank">WikiPathways</a> is a wiki, like Wikipedia, but 
+for biological pathway diagrams. We ripped out the text editor of Mediawiki and put in a custom pathway drawing tool. 
+In addition to capturing pathway models, we have a number of systems to annotate pathway using standardized identifiers and 
+ontology terms.</p>
+<p><b>Goal</b>: To upgrade the current ontology tagging system at WikiPathways to take full advantage of the latest 
+services from NCBO’s <a href="http://bioportal.bioontology.org/" target="_blank">BioPortal</a>.</p>
+<p><b>Description</b>: The upgrade work will include overhauling the current tagging system from the database schema up to the 
+user interface. Promosing proposals will include an assessment of the current system (found on any given pathway page and 
+WikiPathways), research in to the available web services at BioPortal, and a set of features to overhaul and add.</p>
+<p><b>Technology and Skills</b>: WikiPathways, PHP, JavaScript, web services, Mediawiki</p>
+<p><b>Potential Mentors</b>: Alex Pico, Sravanthi Sinah, Martina Summer-Kutmon</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 4: CentiScaPe for multiple networks analysis and graphical output enhancement</h2>
@@ -216,8 +234,95 @@ layouts to user- or attribute-defined spaces. This idea involves implementing la
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu" >Scooter Morris</a> </p>
 <br />
 
-<h2 dir="ltr" >Idea 13: New Features for Online Tutorial System</h2>
+<h2 dir="ltr">Idea 11: Collaborative System for Creating/Sharing Biological Icons</h2>
+<p><b>Background</b>: <a href="http://wikipathways.org/index.php/WikiPathways:About" target="_blank">Biological pathways</a> provide intuitive 
+diagrams of the interactions underlying biological processes. 
+For example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow" target="_blank">SIDS Susceptibility Pathways</a> shows interactions between metabolites, genes and proteins, such as DDC 
+catalyzing the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site 
+<a href="http://www.wikipathways.org" target="_blank">WikiPathways</a> is an open, collaborative platform dedicated to drawing and sharing biological pathways. These pathways often 
+use icons to represent items like mitochondria or cardiac myocytes (heart muscle cells). The WikiPathways drawing editor has 
+a limited set of icons built in, but it does not allow pathway authors to create and re-use custom icons. For example, the 
+cardiac myocyte icon is repeated in the SIDS Susceptibility Pathways for <a href="http://wikipathways.org/index.php/Pathway:WP1266" target="_blank">mouse</a>
+and for <a href="http://wikipathways.org/index.php/Pathway:WP706" target="_blank">human</a>, but the only way to re-use the 
+icon is to manually redraw or copy/paste it. Updates to the icon in pathway do not appear in the other.</p>
+<p><b>Goal</b>: Build a biological icon library that allows pathway authors to create icons, share them with other 
+WikiPathways’ users and reuse them across pathways. It could work like Github for icons, allowing users to create, fork and 
+merge their work, with the best icons rising to the top via a rating system. The library will work as a plugin for the current 
+WikiPathways viewer/editor <a href="https://github.com/wikipathways/pathvisiojs" target="_blank">pathvisiojs</a>, allowing pathway authors to create new icons from scratch or to create icons from 
+sections of existing pathways, e.g., the cardiac myocyte from the previously referenced pathways. It will have a backend 
+component to store the icons and a front-end component to allow WikiPathways users to view and search for icons.</p>
+<p><b>Links</b>: An <a href="https://code.google.com/p/svg-edit/" target="_blank">SVG drawing tool </a>with a large number of icons available might provide some ideas. 
+</p>
+<p><b>Technology and Skills</b>: WikiPathways, JavaScript required. Some backend experience (PHP, Node.js or Python) to create a backend for saving the 
+icons. SVG or Canvas a plus.
+</p>
+<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<br />
 
+<h2 dir="ltr">Idea 12: Biological Pathway Styling Themes</h2>
+<p><b>Background</b>: Description: <a href="http://wikipathways.org/index.php/WikiPathways:About" target="_blank">Biological pathways</a> provide intuitive diagrams of the interactions underlying biological 
+processes. For example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow" target="_blank">SIDS Susceptibility Pathways</a>
+shows interactions between metabolites, genes and proteins, such as 
+DDC catalyzing the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site 
+<a href="http://www.wikipathways.org" target="_blank">WikiPathways</a> is an open, collaborative platform dedicated to drawing and sharing biological pathways. These diagrams are viewed 
+in many different environments, such as laptop screens, presentation slides and printed science journals. At WikiPathways today, 
+the default styling theme for these diagrams is best suited for viewing by an individual on a computer screen, but it would be 
+useful to export the diagrams with themes optimized for print and for presentations.</p>
+<p><b>Goal</b>: Develop a custom theming system to allow for exporting pathways with themes optimized for print and for 
+projected presentation slides. For example, the presentation export option might make pathway diagrams easier to read by 
+removing some text, enlarging the remaining text and inverting the colors of the diagram. Optionally, the presentation option 
+could integrate with one or more existing online presentation framework(s).</p>
+<p><b>Links</b>:
+<ul>
+<li><a href="https://github.com/wikipathways/pathvisiojs" target="_blank">WikiPathways pathway viewer/editor</a></li>
+<li>Example online presentation frameworks:</li>
+<ul>
+     <li><a href="https://github.com/hakimel/reveal.js" target="_blank">github.com/hakimel/reveal.js</a></li>
+     <li><a href="https://github.com/bartaz/impress.js" target="_blank">github.com/bartaz/impress.js</a></li>
+     <li><a href="https://docs.google.com/presentation" target="_blank">docs.google.com/presentation</a></li>
+</ul>
+</ul>
+</p>
+<p><b>Technology and Skills</b>: WikiPathways, User experience, graphical design, CSS, some JavaScript.</p>
+<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 13: Details Panel for Semantic Terms</h2>
+<p><b>Background</b>: <a href="http://wikipathways.org/index.php/WikiPathways:About" target="_blank">Biological pathways</a> provide intuitive 
+diagrams of the interactions underlying biological processes. For 
+example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow" target="_blank">SIDS Susceptibility Pathways</a> 
+show interactions between metabolites, genes and proteins, such as DDC catalyzing 
+the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site <a href="http://www.wikipathways.org" target="_blank">WikiPathways</a>
+is an open, collaborative platform dedicated to drawing and sharing biological pathways.</p>
+<p>A common challenge in biological research is dealing with an ever-growing number of terms, some of them 
+synonyms and others almost synonyms but with important differences in meaning. For instance, WikiPathways uses the term 
+“GeneProduct” in its annotation panels (to see an example, click the “TNF” box in the upper left corner of the SIDS pathway). 
+A WikiPathways user might be unsure of the exact definition of the “GeneProduct”, so it would be useful to point the user to 
+the <a href="http://vocabularies.wikipathways.org/wp#GeneProduct" target="_blank">definition of the term</a> in the WikiPathways vocabulary. This could be done with a link or a mouseover display. Another 
+example from the SIDS pathway is the Extracellular Space, which could display information from this IRI: 
+<a href="http://identifiers.org/go/GO:0005615" target="_blank">href="http://identifiers.org/go/GO:0005615"</a>.</p>
+<p>The first two examples are easy to display because each IRI has an HTML representation, but a more challenging example is 
+Protein: <a href="http://www.biopax.org/release/biopax-level3.owl#Protein" target="_blank">http://www.biopax.org/release/biopax-level3.owl#Protein</a>. 
+This IRI returns RDF but does not have an HTML 
+representation, so it would be necessary to extract information from the RDF, such as the definition, and display it in a 
+small, easy-to-read panel.</p>
+<p><b>Goal</b>: Develop a browser-based display system for dereferenced IRIs. The system will use content-type negotiation to 
+request an HTML representation of a resource, but it will be able to convert JSON-LD, RDF and OWL representations into an HTML 
+representation for display in a small details panel or pop-over. Additionally, develop a plugin for the WikiPathways 
+viewer/editor <a href="https://github.com/wikipathways/pathvisiojs" target="_blank">pathvisiojs</a> that integrates the display system. Optionally, if time allows, add functionality to allow 
+pathvisiojs users to switch vocabularies for the GUI display, mapping from the built-in vocabularies to the user-preferred 
+vocabularies with <a href="http://www.w3.org/TR/skos-primer/" target="_blank">SKOS</a> files.</p>
+<p><b>Links</b>:
+<ul>
+<li><a href="https://semantic-mediawiki.org/" target="_blank">Project with related functionality</a></li>
+<li><a href="https://github.com/alexmilowski/green-turtle" target="_blank">An RDFa implementation for browsers</a></li>
+<li><a href="https://code.google.com/p/ubiquity-rdfa/wiki/TutorialIntroduction" target="_blank">Possibly relevant project</a></li>
+</ul></p>
+<p><b>Technology and Skills</b>: WikiPathways, JavaScript, <a href="http://json-ld.org/" target="_blank">JSON-LD</a>, RDF, OWL, optionally SKOS</p>
+<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
 
 <h2 dir="ltr" >Idea 14: Development of Experiment Data Curation Tools using the NDEx infrastructure and the OpenBEL Knowledge 
@@ -562,100 +667,38 @@ on pathways and a flux data set to interactions on pathways.</li>
 <p><b>Technology and Skills</b>: PathVisio, Java</p>
 <p><b>Potential Mentors</b>: Anwesha Bohler, Martina Summer-Kutmon</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
-
-<br />
-<h2 dir="ltr">Idea 30: Collaborative System for Creating/Sharing Biological Icons</h2>
-<p><b>Background</b>: <a href="http://wikipathways.org/index.php/WikiPathways:About" target="_blank">Biological pathways</a> provide intuitive 
-diagrams of the interactions underlying biological processes. 
-For example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow" target="_blank">SIDS Susceptibility Pathways</a> shows interactions between metabolites, genes and proteins, such as DDC 
-catalyzing the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site 
-<a href="http://www.wikipathways.org" target="_blank">WikiPathways</a> is an open, collaborative platform dedicated to drawing and sharing biological pathways. These pathways often 
-use icons to represent items like mitochondria or cardiac myocytes (heart muscle cells). The WikiPathways drawing editor has 
-a limited set of icons built in, but it does not allow pathway authors to create and re-use custom icons. For example, the 
-cardiac myocyte icon is repeated in the SIDS Susceptibility Pathways for <a href="http://wikipathways.org/index.php/Pathway:WP1266" target="_blank">mouse</a>
-and for <a href="http://wikipathways.org/index.php/Pathway:WP706" target="_blank">human</a>, but the only way to re-use the 
-icon is to manually redraw or copy/paste it. Updates to the icon in pathway do not appear in the other.</p>
-<p><b>Goal</b>: Build a biological icon library that allows pathway authors to create icons, share them with other 
-WikiPathways’ users and reuse them across pathways. It could work like Github for icons, allowing users to create, fork and 
-merge their work, with the best icons rising to the top via a rating system. The library will work as a plugin for the current 
-WikiPathways viewer/editor <a href="https://github.com/wikipathways/pathvisiojs" target="_blank">pathvisiojs</a>, allowing pathway authors to create new icons from scratch or to create icons from 
-sections of existing pathways, e.g., the cardiac myocyte from the previously referenced pathways. It will have a backend 
-component to store the icons and a front-end component to allow WikiPathways users to view and search for icons.</p>
-<p><b>Links</b>: An <a href="https://code.google.com/p/svg-edit/" target="_blank">SVG drawing tool </a>with a large number of icons available might provide some ideas. 
-</p>
-<p><b>Technology and Skills</b>: WikiPathways, JavaScript required. Some backend experience (PHP, Node.js or Python) to create a backend for saving the 
-icons. SVG or Canvas a plus.
-</p>
-<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
-<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
 <br />
 
-<h2 dir="ltr">Idea 31: Biological Pathway Styling Themes</h2>
-<p><b>Background</b>: Description: <a href="http://wikipathways.org/index.php/WikiPathways:About" target="_blank">Biological pathways</a> provide intuitive diagrams of the interactions underlying biological 
-processes. For example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow" target="_blank">SIDS Susceptibility Pathways</a>
-shows interactions between metabolites, genes and proteins, such as 
-DDC catalyzing the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site 
-<a href="http://www.wikipathways.org" target="_blank">WikiPathways</a> is an open, collaborative platform dedicated to drawing and sharing biological pathways. These diagrams are viewed 
-in many different environments, such as laptop screens, presentation slides and printed science journals. At WikiPathways today, 
-the default styling theme for these diagrams is best suited for viewing by an individual on a computer screen, but it would be 
-useful to export the diagrams with themes optimized for print and for presentations.</p>
-<p><b>Goal</b>: Develop a custom theming system to allow for exporting pathways with themes optimized for print and for 
-projected presentation slides. For example, the presentation export option might make pathway diagrams easier to read by 
-removing some text, enlarging the remaining text and inverting the colors of the diagram. Optionally, the presentation option 
-could integrate with one or more existing online presentation framework(s).</p>
-<p><b>Links</b>:
-<ul>
-<li><a href="https://github.com/wikipathways/pathvisiojs" target="_blank">WikiPathways pathway viewer/editor</a></li>
-<li>Example online presentation frameworks:</li>
-<ul>
-     <li><a href="https://github.com/hakimel/reveal.js" target="_blank">github.com/hakimel/reveal.js</a></li>
-     <li><a href="https://github.com/bartaz/impress.js" target="_blank">github.com/bartaz/impress.js</a></li>
-     <li><a href="https://docs.google.com/presentation" target="_blank">docs.google.com/presentation</a></li>
-</ul>
-</ul>
-</p>
-<p><b>Technology and Skills</b>: WikiPathways, User experience, graphical design, CSS, some JavaScript.</p>
-<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
-<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-<br />
+<h2 dir="ltr" >Idea 30: Over-representation module for WikiPathways</h2>
+<p><b>Background</b>: <a href="http://www.pathvisio.org" target="_blank">PathVisio</a> is a commonly-used pathway editor, visualization and analysis tool 
+implemented in Java. Currently, PathVisio provides an advanced statistics module that allows users to define criterias 
+to perform pathway statistics which is sometimes not needed.</p>
+<p><b>Goal</b>: In this project, the student will extend the statistics module with a basic over-representation methods 
+that uses a gene list as input and provides ranked pathways as output. The genes in the pathways are highlighted when they 
+are in the input gene list. Additionally this basic analysis module will also be integrated on <a href="http://www.wikipathways.org" target="_blank">WikiPathways</a>. The student 
+will develop a page where the user can provide a list of genes, then the PathVisio 
+statistics module gets called to calculate the over-representation and the result will be shown on WikiPathways. The pathways 
+will be shown in the pathvisiojs viewer and the genes in the input list will be highlighted.</p>
+<p><b>Technology and Skills</b>: WikiPathways, Java, PHP</p>
+<p><b>Potential Mentors</b>: Martina Summer-Kutmon, Anwesha Bohler</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
+<br/ >
 
-<h2 dir="ltr" >Idea 32: Details Panel for Semantic Terms</h2>
-<p><b>Background</b>: <a href="http://wikipathways.org/index.php/WikiPathways:About" target="_blank">Biological pathways</a> provide intuitive 
-diagrams of the interactions underlying biological processes. For 
-example, the <a href="http://www.wikipathways.org/wpi/PathwayWidget.php?id=WP706&label[]=L-DOPA&label[]=Dopamine&label[]=DDC&colors=yellow" target="_blank">SIDS Susceptibility Pathways</a> 
-show interactions between metabolites, genes and proteins, such as DDC catalyzing 
-the conversion of L-DOPA to Dopamine (look for the items highlighted in yellow on the lower right). The site <a href="http://www.wikipathways.org" target="_blank">WikiPathways</a>
-is an open, collaborative platform dedicated to drawing and sharing biological pathways.</p>
-<p>A common challenge in biological research is dealing with an ever-growing number of terms, some of them 
-synonyms and others almost synonyms but with important differences in meaning. For instance, WikiPathways uses the term 
-“GeneProduct” in its annotation panels (to see an example, click the “TNF” box in the upper left corner of the SIDS pathway). 
-A WikiPathways user might be unsure of the exact definition of the “GeneProduct”, so it would be useful to point the user to 
-the <a href="http://vocabularies.wikipathways.org/wp#GeneProduct" target="_blank">definition of the term</a> in the WikiPathways vocabulary. This could be done with a link or a mouseover display. Another 
-example from the SIDS pathway is the Extracellular Space, which could display information from this IRI: 
-<a href="http://identifiers.org/go/GO:0005615" target="_blank">href="http://identifiers.org/go/GO:0005615"</a>.</p>
-<p>The first two examples are easy to display because each IRI has an HTML representation, but a more challenging example is 
-Protein: <a href="http://www.biopax.org/release/biopax-level3.owl#Protein" target="_blank">http://www.biopax.org/release/biopax-level3.owl#Protein</a>. 
-This IRI returns RDF but does not have an HTML 
-representation, so it would be necessary to extract information from the RDF, such as the definition, and display it in a 
-small, easy-to-read panel.</p>
-<p><b>Goal</b>: Develop a browser-based display system for dereferenced IRIs. The system will use content-type negotiation to 
-request an HTML representation of a resource, but it will be able to convert JSON-LD, RDF and OWL representations into an HTML 
-representation for display in a small details panel or pop-over. Additionally, develop a plugin for the WikiPathways 
-viewer/editor <a href="https://github.com/wikipathways/pathvisiojs" target="_blank">pathvisiojs</a> that integrates the display system. Optionally, if time allows, add functionality to allow 
-pathvisiojs users to switch vocabularies for the GUI display, mapping from the built-in vocabularies to the user-preferred 
-vocabularies with <a href="http://www.w3.org/TR/skos-primer/" target="_blank">SKOS</a> files.</p>
-<p><b>Links</b>:
-<ul>
-<li><a href="https://semantic-mediawiki.org/" target="_blank">Project with related functionality</a></li>
-<li><a href="https://github.com/alexmilowski/green-turtle" target="_blank">An RDFa implementation for browsers</a></li>
-<li><a href="https://code.google.com/p/ubiquity-rdfa/wiki/TutorialIntroduction" target="_blank">Possibly relevant project</a></li>
-</ul></p>
-<p><b>Technology and Skills</b>: WikiPathways, JavaScript, <a href="http://json-ld.org/" target="_blank">JSON-LD</a>, RDF, OWL, optionally SKOS</p>
-<p><b>Potential Mentors</b>: Anders Riutta, Alex Pico, Kristina Hanspers</p>
-<p><b>Contact</b>: <a href="mailto:wikipathways-discuss@googlegroups.com" >wikipathways-discuss@googlegroups.com</a></p>
-<br />
+<h2 dir="ltr" >Idea 31: Tutorial mode for PathVisio</h2>
+<p><b>Background</b>: <a href="http://www.pathvisio.org" target="_blank">PathVisio</a> is a commonly-used pathway editor, visualization and analysis tool 
+implemented in Java. The analyses in PathVisio and the different advanced visualization methods can become very complex 
+and having an integrated tutorial mode in the application is a powerful tool to give detailed instructions while performing 
+a task.</p>
+<p><b>Goal</b>: This will give the users a step-by-step guide with hints and additional information while learning how to use 
+PathVisio. Documentation and tutorials are crucial elements of software development and the goal of this project is to 
+implement a tutorial mode in PathVisio. PathVisio can be extended through plugins, so the tutorial mode should allow other 
+modules to provide additional tutorials that can be selected if the plugins are installed.</p>
+<p><b>Technology and Skills</b>: PathVisio, Java, development of tutorials</p>
+<p><b>Potential Mentors</b>: Martina Summer-Kutmon, Kristina Hanspers, Sravanthi Sinha</p>
+<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
+<br/ >
 
-<h2 dir="ltr" >Idea 33: Principal Component Analysis</h2>
+<h2 dir="ltr" >Idea 32: Principal Component Analysis</h2>
 <p><b>Description</b>: One of the common multidimensional analysis tools is principal component analysis. At this point, there 
 is no good PCA tool integrated with Cytoscape. The ideal tool would support performing the analysis, visualizing the results 
 of the analysis using standard approaches, and then visualizing the results in the context of the Cytoscape network itself.
@@ -666,7 +709,7 @@ idea is looking for ways to integrate the results of the analysis into Cytoscape
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 34: Incremental Loading of Networks</h2>
+<h2 dir="ltr" >Idea 33: Incremental Loading of Networks</h2>
 <p><b>Background</b>: Cytoscape now supports using JSON as a format for loading networks. In an effort to improve exploration 
 of extremely large networks, it would be extremely useful to be able to load parts of the network on request. One use case 
 for this is loading networks from the <a href="http://sfld.rbvi.ucsf.edu/django/" target="_blank">Structure-Function Linkage 
@@ -680,15 +723,23 @@ users to incrementally load all of the nodes within that metanode.</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 35: Add t-SNE to clusterMaker</h2>
-<p><b>Description</b>: <a href="http://lvdmaaten.github.io/tsne/" target="_blank">t-SNE</a> is a technique for dimensionality 
+<h2 dir="ltr" >Idea 34: Add t-SNE to clusterMaker</h2>
+<p><b>Background</b>: <a href="http://apps.cytoscape.org/apps/clustermaker" target="_blank">clusterMaker</a> is a Cytoscape 
+plugin that unifies different clustering techniques and displays into a single interface. Current clustering algorithms 
+include hierarchical, k-medoid, AutoSOME, and k-means for clustering expression or genetic data; and MCL, transitivity 
+clustering, affinity propagation, MCODE, community clustering (GLAY), SCPS, and AutoSOME for partitioning networks based on 
+similarity or distance values. Hierarchical, k-medoid, AutoSOME, and k-means clusters may be displayed as hierarchical groups 
+of nodes or as heat maps. All of the network partitioning cluster algorithms create collapsible "meta nodes" to allow 
+interactive exploration of the putative family associations within the Cytoscape network, and results may also be shown as a 
+separate network containing only the intra-cluster edges, or with inter-cluster edges added back.</p>
+<p><b>Goal</b>: <a href="http://lvdmaaten.github.io/tsne/" target="_blank">t-SNE</a> is a technique for dimensionality 
 reduction that is widely used. It would be extremely useful to add this algorithm into the existing clusterMaker app.</p>
 <p><b>Technology and Skills</b>: Cytoscape, Java</p>
 <p><b>Potential Mentors</b>: Scooter Morris</p>
 <p><b>Contact</b>: <a href="mailto:scooter@cgl.ucsf.edu">Scooter Morris</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 36: cyRecommender - New Cytoscape 3 app for recommending network ontologies</h2>
+<h2 dir="ltr" >Idea 35: cyRecommender - New Cytoscape 3 app for recommending network ontologies</h2>
 <p><b>Background</b>: Cytoscape 3 is a powerful software for networks that provides diverse apps in order to combine 
 external knowledge with the network connectivity. There are a few apps that allow to link ontology details with node labels. 
 However, existing apps require the user to decide what ontology or ontologies are best for each network, which may be a 
@@ -718,7 +769,7 @@ The code will be available as an open source GitHub project.</p>
 <p><b>Contact</b>: <a href="mailto:muntisa@gmail.com">Cristian R Munteanu</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 37: Advanced search on WikiPathways</h2>
+<h2 dir="ltr" >Idea 36: Advanced search on WikiPathways</h2>
 <p><b>Background</b>: <a href="http://www.wikipathways.org" target="_blank">WikiPathways</a> is a collaborative pathway database that is build on Mediawiki. 
 Currently our pathways can be annotated with ontology tags from the pathway ontology, cell type ontology and disease ontology.</p> 
 <p><b>Goal</b>: The advanced search should provide an interface to search for pathways containing one or more pathway 
@@ -730,36 +781,7 @@ creation date, number of edits, etc.</p>
 <p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 38: Over-representation module for WikiPathways</h2>
-<p><b>Background</b>: <a href="http://www.pathvisio.org" target="_blank">PathVisio</a> is a commonly-used pathway editor, visualization and analysis tool 
-implemented in Java. Currently, PathVisio provides an advanced statistics module that allows users to define criterias 
-to perform pathway statistics which is sometimes not needed.</p>
-<p><b>Goal</b>: In this project, the student will extend the statistics module with a basic over-representation methods 
-that uses a gene list as input and provides ranked pathways as output. The genes in the pathways are highlighted when they 
-are in the input gene list. Additionally this basic analysis module will also be integrated on <a href="http://www.wikipathways.org" target="_blank">WikiPathways</a>. The student 
-will develop a page where the user can provide a list of genes, then the PathVisio 
-statistics module gets called to calculate the over-representation and the result will be shown on WikiPathways. The pathways 
-will be shown in the pathvisiojs viewer and the genes in the input list will be highlighted.</p>
-<p><b>Technology and Skills</b>: WikiPathways, Java, PHP</p>
-<p><b>Potential Mentors</b>: Martina Summer-Kutmon, Anwesha Bohler</p>
-<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
-<br/ >
-
-<h2 dir="ltr" >Idea 39: Tutorial mode for PathVisio</h2>
-<p><b>Background</b>: <a href="http://www.pathvisio.org" target="_blank">PathVisio</a> is a commonly-used pathway editor, visualization and analysis tool 
-implemented in Java. The analyses in PathVisio and the different advanced visualization methods can become very complex 
-and having an integrated tutorial mode in the application is a powerful tool to give detailed instructions while performing 
-a task.</p>
-<p><b>Goal</b>: This will give the users a step-by-step guide with hints and additional information while learning how to use 
-PathVisio. Documentation and tutorials are crucial elements of software development and the goal of this project is to 
-implement a tutorial mode in PathVisio. PathVisio can be extended through plugins, so the tutorial mode should allow other 
-modules to provide additional tutorials that can be selected if the plugins are installed.</p>
-<p><b>Technology and Skills</b>: PathVisio, Java, development of tutorials</p>
-<p><b>Potential Mentors</b>: Martina Summer-Kutmon, Kristina Hanspers, Sravanthi Sinha</p>
-<p><b>Contact</b>: <a href="mailto:wikipathways-devel@googlegroups.com">wikipathways-devel@googlegroups.com</a></p>
-<br/ >
-
-<h2 dir="ltr" >Idea 40: SIR model for CentiScaPe</h2>
+<h2 dir="ltr" >Idea 37: SIR model for CentiScaPe</h2>
 <p><b>Background</b>: <a href="http://apps.cytoscape.org/apps/centiscape" target="_blank">CentiScaPe</a> is a Cytoscape app 
 that allows to compute network centrality parameters. It is the most 
 complete Cytoscape app for network centralities calculating Degree, Average Shortest Path, Eccentricity, Closeness, 
@@ -781,7 +803,7 @@ network analysis</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 41: Random networks for CentiScaPe</h2>
+<h2 dir="ltr" >Idea 38: Random networks for CentiScaPe</h2>
 <p><b>Background</b>: <a href="http://apps.cytoscape.org/apps/centiscape" target="_blank">CentiScaPe</a> is a Cytoscape app 
 that allows, by using a very plain interface, to compute different network 
 centrality parameters in single and in multiple networks at the same time. It allows to plot the results by using real and 
@@ -810,7 +832,7 @@ measures of CentiScaPe.</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 42: Implement support for the SBML Multistate/Multicomponent Species package</h2>
+<h2 dir="ltr" >Idea 39: Implement support for the SBML Multistate/Multicomponent Species package</h2>
 <p><b>Description</b>: One of the <a href="http://sbml.org/Community/Wiki#SBML_Level_3_Status_Summary_Table" target="_blank">many packages</a> 
 for SBML Level 3 is <a href="http://sbml.org/Community/Wiki/SBML_Level_3_Proposals/Multistate_and_Multicomponent_Species" target="_blank">
 Multistate and multicomponent species</a>. This package 
@@ -824,7 +846,7 @@ initiated an implementation of the multi package, which will be a useful startin
 <p><b>Contact</b>: <a href="mailto:rodrigue@ebi.ac.uk">Nicolas Rodriguez</a>, <a href="mailto:nicolas.lenovere@babraham.ac.uk">Nicolas Le Novère</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 43: Add support for Schema-based validation of SBML</h2>
+<h2 dir="ltr" >Idea 40: Add support for Schema-based validation of SBML</h2>
 <p><b>Description</b>: SBML files need to be validated carefully to ensure that they conform to the specification. Currently, 
 the most complete implementation of SBML validation is embodied in libSBML, although the rules of SBML validity are defined 
 in the SBML specification documents. It is possible to validate SBML from JSBML using either the 
@@ -842,7 +864,7 @@ using those schemas for validating SBML files.</p>
 <p><b>Contact</b>: <a href="mailto:skeating@ebi.ac.uk">Sarah Keating</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 44: Representation and evaluation of mathematical fomulas</h2>
+<h2 dir="ltr" >Idea 41: Representation and evaluation of mathematical fomulas</h2>
 <p><b>Description</b>: JSBML uses the concept of abstract syntax trees to work with mathematical expressions. In the Google 
 Summer of Code 2014, a new math package was implemented that captures all different kinds of tree nodes that can occur in 
 formulas (e.g., real numbers or algebraic symbols such as 'plus' or 'minus') an own, specialized class, i.e., a specific 
@@ -860,7 +882,7 @@ the JavaCC parser generator will also be required and will be part of this proje
      <a href="mailto:althomas@ucsd.edu">Alex Thomas</a>, <a href="mailto:skeating@ebi.ac.uk">Sarah Keating</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 45: Improving the plugin interface for CellDesigner</h2>
+<h2 dir="ltr" >Idea 42: Improving the plugin interface for CellDesigner</h2>
 <p><b>Description</b>: One of the most frequently used programs in computational systems biology is 
 <a href="http://celldesigner.org/" target="_blank">CellDesigner</a>. JSBML 
 provides an interface that facilitates the development of plugins for this program. This interface has recently been revised 
@@ -877,7 +899,7 @@ plugin interface.</p>
      <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 46: Tests for JSBML</h2>
+<h2 dir="ltr" >Idea 43: Tests for JSBML</h2>
 <p><b>Description</b>: JSBML class and method structure largely corresponds with 
 <a href="http://sbml.org/Software/libSBML" target="_blank">libSBML</a>, our C++ language counterpart. One area that will need 
 to be standardized between the two parsing libraries are the test cases for proper SBML syntax. LibSBML has a set of files 
@@ -890,7 +912,7 @@ also suggest further tests, and he/she would be essential in building the code b
 <p><b>Contact</b>: <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a>, <a href="mailto:althomas@ucsd.edu">Alex Thomas</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 47: Flattening of hierarchically structured models</h2>
+<h2 dir="ltr" >Idea 44: Flattening of hierarchically structured models</h2>
 <p><b>Description</b>: The <a href="http://sbml.org/Documents/Specifications/SBML_Level_3/Packages/comp" target="_blank">hierarchical modeling package</a> 
 enables SBML files to be composed of multiple individual submodels. These submodels can be stored in the same file, or be 
 distributed in a file system, even be linked through resource identifiers. Hence, comp allows models in SBML to be similarly 
@@ -907,7 +929,7 @@ basic validation rules for the comp package.</p>
      <a href="mailto:l.watanabe@utah.edu">Leandro Watanabe</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 48: Better support for constraint-based modeling</h2>
+<h2 dir="ltr" >Idea 45: Better support for constraint-based modeling</h2>
 <p><b>Description</b>: One popular modeling technique in systems biology is 
 <a href="http://cobramethods.wikidot.com/" target="_blank">Constraint-Based Reconstruction and Analysis (COBRA)</a>. 
 <a href="http://sbml.org/Documents/Specifications/SBML_Level_3/Packages/fbc" target="_blank">The Flux Balance Constraints</a>
@@ -923,7 +945,7 @@ converter from COBRA's SBML dialect to fbc needs to be implemented. This also in
 <p><b>Contact</b>: <a href="mailto:althomas@ucsd.edu">Alex Thomas</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 49: Converter of CellDesigner's annotations to pure SBML</h2>
+<h2 dir="ltr" >Idea 46: Converter of CellDesigner's annotations to pure SBML</h2>
 <p><b>Description</b>: One very popular software in systems biology is <a href="http://celldesigner.org/" target="_blank">CellDesigner</a>. 
 Long before the SBML extensions for 
 <a href="http://sbml.org/Documents/Specifications/SBML_Level_3/Packages/layout" target="_blank">Layout</a> and 
@@ -940,7 +962,7 @@ CellDesigner plug-in. If time permits, it would also be nice to have as well a c
 <p><b>Contact</b>: <a href="mailto:funa@bio.keio.ac.jp">Akira Funahashi</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 50: Make CySBML a Cytoscape 3 App</h2>
+<h2 dir="ltr" >Idea 47: Make CySBML a Cytoscape 3 App</h2>
 <p><b>Description</b>: <a href="http://www.cytoscape.org/" target="_blank">Cytoscape</a> belongs to the most popular open 
 source software platforms for visualizing complex networks 
 and integrating these with any type of attribute data. The capabilities of this program can be extended through plug-ins 
@@ -955,7 +977,7 @@ to turn it to a new Cytoscape app that supports the latest features of the SBML 
 <p><b>Contact</b>: <a href="mailto:matthias.koenig@charite.de">Matthias König</a>, <a href="mailto:andraeger@eng.ucsd.edu">Andreas Dräger</a></p> 
 <br />
 
-<h2 dir="ltr" >Idea 51: Spatial Analysis of Functional Enrichment in Biological Networks</h2>
+<h2 dir="ltr" >Idea 48: Spatial Analysis of Functional Enrichment in Biological Networks</h2>
 <p><b>Background</b>: Biological networks connect genes, proteins and other biological entities that interact with one other 
 to perform their function. These networks tend to have a non-random structure and often form densely connected structures 
 (clusters) that involve closely related elements. Depending on the nature of the network, these clusters may correspond to, 
@@ -987,7 +1009,7 @@ their interest and/or with any set of functional annotations. Specifically, the 
 <p><b>Contact</b>: <a href="mailto:abarysh@princeton.edu">Anastasia Baryshnikova</a></p> 
 <br/ >
 
-<h2 dir="ltr" >Idea 53: Cytoscape.js quadtree support</h2>
+<h2 dir="ltr" >Idea 49: Cytoscape.js quadtree support</h2>
 <p><b>Background</b>: Cytoscape.js is a JS library that allows for the analysis and visualisation of graphs (a.k.a. networks).  
 This project would give the opportunity for the student to work on and with Cytoscape.js, as follows:</p>
 <p><b>Goal</b>: A <a href="https://en.wikipedia.org/wiki/Quadtree" target="_blank">quadtree</a> is a datastructure that 
@@ -1001,7 +1023,7 @@ structure may be more appropriate.</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
-<h2 dir="ltr" >Idea 55: Scrollbar in Cytoscape.js</h2>
+<h2 dir="ltr" >Idea 50: Scrollbar in Cytoscape.js</h2>
 <p><b>Background</b>: Cytoscape.js is a JS library that allows for the analysis and visualisation of graphs (a.k.a. networks).  
 This project would give the opportunity for the student to work on and with Cytoscape.js, as follows:</p>
 <p><b>Goal</b>: This project would entail the creation of a Cytoscape.js extension that would show scrollbars in a manner 
