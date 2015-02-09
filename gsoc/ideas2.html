@@ -1050,6 +1050,26 @@ as a reusable extension.</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
 <br />
 
+<h2 dir="ltr" >Idea 51: PubMANIA: Advanced literature search using network inference</h2>
+<p><b>Background</b>: Finding all the relevant literature when researching a topic is a common problem. There are many 
+potentially useful methods for finding relevant works, including: using search terms, looking through papers that cite a 
+publication of particular interest, and looking at papers written by a specific researcher. However, all of these approaches 
+can be extremely slow, and will often miss many relevant works. A similar problem exists in genetics; often, you have a set 
+of related genes and want to find all the genes that are related to these genes in the same way. 
+<a href="http://www.genemania.org/" target="_blank">GeneMANIA</a> solves this 
+problem by integrating different types of gene-gene interaction networks, learning what networks are most important in 
+connecting your set of genes, and suggesting new genes that appear to be related based on the network structure.</p>
+<p><b>Goal</b>: We would like to apply the GeneMANIA approach to publications, creating a service that can recommend 
+publications to the user based on a set of provided publications. This requires that we extend the GeneMANIA codebase to 
+handle extremely large, sparsely-connected networks, and apply this to our collection of publication-interaction networks 
+(based on <a href="http://www.ncbi.nlm.nih.gov/pubmed" target="_blank">PubMed</a>). By integrating networks of citations, 
+journals, authors, and common terms, we hope to assist researchers in quickly and easily finding all of the publications 
+relevant to their work.</p>
+<p><b>Technology and Skills</b>: Java, SQL, Javascript, Data Structures and Algorithms</p>
+<p><b>Potential Mentors</b>: Carl de Boer (the Broad Institute)</p>
+<p><b>Contact</b>: <a href="mailto:cgdeboer@broadinstitute.org">Carl de Boer</a></p>
+
+
 <!-- END PASTE -->
 
     </div> <!-- .span9 !-->
