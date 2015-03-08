@@ -1096,6 +1096,7 @@ browser. </p>
 <p><b>Potential Mentors</b>: Dan Bean, Giorgio Favrin</p>
 <p><b>Contact</b>: <a href="mailto:gf247@cam.ac.uk">Giorgio Favrin</a></p>
 <br />
+
 <h2 dir="ltr" >Idea 54: Cytoscape App for Downloading and Uploading esyN Networks</h2>
 <p><b>Background</b>: <a href="http://www.esyn.org">esyN</a> is a web tool to facilitate the exchange of biological network 
 models between researchers. esyN acts as a searchable database of user-created networks from any field. esyN allows the user 
@@ -1135,6 +1136,37 @@ And there are many extensions to this project that might be proposed:
 <p><b>Technology and Skills</b>: Cytoscape, Java, Swing</p>
 <p><b>Potential Mentors</b>: Scooter Morris, Alex Pico, Christian Lopes</p>
 <p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
+
+<h2 dir="ltr" >Idea 56: Implement a PathLinker Annotation Plugin for PathVisio</h2>
+<p><b>Background</b>: Cells respond to their environment through a series of molecular interactions that form biological 
+pathways; understanding these pathways is a major area of research in Systems Biology. PathLinker is an algorithm that 
+reconstructs biological pathways from experimental data, and it has been very useful in annotating existing biological 
+pathways as well as discovering new pathway additions. <a href="http://www.pathvisio.org">PathVisio</a> is free open-source 
+software to build, visualize, annotate, and analyze pathways.  It integrates tightly with <a href="http://www.wikipathways.org">WikiPathways</a>, 
+a "wikipedia'' for biological pathways. </p>
+<p><b>Goal</b>: To implement PathLinker as an annotation plugin for PathVisio.</p>
+<p>This plugin will assist a pathway author using who is using PathVisio to create or expand a pathway. When the author 
+selects a protein, the plugin will suggest possible physical, regulatory, and signaling interactions involving that protein 
+and the literature supporting each interaction. The author will then click or drag the suggestion over into the pathway to 
+confirm its inclusion. The plugin will collect statistics on the number of suggestions accepted, ignored, or rejected by 
+authors.</p>
+<p>The PathLinker graph algorithm is be the technology underlying this plugin. PathLinker takes as input a comprehensive 
+network of physical, regulatory, and signaling interactions among proteins. PathLinker also requires a set of "sources" 
+(e.g., receptors) and a set of "targets" (e.g., transcription factors) that the pathway author will provide. PathLinker 
+computes multiple shortest paths from any source to any target and ranks these paths in increasing order of length. A 
+user-defined parameter controls the number of paths computed. If the pathway author asks for (say) 50 paths, then for each 
+protein, the plugin will store which interactions in these 50 paths connect with the protein, the ranks of these paths, and 
+the literature support for each interaction.</p>
+<p><b>Links</b>
+     <ul>
+          <li>PathLinker implementation in Python</li>
+          <li>PathLinker implementation in Java (release planned by the end of May 2015)</li>
+     </ul>
+</p>
+<p><b>Technology and Skills</b>: graph algorithms, Java, PathVisio, WikiPathways</p>
+<p><b>Potential Mentors</b>: T. M. Murali and Anna Ritz</p>
+<p><b>Contact</b>: <a href="murali@cs.vt.edu">T.M. Murali</a>, <a href="annaritz@vt.edu">Anna Ritz</a></p>
 <br />
 
 <!-- END PASTE -->
