@@ -1063,6 +1063,7 @@ relevant to their work.</p>
 <p><b>Technology and Skills</b>: Java, SQL, Javascript, Data Structures and Algorithms</p>
 <p><b>Potential Mentors</b>: Carl de Boer (the Broad Institute)</p>
 <p><b>Contact</b>: <a href="mailto:cgdeboer@broadinstitute.org">Carl de Boer</a></p>
+<br />
 
 <h2 dir="ltr" >Idea 52: Analyzing bio-network dynamics on the web</h2>
 <p><b>Background</b>: <a href="http://apps.cytoscape.org/apps/animo">ANIMO</a> is a Cytoscape App to analyse the dynamic 
@@ -1083,6 +1084,58 @@ from any web-enabled device without requiring the installation of additional sof
 <p><b>Potential Mentors</b>: Stefano Schivo, Rom Langerak, Max Franz</p>
 <p><b>Contact</b>: <a href="mailto:s.schivo@ewi.utwente.nl">Stefano Schivo</a></p>
 
+<h2 dir="ltr" >Idea 53: New Layout for Cytoscape.js and esyN Optimised for Large Networks</h2>
+<p><b>Background</b>: <a href="http://www.esyn.org">esyN</a> is a web tool to facilitate the exchange of biological network 
+models between researchers. esyN acts as a searchable database of user-created networks from any field. esyN aims at making 
+it very easy for everybody to build biological networks. Users can upload a list of gene and retrieve interactions from 
+Biogrid to populate the network. One major limitation at the moment is represented by the ability of the current layouts to 
+display medium and large networks. </p>
+<p><b>Goal</b>: Implement a new cityscape.js layout optimised for large networks but yet is fast enough to run on the user’s 
+browser. </p>
+<p><b>Technology and Skills</b>: Cytoscape.js, JavaScript</p>
+<p><b>Potential Mentors</b>: Dan Bean, Giorgio Favrin</p>
+<p><b>Contact</b>: <a href="mailto:gf247@cam.ac.uk">Giorgio Favrin</a></p>
+<br />
+<h2 dir="ltr" >Idea 54: Cytoscape App for Downloading and Uploading esyN Networks</h2>
+<p><b>Background</b>: <a href="http://www.esyn.org">esyN</a> is a web tool to facilitate the exchange of biological network 
+models between researchers. esyN acts as a searchable database of user-created networks from any field. esyN allows the user 
+to easily construct networks by uploading list of gene and retrieving their interactions from BioGRID.  In addition to its 
+basic tools, esyN contains a number of logical templates that can be used to create models more easily. The ability to use 
+previously published models as building blocks makes esyN a powerful tool for the construction of models and network graphs. 
+Users are able to save their own projects online and share them either publicly or with a list of collaborators. </p>
+<p><b>Goal</b>: Implement a Cytoscape app to be able to download esyN networks (both published and private ones) into 
+cytoscape and vice versa upload cytoscape networks in esyN.</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java</p>
+<p><b>Potential Mentors</b>: Dan Bean, Giorgio Favrin, Giovanni Scardoni</p>
+<p><b>Contact</b>: <a href="mailto:gf247@cam.ac.uk">Giorgio Favrin</a></p>
+<br />
+<h2 dir="ltr" >Idea 55: Enhancing Cytoscape Network Data Import</h2>
+<p><b>Background</b>: <a href="http://www.cytoscape.org">Cytoscape</a> is a network analysis and visualization tool. Users 
+commonly want to import data files that contain both network interactions and node annotations. Currently, you have to invoke
+two different import dialogs multiple times to accomplish this task.</p>
+<p><b>Goal</b>: The network import dialog and file processing should be overhauled and enhanced to provide a single interface
+to perform network and node data import. After choosing a source file, the UI would present an interactive preview (like it 
+does currently) with additional features like specifying columns that are associated with either source or target nodes, in 
+addition to edge (interaction) annotation columns. The execution of the dialog would then trigger network and data table 
+import tasks.  There are many subtle aspects to this project:
+     <ul>
+          <li>Designing UI and UX</li>
+          <li>Using Cytoscape Tasks to support command line control</li>
+          <li>Improving logic behind data type and list handling</li>
+          <liImplementing graceful fail states, e.g., friendly UX for fixing a minor error and trying again></li>
+     </ul>
+And there are many extensions to this project that might be proposed:
+<ul>
+ <li>Improvements to the data table importer</li>
+ <li>Expanding supported file formats</li>
+ <li>Batch import of multiple files sharing a common column structure</li>
+ <li>Persistent UI settings within a session</li>
+</ul>
+</p>
+<p><b>Technology and Skills</b>: Cytoscape, Java, Swing</p>
+<p><b>Potential Mentors</b>: Scooter Morris, Alex Pico, Christian Lopes</p>
+<p><b>Contact</b>: <a href="mailto:cytoscape-discuss@googlegroups.com">cytoscape-discuss@googlegroups.com</a></p>
+<br />
 
 <!-- END PASTE -->
 
