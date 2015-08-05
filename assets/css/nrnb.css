@@ -87,6 +87,10 @@ h3, h4, h5 {
     color: #04f0fe !important;
     border: 1px solid #04f0fe;
 }
+.btn-green, a .btn-green {
+    color: #04f004 !important;
+    border: 1px solid #04f004;
+}
 
 
 .small {
@@ -96,7 +100,7 @@ h3, h4, h5 {
     padding-bottom: 5px;
 }
 
-a:hover .btn-blue {
+a:hover .btn-blue, .btn-green {
     font-weight: 700;
     color: red !important;
 }
