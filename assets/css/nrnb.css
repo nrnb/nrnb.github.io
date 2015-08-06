@@ -100,7 +100,11 @@ h3, h4, h5 {
     padding-bottom: 5px;
 }
 
-a:hover .btn-blue, .btn-green {
+a:hover .btn-blue {
+    font-weight: 700;
+    color: red !important;
+}
+a:hover .btn-green {
     font-weight: 700;
     color: red !important;
 }
