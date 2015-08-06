@@ -30,22 +30,17 @@ var navbarText =
                                 '<li class="divider"></li>' +
                                 '<li>' +
                                     '<a href="projects.html#a-tab">' +
-                                    'Project-A: Identification of network-based biomarkers for molecular classification' +
+                                    'Theme 1: Differential Networks' +
                                     '</a>' +
                                 '</li>' +
                                 '<li>' +
                                     '<a href="projects.html#b-tab">' +
-                                    'Project-B: Using Cytoscape for Social Network Research' +
+                                    'Theme 2: From Descriptive to Predictive' +
                                     '</a>' +
                                 '</li>' +
                                 '<li>' +
                                     '<a href="projects.html#c-tab">' +
-                                    'Project-C: Visualization and Representation of Biological Networks' +
-                                    '</a>' +
-                                '</li>' +
-                                '<li>' +
-                                    '<a href="projects.html#d-tab">' +
-                                    'Project-D: Predictive Modeling and Network Inference' +
+                                    'Theme 3: Multi-scale Network Representations' +
                                     '</a>' +
                                 '</li>' +
                             '</ul>' +
