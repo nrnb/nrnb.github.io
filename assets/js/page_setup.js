@@ -13,7 +13,7 @@ var navbarText =
                     '<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu">' +
                         '<li><a href="about-nb.html">What is Network Biology?</a></li>' +
-                        '<li><a href="media-annual.html">Annual Reports</a></li>' +
+                        '<li><a href="presentations.html#annual-tab">Annual Reports</a></li>' +
                         '<li><a href="people.html">NRNB Team</a></li>' +
                         '<li><a href="people.html#eac">Advisory Committee</a></li>' +
                         '<li><a href="people.html#partners">Partners</a></li>' +
@@ -77,19 +77,11 @@ var navbarText =
                 '<li class="dropdown">' +
                     '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu" id="presentations-menu">' +
-                        '<li><a href="media-projects.html">NRNB Projects</a></li>' +
-                        '<li><a href="media-annual.html">Annual Reports</a></li>' +
-                        '<li><a href="media-symposia.html">NRNB Symposia</a></li>' +
-                        '<li class="dropdown-submenu">' +
-                            '<a href="#">NetBio SIG</a>' +
-                            '<ul class="dropdown-menu" id="projects-menu">' +
-                                '<li><a href="media-sig-2014.html">2014</a></li>' +
-                                '<li><a href="media-sig-2013.html">2013</a></li>' +
-                                '<li><a href="media-sig-2012.html">2012</a></li>' +
-                                '<li><a href="media-sig-2011.html">2011</a></li>' +
-                            '</ul>' +
-                        '</li>' +
-                        '<li><a href="media-app-expo.html">Cytoscape App Expo</a></li>' +
+                        '<li><a href="presentations.html#nrnb-tab">NRNB Projects</a></li>' +
+                        '<li><a href="presentations.html#annual-tab">Annual Reports</a></li>' +
+                        '<li><a href="presentations.html#symposia-tab">NRNB Symposia</a></li>' +
+                        '<li><a href="presentations.html#netbiosig-tab">NetBio SIG</a></li>' +
+                        '<li><a href="presentations.html#appexpo-tab">Cytoscape App Expo</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
