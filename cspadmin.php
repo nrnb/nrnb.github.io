@@ -23,7 +23,7 @@ tr:nth-child(odd) {
 include_once("csp_helper.php");
 
 $u = "drpico@gmail.com";
-$p = "VofbyGo28sMgnZ";
+$p = "****";
  
 $ss = new Google_Spreadsheet($u,$p);
 $ss->useSpreadsheet("Collaboration Tracking");
