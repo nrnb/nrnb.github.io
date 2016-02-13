@@ -73,5 +73,36 @@ We are celebrating by awarding cash prizes for the most creative and effective d
             </div>
         </div>
     </div>
+    
+    <footer></footer>
+
+<!-- For Navbar -->
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/page_setup.js"></script>
+
+<script>
+    $(function () {
+        var activeTab = $('[href=' + location.hash + ']');
+        activeTab && activeTab.tab('show');
+        window.scrollTo(0, 0);
+    });
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push([ '_setAccount', 'UA-19386719-1' ]);
+    _gaq.push([ '_trackPageview' ]);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+                : 'http://www')
+                + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
     </body>
     </html>
