@@ -66,6 +66,7 @@ var navbarText =
                         '<li><a href="tools.html#ndex-tab">NDEx</a></li>' +   
                         '<li><a href="tools.html#nexo-tab">NeXO</a></li>' +    
                         '<li><a href="tools.html#noa-tab">NOA</a></li>' +  
+                        '<li><a href="tools.html#noctua-tab">Noctua</a></li>' +
                         '<li><a href="tools.html#pathvisio-tab">PathVisio</a></li>' +
                         '<li><a href="tools.html#pihelper-tab">PiHelper</a></li>' +
                         '<li><a href="tools.html#wikipathways-tab">WikiPathways</a></li>' +  
