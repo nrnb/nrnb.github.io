@@ -1,1 +1,21 @@
-Placeholder
+<html>
+<body>
+<p>Research Synergy and Drug Development: Bright Stars in Neighboring Constellations Keserci et al,&nbsp;<a href="http://biorxiv.org/content/early/2017/06/14/149559.full.pdf+html">http://biorxiv.org</a>.</p>
+
+<div class="cybrowser">
+<input type="button" class="btn btn-primary" onclick="cybrowser.executeCyCommand('network load url url=http://nrnb.org/data/2017_keserci_biorxiv.xgmml');" value="Load network in Cytoscape"/>
+</div>
+
+<script>
+window.onload = function() {
+        if(!window.navigator.userAgent.includes('CyBrowser')){
+                var divs = document.getElementsByClassName("cybrowser")
+                for (var i=0;i<divs.length;i++){
+                        divs[i].style.display = "none";
+                }
+         }
+};
+</script> 
+
+</body>
+</html>
