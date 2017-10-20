@@ -11,4 +11,4 @@ This is the code repository for http://www.nrnb.org.
 * Server admin: apico@gladstone.ucsf.edu
 * Domain name: NetworkSolutions.com (apico)
 
-Note: the contents of the presentation directory are excluded from the repo due to their size, many are over 100MB each. Be sure to scp these files over from a pre-existing repo when setting up a new one.
+Note: the contents of the ```presentation``` directory are excluded from the repo due to their size, many are over 100MB each. Be sure to scp these files over from a pre-existing repo when setting up a new one.
