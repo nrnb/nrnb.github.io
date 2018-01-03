@@ -131,7 +131,7 @@ var footerText =
                 'of General Medical Sciences (NIGMS) under grant P41 GM103504.' +
                 '</p>' +
                 '<p>' +
-                '&copy; NRNB, 2017 <i class="icon-envelope icon-white"></i> ' +
+                '&copy; NRNB, 2018 <i class="icon-envelope icon-white"></i> ' +
                 '<a href="mailto:apico@gladstone.ucsf.edu">email us</a>' +
                 '</p>' +
         '</div>' +
