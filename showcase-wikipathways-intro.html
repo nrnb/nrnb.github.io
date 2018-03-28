@@ -68,7 +68,15 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/page_setup.js"></script>
 
-	<script type="text/javascript">
+<script>
+    $(function () {
+        var activeTab = $('[href=' + location.hash + ']');
+        activeTab && activeTab.tab('show');
+        window.scrollTo(0, 0);
+    });
+</script>
+
+<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push([ '_setAccount', 'UA-19386719-1' ]);
 		_gaq.push([ '_trackPageview' ]);
@@ -83,9 +91,7 @@
 			var s = document.getElementsByTagName('script')[0];
 			s.parentNode.insertBefore(ga, s);
 		})();
-	</script>
-	<script src="assets/js/bootstrap.min.js"></script>
-
+</script>
 </body>
 </html>
 
