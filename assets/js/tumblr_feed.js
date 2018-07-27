@@ -5,9 +5,9 @@ var NUM_ENTRIES_DISPLAYED = 2;
 for (var i = 0; i < NUM_ENTRIES_DISPLAYED; i++) {
 
 	// Put date
-	document.write(
-		'<div class="entry"><h5>' + tumblr_api_read.posts[i]['date'] + '</h5>'
-	);
+	//document.write(
+	//	'<div class="entry"><h5>' + tumblr_api_read.posts[i]['date'] + '</h5>'
+	//);
 
 	if (tumblr_api_read.posts[i]['type'] == "photo") {
 		document.write(
