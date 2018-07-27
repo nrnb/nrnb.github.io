@@ -19,7 +19,7 @@ h3, h4, h5 {
 
 .top {
     color: #ffffff !important;
-    background-image: url("../../images/top_page_bg2.png");
+    /*background-image: url("../../images/top_page_bg2.png");*/
     /*-moz-background-size: 100% auto;*/
     /*background-size: 100% auto;*/
     /*background-repeat: no-repeat;*/
@@ -29,6 +29,7 @@ h3, h4, h5 {
     font-size: 13px;
     padding-left: 10px;
     padding-right: 10px;
+    background: #2E4E81;
 
 }
 .top a {
@@ -42,6 +43,13 @@ h3, h4, h5 {
 
 
 .top-right {
+    display : table-cell;
+    vertical-align : middle;
+    float:none;
+    height: 650px;
+}
+
+.top-left {
     display : table-cell;
     vertical-align : middle;
     float:none;
