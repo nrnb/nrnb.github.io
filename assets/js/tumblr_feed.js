@@ -1,6 +1,6 @@
 // Tumblr Feed Parser
 
-var NUM_ENTRIES_DISPLAYED = 1;
+var NUM_ENTRIES_DISPLAYED = 2;
 
 for (var i = 0; i < NUM_ENTRIES_DISPLAYED; i++) {
 
