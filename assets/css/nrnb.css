@@ -41,21 +41,12 @@ h3, h4, h5 {
     font-size: 24px;
 }
 
-
 .top-right {
     display : table-cell;
     vertical-align : middle;
     float:none;
     height: 650px;
 }
-
-.top-left {
-    display : table-cell;
-    vertical-align : middle;
-    float:none;
-    height: 650px;
-}
-
 
 .logo-big {
     width: 400px;
