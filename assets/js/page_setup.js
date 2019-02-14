@@ -44,7 +44,7 @@ var navbarText =
                                 '</li>' +
                             '</ul>' +
                         '</li>' +
-                        '<li><a href="http://www.citeulike.org/user/nrnb" target="_blank">Publications</a></li>' +
+                        '<li><a href="https://www.ncbi.nlm.nih.gov/pubmed?term=%22national%20resource%20for%20network%20biology%22" target="_blank">Publications</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
