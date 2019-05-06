@@ -105,7 +105,6 @@ var navbarText =
                         '<li><a href="gsoc.html">Google Summer of Code</a></li>' +
                         '<li><a href="gsoc.html">NRNB Academy</a></li>' +
                         '<li><a href="competitions.html">NRNB Competitions</a></li>' +
-                        '<li><a href="collaboration-report.html">Ongoing Collaborations</a></li>' +
 			'<li><a href="collab-wall.html">Wall of Collaborators</a></li>' +
                         '<li><a href="testimonials.html#collab-tab">Testimonials</a></li>' +
                         '<li class="divider"></li>' +
