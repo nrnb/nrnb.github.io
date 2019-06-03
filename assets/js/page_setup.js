@@ -80,12 +80,6 @@ var navbarText =
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
-                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>' +
-                    '<ul class="dropdown-menu" id="presentations-menu">' +
-                        '<li><a href="https://www.slideshare.net/search/slideshow?searchfrom=header&q=nrnb" target="_blank">NRNB Presentations</a></li>' +
-                    '</ul>' +
-                '</li>' +
-                '<li class="dropdown">' +
                     '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu" id="training-menu">' +
                         '<li><a href="training.html"><b>Training</b></a></li>' +
