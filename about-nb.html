@@ -37,19 +37,14 @@
 
             <h3>What is Network Biology?</h3>
 
-            <p>Analysis of biological networks has exploded in recent years. A
-                wide variety of technologies have been introduced for mapping
-                networks of gene and protein interactions, including yeast-two-hybrid
-                assays, affinity purification coupled to mass spectrometry, chromatin
-                immunoprecipitation measurements, synthetic-lethal and suppressor
-                networks, expression QTLs, and many others. These technologies have
-                the potential to revolutionize the study of human health, by enabling
-                the construction of large pathway maps which can pinpoint the
-                molecular mechanisms underlying normal and disease states of
-                biological systems. However, the enormous variety and number of new
-                molecular interaction measurements necessitate new algorithms,
-                conceptual frameworks, and software to integrate, query, visualize,
-                and interpret the resulting network data.</p>
+            <p>We are all familiar with some of the components of biological systems – DNA, proteins, 
+                cells, organs, individuals – but understanding biological systems involves more than 
+                just cataloging its component parts. It is critical to understand the many interactions 
+                of these parts within systems, and how these systems give rise to biological functions 
+                and responses and determine states of health and disease. The National Resource for 
+                Network Biology provides the scientific community with a broad platform of computational 
+                tools for the study of biological networks and for incorporating network knowledge in 
+                biomedical research.</p>
         </div>
 
 
@@ -60,163 +55,94 @@
         <div class="tab-content">
             <div class="tab-pane active" id="research-tab">
 
-                <p>A wide range of computational techniques are being developed
-                    in order to analyze biological network data to address specific
-                    problems with relevance to basic biology and human health:</p>
-
-                <p>
-                    <b>Gene function prediction.</b> This is a basic but important
-                    problem, since the majority of genes in most genomes have no known
-                    function. Examining genes in a network context can help answer this
-                    question. For example, a protein of unknown function connected to a
-                    set of proteins involved in the same biological process is likely
-                    to also function in that process.
+                <p>We are planning new technology research projects focused on three complementary themes for which NRNB and its 
+                    collaborators are well-positioned to catalyze major change (below in bold). These three themes 
+                    serve as the major organizing principles underlying each of the three project areas. All 
+                    three projects capitalize on the rapidly increasing accumulation of molecular network data 
+                    in mammals, and the concomitant growth of new ‘omics profiling technologies which creates 
+                    remarkable new opportunities for using network-based approaches to understand disease states 
+                    on a genome-scale in human individuals.
                 </p>
-
-                <p>
-                    <b>Detection of protein complexes and other modular structures.</b>
-                    Although interaction networks are based on raw pair-wise
-                    interactions, there is clear evidence in these networks for
-                    modularity and principles of higher-order organization. Can we
-                    determine how networks are organized and create abstractions that
-                    serve as effective descriptions of network features? A number of
-                    groups have tried to answer this question through analysis of the
-                    molecular network topology . For example, molecular interaction
-                    networks have been found to cluster into regions that represent
-                    complexes and statistically over-represented motifs, such as
-                    feedback loops, have been discovered some of which have been
-                    thoroughly analyzed.
-                </p>
-
-                <p>
-                    <b>Network evolution.</b> Increasingly, interaction networks are
-                    being used to address questions of evolution, such as 'Which
-                    biological processes are conserved between species, and which are
-                    distinct?' A number of techniques have been developed that identify
-                    common network structures and organizational principles that are
-                    conserved across species. For example, our PathBLAST and
-                    NetworkBLAST tools align protein-protein interaction networks to
-                    identify conserved interaction paths and clusters, respectively.
-                </p>
-
-                <p>
-                    <b>Prediction of new interactions and functional associations.</b>
-                    Statistically significant domain-domain correlations in a protein
-                    interaction network suggest that certain domains (and domain pairs)
-                    mediate protein binding, allowing prediction of new via. Machine
-                    learning has also been applied to predict protein-protein or
-                    genetic interactions through integration of diverse types of
-                    evidence for interaction
-                </p>
-
-                <p>Beyond these established cases, Network Biology is playing an
-                    increasing role in the study of human disease, including:</p>
-
-                <p>
-                    <b>Identification of disease subnetworks.</b> A recent and powerful
-                    trend is to identify neighborhoods of a biological network (i.e.,
-                    subnetworks) that are transcriptionally active in disease Such
-                    neighborhoods suggest key pathway components in disease progression
-                    and provide leads for further study and potential new therapeutic
-                    targets.
-                </p>
-
-                <p>
-                    <b>Subnetwork-based diagnosis.</b> It has become clear that
-                    subnetworks also provide a rich source of biomarkers for disease
-                    classification. Several groups have demonstrated that mRNA profiles
-                    can be integrated with protein networks to identify subnetwork
-                    biomarkers, i.e. subnetworks of interconnected genes whose
-                    aggregate expression levels are predictive of disease state.
-                </p>
-
-                <p>
-                    <b>Subnetwork-based gene association.</b> Despite the growing
-                    number of gene association studies based on Single Nucleotide
-                    Polymorphism (SNP) and Copy Number Variation (CNV) profiling, most
-                    human genetic variation remains uncharacterized, both in biological
-                    mechanism and in impact on disease pathology. We anticipate that
-                    molecular networks will provide a powerful framework for mapping
-                    the common pathway mechanisms impacted by a collection of
-                    genotypes, and several proofs-of-principle have recently been
-                    developed in this area.
+                <p><b>1. Generating Differential and Dynamic Networks.</b> New mass spectrometry technology is 
+                    making it possible to capture comprehensive changes in protein expression and phosphorylation 
+                    at lower cost, higher speed and higher spatial resolution, which makes it possible to measure 
+                    differential network expression information in clinical samples and across tissues and time 
+                    points. Single-cell genomics, including single-cell RNA-seq, now achieves high resolution 
+                    measurements of transcriptional state on a per cell basis over multiple time points, enabling 
+                    differential and dynamic network expression information to be measured or inferred. In this 
+                    area, we develop new computational technologies that take advantage of these qualitatively 
+                    new data types to better understand how networks function in differential biological conditions, 
+                    such as cell types and disease states, and to infer whole-cell dynamic network models. The 
+                    goals of these technologies are to [1] capture the molecular information flow from targeted 
+                    perturbations to downstream cellular responses; [2] functionally characterize 
+                    mechanisms defining individual cell types and their positions in developmental lineages; and 
+                    [3] capture and visualize differential and dynamic changes in protein interactions 
+                    across biological contexts, such as disease versus normal tissue types. </p>
+                <p><b>2. Modeling Multi-scale Network Architecture.</b> In this project, we advance methods to 
+                    transition Network Biology from flat diagrams of nodes and edges towards multi-scale models 
+                    of biological systems. Although current network models and layouts provide a useful summary 
+                    of an interaction dataset, these models and visualizations do not capture the exquisite multi-scale 
+                    hierarchy of modular components and subcomponents that are evident in many biological systems – 
+                    from amino acids to proteins to protein complexes to biological processes to organelles, cells, 
+                    and tissues. Previously, we demonstrated that detailed hierarchical information can be systematically 
+                    revealed by biological network modelling. This discovery enabled us to reconstruct and greatly 
+                    extend the Gene Ontology (GO) hierarchy, yielding a GO built directly from protein networks 
+                    (Data-Driven Ontologies) rather than literature. Here we seek to significantly increase the 
+                    resolution and scalability of algorithms for detection of hierarchical network structure 
+                    [1] and the ability to integrate (embed) many different lines of network evidence 
+                    in discovering such structure [2]. We also aim to broaden and generalize the concepts 
+                    of hierarchical network analysis to study biological structure at the larger scales of cell 
+                    populations and tissues [3]. </p>
+                <p><b>3. Network-guided Machine Learning for Biomedicine.</b> Powerful machine learning technologies, 
+                    such as the recent advances in deep learning, promise to revolutionize our ability to make 
+                    predictions in biology and medicine and could one day replace people in tasks such as image 
+                    analysis and prediction of patient drug response. However, machine learning models are typically 
+                    black boxes that are challenging to use to gain the mechanistic understanding required for us to 
+                    control and fix biological systems for industrial and medical applications. How can we reconcile 
+                    these approaches to gain both the predictive power of machine learning and the interpretability 
+                    of our mechanistic models of biology? Here we explore a series of complementary and innovative 
+                    approaches to this question based on integrating machine learning models with biological networks. 
+                    Specifically, we aim to use networks to: [1] Guide the transfer of predictive models of 
+                    drug response from model systems to patients; [2] Apply machine learning models to 
+                    genotype-phenotype prediction in genome-wide association studies; and [3] Use machine 
+                    learning for patient diagnosis and clinical trial selection in precision medicine applications. 
                 </p>
 
             </div>
             <div class="tab-pane" id="community-tab">
                 <div class="row">
                     <div class="span9">
-                        <p>The Network Biology community has grown rapidly over the past
-                            few years. As an illustration of how pervasive networks have
-                            become, the U.S. National Institutes of Health currently funds 3076
-                            active research grants covering the topic "protein protein
-                            interactions" with 794 of these implementing the specific technique
-                            of "yeast two hybrid system". Network research is also actively
-                            supported by a variety of initiatives from other major national and
-                            supra-national funding agencies, such as the NSF, DOE, EU, and
-                            private foundations. As of 2009, approximately one-third of papers
-                            presented at the major Bioinformatics conferences (e.g., ISMB,
-                            RECOMB, ECCB, ICSB) focus on novel methodologies related to
-                            analysis or inference of biological networks- this number is up
-                            from less than one tenth at the beginning of the decade. Network
-                            Biology is also the focus of several major conferences per year,
-                            most recently including the CSHL / Welcome Trust Network Biology
-                            meeting (18 March 2009, Cold Spring Harbor) and Network Biology 2.0
-                            (20 May 2009, Broad Institute). This number is greater still if one
-                            expands to include conferences in the highly overlapping field of
-                            Systems Biology.</p>
-                    </div>
-                    <div class="span3">
-                        <a href="images/F2.png" target="_blank">
-                            <div class="img-polaroid">
-                                <img src="images/F2.png" alt="Fig 1" width="250"/><br/>
-                                Figure 1: Usage Statistics
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="row belt">
-                    <div class="span3">
-                        <a href="images/F3.png" target="_blank">
-                            <div class="img-polaroid pull-right">
-                                <img src="images/F3.png" alt="Fig 2" width="250"/><br/>
-                                Figure 2: Users
-                                by Grantees
-                            </div>
-                        </a>
-                    </div>
-                    <div class="span9">
-                        <p>Another metric of the growing community of network research
-                            is to track usage of software tools. For instance, use of Cytoscape
-                            has increased at a rate of ~50% per year since 2003, including
-                            nearly 30,000 downloads so far in 2009 and ~40,000 unique visits
-                            and ~50,000 page views per month currently (Figure 1).
-                            Cumulatively, the Cytoscape web page has been visited approximately
-                            one million times and the application has been downloaded ~90,000
-                            times. The original Cytoscape paper and the more recently released
-                            Cline, et al. paper have been cited over 1000 times and used
-                            uncited in many more (we are aware of many publications, including
-                            recent high-profile examples that use Cytoscape for visualization
-                            (i.e. generation of figures) and analysis but do not cite the
-                            Cytoscape publications). Figure 2 shows how a subset of these works
-                            has been supported by a collection of different NIH institutes as
-                            well as other funding agencies. These increases in software usage
-                            and development closely parallel the increases in availability of
-                            large-scale network information and its potential impacts in
-                            biomedicine.</p>
-
-                        <p>Thus, the importance of Network Biology is very much
-                            appreciated by basic scientists and clinicians, many of whom use
-                            interaction databases and network analysis tools in their
-                            day-to-day research. On the other hand, many other investigators
-                            (basic, clinical, and pharmaceutical) as of yet have little
-                            knowledge of recent developments in network biology and would
-                            benefit greatly from outreach and education centered on
-                            network-based technologies. With creation of a NRNB National
-                            Resource- focused on technology development supporting research,
-                            collaboration, education, and dissemination- the Network Biology
-                            community could potentially become a great deal larger.</p>
+                        <p>To serve rapidly growing community of network biology researchers, the NRNB runs a very 
+                            active program of Community Engagement. This program includes Training, Dissemination, and 
+                            Service components (below in bold). While the community of researchers benefiting from network biology is already 
+                            substantial, one suspects that many other investigators (basic, clinical, and 
+                            pharmaceutical) as of yet have little knowledge of recent developments in network biology 
+                            and would benefit greatly from community engagement centered on NRNB technologies. As our 
+                            engagement efforts continue, the network biology community could potentially become a good 
+                            deal larger.</p>
+                        <p><b>Training.</b> We regularly teach application of NRNB technologies in multiple formats 
+                            and in diverse research areas. Each year we lead over a dozen workshops and seminars 
+                            across multiple cities and countries. We have matched over 100 students with network biology 
+                            mentors as part of Google’s Summer of Code (GSoC) program, for diverse set of successfully 
+                            completed projects. We have also offered a full university course in Network Biomedicine 
+                            at UCSD which has been very well received by the students. We are planning to expand our education and training platforms to be more extensible and modular, to scale 
+                            to a substantially larger community of trainees, and to recruit and empower community 
+                            members to become trainers themselves. </p>
+                        <p><b>Dissemination.</b> We have established a collection of interlinked websites, social 
+                            media feeds and community forums for the dissemination of NRNB technologies and to provide 
+                            general information about the field of Network Biology. Regular activities include 
+                            prolific posts on social media of late-breaking network biology publications and results 
+                            and the establishment of a network biology helpdesk, a professional LinkedIn group, and a 
+                            portfolio of tutorial YouTube videos. We launched the NetBio Community of Special Interest 
+                            which has recently been promoted to a central track of the Intelligent Systems for Molecular 
+                            Biology (ISMB) annual international conference. Our NRNB software ecosystem 
+                            provides a major means of dissemination for bioinformatic tools, with connections to platforms 
+                            like Cytoscape and Jupyter/Python/R. </p>
+                        <p><b>Service.</b> We respond to 60-80 requests for collaboration and service in any given year. 
+                            These service collaborations range from assisting users with the application of methods and 
+                            tools for network analysis to consulting on the development of Cytoscape apps. Service 
+                            activities naturally provide access to, and facilitate adoption of, many center-developed tools.
+                        </p>
                     </div>
                 </div>
             </div>
