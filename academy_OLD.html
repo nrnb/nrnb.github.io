@@ -18,7 +18,7 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144"
           href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114"
@@ -33,22 +33,22 @@
 
 <div class="belt white">
     <div class="container">
-        <div class="section">
+        <div class="section" style="max-width:800px">
         <h3>NRNB Academy</h3>
 
-        <img class="img-polaroid pull-right"
+        <!--<img class="img-polaroid pull-right"
              src="images/nrnb_academy_logo.png" alt="image"
-             width="190px"/>
+             width="190px"/> -->
 
-        <p>
-            NRNB Academy offers you the opportunity to work with our open source
-            development team on network biology related tools and resources. <b>This
-            is a great introduction to our dev community and the workings of
-            open source in general.</b> Browse the list of project ideas below or
-            propose your own. Each project has one or more mentors available to
-            guide your learning and production. The goals of the academy are to:
-        </p>
-
+        <p><img class="img-polaroid pull-right" src="images/NRNBAcademyCertificate_web_2.png" width="200px" alt="image"/>
+Outside of our sponsored summer programs, NRNB Academy runs year-round to match students with mentors in network biology software 
+development. NRNB Academy offers you the opportunity to work with our open source development team on network biology related tools 
+and resources. The program is volunteer-based and flexible in terms of time commitment and project lenght. <b>This is a great 
+introduction to our dev community and the workings of open source in general.</b> Start by completing our Admissions Form:</p> 
+<a class="btn btn-success btn-mini"
+href="academy-admissions.html">Admissions Form</a>
+<br /><br />
+<!--
         <ul>
             <li>Provide students with practical open source dev experience</li>
             <li>Provide hobbyists and professionals with introductory
@@ -58,83 +58,139 @@
             <li>Produce useful tools and resources for the research
                 community
             </li>
+        </ul> -->
+<p>	
+    The <a href="http://nrnb.org" target="_blank">National Resource for Network Biology
+    (NRNB)</a> is organizing the joint efforts of <a href="http://cytoscape.org" target="_blank">Cytoscape</a>, 
+    <a href="http://wikipathways.org" target="_blank">WikiPathways</a> and other network biology tools. <b>This
+    is a great opportunity to work at the intersection of biology and
+    computing!</b> We take mentoring seriously and are proud of our <a
+        href="alumni.html#gsoc-tab" class="text-success"><strong><u>90% success rate with former students and
+    projects</u></strong></a>. But don't take our word for it, read testimonials from prior NRNB  
+    <a href="testimonials.html#student-tab" class="text-success"><strong><u>students</u></strong></a> and <a href="testimonials.html#mentor-tab"
+     class="text-success"><strong><u>mentors</u></strong></a>, and <a href="http://www.nrnb.org/testimonials.html#profile-tab"
+     class="text-success"><strong><u>success story profiles</u></strong></a>. 
+    And you also get a certificate of completion!
+</p>
+<p>
+The success of our mentoring program depends on dedicated mentors, great project ideas, amazing students, and effective fundraising. 
+Please <a href="mailto:apico@gladstone.ucsf.edu">contact us</a> with ideas or leads on potential corporate sponsors or use the PayPal 
+widget below to make your own tax deductible donation.</p>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="UYUEWUL7FNZ3S">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+
+<font style="display:inline-block; font-size:9px; line-height:1.4;">This is a tax deductible donation to a 501(c)(3) nonprofit 
+organization, <br />The Cytoscape Consoritum, Tax ID: 20-4909879.</font>
+</form>
+
+ </div>
+<br />
+
+<ul class="nav nav-tabs" id="tabs">
+    <li class="active"><a href="#resources-tab" data-toggle="tab">Resources</a></li>
+    <li><a href="#apply-tab" data-toggle="tab">How to Apply</a></li>
+</ul>
+<div class="tab-content">
+    	<div class="tab-pane" id="apply-tab">
+        <h3>How to apply</h3>
+            <p> You can apply for the year-round mentoring program at any time. Fill out the <a href="academy-admissions.html">
+Admissions Form</a> to start the ball rolling.</p>
+
+            <h3>Advice</h3>
+        <ul>
+            <li><a target="_blank" class="url http outside"
+                   href="https://google.github.io/gsocguides/student/" >GSoC Student Guide</a></li>
+            <li><a target="_blank" class="url http outside"
+                   href="https://developers.google.com/open-source/gsoc/faq">Application Guidelines</a></li>
+        </ul>
+        
+        <h3>If you are selected</h3>
+        <ul>
+            <li>You be working with a small, active group of programmers that also speak <em>biology</em>
+            </li>
+            <li>You will be gaining experience in a rapidly evolving field that interfaces computer and biological sciences
+            </li>
+            <li>You might make more than you would mowing lawns!</li>
+        </ul>
+   </div>
+    <div class="tab-pane active" id="resources-tab">
+	    
+	<h3 id="ideas-tab">Project Ideas</h3>
+	<ul>
+	<li style="list-style-image: url('images/green_arrow.png')"><a href="https://github.com/nrnb/GoogleSummerOfCode/issues" target="_blank">
+		<big>List of NRNB Project Ideas at GitHub</big></a></li>
+	<li style="list-style-type: none">See the complete list of potential projects and mentor contact information.</li>
+	    </ul>
+        <h3>Timeline</h3>
+<p>Open enrollment in NRNB Academy until we find out if NRNB is accepted into GSoC.</p>
+        
+        <h3>Resources</h3>
+        <ul>
+
+            <li><a class="url http outside"
+                   href="https://developers.google.com/open-source/soc/" target="_blank">GSoC Main Site</a></li>
+            <li><a class="url http outside"
+                   href="https://developers.google.com/open-source/soc/resources/flyers" target="_blank">This year's flyer</a></li>
+            <li><a class="url http outside"
+                   href="https://developers.google.com/open-source/gsoc/faq" target="_blank">ProgramFAQ</a></li>
+            <li><a class="url http outside"
+                   href="http://groups.google.com/group/google-summer-of-code-discuss" target="_blank">GSoC Discussion List</a></li>
+            <li><a class="url http outside"
+                   href="http://groups.google.com/group/google-summer-of-code-announce" target="_blank">Announcement List</a></li>
+		</ul>
+        
+        <h3>Communication</h3>
+        <ul>
+            <li>Email the org admin at <a href="mailto:alex.pico@gladstone.ucsf.edu">alex.pico@gladstone.ucsf.edu</a> to find
+                out more NRNB and our projects.<i> Hint: read the <a target="_blank" class="url http outside"
+              	href="https://developers.google.com/open-source/gsoc/faq">ProgramFAQ</a> first!</i></li>
+            <li>Discussion mailing lists: <a target="_blank" class="url http outside"
+             href="http://groups.google.com/group/cytoscape-helpdesk">cytoscape</a>
+                or <a target="_blank" class="url http outside" href="http://groups.google.com/group/wikipathways-discuss">wikipathways</a>
+                - ask about our projects; join the community!
+            </li><li>Start your own <a target="_blank" class="url http outside" href="https://www.blogger.com/">blog</a>!</li>
+        </ul>
+        <h3>For Students</h3>
+        <ul>
+            <li><a class="url http outside" href="https://google.github.io/gsocguides/student/" target="_blank">GSoC Student
+                Guide</a></li>
+            <li><a class="url http outside"
+                   href="http://google-opensource.blogspot.com/2011/03/dos-and-donts-of-google-summer-of-code.html" target="_blank">DOs
+                and DONTs for Students</a></li>
+            <li><a class="url http outside"
+                   href="https://medium.freecodecamp.org/hacking-gsoc-how-to-gain-real-life-experience-and-support-open-source-b1e6a664f6e4" target="_blank">Hacking GSoC</a></li>
+            <li><a class="url http outside"
+                   href="https://google.github.io/gsocguides/student/time-management-for-students" target="_blank">What
+                we expect from our students</a></li>
+		<li><a 
+                   href="testimonials.html#student-tab">Testimonials from
+                students</a></li>            
+		            <li><a href="testimonials.html#profile-tab">Success story profiles</a></li>
+        </ul>
+        <h3>For Mentors</h3>
+        <ul>            
+	<li><a class="url http outside"
+                   href="https://google.github.io/gsocguides/mentor/" target="_blank">Mentor guide</a></li>
+            <li><a class="url http outside"
+                   href="https://google.github.io/gsocguides/mentor/selecting-a-student" target="_blank">How
+                to evaluate student proposals</a></li>
+            <li><a class="url http outside"
+                   href="https://google.github.io/gsocguides/mentor/setting-expectations" target="_blank">Let
+                Students Know What to Expect</a></li>
+		            <li><a 
+                   href="testimonials.html#mentor-tab">Testimonials from
+                mentors</a></li>
         </ul>
 
-        <a class="btn btn-success btn-mini"
-           href="academy-admissions.html">Admissions Form</a>
-<br />
-<br />
-<br />
-<p><b>And check out our special <a href="gsoc.html">NRNB Academy Summer Session</a> for 2015!</b></p>
-        </div>
-
+            
+              </div>
+    </div> 
         </div>
     </div>
-<div class="belt snow-shite">
-    <div class="container">
-        <a name="work"></a>
-
-        <div class="section">
-            <h3>How Does It Work?</h3>
-            <img class="img-polaroid pull-right"
-             src="images/NRNBAcademyCertificate_web_2.png" width="300px" alt="image"
-             />
-            <p>
-                If you are familiar with the <a href="http://code.google.com/soc/">Google
-                Summer of Code program</a>, then you have the basic idea. The main
-                difference is that this is a year-round program, accommodating
-                students and non-students with flexible project dates ranging from 2
-                to 12 months. Another difference is that it is a 100% unfunded,
-                volunteer experience. But from <a
-                    href="testimonials.html#student-tab">past testimonials</a>, you'll
-                see that there are rewards greater than mere cash. Also browse the
-                list of <a href="gsoc/alumni.html"> accepted NRNB Academy
-                participants and their projects</a>. And you also get a certificate of completion!</p>
-
-            <p>NRNB Academy organizes and matches projects and participants,
-                providing structure, guidelines and outreach. The details and
-                execution of each project is ultimately in the hands of you and your
-                mentor. Most participants work remotely, staying in touch and
-                coordinating with mentors and other project contributors via email,
-                IRC, video chat, phone, etc. If you are near a mentor site or have
-                an itch to travel, sometimes office space can be arranged.</p>
-
-            <p>
-                <b> Step 1: Determine if the program is right for you.</b> Carefully
-                read through the program description and <a href="academy-faq.html">FAQ</a>.
-                Contact <a href="mailto:khanspers@gladstone.ucsf.edu">the admin</a>
-                with any questions not covered in these pages. <i>Note: asking
-                questions answered in the FAQ may count against you!</i>
-            </p>
-
-            <p>
-                <b> Step 2: Browse the current project ideas.</b> We maintain a
-                running <a href="academy-ideas.html">list of potential project
-                ideas</a>. Do a bit of background research on each idea that interests
-                you. Or propose your own project idea related to NRNB tools and
-                resources. Fill out the <a href="academy-admissions.html">Admissions
-                Form</a> to start the ball rolling.
-            </p>
-
-            <p>
-                <b> Step 3: Connect with your potential mentors.</b> After you've
-                filled out the Admissions Form, the admin will follow up with you
-                directly and put you in contact with your potential mentors. This
-                begins the dialog about whether a given project is a good fit for
-                you and the mentor.
-            </p>
-
-            <p>
-                <b> Step 4: Submit your project proposal for approval.</b> NRNB
-                Academy has a rolling enrollment, accepting members year-round. <b><i>Together</i></b>
-                with your potential mentor, you will prepare and submit a detailed
-                project proposal. Find a template application and instructions in
-                the <a href="academy-faq.html">FAQ</a> <i>(which you should have
-                already read in Step 1)</i>.
-            </p>
-        </div>
-    </div>
-</div>
 
 <footer></footer>
 
@@ -143,11 +199,18 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/page_setup.js"></script>
 
+<script>
+    $(function () {
+        var activeTab = $('[href=' + location.hash + ']');
+        activeTab && activeTab.tab('show');
+        window.scrollTo(0, 0);
+    });
+</script>
+
 <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push([ '_setAccount', 'UA-19386719-1' ]);
     _gaq.push([ '_trackPageview' ]);
-
     (function () {
         var ga = document.createElement('script');
         ga.type = 'text/javascript';
