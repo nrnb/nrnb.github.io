@@ -11,4 +11,4 @@ This is the code repository for http://www.nrnb.org.
 * Server admin: apico@gladstone.ucsf.edu
 * Domain name: NetworkSolutions.com (apico)
 
-Note: the contents of the ```presentation``` directory are excluded from the repo due to their size, many are over 100MB each. Be sure to scp these files over from a pre-existing repo when setting up a new one.
+Note: The contents of the ```presentation``` directory are excluded from the repo due to their size, many are over 100MB each. Be sure to scp (the scp command) to securely copy files and directories between remote hosts without starting an FTP session or logging into the remote systems explicitly. The scp command uses SSH to transfer data, so it requires a password or passphrase for authentication. these files over from a pre-existing repo when setting up a new one.
