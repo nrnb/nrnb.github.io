@@ -177,6 +177,8 @@ a:hover .btn-green {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    text-align: center;
+    margin-left: 13%;
 }
 
 .section h4 {
