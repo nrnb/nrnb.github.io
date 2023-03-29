@@ -124,6 +124,18 @@ var footerText =
         '</div>' +
     '</div>';
 
+var googleAnalytics = 
+    '<!-- Google tag (gtag.js) -->' +
+    "<script async src='https://www.googletagmanager.com/gtag/js?id=G-YSBTBF5042'></script>" +
+    '<script>' +
+    'window.dataLayer = window.dataLayer || [];' +
+    'function gtag(){dataLayer.push(arguments);}' +
+    "gtag('js', new Date());" 
+    "gtag('config', 'G-YSBTBF5042');" +
+    '</script>';
+
+$('head').append(googleAnalytics);
+
 // Insert Nav Bar right after <body> tag.
 $('body').prepend(navbarText);
 
