@@ -1,7 +1,8 @@
 /**
  * Created by kono on 2014/03/20.
  */
-var navbarText =
+
+    var navbarText =
     '<div class="navbar navbar-inverse navbar-fixed-top">' +
     '<div class="navbar-inner">' +
         '<div class="container">' +
@@ -10,7 +11,7 @@ var navbarText =
             '</a>' +
             '<ul class="nav">' +
                 '<li class="dropdown">' +
-                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>' +
+                    '<a href="#" class="dropdown-toggle">About <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu">' +
                         '<li><a href="about-nb.html">What is Network Biology?</a></li>' +
                         '<li><a href="people.html">NRNB Team</a></li>' +
@@ -20,7 +21,7 @@ var navbarText =
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
-                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>' +
+                    '<a href="#" class="dropdown-toggle">Research <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu">' +
                         '<li class="dropdown-submenu">' +
                             '<a href="#">Projects</a>' +
@@ -48,66 +49,74 @@ var navbarText =
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
-                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>' +
+                    '<a href="#" class="dropdown-toggle">Tools <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu" id="tools-menu">' +
-                        '<li><a href="tools-wall.html"><b>Tools</b></a></li>' +
-                        '<li class="divider"></li>' +
-    			'<li><a href="tools.html#amatreader-tab">aMatReader</a></li>' +
-                        '<li><a href="tools.html#cbioportal-tab">cBio Portal</a></li>' +  
-                        '<li><a href="tools.html#clustermaker-tab">clusterMaker</a></li>' + 
-    			'<li><a href="tools.html#cyanimator-tab">CyAnimator</a></li>' +
-                        '<li><a href="tools.html#cynitoolbox-tab">Cyni Toolbox</a></li>' +  
-                        '<li><a href="tools.html#cytoscape-tab">Cytoscape</a></li>' +
-                        '<li><a href="tools.html#cytoscapejs-tab">Cytoscape.js</a></li>' +
-                        '<li><a href="tools.html#cytoscapeappstore-tab">Cytoscape App Store</a></li>' +
-                        '<li><a href="tools.html#enrichmentmap-tab">Enrichment Map</a></li>' +  
-                        '<li><a href="tools.html#genemania-tab">GeneMANIA</a></li>' +  
-                        '<li><a href="tools.html#gestodifferent-tab">GeStoDifferent</a></li>' +   
-                        '<li><a href="tools.html#mosaic-tab">Mosaic</a></li>' +   
-    			'<li><a href="tools.html#mcds-tab">MCDS</a></li>' + 
-                        '<li><a href="tools.html#ndex-tab">NDEx</a></li>' +   
-                        '<li><a href="tools.html#nexo-tab">NeXO</a></li>' +    
-                        '<li><a href="tools.html#noa-tab">NOA</a></li>' +  
-                        '<li><a href="tools.html#noctua-tab">Noctua</a></li>' +
-                        '<li><a href="tools.html#pathvisio-tab">PathVisio</a></li>' +
-                        '<li><a href="tools.html#pihelper-tab">PiHelper</a></li>' +
-    			'<li><a href="tools.html#setsapp-tab">setsApp</a></li>' +
-    			'<li><a href="tools.html#string-tab">stringApp</a></li>' +
-                        '<li><a href="tools.html#wikipathways-tab">WikiPathways</a></li>' +  
-                        '<li><a href="tools.html#wordcloud-tab">WordCloud</a></li>' +
-                        '<li class="divider"></li>' +
-                        '<li><a href="training.html#tutorials-tab">How to Get Started</a></li>' +
+                    '<li><a href="tools-wall.html"><b>Tools</b></a></li>' +
+                    '<li class="divider"></li>' +
+            '<li><a href="tools.html#amatreader-tab">aMatReader</a></li>' +
+                    '<li><a href="tools.html#cbioportal-tab">cBio Portal</a></li>' +  
+                    '<li><a href="tools.html#clustermaker-tab">clusterMaker</a></li>' + 
+            '<li><a href="tools.html#cyanimator-tab">CyAnimator</a></li>' +
+                    '<li><a href="tools.html#cynitoolbox-tab">Cyni Toolbox</a></li>' +  
+                    '<li><a href="tools.html#cytoscape-tab">Cytoscape</a></li>' +
+                    '<li><a href="tools.html#cytoscapejs-tab">Cytoscape.js</a></li>' +
+                    '<li><a href="tools.html#cytoscapeappstore-tab">Cytoscape App Store</a></li>' +
+                    '<li><a href="tools.html#enrichmentmap-tab">Enrichment Map</a></li>' +  
+                    '<li><a href="tools.html#genemania-tab">GeneMANIA</a></li>' +  
+                    '<li><a href="tools.html#gestodifferent-tab">GeStoDifferent</a></li>' +   
+                    '<li><a href="tools.html#mosaic-tab">Mosaic</a></li>' +   
+            '<li><a href="tools.html#mcds-tab">MCDS</a></li>' + 
+                    '<li><a href="tools.html#ndex-tab">NDEx</a></li>' +   
+                    '<li><a href="tools.html#nexo-tab">NeXO</a></li>' +    
+                    '<li><a href="tools.html#noa-tab">NOA</a></li>' +  
+                    '<li><a href="tools.html#noctua-tab">Noctua</a></li>' +
+                    '<li><a href="tools.html#pathvisio-tab">PathVisio</a></li>' +
+                    '<li><a href="tools.html#pihelper-tab">PiHelper</a></li>' +
+            '<li><a href="tools.html#setsapp-tab">setsApp</a></li>' +
+            '<li><a href="tools.html#string-tab">stringApp</a></li>' +
+                    '<li><a href="tools.html#wikipathways-tab">WikiPathways</a></li>' +  
+                    '<li><a href="tools.html#wordcloud-tab">WordCloud</a></li>' +
+                    '<li class="divider"></li>' +
+                    '<li><a href="training.html#tutorials-tab">How to Get Started</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
-                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <b class="caret"></b></a>' +
+                    '<a href="#" class="dropdown-toggle">Training <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu" id="training-menu">' +
-                        '<li><a href="training.html"><b>Training</b></a></li>' +
-                        '<li class="divider"></li>' +
-                        '<li><a href="training.html#events-tab">Events</a></li>' +
-                        '<li><a href="training.html#courses-tab">Courses</a></li>' +
-                        '<li><a href="training.html#tutorials-tab">Tutorials</a></li>' + 
-                        '<li class="divider"></li>' +
-                        '<li><a href="testimonials.html">Testimonials</a></li>' +
+                    '<li><a href="training.html"><b>Training</b></a></li>' +
+                    '<li class="divider"></li>' +
+                    '<li><a href="training.html#events-tab">Events</a></li>' +
+                    '<li><a href="training.html#courses-tab">Courses</a></li>' +
+                    '<li><a href="training.html#tutorials-tab">Tutorials</a></li>' + 
+                    '<li class="divider"></li>' +
+                    '<li><a href="testimonials.html">Testimonials</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li class="dropdown">' +
-                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">Collaboration <b class="caret"></b></a>' +
+                    '<a href="#" class="dropdown-toggle">Collaboration <b class="caret"></b></a>' +
                     '<ul class="dropdown-menu">' +
-                        '<li><a href="outreach.html"><b>Collaboration</b></a></li>' +
+                    '<li><a href="outreach.html"><b>Collaboration</b></a></li>' +
                         '<li class="divider"></li>' +
                         '<li><a href="gsoc.html">Google Summer of Code</a></li>' +
                         /**'<li><a href="academy.html">NRNB Academy</a></li>' + */
                         '<li><a href="competitions.html">NRNB Competitions</a></li>' +
                         '<li><a href="testimonials.html#collab-tab">Testimonials</a></li>' +
                         '<li class="divider"></li>' +
-                        '<li><a href="collaboration-tracking.html">Collaboration Request Form</a></li>' +
+                        '<li><a href="collaboration-tracking.html">Collaboration Request Form</a></li>' + // ... rest of the code ...
                     '</ul>' +
                 '</li>' +
             '</ul>' +
         '</div>' +
     '</div>' +
     '</div>';
+    $(document).ready(function() {
+        // Show the dropdown menu on hover
+        $('.dropdown').hover(function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
+        }, function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
+        });
+      });
 
 var footerText =
     '<div class="belt black">' +
