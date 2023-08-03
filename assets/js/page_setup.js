@@ -102,7 +102,7 @@
                         '<li><a href="competitions.html">NRNB Competitions</a></li>' +
                         '<li><a href="testimonials.html#collab-tab">Testimonials</a></li>' +
                         '<li class="divider"></li>' +
-                        '<li><a href="collaboration-tracking.html">Collaboration Request Form</a></li>' + // ... rest of the code ...
+                        '<li><a href="collaboration-tracking.html">Collaboration Request Form</a></li>' + 
                     '</ul>' +
                 '</li>' +
             '</ul>' +
