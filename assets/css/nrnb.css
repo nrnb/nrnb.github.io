@@ -8,7 +8,6 @@ body {
     background: #000000;
 }
 
-
 footer {
     padding: 20px;
 }
@@ -292,3 +291,10 @@ content: "";
 /*.card:hover h4 {*/
     /*color: #FFFFFF;*/
 /*}*/
+
+
+@media (max-width : 979px){
+    body {
+        padding-top: 0px;
+    }
+}
