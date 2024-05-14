@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>NRNB: stringApp</title>
+
+<!-- Le styles -->
+<link href="../assets/css/bootstrap.css" rel="stylesheet">
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="../assets/css/jquery.tocify.css" />
+<link type="text/css" rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+<style type="text/css">
+</style>
+</head>
+<body>
+
+<!-- PASTE HERE -->
+
+<h3>stringApp</h3>
+	<p>
+	<a href="https://apps.cytoscape.org/apps/stringapp" target="_blank">stringApp</a> 
+	imports functional associations or physical interactions between protein-protein and protein-chemical pairs from <a href="https://string-db.org/" target="_blank">STRING</a>, <a href="http://viruses.string-db.org/" target="_blank">Viruses.STRING</a>, <a href="http://stitch.embl.de/" target="_blank">STITCH</a>, <a href="http://diseases.jensenlab.org/" target="_blank">DISEASES</a> and from PubMed text mining into Cytoscape. Users provide a list of one or more gene, protein, compound, disease, or PubMed queries, the species, the network type, and a confidence score and stringApp queries the database to return the matching network. Currently, five different queries are supported:</p>
+    <ul>
+    <li><b>STRING: protein query</b> -- enter a list of protein names (e.g. gene symbols or UniProt identifiers/accession numbers) to obtain a STRING network for the proteins</li>
+    <li><b>STRING: PubMed query</b> -- enter a PubMed query and utilize text mining to get a STRING network for the top N proteins associated with the query</li>
+    <li><b>STRING: disease query</b> -- enter a disease name to retrieve a STRING network of the top N proteins associated with the specified disease</li>
+    <li><b>STITCH: protein/compound query</b> -- enter a list of protein or compound names to obtain a network for them from STITCH</li>
+    <li><b>STRING: cross-species query</b> -- choose two species to obtain a STRING network between and within the proteins of the interacting species</li>
+    </ul>
+    <p>For each query, the user can choose to retrieve a full STRING network of functional associations or a physical subnetwork.</p>
+    <p>stringApp also allows users to change the confidence score, the type of interactions, and to expand the resulting network by adding an arbitrary number of nodes; this can be either proteins from the same organism, proteins involved in virus--host interactions, or chemical compounds. All STRING networks are visualized using a new "String Style" custom graphic, which closely resembles the networks on the STRING web site.</p>
+    <p>In addition, stringApp can retrieve functional enrichment for Gene Ontology terms, KEGG, Reactome and Wiki Pathways, DISEASES, COMPARTMENTS, TISSUES, and protein domains at a user-specified significance threshold and show the results in a new table in the Table Panel. It is also possible to perform the enrichment analysis automatically for several groups of nodes such as resulting from clustering. For visualization of the enrichment results, the app provides different types of charts to show the enriched terms. Note that you need to install the <a href="http://apps.cytoscape.org/apps/enhancedgraphics" target="_blank">enhancedGraphics</a> app for the charts to show.</p>
+    <p>stringApp supports automation from both commands and CyREST.</p>
+	
+	<h5>Documentation</h5>
+	<ul>
+	<li><a href="http://www.cgl.ucsf.edu/cytoscape/stringApp/index.shtml" target="_blank">stringApp Website</a></li>
+	<li><a href="http://jensenlab.org/training/stringapp/" target="_blank">Tutorial</a></li>
+	</ul>
+	
+	<h5>Developer Resources</h5>
+	<ul>
+	<li><a href="https://github.com/RBVI/StringApp" target="_blank">Code Repository</a></li>
+	</ul>
+	
+	<h5>How to Cite</h5>
+	<ul>
+	<li><a href="http://www.ncbi.nlm.nih.gov/pubmed/30450911" target="_blank">
+	Cytoscape StringApp: Network Analysis and Visualization of Proteomics Data.</a>
+	 Doncheva et al., <i>J Proteome Research</i> 2018</li>
+	</ul>
+	
+	<hr />
+	<h5>Image Gallery</h5>
+	<div class="row-fluid">
+		<ul class="thumbnails">
+			<li class="span4">
+			<div class="thumbnail">
+			<a href="../images/screenshot_cdk1.png_1.png" target="_blank"><img src="../images/screenshot_cdk1.png_1.png" 
+			alt="stringApp 1" /></a>
+			</div>
+			</li>
+			
+			<li class="span4">
+			<div class="thumbnail">
+			<a href="../images/Screenshot from 2018-01-23 08-53-37.png" target="_blank"><img src="../images/Screenshot from 2018-01-23 08-53-37.png" 
+			alt="stringApp 2" /></a>
+			</div>
+			</li>	
+		</ul>
+	</div>
+</body>
+<!-- END PASTE -->
+</html>
