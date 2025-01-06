@@ -127,7 +127,7 @@ var footerText =
                 'of General Medical Sciences (NIGMS) under grant P41 GM103504.' +
                 '</p>' +
                 '<p>' +
-                '&copy; NRNB, 2024 <i class="icon-envelope icon-white"></i> ' +
+                '&copy; NRNB, 2025 <i class="icon-envelope icon-white"></i> ' +
                 '<a href="mailto:alex.pico@gladstone.ucsf.edu">email us</a>' +
                 '</p>' +
         '</div>' +
