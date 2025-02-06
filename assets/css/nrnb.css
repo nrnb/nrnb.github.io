@@ -16,6 +16,9 @@ h3, h4, h5 {
     font-weight: 200;
 }
 
+.form-control{
+    padding-top: 5px; width: 338px;
+}
 .top {
     color: #ffffff !important;
     background-image: url("../../images/top_page_bg2.png");
@@ -89,7 +92,15 @@ h3, h4, h5 {
     color: #04f004 !important;
     border: 1px solid #04f004;
 }
-
+.row-buttons{
+    float:left; margin-top: 0px
+}
+.form-group-blue-border-focus{
+    margin-bottom: 0px auto;
+}
+.col-md-4-col{
+    padding-top: 25px;
+}
 
 .small {
     width: 150px !important;
@@ -297,11 +308,53 @@ content: "";
         padding-left: 20px;
         padding-right: 20px;
     }
-
+    
 }
 
 @media (max-width : 979px){
     body {
         padding-top: 0px;
     }
+}
+@media (max-width:500px) {
+    .button-flat {
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #ffffff;
+        color: #ffffff !important;
+        font-weight: 200;
+        font-size: 12px;
+        width: 250px !important;
+        height: auto;
+        background: rgba(255,255,255,0.0) !important;
+    }
+    .top h2 {
+        font-weight: 100;
+        font-size: 15px;
+    }
+    .top {
+        color: #ffffff !important;
+        background-image: url("../../images/top_page_bg2.png");
+        /*-moz-background-size: 100% auto;*/
+        /*background-size: 100% auto;*/
+        /*background-repeat: no-repeat;*/
+        height: 650px;
+        padding-top: 150px;
+        font-weight: 400;
+        font-size: 13px;
+        padding-left: 50px;
+        padding-right: 10px;
+        /*background: #2E4E81;*/
+    
+    }
+    .row-buttons{
+        float:left; margin-top: 0px
+    }
+    .form-control{
+        padding-top: 5px; width: 240px;
+    }
+    .col-md-4-col{
+        padding-top: 25px;
+    }
+
 }
