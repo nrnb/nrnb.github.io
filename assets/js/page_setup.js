@@ -15,7 +15,6 @@
                     '<ul class="dropdown-menu">' +
                         '<li><a href="about-nb.html">What is Network Biology?</a></li>' +
                         '<li><a href="people.html">NRNB Team</a></li>' +
-                        '<li><a href="people.html#eac">Advisory Committee</a></li>' +
                         '<li><a href="people.html#partners">Partners</a></li>' +
                         '</li>' +
                     '</ul>' +
@@ -123,8 +122,8 @@ var footerText =
         '<div class="container">' +
                 '<p>' +
                 'The National Resource for Network Biology is an NIH Biomedical ' +
-                'Technology Research Center (BTRC) supported by the National Institute ' +
-                'of General Medical Sciences (NIGMS) under grant P41 GM103504.' +
+                'Technology Research Center (BTRC) that was supported by the National Institute ' +
+                'of General Medical Sciences (NIGMS) under grant P41 GM103504 from 2011-2025.' +
                 '</p>' +
                 '<p>' +
                 '&copy; NRNB, 2025 <i class="icon-envelope icon-white"></i> ' +
