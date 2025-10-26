@@ -1,19 +1,8 @@
-function getElementsByClassName(className, tag, elm){
-    var testClass = new RegExp("(^|\\\\s)" + className + "(\\\\s|$)");
-    var tag = tag || "*";
-    var elm = elm || document;
-    var elements = (tag == "*" && elm.all)? elm.all : elm.getElementsByTagName(tag);
-    var returnElements = [];
-    var current;
-    var length = elements.length;
-    for(var i=0; i<length; i++){
-        current = elements[i];
-        if(testClass.test(current.className)){
-            returnElements.push(current);
-        }
-    }
-    return returnElements;
-}
+const getElementsByClassName = (className, tag = '*', elm = document) => {
+    const elements = elm.querySelectorAll(`${tag}.${className}`);
+    return Array.from(elements);
+};
+
 
 // Takes an ISO time and returns a string representing how
 // long ago the date represents.
@@ -52,20 +41,22 @@ function showHideContent() {
 
 window.onload = function() {
     //Dates to age
-    var dates = getElementsByClassName('date');
-    for (var i=0; i< dates.length; i++) {
-        dates[i].title = dates[i].innerHTML;
-        dates[i].innerHTML = prettyDate(dates[i].id.replace('post',''));
+   const dates = document.querySelectorAll('.date');
 
-        if (dates[i].title && dates[i].title != '') {
-            dates[i].style.cursor = "pointer";
-            dates[i].onclick = function() {
-                var tmp = this.innerHTML;
-                this.innerHTML = this.title;
-                this.title = tmp;
-            }
-        }
+for (const date of dates) {
+    date.title = date.innerHTML;
+    date.innerHTML = prettyDate(date.id.replace('post',''));
+
+    if (date.title && date.title !== '') {
+        date.style.cursor = "pointer";
+        date.onclick = () => {
+            const tmp = date.innerHTML;
+            date.innerHTML = date.title;
+            date.title = tmp;
+        };
     }
+}
+
     
     //Show/hide posts
     /*
