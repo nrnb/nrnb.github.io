@@ -127,7 +127,7 @@ var footerText =
                 '</p>' +
                 '<p>' +
                 '&copy; NRNB, 2026 <i class="icon-envelope icon-white"></i> ' +
-                '<a href="mailto:kristina.hanspers@gladstone.ucsf.edu">contact us</a>' +
+                '<a href="mailto:help@nrnb.org">contact us</a>' +
                 '</p>' +
         '</div>' +
     '</div>';
