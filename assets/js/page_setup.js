@@ -126,7 +126,8 @@ var footerText =
                 'of General Medical Sciences (NIGMS) under grant P41 GM103504 from 2011-2025.' +
                 '</p>' +
                 '<p>' +
-                '&copy; NRNB, 2026' +
+                '&copy; NRNB, 2026 <i class="icon-envelope icon-white"></i> ' +
+                '<a href="mailto:help@nrnb.org">contact us</a>' +
                 '</p>' +
         '</div>' +
     '</div>';
