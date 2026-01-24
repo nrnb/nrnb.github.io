@@ -12,6 +12,161 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/nrnb.css" rel="stylesheet">
+    
+    <style>
+        /* Gene Analysis Widget Styles */
+        .gene-analysis-widget {
+            margin-top: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .gene-analysis-widget h2 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 24px;
+            color: #fff;
+            letter-spacing: 0.3px;
+            text-align: center;
+        }
+        
+        .gene-input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #151515 ;
+            border-radius: 10px;
+            padding: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(10px);
+           
+        }
+        
+        .gene-textarea {
+            flex: 1;
+            height: 48px;
+            padding: 16px 16px 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background: transparent;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 14px;
+            color: #e1e3e6;
+            resize: none;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            /* box-shadow: #95a5a6; */
+        }
+        
+        .gene-textarea:focus {
+            outline: none;
+            background: rgba(85, 86, 88, 0.04);
+        }
+        
+        .gene-textarea::placeholder {
+            color: #95a5a6;
+        }
+        
+        .analyze-button {
+            height: 44px;
+            padding: 0 24px;
+            background: #2C4D83;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: none;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(44, 77, 131, 0.3);
+        }
+        
+        .analyze-button:hover:not(:disabled) {
+            background: #243d6b;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(44, 77, 131, 0.4);
+        }
+        
+        .analyze-button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        
+        .analyze-button:disabled {
+            background: #8197b8;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        
+        /* Research Highlights Uniform Cards */
+        .research-highlight-card {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+            min-height: 180px;
+        }
+        
+        .research-highlight-card:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+        
+        .research-highlight-image {
+            flex: 0 0 200px;
+            width: 200px;
+            height: 140px;
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .research-highlight-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .research-highlight-content {
+            flex: 1;
+        }
+        
+        .research-highlight-content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+            color: #2c3e50;
+        }
+        
+        .research-highlight-content p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .research-highlight-content a {
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .research-highlight-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -45,47 +200,45 @@
                     </div>
 
                     <!-- Begin iQuery widget-->
-
-                    <div class="row">
-                        <div class="col-md-4 col" style="padding-top: 25px">
-                            <h2>Analyze Your Genes With NDEx iQuery</h2>
-
-
-                            <div class="form-group blue-border-focus" style="margin-bottom: 0px auto">
-                                <textarea style="padding-top: 5px; width: 338px" class="form-control" id="geneSet_input" rows="2" placeholder="Type or paste your list of genes here..."></textarea>
-                            </div>
-
-                            <div class="row-buttons">
-                                <input type="submit" value="Analyze Now!" style="float:left; margin-top: 0px" id="openGeneSetButton" class="button-flat btn-blue" disabled="">
-                            </div>
-
-                            <script>
-                                document.getElementById("geneSet_input").addEventListener("keyup", function() {
-                                    var nameInput = document.getElementById('geneSet_input').value;
-                                    if (nameInput != "") {
-                                        document.getElementById('openGeneSetButton').removeAttribute("disabled");
-                                    } else {
-                                        document.getElementById('openGeneSetButton').setAttribute("disabled", null);
-                                    }
-                                });
-
-                                document.getElementById('openGeneSetButton').disabled = true;
-                                document.getElementById('openGeneSetButton').addEventListener('click', function(e) {
-                                    var geneSet = document.getElementById("geneSet_input").value;
-                                    geneSet = geneSet.replace(/\s/g, ",")
-                                    console.log(geneSet)
-                                    var baseUrl = 'https://www.ndexbio.org/iquery?genes=';
-                                    console.log(baseUrl + encodeURIComponent(geneSet));
-                                    window.open(baseUrl + encodeURIComponent(geneSet));
-                                    e.preventDefault();
-                                    return false;
-                                });
-
-                            </script>
-
+                    <div class="gene-analysis-widget">
+                        <h2>Analyze Your Genes With NDEx iQuery</h2>
+                        <div class="gene-input-container">
+                            <textarea 
+                                class="gene-textarea" 
+                                id="geneSet_input" 
+                                placeholder="Type or paste your list of genes here..."></textarea>
+                            <button 
+                                type="button" 
+                                id="openGeneSetButton" 
+                                class="analyze-button" 
+                                disabled>
+                                Analyze Now
+                            </button>
                         </div>
                     </div>
 
+                    <script>
+                        document.getElementById("geneSet_input").addEventListener("keyup", function() {
+                            var nameInput = document.getElementById('geneSet_input').value;
+                            if (nameInput != "") {
+                                document.getElementById('openGeneSetButton').removeAttribute("disabled");
+                            } else {
+                                document.getElementById('openGeneSetButton').setAttribute("disabled", null);
+                            }
+                        });
+
+                        document.getElementById('openGeneSetButton').disabled = true;
+                        document.getElementById('openGeneSetButton').addEventListener('click', function(e) {
+                            var geneSet = document.getElementById("geneSet_input").value;
+                            geneSet = geneSet.replace(/\s/g, ",")
+                            console.log(geneSet)
+                            var baseUrl = 'https://www.ndexbio.org/iquery?genes=';
+                            console.log(baseUrl + encodeURIComponent(geneSet));
+                            window.open(baseUrl + encodeURIComponent(geneSet));
+                            e.preventDefault();
+                            return false;
+                        });
+                    </script>
                     <!--End iQuery widget-->
 
                 </div>
@@ -133,30 +286,6 @@
         </div>
     </div>
 
-<!--    <div id="renewed"></div>
-    <div class="belt white">
-        <div class="container">
-            <div class="row section">
-                <h3>5-Year Funding Renewal</h3>
-            </div>
-            <div class="row">
-                <div class="span3">
-                    <img src="images/NRNB_black.png" alt="nrnb logo">
-                </div>
-                <div class="span9">
-
-                    <p>
-                        We have been awarded another five years of funding by <a href="https://www.nigms.nih.gov/" target="_blank">NIGMS</a>
-                        for the National Resource of Network Biology until 2025. We have identified three major themes of Differential Networks,
-                        From Descriptive to Predictive and Multi-scale Network Representations in Network Biology that will define our
-                        technology research and development projects. With this renewed investment, we will also continue to pursue a broad
-                        range of <a href="./outreach">collaboration</a> and <a href="./training.html">training</a> opportunities.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
     <div id="highlights"></div>
     <div class="belt white">
         <div class="container">
@@ -164,12 +293,13 @@
                 <h3>Research Highlights</h3>
             </div>
 
-            <div class="row belt">
-                <div class="span3">
-                    <img src="images/NeXO.png" alt="image">
+            <div class="research-highlight-card">
+                <div class="research-highlight-image">
+                    <img src="images/NeXO.png" alt="NeXO Network Ontology">
                 </div>
-                <div class="span9">
-                    <p><b>Network Approach to Building Gene Ontologies</b><br />
+                <div class="research-highlight-content">
+                    <h4>Network Approach to Building Gene Ontologies</h4>
+                    <p>
                         <a href="http://nexontology.org/" target="_blank">NeXO</a> (The Network Extracted Ontology) uses a principled
                         computational approach which integrates evidence from hundreds of thousands of individual gene and
                         protein interactions to construct a complete hierarchy of cellular components and processes. This
@@ -179,23 +309,25 @@
                 </div>
             </div>
 
-            <div class="row belt">
-                <div class="span3">
-                    <img src="images/nbs.png" alt="image">
+            <div class="research-highlight-card">
+                <div class="research-highlight-image">
+                    <img src="images/nbs.png" alt="Network-based Stratification">
                 </div>
-                <div class="span9">
-                    <p><b>Network-based stratification of tumor mutations</b><br />
+                <div class="research-highlight-content">
+                    <h4>Network-based Stratification of Tumor Mutations</h4>
+                    <p>
                         <a href="http://www.nature.com/nmeth/journal/v10/n11/full/nmeth.2651.html" target="_blank">NBS</a> is a method for stratification (clustering) of patients in a cancer cohort based on somatic mutations and a gene interaction network. The method uses network propagation to integrate genome wide somatic mutation profiles for each patient over a gene interaction network, and a non-negative matrix factorization based clustering approach in order to derive biologically meaningful stratification of a patient cohort.
                     </p>
                 </div>
             </div>
 
-            <div class="row belt">
-                <div class="span3">
-                    <img src="images/cyappstore1.png" alt="image">
+            <div class="research-highlight-card">
+                <div class="research-highlight-image">
+                    <img src="images/cyappstore1.png" alt="Cytoscape App Store">
                 </div>
-                <div class="span9">
-                    <p><b>Cytoscape App Store</b><br />
+                <div class="research-highlight-content">
+                    <h4>Cytoscape App Store</h4>
+                    <p>
                         The overarching goals of the <a href="http://apps.cytoscape.org" target="_blank">Cytoscape App Store</a> are to
                         highlight the important features apps add to Cytoscape, to enable researchers to find apps they
                         need, and for developers to promote their apps. The Cytoscape App Store highlights the important
@@ -205,12 +337,13 @@
                 </div>
             </div>
 
-            <div class="row belt">
-                <div class="span3">
-                    <img src="images/cBioPortal_2.png" alt="image">
+            <div class="research-highlight-card">
+                <div class="research-highlight-image">
+                    <img src="images/cBioPortal_2.png" alt="Network Analysis Tools">
                 </div>
-                <div class="span9">
-                    <p><b>Network Analysis Tools</b><br />
+                <div class="research-highlight-content">
+                    <h4>Network Analysis Tools</h4>
+                    <p>
                         Our research programs are exploring an array of new approaches to network analysis, such as how to
                         use
                         molecular networks to stratify cancer patient genomes (Network-Based Stratification) or how to
@@ -255,9 +388,7 @@
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(ga, s);
         })();
-
     </script>
-
 
 </body>
 </html>

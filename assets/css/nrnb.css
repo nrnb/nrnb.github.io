@@ -19,17 +19,17 @@ h3, h4, h5 {
 .top {
     color: #ffffff !important;
     background-image: url("../../images/top_page_bg2.png");
-    /*-moz-background-size: 100% auto;*/
-    /*background-size: 100% auto;*/
-    /*background-repeat: no-repeat;*/
-    height: 650px;
+    background-size: 150%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 600px;
     padding-top: 150px;
     font-weight: 400;
     font-size: 13px;
     padding-left: 10px;
     padding-right: 10px;
-    /*background: #2E4E81;*/
-
+    background-color: #2E4E81;
 }
 .top a {
     color: #04f0fe;
@@ -44,7 +44,9 @@ h3, h4, h5 {
     display : table-cell;
     vertical-align : middle;
     float:none;
-    height: 650px;
+    height: 600px;
+    text-align: right;
+    margin-left: auto;
 }
 
 .logo-big {
@@ -57,8 +59,13 @@ h3, h4, h5 {
 }
 
 .buttons {
-   margin-top: 0;
+   margin-top: 20px;
    padding-top: 0;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 10px;
+   max-width: 550px;
+   margin-left: auto;
 }
 
 
@@ -68,17 +75,22 @@ h3, h4, h5 {
 
 
 .button-flat {
-    display: inline-block;
+    display: block;
     text-align: center;
     border: 1px solid #ffffff;
     color: #ffffff !important;
     font-weight: 200;
-    font-size: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    width: 350px !important;
+    font-size: 13px;
+    padding: 10px 8px;
+    margin: 0;
+    width: 100% !important;
     background: rgba(255,255,255,0.0) !important;
+    transition: all 0.3s ease;
+}
+
+.button-flat:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 .btn-blue, a .btn-blue {
